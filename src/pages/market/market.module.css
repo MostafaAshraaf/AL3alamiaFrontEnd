@@ -1,0 +1,57 @@
+/* =============================================
+   Market Page – module styles (Dark + Gold Theme)
+   ============================================= */
+
+.marketPage,
+.marketPage * {
+  font-family: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+/* ── Pricing Disclaimer Notice ── */
+.pricingNotice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin: 1.25rem auto;
+  padding: 0.85rem 1.25rem;
+  max-width: 900px;
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  border-left: 4px solid #c9a84c;
+  border-radius: 12px;
+  font-family: inherit;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+.pricingNoticeIcon {
+  font-size: 2rem;
+  line-height: 1.5;
+  flex-shrink: 0;
+}
+
+.pricingNoticeText {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.55;
+  color: #e8c96b;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .pricingNotice {
+    margin: 1rem 1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .pricingNoticeText {
+    font-size: 0.85rem;
+  }
+}

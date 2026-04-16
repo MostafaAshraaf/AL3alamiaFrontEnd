@@ -1,0 +1,17 @@
+/* cardsContainer.module.css – Dark + Gold Theme (matching landing page) */
+
+.market_con {
+  padding: 72px 0px;
+  background: linear-gradient(180deg, #0e0e0e 0%, #141414 100%);
+}
+
+.cards {
+  padding-top: 54px;
+}
+
+.cards .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 50px 20px;
+  position: relative;
+}

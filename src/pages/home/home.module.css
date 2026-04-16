@@ -1,0 +1,2016 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #0e0e0e, #1a1a1a, #141414);
+  padding-top: 50px;
+}
+
+.floatingBackground {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.floatingCircle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(24px);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.circleAmber {
+  top: 5rem;
+  left: 2.5rem;
+  width: 8rem;
+  height: 8rem;
+  background: linear-gradient(
+    to right,
+    rgba(252, 211, 77, 0.2),
+    rgba(255, 243, 166, 0.2)
+  );
+}
+
+.circleEmerald {
+  top: 10rem;
+  right: 5rem;
+  width: 12rem;
+  height: 12rem;
+  background: linear-gradient(
+    to right,
+    rgba(167, 243, 208, 0.2),
+    rgba(153, 246, 228, 0.2)
+  );
+  animation-delay: 1s;
+}
+
+.circleRose {
+  bottom: 5rem;
+  left: 25%;
+  width: 6rem;
+  height: 6rem;
+  background: linear-gradient(
+    to right,
+    rgba(251, 207, 232, 0.2),
+    rgba(244, 114, 182, 0.2)
+  );
+  animation-delay: 2s;
+}
+
+.heroSection {
+  position: relative;
+  padding: 2rem 1.5rem 8rem;
+  overflow: hidden;
+}
+
+.heroContainer {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.heroGrid {
+  display: grid;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.heroText {
+  animation: fadeInLeft 1s ease-out forwards;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: rgba(201, 168, 76, 0.1);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  border-radius: 9999px;
+  color: #c9a84c;
+}
+
+.badgeIcon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+.heroTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: white;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1024px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+}
+
+.heroTitleGradient {
+  background: linear-gradient(to right, #e8c96b, #c9a84c, #a8832a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.heroTitleGradientEmerald {
+  background: linear-gradient(to right, #c9a84c, #a8832a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.heroTitleGradientAL3ALAMIA {
+  background: linear-gradient(135deg, #c9a84c, #a8832a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-style: italic;
+  font-family: serif;
+}
+
+.heroDescription {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  color: #8a8070;
+  max-width: 28rem;
+  margin-bottom: 20px;
+}
+
+.heroButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .heroButtons {
+    flex-direction: row;
+  }
+}
+
+.exploreButton {
+  position: relative;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #c9a84c, #a8832a);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.exploreButton:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.exploreButton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #e8c96b, #c9a84c);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.exploreButton:hover::after {
+  transform: scaleX(1);
+}
+
+.buttonContent {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.buttonIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: transform 0.3s;
+}
+
+.exploreButton:hover .buttonIcon {
+  transform: translateX(4px);
+}
+
+.heroImage {
+  animation: fadeInRight 1s ease-out forwards;
+}
+
+.cardContainer {
+  position: relative;
+}
+
+.mainCard {
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(16px);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  animation: float 6s ease-in-out infinite;
+}
+
+.cardGlow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #c9a84c, #e8c96b);
+  border-radius: 1.5rem;
+  filter: blur(4px);
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.cardContainer:hover .cardGlow {
+  opacity: 0.5;
+}
+
+.cardContent {
+  position: relative;
+}
+
+.cardIconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  height: 8rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  margin: 0 auto 2rem;
+  background: linear-gradient(to right, #c9a84c, #a8832a);
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cardIcon {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  width: 80%;
+}
+
+.cardTitle {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, #c9a84c, #a8832a);
+
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cardInfo {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.cardInfoLabel {
+  font-size: 0.875rem;
+  color: #8a8070;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.cardInfoYear {
+  font-size: 1.875rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #c9a84c, #a8832a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.accentCircle {
+  position: absolute;
+  border-radius: 50%;
+  animation: pulse 4s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+.accentRose {
+  top: -1rem;
+  left: -1rem;
+  width: 2rem;
+  height: 2rem;
+  background: linear-gradient(to right, #fb7185, #f472b6);
+}
+
+.accentBlue {
+  bottom: -1rem;
+  right: -1rem;
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(to right, #60a5fa, #22d3ee);
+  animation-delay: 1s;
+}
+
+.accentPurple {
+  top: 50%;
+  right: -2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: linear-gradient(to right, #a78bfa, #4f46e5);
+  animation-delay: 2s;
+}
+
+.worksSection {
+  padding: 6rem 1.5rem;
+  background: linear-gradient(to right, #141414, #1a1a1a);
+}
+
+.worksContainer {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.sectionBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: linear-gradient(135deg, rgba(201,168,76,0.15), rgba(201,168,76,0.05));
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  border-radius: 9999px;
+  color: #c9a84c;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f4f0e8;
+  margin-bottom: 1rem;
+}
+
+.sectionTitleGradient {
+  background: linear-gradient(135deg, #c9a84c, #a8832a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.sectionDescription {
+  font-size: 1.25rem;
+  color: #8a8070;
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+.worksGrid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .worksGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .worksGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.workStep {
+  position: relative;
+  text-align: center;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.connectionLine {
+  display: none;
+  position: absolute;
+  top: 3rem;
+  left: 75%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #c9a84c, #e8c96b);
+  opacity: 0.3;
+}
+
+@media (min-width: 1024px) {
+  .connectionLine {
+    display: block;
+  }
+}
+
+.stepContent {
+  position: relative;
+}
+
+.stepIconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto 1.5rem;
+  background: #141414;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(201, 168, 76, 0.3);
+  transition: all 0.3s;
+}
+
+.workStep:hover .stepIconContainer {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  border-color: rgba(201, 168, 76, 0.4);
+}
+
+.stepIcon {
+  color: #c9a84c;
+  transition: color 0.3s;
+  font-size: 50px;
+}
+
+.workStep:hover .stepIcon {
+  color: #c9a84c;
+}
+
+.stepNumber {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(to right, #c9a84c, #e8c96b);
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  top: -0.5rem;
+  right: -0.5rem;
+}
+
+.stepTitle {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f4f0e8;
+  transition: color 0.3s;
+}
+
+.workStep:hover .stepTitle {
+  color: #c9a84c;
+}
+
+.stepDescription {
+  color: #8a8070;
+}
+
+.servicesSection {
+  padding: 6rem 1.5rem;
+}
+
+.servicesContainer {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.sectionBadgeAmber {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: rgba(201, 168, 76, 0.1);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  border-radius: 9999px;
+  color: #c9a84c;
+}
+
+.sectionTitleGradientEmerald {
+  background: linear-gradient(to right, #c9a84c, #a8832a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.servicesGrid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .servicesGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.serviceCard {
+  position: relative;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.5s;
+}
+
+.serviceCard:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.5rem);
+}
+
+.gradientAmber {
+  background: linear-gradient(to bottom right, #141414, #1a1a1a);
+}
+
+/* .gradientEmerald {
+  background: linear-gradient(to bottom right, #d1fae5, #99f6e4);
+}
+
+.gradientRose {
+  background: linear-gradient(to bottom right, #fce7f3, #fbcfe8);
+}
+
+.gradientBlue {
+  background: linear-gradient(to bottom right, #dbeafe, #bfdbfe);
+} */
+
+.serviceCardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  border-radius: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.serviceCard:hover .serviceCardOverlay {
+  opacity: 1;
+}
+
+.serviceContent {
+  position: relative;
+}
+
+.serviceIconContainer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  transition: transform 0.3s;
+}
+
+.serviceCard:hover .serviceIconContainer {
+  transform: scale(1.1);
+}
+
+.iconBgAmber {
+  background: linear-gradient(135deg, #c9a84c, #a8832a);
+}
+
+.iconBgEmerald {
+  background: linear-gradient(to right, #c9a84c, #a8832a);
+}
+
+.iconBgRose {
+  background: linear-gradient(135deg, #c9a84c, #a8832a);
+}
+
+.iconBgBlue {
+  background: linear-gradient(135deg, #c9a84c, #a8832a);
+}
+
+.serviceIcon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.serviceTitle {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f4f0e8;
+}
+
+.serviceCard:hover .serviceTitle {
+  color: #ffffff;
+}
+
+.serviceDescription {
+  margin-bottom: 1.5rem;
+  line-height: 1.75;
+  color: #c0b090;
+}
+
+.serviceLink {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #c9a84c;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.serviceCard:hover .serviceLink {
+  color: #a8832a;
+}
+
+.serviceLinkIcon {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.serviceCard:hover .serviceLinkIcon {
+  transform: translateX(4px);
+}
+
+.perfumesSection {
+  padding: 6rem 1.5rem;
+  background: linear-gradient(to bottom right, #141414, #1a1a1a, #0e0e0e);
+}
+
+.perfumesContainer {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.sectionBadgeRose {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: rgba(201, 168, 76, 0.08);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  border-radius: 9999px;
+  color: #c9a84c;
+}
+
+.sectionTitleGradientRose {
+  background: linear-gradient(to right, #e8c96b, #c9a84c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.perfumesGrid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .perfumesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.perfumeCard {
+  position: relative;
+  padding: 2rem;
+  background: rgba(26, 26, 26, 0.9);
+  backdrop-filter: blur(4px);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(201, 168, 76, 0.12);
+  transition: all 0.5s;
+}
+
+.perfumeCard:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1rem);
+}
+
+.perfumeCardHighlighted {
+  background: linear-gradient(to bottom right, #1a1a1a, #141414);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  border: 2px solid rgba(201, 168, 76, 0.3);
+}
+
+.bestsellerBadge {
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #c9a84c, #a8832a);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.perfumeContent {
+  text-align: center;
+}
+
+.perfumeIconContainer {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.perfumeInnerIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+  height: 6rem;
+  background: linear-gradient(135deg, #c9a84c, #a8832a);
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.perfumeCard:hover .perfumeInnerIcon {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.perfumeInnerIcon .perfumeIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background: #141414;
+  border-radius: 50%;
+}
+
+.perfumeIcon {
+  width: 2rem;
+  height: 2rem;
+  color: #c9a84c;
+}
+
+.perfumeAccentCircle {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: linear-gradient(to right, #34d399, #14b8a6);
+  border-radius: 50%;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.perfumeTitle {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f4f0e8;
+  transition: color 0.3s;
+}
+
+.perfumeCard:hover .perfumeTitle {
+  color: #c9a84c;
+}
+
+.perfumeSpecialty {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #c9a84c, #a8832a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.perfumeDescription {
+  margin-bottom: 1.5rem;
+  line-height: 1.75;
+  color: #8a8070;
+}
+
+.perfumeInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.perfumePrice {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #c9a84c;
+}
+
+.perfumeRating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.starIcon {
+  width: 1rem;
+  height: 1rem;
+  color: #e8c96b;
+  fill: currentColor;
+}
+
+.addToCartButton {
+  width: 100%;
+  padding: 0.75rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #c9a84c, #a8832a);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.addToCartButton:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.reviewsSection {
+  padding: 6rem 1.5rem;
+  background: linear-gradient(to right, #0e0e0e, #1a1a1a);
+}
+
+.reviewsContainer {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.sectionBadgeWhite {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 9999px;
+  color: #ffffff;
+}
+
+.sectionTitleWhite {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.sectionTitleGradientAmber {
+  background: linear-gradient(to right, #facc15, #facc15);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.reviewsGrid {
+  display: grid;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .reviewsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reviewItem {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.reviewItem:hover {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+.reviewItemActive {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(16px);
+  border-left: 4px solid #facc15;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.reviewAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: linear-gradient(to right, #c9a84c, #e8c96b);
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reviewAvatarIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #ffffff;
+}
+
+.reviewInfo {
+  flex: 1;
+}
+
+.reviewName {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #ffffff;
+}
+
+.reviewProfession {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.reviewIndicator {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.3s;
+}
+
+.reviewItem:hover .reviewIndicator {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.reviewIndicatorActive {
+  background: #facc15;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reviewContent {
+  position: relative;
+}
+
+.reviewCard {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.reviewQuote {
+  font-size: 6rem;
+  color: #e8c96b;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.reviewText {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+}
+
+.reviewStars {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.reviewAuthor {
+  text-align: right;
+  color: #e8c96b;
+  font-weight: 600;
+}
+
+.valuesSection {
+  padding: 6rem 1.5rem;
+  background: linear-gradient(to bottom right, #0e0e0e, #141414);
+}
+
+.valuesContainer {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.sectionBadgeEmerald {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: linear-gradient(135deg, rgba(201,168,76,0.15), rgba(201,168,76,0.05));
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  border-radius: 9999px;
+  color: #c9a84c;
+}
+
+.valuesGrid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .valuesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.valueCard {
+  position: relative;
+  padding: 2.5rem;
+  background: #141414;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(201, 168, 76, 0.12);
+  transition: all 0.5s;
+}
+
+.valueCard:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.5rem);
+}
+
+.valueCardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom right,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  border-radius: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.valueCard:hover .valueCardOverlay {
+  opacity: 1;
+}
+
+.valueContent {
+  position: relative;
+  text-align: center;
+}
+
+.valueIconContainer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  transition: transform 0.3s;
+}
+
+.valueCard:hover .valueIconContainer {
+  transform: scale(1.1);
+}
+
+.gradientAmberYellow {
+  background: linear-gradient(to right, #c9a84c, #e8c96b);
+}
+
+.gradientEmeraldTeal {
+  background: linear-gradient(to right, #c9a84c, #a8832a);
+}
+
+.gradientRosePink {
+  background: linear-gradient(135deg, #c9a84c, #a8832a);
+}
+
+.valueIcon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.valueTitle {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f4f0e8;
+  transition: color 0.3s;
+}
+
+.valueCard:hover .valueTitle {
+  color: #c9a84c;
+}
+
+.valueDescription {
+  line-height: 1.75;
+  color: #8a8070;
+}
+
+.contactSection {
+  padding: 6rem 1.5rem;
+  background: linear-gradient(to bottom right, #141414, #1a1a1a);
+}
+
+.contactContainer {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.sectionBadgeStone {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: linear-gradient(to right, #1a1a1a, rgba(201, 168, 76, 0.1));
+  border: 1px solid #d6d3d1;
+  border-radius: 9999px;
+  color: #f4f0e8;
+}
+
+.contactForm {
+  background: rgba(26, 26, 26, 0.9);
+  backdrop-filter: blur(16px);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.formGroup {
+  margin-bottom: 2rem;
+}
+
+.formInput {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1.125rem;
+  background: #1a1a1a;
+  border: 2px solid #e7e5e4;
+  border-radius: 1rem;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.formInput:focus {
+  border-color: transparent;
+  ring: 2px solid #facc15;
+}
+
+.formGroup:hover .formInput {
+  border-color: rgba(201, 168, 76, 0.4);
+}
+
+.formTextarea {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1.125rem;
+  background: #1a1a1a;
+  border: 2px solid #e7e5e4;
+  border-radius: 1rem;
+  resize: none;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.formTextarea:focus {
+  border-color: transparent;
+  ring: 2px solid #facc15;
+}
+
+.formGroup:hover .formTextarea {
+  border-color: rgba(201, 168, 76, 0.4);
+}
+
+.formButton {
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #c9a84c, #a8832a);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.formButton:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.formButton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #eab308, #f59e0b);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.formButton:hover::after {
+  transform: scaleX(1);
+}
+
+.footerSection {
+  padding: 5rem 1.5rem;
+  background: linear-gradient(to right, #0e0e0e, #1a1a1a, #141414);
+}
+
+.footerContainer {
+  max-width: 64rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footerTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.footerTitleGradient {
+  background: linear-gradient(to right, #facc15, #facc15);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.footerDescription {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2.5rem;
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footerButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .footerButtons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.startShoppingButton {
+  position: relative;
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #f4f0e8;
+  background: linear-gradient(to right, #facc15, #facc15);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.startShoppingButton:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.startShoppingButton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(201, 168, 76, 0.08), rgba(201, 168, 76, 0.04));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.startShoppingButton:hover::after {
+  transform: scaleX(1);
+}
+
+.floatingActionButton {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 50;
+}
+
+.fabButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(to right, #c9a84c, #e8c96b);
+  border-radius: 50%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.fabButton:hover {
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}
+
+.fabIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #ffffff;
+}
+
+.fabButton:hover .fabIcon {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(360deg);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #e8c96b, #a8832a);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #c9a84c, #a8832a);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Performance optimizations */
+* {
+  will-change: auto;
+}
+
+.group:hover * {
+  will-change: transform;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .animateFadeInLeft,
+  .animateFadeInRight {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+}
+
+
+
+
+
+/* ============================================
+   About Us Section — Enhanced Creative Design
+   ============================================ */
+.aboutSection {
+  position: relative;
+  padding: 7rem 1.5rem;
+  background: linear-gradient(135deg, #0e0e0e 0%, #141414 40%, #1a1a1a 70%, #0e0e0e 100%);
+  overflow: hidden;
+}
+
+.aboutPatternOverlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 15% 30%, rgba(180, 83, 9, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 85% 70%, rgba(4, 120, 87, 0.15) 0%, transparent 45%),
+    radial-gradient(circle at 50% 10%, rgba(250, 204, 21, 0.07) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.aboutContainer {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.aboutSplitLayout {
+  display: grid;
+  gap: 0;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 1024px) {
+  .aboutSplitLayout {
+    grid-template-columns: 380px 1fr;
+  }
+}
+
+/* Left: Identity Panel */
+.aboutIdentityPanel {
+  background: linear-gradient(160deg, #c9a84c, #a8832a 50%, #0e0e0e);
+  padding: 3.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.aboutIdentityPanel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255,255,255,0.03) 0px,
+    rgba(255,255,255,0.03) 1px,
+    transparent 1px,
+    transparent 12px
+  );
+}
+
+.aboutYearStamp {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 9rem;
+  height: 9rem;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.aboutYearStamp::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 1px dashed rgba(250, 204, 21, 0.5);
+  animation: drift 20s linear infinite;
+}
+
+.aboutYearNumber {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #e8c96b;
+  line-height: 1;
+  font-family: Georgia, serif;
+  letter-spacing: -1px;
+}
+
+.aboutYearLabel {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 0.25rem;
+}
+
+.aboutLogoBlock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.aboutBuildingIcon {
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.9);
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+.aboutCompanyName {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #e8c96b;
+  font-family: Georgia, serif;
+  font-style: italic;
+  line-height: 1.2;
+}
+
+.aboutCompanyFullName {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
+  max-width: 260px;
+}
+
+.aboutOwnerTag {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  text-align: left;
+  width: 100%;
+}
+
+.aboutOwnerIcon {
+  font-size: 1.5rem;
+  color: #e8c96b;
+  flex-shrink: 0;
+}
+
+.aboutOwnerLabel {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.aboutOwnerName {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Right: Details Panel */
+.aboutDetailsPanel {
+  background: rgba(20, 20, 20, 0.98);
+  padding: 3.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.75rem;
+}
+
+.aboutBadgeRow {
+  display: flex;
+}
+
+.aboutSectionBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  background: linear-gradient(to right, rgba(201,168,76,0.15), rgba(201,168,76,0.08));
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  border-radius: 9999px;
+  color: #c9a84c;
+}
+
+.aboutSectionTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.aboutTitleAccent {
+  background: linear-gradient(to right, #c9a84c, #a8832a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.aboutParagraph {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #8a8070;
+  margin: 0;
+}
+
+/* Credentials */
+.credentialsGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .credentialsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.credentialCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1.1rem;
+  border-radius: 0.875rem;
+  background: linear-gradient(135deg, #1a1a1a, #141414);
+  border: 1px solid rgba(201, 168, 76, 0.12);
+  transition: all 0.3s;
+}
+
+.credentialCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(201, 168, 76, 0.15);
+  border-color: rgba(201, 168, 76, 0.4);
+}
+
+.credentialIconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: linear-gradient(135deg, #c9a84c, #a8832a);
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+
+.credentialIcon {
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.credentialText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.credentialTitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.credentialSub {
+  font-size: 0.72rem;
+  color: #6b6050;
+}
+
+/* ============================================
+   Top Clients Section — Enhanced Creative Design
+   (Uses the dark background color from reviewsSection)
+   ============================================ */
+.topClientsSection {
+  position: relative;
+  padding: 7rem 1.5rem;
+  background: linear-gradient(to right, #0e0e0e, #1a1a1a);
+  overflow: hidden;
+}
+
+.clientsPatternBg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(250, 204, 21, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(124, 45, 18, 0.4) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.topClientsContainer {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+/* Clients Header Row */
+.clientsHeaderRow {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .clientsHeaderRow {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.clientsHeaderLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.clientsSectionBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 9999px;
+  color: rgba(255, 255, 255, 0.85);
+  width: fit-content;
+}
+
+.clientsSectionTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.1;
+}
+
+@media (min-width: 1024px) {
+  .clientsSectionTitle {
+    font-size: 3.5rem;
+  }
+}
+
+.clientsTitleGold {
+  background: linear-gradient(to right, #e8c96b, #c9a84c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.clientsHeaderRight {
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+  .clientsHeaderRight {
+    align-items: flex-end;
+    text-align: right;
+  }
+}
+
+.clientsHeaderDesc {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.clientsYearsBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  background: linear-gradient(135deg, #c9a84c, #a8832a);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 15px rgba(201, 168, 76, 0.4);
+}
+
+.clientsYearsNum {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #e8c96b;
+  line-height: 1;
+}
+
+.clientsYearsText {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Clients Showcase Grid */
+.clientsShowcase {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.clientShowcaseCard {
+  position: relative;
+  padding: 2rem 1.5rem;
+  border-radius: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+  cursor: default;
+}
+
+.clientShowcaseCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1.25rem;
+  opacity: 0;
+  transition: opacity 0.35s;
+  background: linear-gradient(135deg, rgba(250, 204, 21, 0.12), transparent);
+}
+
+.clientShowcaseCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.clientShowcaseCard:hover::before {
+  opacity: 1;
+}
+
+.clientCardEven {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(10px);
+}
+
+.clientCardOdd {
+  background: rgba(180, 83, 9, 0.18);
+  border: 1px solid rgba(250, 204, 21, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.clientCardNumber {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.875rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: rgba(250, 204, 21, 0.4);
+  letter-spacing: 0.05em;
+  font-family: Georgia, serif;
+}
+
+.clientIconLarge {
+  font-size: 2.75rem;
+  color: #e8c96b;
+  filter: drop-shadow(0 4px 8px rgba(250, 204, 21, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.clientShowcaseCard:hover .clientIconLarge {
+  transform: scale(1.15);
+}
+
+.clientShowcaseName {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.clientCardAccentLine {
+  width: 2.5rem;
+  height: 2px;
+  background: linear-gradient(to right, #facc15, transparent);
+  border-radius: 1px;
+  transition: width 0.35s ease;
+}
+
+.clientShowcaseCard:hover .clientCardAccentLine {
+  width: 4rem;
+}
+
+.clientsNote {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+  letter-spacing: 0.03em;
+}

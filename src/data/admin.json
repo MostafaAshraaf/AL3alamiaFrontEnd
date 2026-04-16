@@ -1,0 +1,22 @@
+[
+  {
+    "id": "admin",
+    "username": "مصطفى 👌",
+    "email": "mostafa@gmail.com",
+    "password": "123456",
+    "age": 23,
+    "specialty": "Admin",
+    "role": "admin",
+    "phoneNumber": "01016561539"
+  },
+  {
+    "id": "admin",
+    "username": "أحمد👌",
+    "email": "ahmed@gmail.com",
+    "password": "123456",
+    "age": 23,
+    "specialty": "Admin",
+    "role": "admin",
+    "phoneNumber": "01114939714"
+  }
+]

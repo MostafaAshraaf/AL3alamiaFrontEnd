@@ -1,0 +1,27 @@
+[
+  {
+    "id": "0d64",
+    "username": "Mostafa",
+    "email": "mostafa.asiwy@gmail.com",
+    "password": "123456",
+    "phoneNumber": "0114003012",
+    "age": 20,
+    "gender": "male",
+    "role": "client",
+    "address": "",
+    "cartInfo": {
+      "cart": [],
+      "isEmpty": true,
+      "totalPrice": 0
+    },
+    "billsHistory": [],
+    "cardNumber": "",
+    "cardExpiry": "",
+    "cardCVC": "",
+    "cardHolder": "",
+    "bannInfo": {
+      "isBanned": false,
+      "reason": ""
+    }
+  }
+]
