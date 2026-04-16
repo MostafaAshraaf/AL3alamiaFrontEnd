@@ -5,14 +5,14 @@ import { getStorage } from "firebase/storage";
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
-  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
+  apiKey: "AIzaSyClQKlYDXUfuesJBkkhEmiKQ9s6N7OLnhE",
+  authDomain: "al3alamia-backend.firebaseapp.com",
+  databaseURL: "https://al3alamia-backend-default-rtdb.firebaseio.com",
+  projectId: "al3alamia-backend",
+  storageBucket: "al3alamia-backend.firebasestorage.app",
+  messagingSenderId: "936036307358",
+  appId: "1:936036307358:web:1c90d5b0e9719e8f6cc68f",
+  measurementId: "G-D8F3NCXVWK",
 };
 
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
