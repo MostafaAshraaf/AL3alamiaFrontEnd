@@ -50,9 +50,9 @@ const addBillToUserHistory = async ({ userId, newBill }) => {
       createdAt: new Date().toISOString(),
     };
 
-    let updatedCart = userData.cartInfo || { cart: [], isEmpty: true, totalPrice: 0 };
+    let updatedCart = userData.cartInfo || { cart: [], isEmpty: true };
     if (newBill.paymentMethod === "WhatsApp" || newBill.clearCart) {
-      updatedCart = { cart: [], isEmpty: true, totalPrice: 0 };
+      updatedCart = { cart: [], isEmpty: true};
     }
 
     const updates = {};
