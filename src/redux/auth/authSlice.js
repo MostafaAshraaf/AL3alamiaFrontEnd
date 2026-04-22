@@ -32,7 +32,6 @@ const authSlice = createSlice({
         state.user.cartInfo = {
           cart: [],
           isEmpty: true,
-          totalPrice: 0,
         };
       }
     },
