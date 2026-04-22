@@ -29,21 +29,7 @@ function Cart() {
   const productsData = productsQuery.data;
 
 
-  const calculateDiscounts = () => {
-    let discount = 0;
-    let discountType = "";
-    if (appliedDiscount) {
-      discount += cartData.totalPrice * 0.2;
-      discountType = appliedDiscount === "INK20" ? t("discountCodeINK20") : t("discountCodeTECH15");
-    }
-    return {
-      amount: discount,
-      type: discountType,
-      finalPrice: cartData.totalPrice - discount,
-    };
-  };
 
-  const discounts = calculateDiscounts();
 
   const applyDiscountCode = () => {
     if (discountCode === "INK20" || discountCode === "TECH15") {
@@ -112,15 +98,12 @@ function Cart() {
         id: item.product.id || item.product.fireId,
         img: item.product.image || item.product.url,
         title: item.product.name,
-        price: item.product.price,
         quantity: item.quantity,
       })),
-      totalPrice: discounts.finalPrice,
       orderDate: new Date().toISOString(),
       location: customerAddress,
       paymentMethod: "WhatsApp",
       status: "pending",
-      discount: discounts.amount > 0 ? discounts : null,
     };
   };
 
@@ -146,19 +129,9 @@ function Cart() {
         });
         message += `   📦 ${t("totalAccessories")}: ${getTotalSelectedAccessories()}\n`;
       }
-      message += `   💰 ${t("price")}: ${item.product.price} ${t("EGP")}\n`;
       message += `   🔢 ${t("quantity")}: ${item.quantity}\n`;
-      message += `   💎 ${t("subtotal")}: ${(
-        item.product.price * item.quantity
-      ).toFixed(2)} ${t("EGP")}\n\n`;
     });
 
-    if (discounts.amount > 0) {
-      message += `🎫 *${t("discountApplied")}:* ${discounts.type}\n`;
-      message += `💰 *${t("discountAmount")}:* -${discounts.amount.toFixed(2)} ${t("EGP")}\n\n`;
-    }
-
-    message += `💳 *${t("orderTotal")}:* ${discounts.finalPrice.toFixed(2)} ${t("EGP")}\n\n`;
     message += `✨ ${t("thankYouForChoosingUs")} ✨`;
     return encodeURIComponent(message);
   };
@@ -257,59 +230,6 @@ function Cart() {
                 <div className={styles.cartSummary}>
                   <div className={styles.summaryCard}>
                     <h3 className={styles.summaryTitle}>{t("orderSummary")}</h3>
-                    <div className={styles.summaryDetails}>
-                      <div className={styles.summaryRow}>
-                        <span>{t("subtotal")}</span>
-                        <span>{cartData.totalPrice} {t("EGP")}</span>
-                      </div>
-                      <div className={styles.discountSection}>
-                        <div className={styles.discountInput}>
-                          <input
-                            type="text"
-                            placeholder={t("enterDiscountCodePlaceholder")}
-                            value={discountCode}
-                            onChange={(e) => setDiscountCode(e.target.value)}
-                            disabled={appliedDiscount !== null}
-                          />
-                          {appliedDiscount ? (
-                            <button
-                              className={styles.removeDiscountBtn}
-                              onClick={removeDiscountCode}
-                            >
-                              {t("removeDiscount")}
-                            </button>
-                          ) : (
-                            <button
-                              className={styles.applyDiscountBtn}
-                              onClick={applyDiscountCode}
-                            >
-                              {t("applyDiscount")}
-                            </button>
-                          )}
-                        </div>
-                        {appliedDiscount && (
-                          <div className={styles.discountApplied}>
-                            {t("discountCodeApplied", { code: appliedDiscount })}
-                          </div>
-                        )}
-                      </div>
-                      {discounts.amount > 0 && (
-                        <>
-                          <div className={styles.summaryRow}>
-                            <span>{t("discounts")}</span>
-                            <span className={styles.discount}>
-                              -{discounts.amount.toFixed(2)} {t("EGP")}
-                            </span>
-                          </div>
-                          <div className={styles.discountNote}>{discounts.type}</div>
-                        </>
-                      )}
-                      <div className={styles.summaryDivider}></div>
-                      <div className={`${styles.summaryRow} ${styles.total}`}>
-                        <span>{t("total")}</span>
-                        <span>{discounts.finalPrice.toFixed(2)} {t("EGP")}</span>
-                      </div>
-                    </div>
                     <div className={styles.actionButtons}>
                       <button
                         className={styles.buyAllBtn}
@@ -362,28 +282,8 @@ function Cart() {
                 {cartData.cart.map((item) => (
                   <div key={item.product.id || item.product.fireId} className={styles.orderItem}>
                     <span className={styles.itemName}>{item.product.name}</span>
-                    <span className={styles.itemDetails}>
-                      {item.product.price} {t("EGP")} × {item.quantity} ={" "}
-                      {(item.product.price * item.quantity).toFixed(2)} {t("EGP")}
-                    </span>
                   </div>
                 ))}
-                {discounts.amount > 0 && (
-                  <>
-                    <div className={styles.orderItem}>
-                      <span className={styles.itemName}>{t("discount")}</span>
-                      <span className={styles.itemDetails}>
-                        -{discounts.amount.toFixed(2)} {t("EGP")}
-                      </span>
-                    </div>
-                    <div className={styles.discountNoteModal}>{discounts.type}</div>
-                  </>
-                )}
-                <div className={styles.orderTotal}>
-                  <strong>
-                    {t("total")}: {discounts.finalPrice.toFixed(2)} {t("EGP")}
-                  </strong>
-                </div>
               </div>
               <div className={styles.whatsappSection}>
                 <p>📱 {t("selectWhatsAppNumberToSendOrder")}:</p>
