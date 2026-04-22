@@ -1,11 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { loginMessage, errorMessage } from "../toasts";
-import {
-  loginApi,
-  signUpApi,
-  logoutApi,
-  updateUserDataApi,
-} from "./authApis";
+import { loginMessage } from "../toasts";
+import { loginApi, signUpApi, logoutApi, updateUserDataApi } from "./authApis";
 
 const initialState = {
   user: null,
@@ -43,8 +38,6 @@ const authSlice = createSlice({
     },
     // Called on app initialization to restore session from localStorage
     restoreSession: (state, action) => {
-      // Note: actual auth state comes from Firebase onAuthStateChanged
-      // This is just for loading stored user metadata
       const stored = action.payload;
       if (stored) {
         state.user = stored;
@@ -102,7 +95,7 @@ const authSlice = createSlice({
       })
       .addCase(updateUserDataApi.fulfilled, (state, action) => {
         state.loading = false;
-        state.user = action.payload;
+        state.user = { ...state.user, ...action.payload }; // ✅ Merge, don't replace
         loginMessage("Profile updated successfully");
       })
       .addCase(updateUserDataApi.rejected, (state, action) => {
@@ -112,11 +105,6 @@ const authSlice = createSlice({
   },
 });
 
-export const {
-  clearError,
-  logout,
-  updateCart,
-  clearCart,
-  restoreSession,
-} = authSlice.actions;
+export const { clearError, logout, updateCart, clearCart, restoreSession } =
+  authSlice.actions;
 export default authSlice.reducer;
