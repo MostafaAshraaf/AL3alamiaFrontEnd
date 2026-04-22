@@ -5,7 +5,7 @@ import styles from "./cart.module.css";
 import { useNavigate } from "react-router-dom";
 import { CartOperationsApi } from "../../redux/auth/authApis";
 import { useProducts } from "../../redux/products/productsApis";
-import { useAddBillToUserHistory, useUserBillsHistory } from "../../redux/bills/billsApi";
+import { useAddBillToUserHistory } from "../../redux/bills/billsApi";
 import { successMessage, errorMessage } from "../../redux/toasts";
 import { useTranslation } from "react-i18next";
 
@@ -24,20 +24,14 @@ function Cart() {
 
   const userId = user?.uid;
   const { mutate: addBill, isLoading: isAddingBill } = useAddBillToUserHistory(userId);
-  const { data: bills = [] } = useUserBillsHistory(userId);
 
   const productsQuery = useProducts();
   const productsData = productsQuery.data;
 
-  const isFirstOrder = bills.length === 0;
 
   const calculateDiscounts = () => {
     let discount = 0;
     let discountType = "";
-    if (isFirstOrder) {
-      discount += cartData.totalPrice * 0.1;
-      discountType = t("firstOrderDiscount10");
-    }
     if (appliedDiscount) {
       discount += cartData.totalPrice * 0.2;
       discountType = appliedDiscount === "INK20" ? t("discountCodeINK20") : t("discountCodeTECH15");
@@ -315,11 +309,6 @@ function Cart() {
                         <span>{t("total")}</span>
                         <span>{discounts.finalPrice.toFixed(2)} {t("EGP")}</span>
                       </div>
-                      {isFirstOrder && !appliedDiscount && (
-                        <div className={styles.firstOrderNote}>
-                          🎉 {t("youQualifyForFirstOrderDiscount")}
-                        </div>
-                      )}
                     </div>
                     <div className={styles.actionButtons}>
                       <button
