@@ -44,7 +44,7 @@ function Market() {
     cards: shuffledCards,
     type: "market",
   };
-
+  
   if (role === "admin") return <Navigate to="/unauthorized" />;
 
   return (
