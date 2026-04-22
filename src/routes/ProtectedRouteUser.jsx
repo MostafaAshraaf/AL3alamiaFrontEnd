@@ -1,3 +1,4 @@
+// ProtectedRouteUser.jsx (updated)
 import { useSelector } from "react-redux";
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 
@@ -16,6 +17,11 @@ const ProtectedRouteUser = () => {
 
   if (!isAuthenticated) {
     return <Navigate to="/login" state={{ from: location }} replace />;
+  }
+
+  // 🔐 NEW: Check email verification
+  if (!user?.emailVerified) {
+    return <Navigate to="/verify-email" replace />;
   }
 
   // Ensure user is client; admins should not access client routes
