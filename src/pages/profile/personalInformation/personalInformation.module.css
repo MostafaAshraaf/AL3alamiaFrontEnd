@@ -24,7 +24,7 @@
 }
 
 .avatarContainer::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 5px;
   right: 5px;
@@ -89,7 +89,9 @@
   font-weight: 500;
   border: 1px solid rgba(255, 255, 255, 0.08);
   cursor: pointer;
-  transition: background-color 0.2s, border-color 0.2s;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
 }
 
 .editBtn:hover {
@@ -116,7 +118,9 @@
   font-weight: 600;
   border: none;
   cursor: pointer;
-  transition: opacity 0.2s, box-shadow 0.2s;
+  transition:
+    opacity 0.2s,
+    box-shadow 0.2s;
 }
 
 .saveBtn:hover {
@@ -158,7 +162,9 @@
   padding: 20px;
   text-align: center;
   border-radius: 14px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   border: 1px solid rgba(201, 168, 76, 0.1);
 }
 
@@ -168,15 +174,27 @@
 }
 
 .statBlue {
-  background: linear-gradient(135deg, rgba(201, 168, 76, 0.1) 0%, rgba(201, 168, 76, 0.06) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(201, 168, 76, 0.1) 0%,
+    rgba(201, 168, 76, 0.06) 100%
+  );
 }
 
 .statIndigo {
-  background: linear-gradient(135deg, rgba(232, 201, 107, 0.1) 0%, rgba(168, 131, 42, 0.06) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(232, 201, 107, 0.1) 0%,
+    rgba(168, 131, 42, 0.06) 100%
+  );
 }
 
 .statAmber {
-  background: linear-gradient(135deg, rgba(201, 168, 76, 0.15) 0%, rgba(232, 201, 107, 0.08) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(201, 168, 76, 0.15) 0%,
+    rgba(232, 201, 107, 0.08) 100%
+  );
 }
 
 .statNumber {
@@ -250,7 +268,9 @@
   font-size: 14px;
   background-color: rgba(255, 255, 255, 0.04);
   color: #f4f0e8;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
 }
 
 .input:focus {
@@ -298,7 +318,9 @@
   font-weight: 600;
   border: none;
   cursor: pointer;
-  transition: opacity 0.2s, box-shadow 0.2s;
+  transition:
+    opacity 0.2s,
+    box-shadow 0.2s;
 }
 
 .updateBtn:hover {
@@ -511,4 +533,10 @@
   .passwordToggle {
     right: 8px;
   }
+}
+
+.badgeActive {
+  background-color: rgba(76, 175, 80, 0.15);
+  color: #81c784;
+  border: 1px solid rgba(76, 175, 80, 0.3);
 }
