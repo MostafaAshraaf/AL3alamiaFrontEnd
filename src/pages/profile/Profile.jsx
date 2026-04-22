@@ -1,3 +1,4 @@
+// Profile.jsx
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import PersonalInformation from './personalInformation/PersonalInformation';
@@ -6,12 +7,21 @@ import styles from './profile.module.css';
 
 const Profile = () => {
   const [activeSection] = useState('profile');
-  const { user, isAuthenticated } = useSelector(state => state.auth);
+  const { user, isAuthenticated, loading } = useSelector(state => state.auth);
 
-  // إذا لم تكن البيانات قد وصلت بعد، اظهر رسالة تحميل بدل الشاشة البيضاء
-  if (!user) {
-    return <div className={styles.container}>Loading User Data...</div>;
+  if (loading || !user) {
+    return (
+      <div className={styles.container}>
+        <div className={styles.loadingWrapper}>
+          <div className={styles.spinner} />
+          <p>Loading profile...</p>
+        </div>
+      </div>
+    );
   }
+
+  // Use displayName from Firebase; fallback to email or "User"
+  const displayName = user.displayName || user.email?.split('@')[0] || 'User';
 
   return (
     <div className={styles.container}>
@@ -19,23 +29,15 @@ const Profile = () => {
         <div className={styles.header}>
           <div className={styles.headerLeft}>
             <h2 className={styles.headerTitle}>
-              {isAuthenticated ? `${user.username}'s Profile` : 'User Profile'}
+              {isAuthenticated ? `${displayName}'s Profile` : 'User Profile'}
             </h2>
+            <p className={styles.headerSubtitle}>Manage your personal information and preferences</p>
           </div>
         </div>
 
         <div className={styles.contentArea}>
-          {(() => {
-            switch (activeSection) {
-              case 'profile':
-                // نمرر اليوزر كـ prop للتأكد من وصوله
-                return <PersonalInformation user={user} />;
-              case 'invoices':
-                return <Invoices user={user} />;
-              default:
-                return <PersonalInformation user={user} />;
-            }
-          })()}
+          {activeSection === 'profile' && <PersonalInformation />}
+          {activeSection === 'invoices' && <Invoices />}
         </div>
       </div>
     </div>
