@@ -28,14 +28,15 @@ function Login() {
       const user = { email: values.email, password: values.password };
       const response = await dispatch(loginApi(user)).unwrap();
 
-      console.log("Logged in user:", response.user); // تأكد أن الـ role موجود هنا
+      const loggedInUser = response.user;
 
-      if (!response.user || !response.user.role) {
-        console.error("Role is missing in response!");
+      // 🔐 Check email verification
+      if (!loggedInUser.emailVerified) {
+        navigate("/verify-email");
         return;
       }
 
-      switch (response.user.role) {
+      switch (loggedInUser.role) {
         case "client":
           navigate("/profile");
           break;
