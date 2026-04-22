@@ -429,7 +429,7 @@ function CartItem({ data, quantity }) {
                   </button>
                   <button
                     className={styles.whatsappBtn}
-                    onClick={() => handleWhatsAppOrder("201149260444")}
+                    onClick={() => handleWhatsAppOrder("201114939714")}
                     disabled={isAddingBill}
                   >
                     <span className={styles.whatsappIcon}>📱</span>
