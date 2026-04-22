@@ -77,7 +77,6 @@ const ProductInfo = () => {
 
   const {
     name,
-    price,
     description,
     image,
     stock,
@@ -130,26 +129,6 @@ const ProductInfo = () => {
   };
 
   // Render star rating
-  const renderStars = (rating) => {
-    const stars = [];
-    const fullStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 !== 0;
-
-    for (let i = 0; i < fullStars; i++) {
-      stars.push(<FaStar key={i} className={styles.star} />);
-    }
-
-    if (hasHalfStar) {
-      stars.push(<FaStarHalfAlt key="half" className={styles.star} />);
-    }
-
-    const emptyStars = 5 - Math.ceil(rating);
-    for (let i = 0; i < emptyStars; i++) {
-      stars.push(<FaStar key={`empty-${i}`} className={styles.emptyStar} />);
-    }
-
-    return stars;
-  };
 
   const fieldsToDisplay = [
     { label: t("productName"), value: name },
@@ -278,7 +257,7 @@ const ProductInfo = () => {
             )} */}
             <div className={styles.priceContainer}>
               <div className={styles.price}>
-                {price} {t("EGP")}
+                {t("Available")}
               </div>
               <button
                 className={`${styles.button} ${
