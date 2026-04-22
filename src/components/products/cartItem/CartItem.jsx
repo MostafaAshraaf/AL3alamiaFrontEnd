@@ -11,7 +11,7 @@ import { useAddBillToUserHistory } from "../../../redux/bills/billsApi";
 
 function CartItem({ data, quantity }) {
   const { t } = useTranslation();
-  const { id, fireId, name, price, image, productType } = data;
+  const { id, fireId, name, image, productType } = data;
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector((state) => state?.auth?.user);
@@ -118,11 +118,9 @@ function CartItem({ data, quantity }) {
           id: id || fireId,
           img: image,
           title: name,
-          price: price,
           quantity: quantity,
         },
       ],
-      totalPrice: price * quantity,
       orderDate: new Date().toISOString(),
       location: customerAddress,
       paymentMethod: "WhatsApp",
@@ -148,9 +146,7 @@ function CartItem({ data, quantity }) {
       });
       message += `   📦 ${t("totalAccessories")}: ${getTotalSelectedAccessories()}\n`;
     }
-    message += `💰 ${t("price")}: ${price} ${t("EGP")}\n`;
     message += `🔢 ${t("quantity")}: ${quantity}\n`;
-    message += `💎 ${t("total")}: ${(price * quantity).toFixed(2)} ${t("EGP")}\n\n`;
     message += `📞 *${t("contactInfo")}:*\n`;
     message += `   ${t("name")}: ${customerName}\n`;
     message += `   ${t("address")}: ${customerAddress}\n\n`;
@@ -229,11 +225,6 @@ function CartItem({ data, quantity }) {
             </button>
           </div>
 
-          <div className={styles.priceSection}>
-            <span className={styles.priceLabel}>{t("unitPrice")}</span>
-            <span className={styles.unitPrice}>{price} {t("EGP")}</span>
-          </div>
-
           <div className={styles.quantitySection}>
             <span className={styles.quantityLabel}>{t("quantity")}</span>
             <div className={styles.quantityControls}>
@@ -251,12 +242,6 @@ function CartItem({ data, quantity }) {
             </div>
           </div>
 
-          <div className={styles.totalSection}>
-            <span className={styles.totalLabel}>{t("subtotal")}</span>
-            <span className={styles.totalPrice}>
-              {(price * quantity).toFixed(2)} {t("EGP")}
-            </span>
-          </div>
 
           <div className={styles.actionButtons}>
             <button className={styles.buyNowBtn} onClick={buyHandler} disabled={isAddingBill}>
@@ -384,9 +369,6 @@ function CartItem({ data, quantity }) {
                     <span className={styles.itemName}>{name}</span>
                     <span className={styles.itemType}>{productType}</span>
                   </div>
-                  <span className={styles.itemDetails}>
-                    {price} {t("EGP")} × {quantity} = {(price * quantity).toFixed(2)} {t("EGP")}
-                  </span>
                 </div>
                 {isComboProduct() && Object.keys(selectedAccessories).length > 0 && (
                   <div className={styles.selectedAccessoriesDisplay}>
@@ -410,11 +392,6 @@ function CartItem({ data, quantity }) {
                     </div>
                   </div>
                 )}
-                <div className={styles.orderTotal}>
-                  <strong>
-                    {t("total")}: {(price * quantity).toFixed(2)} {t("EGP")}
-                  </strong>
-                </div>
               </div>
               <div className={styles.whatsappSection}>
                 <p>📱 {t("selectWhatsAppNumberToSendOrder")}:</p>
