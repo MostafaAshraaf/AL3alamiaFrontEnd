@@ -21,9 +21,7 @@ function getTotalBillsSum(users) {
 
 const PersonalInformation = () => {
   const authData = useSelector((state) => state?.auth?.user);
-  console.log(authData);
 
-  // const { data: doctors } = useDoctors();
 
   const [total, setTotal] = useState(0);
 
@@ -31,7 +29,6 @@ const PersonalInformation = () => {
 
   useEffect(() => {
     if (data) {
-      console.log(data);
       const theTotal = getTotalBillsSum(data);
       setTotal(theTotal);
     }
