@@ -1,7 +1,6 @@
-// Header.jsx
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import styles from "./header.module.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutApi } from "../../../redux/auth/authApis";
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -36,17 +35,10 @@ function Header() {
     setActiveMenu((prev) => !prev);
     setActiveCart(false);
     setActiveAuthMenu(false);
-    // Prevent body scroll when menu is open on mobile
-    if (!activeMenu) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
   };
 
   const toggleCart = () => {
     navigate("/cart");
-    toggleAll();
   };
 
   const toggleAuthMenu = () => {
@@ -59,30 +51,7 @@ function Header() {
     setActiveAuthMenu(false);
     setActiveCart(false);
     setActiveMenu(false);
-    document.body.style.overflow = '';
   };
-
-  // Close menus on ESC key
-  useEffect(() => {
-    const handleEsc = (e) => {
-      if (e.key === 'Escape') {
-        toggleAll();
-      }
-    };
-    window.addEventListener('keydown', handleEsc);
-    return () => window.removeEventListener('keydown', handleEsc);
-  }, []);
-
-  // Close mobile menu on window resize (if screen becomes desktop)
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024 && activeMenu) {
-        toggleAll();
-      }
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [activeMenu]);
 
   const handleProfileButton = () => {
     toggleAll();
@@ -113,7 +82,7 @@ function Header() {
     <header className={`${styles.header}`}>
       <div
         onClick={toggleAll}
-        className={`${styles.overlay} ${activeMenu || activeCart || activeAuthMenu ? styles.active : ""}`}
+        className={`overlay ${activeMenu || activeCart || activeAuthMenu ? `active ${styles.active}` : ""}`}
       ></div>
       <div className={`container ${styles.container} ${authData?.isAuthenticated ? styles.isAuth : ""}`}>
         <nav className={styles.nav}>
@@ -135,7 +104,7 @@ function Header() {
             )}
           </ul>
 
-          <div className={styles.headerRight}>
+          <div className={styles.headerAuthContainer}>
             <div className={styles.languageSwitcher}>
               <button
                 onClick={() => changeLang(i18n.language === "en" ? "ar" : "en")}
@@ -166,11 +135,9 @@ function Header() {
             <div className={styles.headerAuth}>
               <button onClick={toggleAuthMenu}>
                 {authData?.isAuthenticated ? (
-                  <span className={styles.userGreeting}>
-                    <span className={styles.label}>{t("hi")}</span>
-                    <span className={styles.userName}>
-                      {user?.displayName || user?.fullname || "User"}
-                    </span>
+                  <span>
+                    <span className={styles.label}>{t("hi")}</span>{" "}
+                    {user?.displayName || user?.fullname || "User"}
                   </span>
                 ) : (
                   t("account")
@@ -208,17 +175,16 @@ function Header() {
                 )}
               </ul>
             </div>
-
-            <button
-              onClick={toggleMenu}
-              className={`${styles.ul_icon} ${activeMenu ? styles.active : ""}`}
-              aria-label="Menu"
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
           </div>
+
+          <button
+            onClick={toggleMenu}
+            className={`${styles.ul_icon} ${activeMenu ? styles.active : ""}`}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </nav>
       </div>
     </header>
