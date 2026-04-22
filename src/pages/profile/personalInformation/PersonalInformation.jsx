@@ -1,3 +1,4 @@
+// PersonalInformation.jsx
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./personalInformation.module.css";
@@ -5,39 +6,34 @@ import { updateUserDataApi } from "../../../redux/auth/authApis";
 import image from "../../../assets/user.png";
 
 const PersonalInformation = () => {
-  const authData = useSelector((state) => state.auth);
-  const user = authData?.user;
   const dispatch = useDispatch();
+  const user = useSelector((state) => state.auth.user);
 
   const [isEditing, setIsEditing] = useState(false);
-  
-  // الحالة الابتدائية للبيانات
   const [formData, setFormData] = useState({
-    username: "",
+    displayName: "",
     age: "",
-    phone: "",
+    phoneNumber: "",
     address: "",
-    email: ""
+    email: "",
   });
-  
   const [tempFormData, setTempFormData] = useState(formData);
+  const [updateLoading, setUpdateLoading] = useState(false);
 
-  // تحديث البيانات عند تحميل المستخدم أو تغيره
+  // Load user data when available
   useEffect(() => {
-    // التحقق من وجود user أولاً لمنع خطأ الـ null
     if (user) {
       const newFormData = {
-        username: user.username || "",
+        displayName: user.displayName || "",
         email: user.email || "",
         age: user.age || "",
-        // نستخدم phoneNumber لأن هذا هو المسمى في ملف الـ JSON الخاص بك
-        phone: user.phoneNumber || "", 
+        phoneNumber: user.phoneNumber || "",
         address: user.address || "",
       };
       setFormData(newFormData);
       setTempFormData(newFormData);
     }
-  }, [user]); // نعتمد على كائن الـ user بالكامل
+  }, [user]);
 
   const handleEditClick = () => {
     setIsEditing(true);
@@ -52,11 +48,17 @@ const PersonalInformation = () => {
     }));
   };
 
-  const handleSave = () => {
-    setFormData(tempFormData);
-    setIsEditing(false);
-    // إرسال التحديث للـ API
-    dispatch(updateUserDataApi(tempFormData));
+  const handleSave = async () => {
+    setUpdateLoading(true);
+    try {
+      await dispatch(updateUserDataApi(tempFormData)).unwrap();
+      setFormData(tempFormData);
+      setIsEditing(false);
+    } catch (error) {
+      console.error("Update failed:", error);
+    } finally {
+      setUpdateLoading(false);
+    }
   };
 
   const handleCancel = () => {
@@ -64,11 +66,11 @@ const PersonalInformation = () => {
     setIsEditing(false);
   };
 
-  // حماية إضافية: إذا لم تكن البيانات جاهزة اظهر مؤشر تحميل بسيط
   if (!user) {
-    return <div className={styles.loading}>Loading...</div>;
+    return <div className={styles.loading}>Loading user data...</div>;
   }
 
+  const firstName = formData.displayName?.split(" ")[0] || "User";
   return (
     <div className={styles.container}>
       <div className={styles.mainSection}>
@@ -78,19 +80,29 @@ const PersonalInformation = () => {
               <img src={image} alt="Profile" className={styles.avatar} />
             </div>
             <div className={styles.profileInfo}>
-              <h3 className={styles.profileName}>
-                {formData.username ? formData.username.split(" ")[0] : "-"}
-              </h3>
+              <h3 className={styles.profileName}>{firstName}</h3>
               <p className={styles.profileEmail}>{formData.email || "-"}</p>
-              <p className={styles.profilePhone}>{formData.phone || "-"}</p>
+              <p className={styles.profilePhone}>
+                {formData.phoneNumber || "-"}
+              </p>
               <div className={styles.badges}>
                 <span className={styles.badge}>Premium Member</span>
+                {user.emailVerified && (
+                  <span className={`${styles.badge} ${styles.badgeActive}`}>
+                    ✓ Verified
+                  </span>
+                )}
               </div>
-              
+
               {isEditing ? (
                 <div className={styles.editButtons}>
-                  <button className={styles.saveBtn} onClick={handleSave}>
-                    <i className="fas fa-save"></i> Save
+                  <button
+                    className={styles.saveBtn}
+                    onClick={handleSave}
+                    disabled={updateLoading}
+                  >
+                    <i className="fas fa-save"></i>{" "}
+                    {updateLoading ? "Saving..." : "Save"}
                   </button>
                   <button className={styles.cancelBtn} onClick={handleCancel}>
                     <i className="fas fa-times"></i> Cancel
@@ -111,27 +123,36 @@ const PersonalInformation = () => {
             <div className={styles.infoField}>
               <label className={styles.fieldLabel}>Full Name</label>
               {isEditing ? (
-                <input 
-                  type="text" 
-                  name="username" 
-                  value={tempFormData.username} 
-                  onChange={handleInputChange} 
-                  className={styles.input} 
+                <input
+                  type="text"
+                  name="displayName"
+                  value={tempFormData.displayName}
+                  onChange={handleInputChange}
+                  className={styles.input}
                 />
               ) : (
-                <div className={styles.fieldValue}>{formData.username || "-"}</div>
+                <div className={styles.fieldValue}>
+                  {formData.displayName || "-"}
+                </div>
               )}
+            </div>
+
+            <div className={styles.infoField}>
+              <label className={styles.fieldLabel}>Email</label>
+              <div className={styles.fieldValue}>{formData.email}</div>
             </div>
 
             <div className={styles.infoField}>
               <label className={styles.fieldLabel}>Age</label>
               {isEditing ? (
-                <input 
-                  type="number" 
-                  name="age" 
-                  value={tempFormData.age} 
-                  onChange={handleInputChange} 
-                  className={styles.input} 
+                <input
+                  type="number"
+                  name="age"
+                  value={tempFormData.age}
+                  onChange={handleInputChange}
+                  className={styles.input}
+                  min="13"
+                  max="120"
                 />
               ) : (
                 <div className={styles.fieldValue}>
@@ -143,30 +164,34 @@ const PersonalInformation = () => {
             <div className={styles.infoField}>
               <label className={styles.fieldLabel}>Phone</label>
               {isEditing ? (
-                <input 
-                  type="tel" 
-                  name="phone" 
-                  value={tempFormData.phone} 
-                  onChange={handleInputChange} 
-                  className={styles.input} 
+                <input
+                  type="tel"
+                  name="phoneNumber"
+                  value={tempFormData.phoneNumber}
+                  onChange={handleInputChange}
+                  className={styles.input}
                 />
               ) : (
-                <div className={styles.fieldValue}>{formData.phone || "-"}</div>
+                <div className={styles.fieldValue}>
+                  {formData.phoneNumber || "-"}
+                </div>
               )}
             </div>
 
             <div className={`${styles.infoField} ${styles.fullWidth}`}>
               <label className={styles.fieldLabel}>Address</label>
               {isEditing ? (
-                <input 
-                  type="text" 
-                  name="address" 
-                  value={tempFormData.address} 
-                  onChange={handleInputChange} 
-                  className={styles.input} 
+                <input
+                  type="text"
+                  name="address"
+                  value={tempFormData.address}
+                  onChange={handleInputChange}
+                  className={styles.input}
                 />
               ) : (
-                <div className={styles.fieldValue}>{formData.address || "-"}</div>
+                <div className={styles.fieldValue}>
+                  {formData.address || "-"}
+                </div>
               )}
             </div>
           </div>
