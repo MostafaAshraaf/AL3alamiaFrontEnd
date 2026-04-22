@@ -297,5 +297,11 @@
   "clientCairoUniversity": "Cairo University",
   "clientMinistry": "Other Government Entities",
   "clientsNote": "... and many more government and private institutions",
-  "individualPricingNotice":"The prices shown are for individual users. Companies, institutions and offices have their own separate prices."
+  "individualPricingNotice":"The prices shown are for individual users. Companies, institutions and offices have their own separate prices.",
+  "verifyEmailTitle": "Verify Your Email",
+  "verificationEmailSent": "A verification email has been sent to",
+  "checkInboxAndSpam": "Please check your inbox and spam folder.",
+  "resendVerificationEmail": "Resend Verification Email",
+  "resendIn": "Resend in",
+  "backToLogin": "Back to Login"
 }
