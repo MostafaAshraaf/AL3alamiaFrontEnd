@@ -239,28 +239,7 @@
   font-weight: bold;
 }
 
-/* Price Section */
-.priceSection {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.75rem;
-  background: var(--tech-bg);
-  border-radius: 0.5rem;
-  border: 1px solid var(--border-color);
-}
 
-.priceLabel {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  font-weight: 500;
-}
-
-.unitPrice {
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: var(--primary-light);
-}
 
 /* Quantity Section */
 .quantitySection {
@@ -342,11 +321,7 @@
   font-weight: 600;
 }
 
-.totalPrice {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--primary-light);
-}
+
 
 /* Action Buttons */
 .actionButtons {
@@ -880,11 +855,7 @@
     font-size: 1rem;
   }
   
-  .priceSection,
-  .quantitySection,
-  .totalSection {
-    padding: 0.5rem;
-  }
+
   
   .accessoryGrid {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
