@@ -1,34 +1,214 @@
+/* ── Verify Email — Dark/Gold Theme ── */
+
 .container {
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 60vh;
-  font-family: Arial, sans-serif;
   padding: 2rem;
+  background: #0e0e0e;
+  position: relative;
+  overflow: hidden;
 }
 
-.message {
-  font-size: 1.2rem;
-  color: #333;
+/* Subtle radial glow behind card */
+.container::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(201, 168, 76, 0.08) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.success {
-  color: green;
-  font-weight: bold;
-  font-size: 1.2rem;
-  background-color: #e6ffed;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  border: 1px solid #a1e3b4;
+/* Subtle grid overlay */
+.container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
 }
 
-.error {
-  color: red;
-  font-weight: bold;
-  font-size: 1.2rem;
-  background-color: #ffe6e6;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  border: 1px solid #f5a1a1;
+/* ── Card ── */
+.card {
+  position: relative;
+  z-index: 1;
+  background: #141414;
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  box-shadow:
+    0 0 0 1px rgba(201, 168, 76, 0.05),
+    0 24px 60px rgba(0, 0, 0, 0.6),
+    0 0 80px rgba(201, 168, 76, 0.04);
+  animation: fadeUp 0.6s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Icon Badge ── */
+.iconBadge {
+  width: 72px;
+  height: 72px;
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.15), rgba(232, 201, 107, 0.08));
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
+  position: relative;
+}
+
+.iconBadge::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  animation: ripple 2.5s ease-out infinite;
+}
+
+@keyframes ripple {
+  0%   { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* ── Typography ── */
+.card h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.01em;
+}
+
+.card p {
+  color: #8a8070;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+.card p strong {
+  color: #c9a84c;
+  font-weight: 600;
+}
+
+/* ── Divider ── */
+.divider {
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, #c9a84c, #e8c96b);
+  border-radius: 2px;
+  margin: 1.25rem auto;
+}
+
+/* ── Status badge (polling indicator) ── */
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(201, 168, 76, 0.08);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 50px;
+  padding: 6px 14px;
+  font-size: 0.78rem;
+  color: #c9a84c;
+  margin: 1.25rem 0;
+  letter-spacing: 0.03em;
+}
+
+.statusDot {
+  width: 7px;
+  height: 7px;
+  background: #c9a84c;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(1.4); }
+}
+
+/* ── Buttons ── */
+.resendBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  background: linear-gradient(135deg, #c9a84c, #a8832a);
+  color: #0e0e0e;
+  border: none;
+  padding: 13px 24px;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 1rem 0 0.75rem;
+  transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(201, 168, 76, 0.25);
+  letter-spacing: 0.02em;
+}
+
+.resendBtn:hover:not(:disabled) {
+  opacity: 0.92;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 28px rgba(201, 168, 76, 0.35);
+}
+
+.resendBtn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.resendBtn:disabled {
+  background: #2a2a2a;
+  color: #8a8070;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  color: #c9a84c;
+  padding: 11px 24px;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  letter-spacing: 0.02em;
+}
+
+.backBtn:hover {
+  background: rgba(201, 168, 76, 0.06);
+  border-color: rgba(201, 168, 76, 0.45);
+  transform: translateY(-1px);
 }
