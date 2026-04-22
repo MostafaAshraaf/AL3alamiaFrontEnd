@@ -54,13 +54,14 @@ function App() {
               role: isAdmin ? "admin" : "client",
               emailVerified: firebaseUser.emailVerified,
               createdAt: new Date().toISOString(),
-              cartInfo: { cart: [], isEmpty: true, totalPrice: 0 },
+              cartInfo: { cart: [], isEmpty: true },
               billsHistory: [],
               age: "",
               phoneNumber: "",
               gender: "",
               address: "",
             };
+            
             await set(userRef, userData);
           } else {
             userData = snapshot.val();
@@ -87,7 +88,6 @@ function App() {
               cartInfo: userData.cartInfo || {
                 cart: [],
                 isEmpty: true,
-                totalPrice: 0,
               },
               billsHistory: userData.billsHistory || [],
               age: userData.age || "",
