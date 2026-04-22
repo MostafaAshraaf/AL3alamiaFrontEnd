@@ -37,7 +37,7 @@ export const signUpApi = createAsyncThunk(
         role: "client",
         emailVerified: user.emailVerified, // false initially
         createdAt: new Date().toISOString(),
-        cartInfo: { cart: [], isEmpty: true, totalPrice: 0 },
+        cartInfo: { cart: [], isEmpty: true },
         billsHistory: [],
         ...additionalData,
       };
@@ -119,7 +119,7 @@ export const loginApi = createAsyncThunk(
           displayName: user.displayName || "",
           role: isAdmin ? "admin" : "client",
           createdAt: new Date().toISOString(),
-          cartInfo: { cart: [], isEmpty: true, totalPrice: 0 },
+          cartInfo: { cart: [], isEmpty: true },
           billsHistory: [],
         };
         await set(userRef, defaultUserData);
@@ -143,7 +143,6 @@ export const loginApi = createAsyncThunk(
         cartInfo: userData.cartInfo || {
           cart: [],
           isEmpty: true,
-          totalPrice: 0,
         },
         billsHistory: userData.billsHistory || [],
       };
@@ -196,7 +195,7 @@ export const CartOperationsApi = createAsyncThunk(
       const snapshot = await get(cartRef);
       let cartInfo = snapshot.exists()
         ? snapshot.val()
-        : { cart: [], isEmpty: true, totalPrice: 0 };
+        : { cart: [], isEmpty: true};
 
       if (!cartInfo.cart) cartInfo.cart = [];
 
@@ -213,13 +212,8 @@ export const CartOperationsApi = createAsyncThunk(
             cartInfo.cart.push({
               product: { ...data },
               quantity: 1,
-              priceWhenAdded: data.price,
             });
           }
-          cartInfo.totalPrice = cartInfo.cart.reduce(
-            (sum, item) => sum + item.priceWhenAdded * item.quantity,
-            0,
-          );
           cartInfo.isEmpty = cartInfo.cart.length === 0;
           successMessage("Added to cart");
           break;
@@ -230,10 +224,6 @@ export const CartOperationsApi = createAsyncThunk(
           );
           if (index !== -1) {
             cartInfo.cart.splice(index, 1);
-            cartInfo.totalPrice = cartInfo.cart.reduce(
-              (sum, item) => sum + item.priceWhenAdded * item.quantity,
-              0,
-            );
             cartInfo.isEmpty = cartInfo.cart.length === 0;
             successMessage("Removed from cart");
           }
@@ -245,7 +235,6 @@ export const CartOperationsApi = createAsyncThunk(
           );
           if (item) {
             item.quantity += 1;
-            cartInfo.totalPrice += item.priceWhenAdded;
           }
           break;
         }
@@ -255,21 +244,16 @@ export const CartOperationsApi = createAsyncThunk(
           );
           if (item && item.quantity > 1) {
             item.quantity -= 1;
-            cartInfo.totalPrice -= item.priceWhenAdded;
           } else if (item && item.quantity === 1) {
             cartInfo.cart = cartInfo.cart.filter(
               (item) => (item.product.id || item.product.fireId) !== data,
-            );
-            cartInfo.totalPrice = cartInfo.cart.reduce(
-              (sum, item) => sum + item.priceWhenAdded * item.quantity,
-              0,
             );
           }
           cartInfo.isEmpty = cartInfo.cart.length === 0;
           break;
         }
         case "clear": {
-          cartInfo = { cart: [], isEmpty: true, totalPrice: 0 };
+          cartInfo = { cart: [], isEmpty: true };
           successMessage("Cart cleared");
           break;
         }
