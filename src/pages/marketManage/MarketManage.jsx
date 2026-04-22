@@ -16,9 +16,6 @@ const validationSchema = Yup.object({
   name: Yup.string().required("Name is required"),
   description: Yup.string().required("Description is required"),
   type: Yup.string().required("Type is required"),
-  price: Yup.number()
-    .required("Price is required")
-    .positive("Price must be positive"),
   image: Yup.string().required("Image is required"),
   brand: Yup.string().required("Brand is required"),
   stock: Yup.number()
@@ -184,7 +181,6 @@ const MarketManage = () => {
                 name: selectedProduct?.name || "",
                 description: selectedProduct?.description || "",
                 type: selectedProduct?.type || "",
-                price: selectedProduct?.price || "",
                 image: selectedProduct?.image || "",
                 brand: selectedProduct?.brand || "",
                 stock: selectedProduct?.stock || "",
