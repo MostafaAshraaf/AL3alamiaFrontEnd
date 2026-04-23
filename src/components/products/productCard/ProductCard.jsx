@@ -17,9 +17,7 @@ import { useTranslation } from "react-i18next";
 function ProductCard({ data, children }) {
   const { t } = useTranslation();
 
-  // فك البيانات بالمسميات اللي طلعت لك في الـ Console
-  // لاحظ استخدمنا image بدل url و description بدل desc
-  const { fireId, name, description, price, image, type } = data;
+  const { fireId, name, description, image, type } = data;
 
   const { inCart, addToCartHandler, removeFromCartHandler } = useCart(data);
   const userRole = useSelector((state) => state?.auth?.user?.role);
@@ -56,7 +54,7 @@ function ProductCard({ data, children }) {
         </p>
         <div className={styles.main}>
           <p className={styles.price}>
-            {price} {t("EGP")}
+            Available
           </p>
           {userRole === "admin" ? (
             children
