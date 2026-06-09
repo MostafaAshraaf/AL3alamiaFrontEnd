@@ -40,7 +40,7 @@ function Market() {
       { value: "Inks", label: t("Inks") },
       { value: "Cartridges", label: t("Cartridges") },
       { value: "Drums", label: t("Drums") },
-      { value: "Chips", label: t("Chips") },
+      { value: "Chips", label: t("Chips") }
     ],
     defaultCategory: "all",
     cards: shuffledCards,
