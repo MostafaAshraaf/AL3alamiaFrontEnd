@@ -45,7 +45,6 @@ export const useProductFilters = (products = []) => {
       "Keyboard",
       "Mouse Pad",
       "Game Pad",
-      "cables",
       "Speakers",
     ];
     const availableAccessoryTypes = unique(
@@ -98,7 +97,6 @@ export const useProductFilters = (products = []) => {
         "Keyboard",
         "Mouse Pad",
         "Game Pad",
-        "cables",
         "Speakers",
       ];
       result = result.filter((p) => accessoryTypes.includes(p.type));
@@ -185,7 +183,7 @@ export const useProductFilters = (products = []) => {
     }
     if (testFilters.mainCategory === "accessories") {
       testResult = testResult.filter((p) =>
-        ["Mouse", "Keyboard", "Mouse Pad", "Game Pad", "cables", "Speakers"].includes(p.type)
+        ["Mouse", "Keyboard", "Mouse Pad", "Game Pad", "Speakers"].includes(p.type)
       );
       if (testFilters.accessoryType !== "all") {
         testResult = testResult.filter((p) => p.type === testFilters.accessoryType);
