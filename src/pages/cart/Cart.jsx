@@ -19,8 +19,6 @@ function Cart() {
   const [showAccessorySelection, setShowAccessorySelection] = useState(false);
   const [customerAddress, setCustomerAddress] = useState("");
   const [selectedAccessories, setSelectedAccessories] = useState({});
-  const [discountCode, setDiscountCode] = useState("");
-  const [appliedDiscount, setAppliedDiscount] = useState(null);
 
   const userId = user?.uid;
   const { mutate: addBill, isLoading: isAddingBill } = useAddBillToUserHistory(userId);
@@ -28,22 +26,15 @@ function Cart() {
   const productsQuery = useProducts();
   const productsData = productsQuery.data;
 
-
-
-
-  const applyDiscountCode = () => {
-    if (discountCode === "INK20" || discountCode === "TECH15") {
-      setAppliedDiscount(discountCode);
-      alert(t("discountAppliedSuccessfully", { code: discountCode }));
-    } else {
-      alert(t("invalidDiscountCode"));
-    }
-  };
-
-  const removeDiscountCode = () => {
-    setAppliedDiscount(null);
-    setDiscountCode("");
-  };
+  // Calculate total price directly from cart items
+  const totalPrice = useMemo(() => {
+    if (!cartData?.cart || cartData.cart.length === 0) return 0;
+    return cartData.cart.reduce((sum, item) => {
+      const price = item.product?.price || 0;
+      const quantity = item.quantity || 0;
+      return sum + (price * quantity);
+    }, 0);
+  }, [cartData?.cart]);
 
   const allAccessories = useMemo(() => {
     return (
@@ -94,12 +85,14 @@ function Cart() {
     const billId = `bill_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     return {
       id: billId,
-      products: cartData.cart.map((item) => ({
+      products: cartData?.cart?.map((item) => ({
         id: item.product.id || item.product.fireId,
         img: item.product.image || item.product.url,
         title: item.product.name,
+        price: item.product.price,
         quantity: item.quantity,
-      })),
+      })) || [],
+      totalPrice: totalPrice,
       orderDate: new Date().toISOString(),
       location: customerAddress,
       paymentMethod: "WhatsApp",
@@ -114,7 +107,7 @@ function Cart() {
     message += `📍 *${t("address")}:* ${customerAddress}\n\n`;
     message += `🛒 *${t("orderDetails")}:*\n`;
 
-    cartData.cart.forEach((item, index) => {
+    cartData?.cart?.forEach((item, index) => {
       message += `${index + 1}. *${item.product.name}*\n`;
       if (
         item.product.name === t("inkStarterKit") &&
@@ -129,9 +122,14 @@ function Cart() {
         });
         message += `   📦 ${t("totalAccessories")}: ${getTotalSelectedAccessories()}\n`;
       }
+      message += `   💰 ${t("price")}: ${item.product.price} ${t("EGP")}\n`;
       message += `   🔢 ${t("quantity")}: ${item.quantity}\n`;
+      message += `   💎 ${t("subtotal")}: ${(
+        item.product.price * item.quantity
+      ).toFixed(2)} ${t("EGP")}\n\n`;
     });
 
+    message += `💳 *${t("orderTotal")}:* ${totalPrice.toFixed(2)} ${t("EGP")}\n\n`;
     message += `✨ ${t("thankYouForChoosingUs")} ✨`;
     return encodeURIComponent(message);
   };
@@ -170,6 +168,9 @@ function Cart() {
     }
   };
 
+  // Check if cart is empty safely
+  const isEmpty = !cartData?.cart || cartData.cart.length === 0;
+
   return (
     <div className={styles.cartWrapper}>
       <div className={styles.backgroundElements}>
@@ -185,22 +186,22 @@ function Cart() {
               <h1 className={styles.pageTitle}>
                 <span className={styles.titleIcon}>🛒</span>
                 {t("yourCart")}
-                {cartData?.isEmpty && (
+                {isEmpty && (
                   <span className={styles.emptyBadge}>{t("empty")}</span>
                 )}
               </h1>
-              {!cartData?.isEmpty && (
+              {!isEmpty && (
                 <p className={styles.itemCount}>
                   {t("itemCount", {
-                    count: cartData.cart.length,
-                    items: cartData.cart.length !== 1 ? t("items") : t("item"),
+                    count: cartData?.cart?.length || 0,
+                    items: (cartData?.cart?.length || 0) !== 1 ? t("items") : t("item"),
                   })}
                 </p>
               )}
             </div>
           </div>
 
-          {cartData?.isEmpty ? (
+          {isEmpty ? (
             <div className={styles.emptyState}>
               <div className={styles.emptyIcon}>🖨️</div>
               <h3>{t("yourComputerSuppliesCartIsEmpty")}</h3>
@@ -216,7 +217,7 @@ function Cart() {
             <>
               <div className={styles.cartContent}>
                 <div className={styles.itemsList}>
-                  {cartData.cart.map((p, index) => (
+                  {cartData?.cart?.map((p, index) => (
                     <div
                       key={p.product.id || p.product.fireId}
                       className={styles.itemWrapper}
@@ -230,6 +231,17 @@ function Cart() {
                 <div className={styles.cartSummary}>
                   <div className={styles.summaryCard}>
                     <h3 className={styles.summaryTitle}>{t("orderSummary")}</h3>
+                    <div className={styles.summaryDetails}>
+                      <div className={styles.summaryRow}>
+                        <span>{t("subtotal")}</span>
+                        <span>{totalPrice.toFixed(2)} {t("EGP")}</span>
+                      </div>
+                      <div className={styles.summaryDivider}></div>
+                      <div className={`${styles.summaryRow} ${styles.total}`}>
+                        <span>{t("total")}</span>
+                        <span>{totalPrice.toFixed(2)} {t("EGP")}</span>
+                      </div>
+                    </div>
                     <div className={styles.actionButtons}>
                       <button
                         className={styles.buyAllBtn}
@@ -252,7 +264,7 @@ function Cart() {
         </div>
       </section>
 
-      {/* WhatsApp Modal */}
+      {/* WhatsApp Modal - same as before */}
       {showWhatsAppModal && (
         <div className={styles.modalOverlay}>
           <div className={styles.modal}>
@@ -279,11 +291,20 @@ function Cart() {
               </div>
               <div className={styles.orderSummary}>
                 <h4>📦 {t("yourOrderDetails")}:</h4>
-                {cartData.cart.map((item) => (
+                {cartData?.cart?.map((item) => (
                   <div key={item.product.id || item.product.fireId} className={styles.orderItem}>
                     <span className={styles.itemName}>{item.product.name}</span>
+                    <span className={styles.itemDetails}>
+                      {item.product.price} {t("EGP")} × {item.quantity} ={" "}
+                      {(item.product.price * item.quantity).toFixed(2)} {t("EGP")}
+                    </span>
                   </div>
                 ))}
+                <div className={styles.orderTotal}>
+                  <strong>
+                    {t("total")}: {totalPrice.toFixed(2)} {t("EGP")}
+                  </strong>
+                </div>
               </div>
               <div className={styles.whatsappSection}>
                 <p>📱 {t("selectWhatsAppNumberToSendOrder")}:</p>
@@ -314,7 +335,7 @@ function Cart() {
         </div>
       )}
 
-      {/* Accessory Selection Modal */}
+      {/* Accessory Selection Modal - same as before */}
       {showAccessorySelection && (
         <div className={styles.modalOverlay}>
           <div className={styles.modal} style={{ maxWidth: "800px" }}>
