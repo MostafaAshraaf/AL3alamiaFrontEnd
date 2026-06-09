@@ -289,7 +289,7 @@
   "topClientsBadge": "Trusted By",
   "topClients": "Top Clients",
   "topClientsSubtitle": "We are proud to work with leading organizations",
-  "clientGizaWater": "Giza Water & Wastewater Company",
+  "clientWater": "Water & Wastewater Company",
   "clientYouthSports": "Ministry of Youth and Sports",
   "clientNileClub": "Nile Sports Club",
   "clientAdultEducation": "Adult Education Authority",
@@ -302,5 +302,10 @@
   "checkInboxAndSpam": "Please check your inbox and spam folder.",
   "resendVerificationEmail": "Resend Verification Email",
   "resendIn": "Resend in",
-  "backToLogin": "Back to Login"
+  "backToLogin": "Back to Login",
+  "companyFullName": "AL 3ALAMIA Store Company for Importing and Supplying Inks and Computer Supplies",
+  "visitProfile": "Visit our Profile",
+  "Drums": "Drums",
+  "Chips": "Chips"
+
 }
