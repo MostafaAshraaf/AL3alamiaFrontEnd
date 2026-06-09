@@ -15,6 +15,10 @@ export const useProductFilters = (products = []) => {
   const [printerType, setPrinterType] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
 
+  // القوائم الموحدة للفحص بحروف صغيرة (ضمان عدم التأثر بأخطاء الداتا)
+  const accessoryTypesLower = ["mouse", "keyboard", "mouse pad", "game pad", "speakers"];
+  const printerTypesLower = ["printers", "cartridges", "inks", "drums", "chips"];
+
   // Reset dependent filters when main category changes
   const setMainCategoryWithReset = (value) => {
     setMainCategory(value);
@@ -27,47 +31,39 @@ export const useProductFilters = (products = []) => {
 
   // Available options for each level (computed from current products)
   const options = useMemo(() => {
-    // First, apply search filter to get base product set
     let baseProducts = products;
+    
+    // تطبيق البحث أولاً لاستخراج الخيارات المتاحة المرتبطة بكلمة البحث
     if (searchTerm.trim()) {
       const term = searchTerm.toLowerCase();
       baseProducts = baseProducts.filter(
         (p) =>
           p.name?.toLowerCase().includes(term) ||
           p.brand?.toLowerCase().includes(term) ||
-          p.inspiredBy?.toLowerCase().includes(term),
+          p.inspiredBy?.toLowerCase().includes(term)
       );
     }
 
-    // Accessory types (from products with type in accessory list)
-    const accessoryTypes = [
-      "Mouse",
-      "Keyboard",
-      "Mouse Pad",
-      "Game Pad",
-      "Speakers",
-    ];
+    // استخراج الأنواع المتوفرة للإكسسوارات
     const availableAccessoryTypes = unique(
       baseProducts
-        .filter((p) => accessoryTypes.includes(p.type))
-        .map((p) => p.type),
+        .filter((p) => p.type && accessoryTypesLower.includes(p.type.toLowerCase().trim()))
+        .map((p) => p.type.trim())
     );
 
-    // Printers & Inks related
+    // المنتجات المتعلقة بالطابعات والأحبار
     const printerInksProducts = baseProducts.filter((p) =>
-      ["Printers", "Cartridges", "Inks", "Drums", "Chips"].includes(p.type),
+      p.type && printerTypesLower.includes(p.type.toLowerCase().trim())
     );
 
-    // Brands from inspiredBy field — normalize to deduplicate (e.g. "HP" vs "Hp")
     const availableBrands = unique(
       printerInksProducts
         .map((p) => normalizeBrand(p.inspiredBy))
-        .filter(Boolean),
+        .filter(Boolean)
     );
 
-    // Printer types (Printers, Cartridges, Inks) that exist
     const availablePrinterTypes = unique(
-      printerInksProducts.map((p) => p.type),
+      printerInksProducts.map((p) => p.type.trim())
     );
 
     return {
@@ -81,45 +77,35 @@ export const useProductFilters = (products = []) => {
   const filteredProducts = useMemo(() => {
     let result = products;
 
-    // 1. الفئة الرئيسية أولاً (لتحديد المسار الأساسي بشكل صارم)
+    // 1. الفرز الصارم والآمن حسب الفئة الرئيسية أولاً لمنع الاختلاط بالأنواع الأخرى
     if (mainCategory === "accessories") {
-      const accessoryTypes = [
-        "Mouse",
-        "Keyboard",
-        "Mouse Pad",
-        "Game Pad",
-        "Speakers",
-      ];
-      result = result.filter((p) => accessoryTypes.includes(p.type));
+      result = result.filter((p) => p.type && accessoryTypesLower.includes(p.type.toLowerCase().trim()));
 
-      // 2. تطبيق الفلتر الفرعي للاكسسوارات فقط في حال اختيار نوع محدد
+      // 2. تطبيق الفلتر الفرعي للاكسسوارات فقط
       if (accessoryType !== "all") {
-        result = result.filter((p) => p.type === accessoryType);
+        result = result.filter((p) => p.type && p.type.toLowerCase().trim() === accessoryType.toLowerCase().trim());
       }
-    } else if (mainCategory === "printers-inks") {
-      result = result.filter((p) =>
-        ["Printers", "Cartridges", "Inks", "Drums", "Chips"].includes(p.type),
-      );
+    } 
+    else if (mainCategory === "printers-inks") {
+      result = result.filter((p) => p.type && printerTypesLower.includes(p.type.toLowerCase().trim()));
 
-      // تطبيق فلاتر الطابعات الفرعية فقط هنا
+      // تطبيق فلاتر الطابعات الفرعية
       if (printerBrand !== "all") {
-        result = result.filter(
-          (p) => normalizeBrand(p.inspiredBy) === printerBrand,
-        );
+        result = result.filter((p) => normalizeBrand(p.inspiredBy) === printerBrand);
       }
       if (printerType !== "all") {
-        result = result.filter((p) => p.type === printerType);
+        result = result.filter((p) => p.type && p.type.toLowerCase().trim() === printerType.toLowerCase().trim());
       }
     }
 
-    // 3. تطبيق نص البحث على النتيجة المفلترة فئوياً (وليس على المنتجات كلها)
+    // 3. تطبيق نص البحث على النتيجة النهائية المعزولة فئوياً
     if (searchTerm.trim()) {
       const term = searchTerm.toLowerCase();
       result = result.filter(
         (p) =>
           p.name?.toLowerCase().includes(term) ||
           p.brand?.toLowerCase().includes(term) ||
-          p.inspiredBy?.toLowerCase().includes(term),
+          p.inspiredBy?.toLowerCase().includes(term)
       );
     }
 
@@ -150,7 +136,6 @@ export const useProductFilters = (products = []) => {
 
   // Determine if a filter option should be disabled (no results if selected)
   const isOptionDisabled = (level, value) => {
-    // Create a temporary filter state with this option selected
     let testFilters = {
       mainCategory,
       accessoryType,
@@ -172,61 +157,51 @@ export const useProductFilters = (products = []) => {
       testFilters.printerType = value;
     }
 
-    // Re-run filtering logic (simplified version)
     let testResult = products;
+
+    // هنا قمنا بتعديل المنطق ليطابق تماماً دالة التصفية الفعلية (الفئة أولاً ثم البحث)
+    if (testFilters.mainCategory === "accessories") {
+      testResult = testResult.filter((p) => p.type && accessoryTypesLower.includes(p.type.toLowerCase().trim()));
+      if (testFilters.accessoryType !== "all") {
+        testResult = testResult.filter((p) => p.type && p.type.toLowerCase().trim() === testFilters.accessoryType.toLowerCase().trim());
+      }
+    } 
+    else if (testFilters.mainCategory === "printers-inks") {
+      testResult = testResult.filter((p) => p.type && printerTypesLower.includes(p.type.toLowerCase().trim()));
+      if (testFilters.printerBrand !== "all") {
+        testResult = testResult.filter((p) => normalizeBrand(p.inspiredBy) === testFilters.printerBrand);
+      }
+      if (testFilters.printerType !== "all") {
+        testResult = testResult.filter((p) => p.type && p.type.toLowerCase().trim() === testFilters.printerType.toLowerCase().trim());
+      }
+    }
+
+    // تطبيق البحث في النهاية بشكل متطابق ومتزامن مع التصفية
     if (testFilters.searchTerm.trim()) {
       const term = testFilters.searchTerm.toLowerCase();
       testResult = testResult.filter(
         (p) =>
           p.name?.toLowerCase().includes(term) ||
           p.brand?.toLowerCase().includes(term) ||
-          p.inspiredBy?.toLowerCase().includes(term),
+          p.inspiredBy?.toLowerCase().includes(term)
       );
     }
-    if (testFilters.mainCategory === "accessories") {
-      testResult = testResult.filter((p) =>
-        ["Mouse", "Keyboard", "Mouse Pad", "Game Pad", "Speakers"].includes(
-          p.type,
-        ),
-      );
-      if (testFilters.accessoryType !== "all") {
-        testResult = testResult.filter(
-          (p) => p.type === testFilters.accessoryType,
-        );
-      }
-    } else if (testFilters.mainCategory === "printers-inks") {
-      testResult = testResult.filter((p) =>
-        ["Printers", "Cartridges", "Inks", "Drums", "Chips"].includes(p.type),
-      );
-      if (testFilters.printerBrand !== "all") {
-        testResult = testResult.filter(
-          (p) => normalizeBrand(p.inspiredBy) === testFilters.printerBrand,
-        );
-      }
-      if (testFilters.printerType !== "all") {
-        testResult = testResult.filter(
-          (p) => p.type === testFilters.printerType,
-        );
-      }
-    }
+
     return testResult.length === 0;
   };
 
   return {
-    // State
     mainCategory,
     accessoryType,
     printerBrand,
     printerType,
     searchTerm,
-    // Setters
     setMainCategory: setMainCategoryWithReset,
     setAccessoryType,
     setPrinterBrand,
     setPrinterType,
     setSearchTerm,
     resetFilters,
-    // Data
     filteredProducts,
     resultCount,
     options,
