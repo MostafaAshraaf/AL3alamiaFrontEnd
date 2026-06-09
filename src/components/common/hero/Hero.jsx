@@ -48,7 +48,7 @@ function Hero({ children }) {
 
               {/* Main Card */}
               <div className={styles.mainCard}>
-                <img src="/logo2.png" alt={t("siteName")} />
+                <img src="/logo.png" alt={t("siteName")} />
                 <div className={styles.cardContent}>
                 </div>
               </div>
