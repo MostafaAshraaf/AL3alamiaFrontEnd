@@ -35,7 +35,7 @@ export const useProductFilters = (products = []) => {
         (p) =>
           p.name?.toLowerCase().includes(term) ||
           p.brand?.toLowerCase().includes(term) ||
-          p.inspiredBy?.toLowerCase().includes(term)
+          p.inspiredBy?.toLowerCase().includes(term),
       );
     }
 
@@ -50,22 +50,24 @@ export const useProductFilters = (products = []) => {
     const availableAccessoryTypes = unique(
       baseProducts
         .filter((p) => accessoryTypes.includes(p.type))
-        .map((p) => p.type)
+        .map((p) => p.type),
     );
 
     // Printers & Inks related
     const printerInksProducts = baseProducts.filter((p) =>
-      ["Printers", "Cartridges", "Inks", "Drums", "Chips"].includes(p.type)
+      ["Printers", "Cartridges", "Inks", "Drums", "Chips"].includes(p.type),
     );
 
     // Brands from inspiredBy field — normalize to deduplicate (e.g. "HP" vs "Hp")
     const availableBrands = unique(
-      printerInksProducts.map((p) => normalizeBrand(p.inspiredBy)).filter(Boolean)
+      printerInksProducts
+        .map((p) => normalizeBrand(p.inspiredBy))
+        .filter(Boolean),
     );
 
     // Printer types (Printers, Cartridges, Inks) that exist
     const availablePrinterTypes = unique(
-      printerInksProducts.map((p) => p.type)
+      printerInksProducts.map((p) => p.type),
     );
 
     return {
@@ -79,18 +81,7 @@ export const useProductFilters = (products = []) => {
   const filteredProducts = useMemo(() => {
     let result = products;
 
-    // 1. Search term
-    if (searchTerm.trim()) {
-      const term = searchTerm.toLowerCase();
-      result = result.filter(
-        (p) =>
-          p.name?.toLowerCase().includes(term) ||
-          p.brand?.toLowerCase().includes(term) ||
-          p.inspiredBy?.toLowerCase().includes(term)
-      );
-    }
-
-    // 2. Main category
+    // 1. الفئة الرئيسية أولاً (لتحديد المسار الأساسي بشكل صارم)
     if (mainCategory === "accessories") {
       const accessoryTypes = [
         "Mouse",
@@ -100,28 +91,39 @@ export const useProductFilters = (products = []) => {
         "Speakers",
       ];
       result = result.filter((p) => accessoryTypes.includes(p.type));
+
+      // 2. تطبيق الفلتر الفرعي للاكسسوارات فقط في حال اختيار نوع محدد
+      if (accessoryType !== "all") {
+        result = result.filter((p) => p.type === accessoryType);
+      }
     } else if (mainCategory === "printers-inks") {
       result = result.filter((p) =>
-        ["Printers", "Cartridges", "Inks", "Drums", "Chips"].includes(p.type)
+        ["Printers", "Cartridges", "Inks", "Drums", "Chips"].includes(p.type),
+      );
+
+      // تطبيق فلاتر الطابعات الفرعية فقط هنا
+      if (printerBrand !== "all") {
+        result = result.filter(
+          (p) => normalizeBrand(p.inspiredBy) === printerBrand,
+        );
+      }
+      if (printerType !== "all") {
+        result = result.filter((p) => p.type === printerType);
+      }
+    }
+
+    // 3. تطبيق نص البحث على النتيجة المفلترة فئوياً (وليس على المنتجات كلها)
+    if (searchTerm.trim()) {
+      const term = searchTerm.toLowerCase();
+      result = result.filter(
+        (p) =>
+          p.name?.toLowerCase().includes(term) ||
+          p.brand?.toLowerCase().includes(term) ||
+          p.inspiredBy?.toLowerCase().includes(term),
       );
     }
 
-    // 3. Accessory sub‑type
-    if (mainCategory === "accessories" && accessoryType !== "all") {
-      result = result.filter((p) => p.type === accessoryType);
-    }
-
-    // 4. Printer brand (compare normalized to handle "HP" vs "Hp" in data)
-    if (mainCategory === "printers-inks" && printerBrand !== "all") {
-      result = result.filter((p) => normalizeBrand(p.inspiredBy) === printerBrand);
-    }
-
-    // 5. Printer type
-    if (mainCategory === "printers-inks" && printerType !== "all") {
-      result = result.filter((p) => p.type === printerType);
-    }
-
-    // 6. Exclude out-of-stock products (stock === 0)
+    // 4. استبعاد المنتجات المنتهية من المخزن
     result = result.filter((p) => p.stock > 0 || p.stock === undefined);
 
     return result;
@@ -178,25 +180,33 @@ export const useProductFilters = (products = []) => {
         (p) =>
           p.name?.toLowerCase().includes(term) ||
           p.brand?.toLowerCase().includes(term) ||
-          p.inspiredBy?.toLowerCase().includes(term)
+          p.inspiredBy?.toLowerCase().includes(term),
       );
     }
     if (testFilters.mainCategory === "accessories") {
       testResult = testResult.filter((p) =>
-        ["Mouse", "Keyboard", "Mouse Pad", "Game Pad", "Speakers"].includes(p.type)
+        ["Mouse", "Keyboard", "Mouse Pad", "Game Pad", "Speakers"].includes(
+          p.type,
+        ),
       );
       if (testFilters.accessoryType !== "all") {
-        testResult = testResult.filter((p) => p.type === testFilters.accessoryType);
+        testResult = testResult.filter(
+          (p) => p.type === testFilters.accessoryType,
+        );
       }
     } else if (testFilters.mainCategory === "printers-inks") {
       testResult = testResult.filter((p) =>
-        ["Printers", "Cartridges", "Inks", "Drums", "Chips"].includes(p.type)
+        ["Printers", "Cartridges", "Inks", "Drums", "Chips"].includes(p.type),
       );
       if (testFilters.printerBrand !== "all") {
-        testResult = testResult.filter((p) => normalizeBrand(p.inspiredBy) === testFilters.printerBrand);
+        testResult = testResult.filter(
+          (p) => normalizeBrand(p.inspiredBy) === testFilters.printerBrand,
+        );
       }
       if (testFilters.printerType !== "all") {
-        testResult = testResult.filter((p) => p.type === testFilters.printerType);
+        testResult = testResult.filter(
+          (p) => p.type === testFilters.printerType,
+        );
       }
     }
     return testResult.length === 0;
