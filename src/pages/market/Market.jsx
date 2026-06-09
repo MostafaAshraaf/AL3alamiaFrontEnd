@@ -32,7 +32,6 @@ function Market() {
       { value: "all", label: t("allProducts") },
       { value: "Mouse", label: t("Mouse") },
       { value: "Keyboard", label: t("Keyboard") },
-      { value: "cables", label: t("cables") },
       { value: "Mouse pad", label: t("MousePad") },
       { value: "Game pad", label: t("GamePad") },
       { value: "Speakers", label: t("Speakers") },
