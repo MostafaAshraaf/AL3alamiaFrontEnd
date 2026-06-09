@@ -576,7 +576,7 @@
     "createdAt": 0
   },
   {
-    "id": "hp_laserjet_powder_bk",
+    "id": "hp_laserjet_powder_bk_2",
     "name": "HP LaserJet Powder Black",
     "brand": "AL3ALAMIA",
     "description": "بودرة حبر ليزر أسود متوافقة مع طابعات إتش بي (HP) لإعادة التعبئة - كيس بحجم 800 جرام.",
@@ -860,7 +860,7 @@
     "name": "Kyocera LaserJet Powder Black 8520",
     "brand": "AL3ALAMIA",
     "description": "كيس حبر كيوسيرا 8520 أسود 250جرام، متوافق مع طابعات Kyocera FS-C8520MFP وFS-C8525MFP",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Inks",
     "price": 375,
     "stock": 1000,
@@ -2773,7 +2773,7 @@
     "name": "Cartridge TONER KYOCERA 5500",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA 5500 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 35000 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 1170,
     "stock": 1000,
@@ -2787,7 +2787,7 @@
     "name": "Cartridge TONER KYOCERA TK 06 – 8515 CKMY",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 06 – 8515 Compatible LaserJet Toner Cartridge, C/M/Y/K, Pack of 4",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 4950,
     "stock": 1000,
@@ -2801,7 +2801,7 @@
     "name": "Cartridge TONER KYOCERA TK 1110 – 1120 – 1125",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 1110 – 1120 – 1125 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 3000 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 250,
     "stock": 1000,
@@ -2815,7 +2815,7 @@
     "name": "Cartridge TONER KYOCERA TK 1130 – 1132",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 1130 – 1132 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 3000 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 420,
     "stock": 1000,
@@ -2829,7 +2829,7 @@
     "name": "Cartridge TONER KYOCERA TK 1140",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 1140 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 7200 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 520,
     "stock": 1000,
@@ -2843,7 +2843,7 @@
     "name": "Cartridge TONER KYOCERA TK 1150 – 2635",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 1150 – 2635 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 3000 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 520,
     "stock": 1000,
@@ -2857,7 +2857,7 @@
     "name": "Cartridge TONER KYOCERA TK 1170",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 1170 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 7200 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 570,
     "stock": 1000,
@@ -2871,7 +2871,7 @@
     "name": "Cartridge TONER KYOCERA TK 1200",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 1200 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 3000 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 820,
     "stock": 1000,
@@ -2885,7 +2885,7 @@
     "name": "Cartridge TONER KYOCERA TK 130 – 170",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 130 – 170 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 7200 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 520,
     "stock": 1000,
@@ -2899,7 +2899,7 @@
     "name": "Cartridge TONER KYOCERA TK 160",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 160 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 2500 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 520,
     "stock": 1000,
@@ -2913,7 +2913,7 @@
     "name": "Cartridge TONER KYOCERA TK 17 – 18 – 100",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 17 – 18 – 100 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 7200 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 520,
     "stock": 1000,
@@ -2927,7 +2927,7 @@
     "name": "Cartridge TONER KYOCERA TK 2100 – 3100 – 4100",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 2100 – 3100 – 4100 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 12500 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 620,
     "stock": 1000,
@@ -2941,7 +2941,7 @@
     "name": "Cartridge TONER KYOCERA TK 2500 – 2551 – 8325  CKMY",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 2500 – 2551 – 8325 Compatible LaserJet Toner Cartridge, C/M/Y/K, Pack of 4",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 4550,
     "stock": 1000,
@@ -2955,7 +2955,7 @@
     "name": "Cartridge TONER KYOCERA TK 3051 – 8305  CKMY",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 3051 – 8305 Compatible LaserJet Toner Cartridge, C/M/Y/K, Pack of 4",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 4950,
     "stock": 1000,
@@ -2969,7 +2969,7 @@
     "name": "Cartridge TONER KYOCERA TK 3160",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 3160 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 12500 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 570,
     "stock": 1000,
@@ -2983,7 +2983,7 @@
     "name": "Cartridge TONER KYOCERA TK 3500 – 4500 – 5500 – 6305",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 3500 – 4500 – 5500 – 6305 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 35000 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 1200,
     "stock": 1000,
@@ -2997,7 +2997,7 @@
     "name": "Cartridge TONER KYOCERA TK 4030",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 4030 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 34000 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 670,
     "stock": 1000,
@@ -3011,7 +3011,7 @@
     "name": "Cartridge TONER KYOCERA TK 410",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 410 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 15000 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 870,
     "stock": 1000,
@@ -3025,7 +3025,7 @@
     "name": "Cartridge TONER KYOCERA TK 4105",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 4105 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 15000 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 770,
     "stock": 1000,
@@ -3039,7 +3039,7 @@
     "name": "Cartridge TONER KYOCERA TK 435",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 435 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 15000 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 870,
     "stock": 1000,
@@ -3053,7 +3053,7 @@
     "name": "Cartridge TONER KYOCERA TK 448",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 448 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 7200 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 770,
     "stock": 1000,
@@ -3067,7 +3067,7 @@
     "name": "Cartridge TONER KYOCERA TK 475 – 630",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 475 – 630 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 15000 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 770,
     "stock": 1000,
@@ -3081,7 +3081,7 @@
     "name": "Cartridge TONER KYOCERA TK 5440 CKMY",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 5440 Compatible LaserJet Toner Cartridge, C/M/Y/K, Pack of 4",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 4950,
     "stock": 1000,
@@ -3095,7 +3095,7 @@
     "name": "Cartridge TONER KYOCERA TK 6115",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 6115 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 15000 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 1070,
     "stock": 1000,
@@ -3109,7 +3109,7 @@
     "name": "Cartridge TONER KYOCERA TK 6325",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 6325 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 35000 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 1270,
     "stock": 1000,
@@ -3123,7 +3123,7 @@
     "name": "Cartridge TONER KYOCERA TK 675",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 675 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 20000 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 7800,
     "stock": 1000,
@@ -3137,7 +3137,7 @@
     "name": "Cartridge TONER KYOCERA TK 7105",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 7105 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 5000 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 1070,
     "stock": 1000,
@@ -3151,7 +3151,7 @@
     "name": "Cartridge TONER KYOCERA TK 7120 – 7125",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 7120 – 7125 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 2000 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 1070,
     "stock": 1000,
@@ -3165,7 +3165,7 @@
     "name": "Cartridge TONER KYOCERA TK 715",
     "brand": "AL3ALAMIA",
     "description": "KYOCERA TK 715 Compatible LaserJet Toner Cartridge, Black, Single pack - يدعم حتى 30000 صفحة",
-    "inspiredBy": "KyocerA",
+    "inspiredBy": "Kyocera",
     "type": "Cartridges",
     "price": 1070,
     "stock": 1000,
@@ -5275,7 +5275,7 @@
     "createdAt": 0
   },
   {
-    "id": "brother_tn_1000_1030_1050_1060",
+    "id": "drum_brother_tn_1000_1030_1050_1060",
     "name": "UNIT DRUM BROTHER TN 1000 – 1030 – 1050 – 1060",
     "brand": "AL3ALAMIA",
     "description": "BROTHER TN 1000 – 1030 – 1050 – 1060 Compatible Drum Unit, Black, Single pack - يدعم حتى 1000 صفحة",
@@ -5289,7 +5289,7 @@
     "createdAt": 0
   },
   {
-    "id": "brother_tn_2000_2025",
+    "id": "drum_brother_tn_2000_2025",
     "name": "UNIT DRUM BROTHER TN 2000 – 2025",
     "brand": "AL3ALAMIA",
     "description": "BROTHER TN 2000 – 2025 Compatible Drum Unit, Black, Single pack - يدعم حتى 12000 صفحة",
@@ -5317,7 +5317,7 @@
     "createdAt": 0
   },
   {
-    "id": "brother_tn_2405",
+    "id": "drum_brother_tn_2405",
     "name": "UNIT DRUM BROTHER TN 2405",
     "brand": "AL3ALAMIA",
     "description": "BROTHER TN 2405 Compatible Drum Unit, Black, Single pack - يدعم حتى 12000 صفحة",
@@ -5331,7 +5331,7 @@
     "createdAt": 0
   },
   {
-    "id": "brother_tn_3417_3405_5200",
+    "id": "drum_brother_tn_3417_3405_5200",
     "name": "UNIT DRUM BROTHER TN 3417 – 3405 – 5200",
     "brand": "AL3ALAMIA",
     "description": "BROTHER TN 3417 – 3405 – 5200 Compatible Drum Unit, Black, Single pack - يدعم حتى 30000 صفحة",
@@ -5345,7 +5345,7 @@
     "createdAt": 0
   },
   {
-    "id": "brother_tn_360_2125_2130_2150",
+    "id": "drum_brother_tn_360_2125_2130_2150",
     "name": "UNIT DRUM BROTHER TN 360 – 2125 – 2130 – 2150",
     "brand": "AL3ALAMIA",
     "description": "BROTHER TN 360 – 2125 – 2130 – 2150 Compatible Drum Unit, Black, Single pack - يدعم حتى 12000 صفحة",
@@ -5359,7 +5359,7 @@
     "createdAt": 0
   },
   {
-    "id": "brother_tn_520_620_5340_3230_3250",
+    "id": "drum_brother_tn_520_620_5340_3230_3250",
     "name": "UNIT DRUM BROTHER TN 520 – 620 – 5340 – 3230 – 3250",
     "brand": "AL3ALAMIA",
     "description": "BROTHER TN 520 – 620 – 5340 – 3230 – 3250 Compatible Drum Unit, Black, Single pack - يدعم حتى 25000 صفحة",
@@ -5401,7 +5401,7 @@
     "createdAt": 0
   },
   {
-    "id": "brother_tn_820_850_3480_5100",
+    "id": "drum_brother_tn_820_850_3480_5100",
     "name": "UNIT DRUM BROTHER TN 820 – 850 – 3480 – 5100",
     "brand": "AL3ALAMIA",
     "description": "BROTHER TN 820 – 850 – 3480 – 5100 Compatible Drum Unit, Black, Single pack - يدعم حتى 30000 صفحة",
@@ -5527,7 +5527,7 @@
     "createdAt": 0
   },
   {
-    "id": "oki_412_432_472_492",
+    "id": "drum_oki_412_432_472_492",
     "name": "UNIT DRUM OKI 412 – 432 – 472 – 492",
     "brand": "AL3ALAMIA",
     "description": "OKI 412 – 432 – 472 – 492 Compatible Drum Unit, Black, Single pack - يدعم حتى 30000 صفحة",
@@ -5569,7 +5569,7 @@
     "createdAt": 0
   },
   {
-    "id": "ricoh_sp_3600_4500",
+    "id": "drum_ricoh_sp_3600_4500",
     "name": "UNIT DRUM RICOH SP 3600 – 4500",
     "brand": "AL3ALAMIA",
     "description": "RICOH SP 3600 – 4500 Compatible Drum Unit, Black, Single pack - يدعم حتى 20000 صفحة",
@@ -5583,7 +5583,7 @@
     "createdAt": 0
   },
   {
-    "id": "ricoh_sp_400_450",
+    "id": "drum_ricoh_sp_400_450",
     "name": "UNIT DRUM RICOH SP 400 – 450",
     "brand": "AL3ALAMIA",
     "description": "RICOH SP 400 – 450 Compatible Drum Unit, Black, Single pack - يدعم حتى 20000 صفحة",
@@ -5597,7 +5597,7 @@
     "createdAt": 0
   },
   {
-    "id": "samsung_204",
+    "id": "drum_samsung_204",
     "name": "UNIT DRUM SAMSUNG 204",
     "brand": "AL3ALAMIA",
     "description": "SAMSUNG 204 Compatible Drum Unit, Black, Single pack - يدعم حتى 30000 صفحة",
@@ -5625,7 +5625,7 @@
     "createdAt": 0
   },
   {
-    "id": "xerox_3215_3225_3260",
+    "id": "drum_xerox_3215_3225_3260",
     "name": "UNIT DRUM XEROX 3215 – 3225 – 3260",
     "brand": "AL3ALAMIA",
     "description": "XEROX 3215 – 3225 – 3260 Compatible Drum Unit, Black, Single pack - يدعم حتى 10000 صفحة",
@@ -5639,7 +5639,7 @@
     "createdAt": 0
   },
   {
-    "id": "xerox_3330_3335_3345",
+    "id": "drum_xerox_3330_3335_3345",
     "name": "UNIT DRUM XEROX 3330 – 3335 – 3345",
     "brand": "AL3ALAMIA",
     "description": "XEROX 3330 – 3335 – 3345 Compatible Drum Unit, Black, Single pack - يدعم حتى 30000 صفحة",
@@ -5667,7 +5667,7 @@
     "createdAt": 0
   },
   {
-    "id": "xerox_5019_5021_5024",
+    "id": "drum_xerox_5019_5021_5024",
     "name": "UNIT DRUM XEROX 5019 – 5021 – 5024",
     "brand": "AL3ALAMIA",
     "description": "XEROX 5019 – 5021 – 5024 Compatible Drum Unit, Black, Single pack - يدعم حتى 80000 صفحة",
@@ -5737,7 +5737,7 @@
     "createdAt": 0
   },
   {
-    "id": "xerox_b205_215",
+    "id": "drum_xerox_b205_215",
     "name": "UNIT DRUM XEROX B205 – 215",
     "brand": "AL3ALAMIA",
     "description": "XEROX B205 – 215 Compatible Drum Unit, Black, Single pack - يدعم حتى 10000 صفحة",
@@ -6003,7 +6003,7 @@
     "createdAt": 0
   },
   {
-    "id": "canon_057",
+    "id": "chip_canon_057",
     "name": "CHIP CANON 057",
     "brand": "AL3ALAMIA",
     "description": "CANON 057 Chip, Black, Single pack - يدعم حتى 3100 صفحة",
@@ -6031,7 +6031,7 @@
     "createdAt": 0
   },
   {
-    "id": "canon_070",
+    "id": "chip_canon_070",
     "name": "CHIP CANON 070",
     "brand": "AL3ALAMIA",
     "description": "CANON 070 Chip, Black, Single pack - يدعم حتى 3000 صفحة",
@@ -6157,7 +6157,7 @@
     "createdAt": 0
   },
   {
-    "id": "hp_10A",
+    "id": "chip_hp_10A",
     "name": "CHIP HP 10A",
     "brand": "AL3ALAMIA",
     "description": "HP 10A Chip, Black, Single pack - يدعم حتى 6000 صفحة",
@@ -6283,7 +6283,7 @@
     "createdAt": 0
   },
   {
-    "id": "hp_14A",
+    "id": "chip_hp_14A",
     "name": "CHIP HP 14A",
     "brand": "AL3ALAMIA",
     "description": "HP 14A Chip, Black, Single pack - يدعم حتى 10000 صفحة",
@@ -6493,7 +6493,7 @@
     "createdAt": 0
   },
   {
-    "id": "hp_25x",
+    "id": "chip_hp_25x",
     "name": "CHIP HP 25X",
     "brand": "AL3ALAMIA",
     "description": "HP 25X Chip, Black, Single pack - يدعم حتى 34500 صفحة",
@@ -6563,7 +6563,7 @@
     "createdAt": 0
   },
   {
-    "id": "hp_26A",
+    "id": "chip_hp_26A",
     "name": "CHIP HP 26A",
     "brand": "AL3ALAMIA",
     "description": "HP 26A Chip, Black, Single pack - يدعم حتى 3100 صفحة",
@@ -6633,7 +6633,7 @@
     "createdAt": 0
   },
   {
-    "id": "hp_37A",
+    "id": "chip_hp_37A",
     "name": "CHIP HP 37A",
     "brand": "AL3ALAMIA",
     "description": "HP 37A Chip, Black, Single pack - يدعم حتى 11000 صفحة",
@@ -6787,7 +6787,7 @@
     "createdAt": 0
   },
   {
-    "id": "hp_57A",
+    "id": "chip_hp_57A",
     "name": "CHIP HP 57A",
     "brand": "AL3ALAMIA",
     "description": "HP 57A Chip, Black, Single pack - يدعم حتى 80000 صفحة",
@@ -6815,7 +6815,7 @@
     "createdAt": 0
   },
   {
-    "id": "hp_59A",
+    "id": "chip_hp_59A",
     "name": "CHIP HP 59A",
     "brand": "AL3ALAMIA",
     "description": "HP 59A Chip, Black, Single pack - يدعم حتى 3000 صفحة",
@@ -6899,7 +6899,7 @@
     "createdAt": 0
   },
   {
-    "id": "hp_89A",
+    "id": "chip_hp_89A",
     "name": "CHIP HP 89A",
     "brand": "AL3ALAMIA",
     "description": "HP 89A Chip, Black, Single pack - يدعم حتى 5000 صفحة",
@@ -7599,7 +7599,7 @@
     "createdAt": 0
   },
   {
-    "id": "oki_412_432_472_492",
+    "id": "chip_oki_412_432_472_492",
     "name": "CHIP OKI 412 – 432 – 472 – 492",
     "brand": "AL3ALAMIA",
     "description": "OKI 412 – 432 – 472 – 492 Chip, Black, Single pack - يدعم حتى 7000 صفحة",
@@ -7655,7 +7655,7 @@
     "createdAt": 0
   },
   {
-    "id": "pantum_5100_5120",
+    "id": "chip_pantum_5100_5120",
     "name": "CHIP PANTUM 5100 – 5120",
     "brand": "AL3ALAMIA",
     "description": "PANTUM 5100 – 5120 Chip, Black, Single pack - يدعم حتى 3000 صفحة",
@@ -8313,7 +8313,7 @@
     "createdAt": 0
   },
   {
-    "id": "ricoh_sp_200_210_211",
+    "id": "chip_ricoh_sp_200_210_211",
     "name": "CHIP RICOH SP 200 – 210 – 211",
     "brand": "AL3ALAMIA",
     "description": "RICOH SP 200 – 210 – 211 Chip, Black, Single pack - يدعم حتى 2600 صفحة",
@@ -8397,7 +8397,7 @@
     "createdAt": 0
   },
   {
-    "id": "samsung_105",
+    "id": "chip_samsung_105",
     "name": "CHIP SAMSUNG 105",
     "brand": "AL3ALAMIA",
     "description": "SAMSUNG 105 Chip, Black, Single pack - يدعم حتى 2500 صفحة",
@@ -8439,7 +8439,7 @@
     "createdAt": 0
   },
   {
-    "id": "samsung_111",
+    "id": "chip_samsung_111",
     "name": "CHIP SAMSUNG 111",
     "brand": "AL3ALAMIA",
     "description": "SAMSUNG 111 Chip, Black, Single pack - يدعم حتى 2000 صفحة",
@@ -8565,7 +8565,7 @@
     "createdAt": 0
   },
   {
-    "id": "samsung_208",
+    "id": "chip_samsung_208",
     "name": "CHIP SAMSUNG 208",
     "brand": "AL3ALAMIA",
     "description": "SAMSUNG 208 Chip, Black, Single pack - يدعم حتى 10000 صفحة",
@@ -8677,7 +8677,7 @@
     "createdAt": 0
   },
   {
-    "id": "samsung_3470",
+    "id": "chip_samsung_3470",
     "name": "CHIP SAMSUNG 3470",
     "brand": "AL3ALAMIA",
     "description": "SAMSUNG 3470 Chip, Black, Single pack - يدعم حتى 10000 صفحة",
@@ -9139,7 +9139,7 @@
     "createdAt": 0
   },
   {
-    "id": "toshiba_2450",
+    "id": "chip_toshiba_2450",
     "name": "CHIP TOSHIBA 2450",
     "brand": "AL3ALAMIA",
     "description": "TOSHIBA 2450 Chip, Black, Single pack - يدعم حتى 10000 صفحة",
@@ -9335,7 +9335,7 @@
     "createdAt": 0
   },
   {
-    "id": "toshiba_385",
+    "id": "chip_toshiba_385",
     "name": "CHIP TOSHIBA 385",
     "brand": "AL3ALAMIA",
     "description": "TOSHIBA 385 Chip, Black, Single pack - يدعم حتى 10000 صفحة",
