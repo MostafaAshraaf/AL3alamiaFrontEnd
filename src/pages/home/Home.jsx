@@ -21,7 +21,7 @@ import {
 } from "react-icons/fa";
 import styles from "./home.module.css";
 import { useTranslation } from "react-i18next";
-
+import logo from "../../../public/logo.png";
 const Home = () => {
   const { t } = useTranslation();
   const [scrollY, setScrollY] = useState(0);
@@ -101,7 +101,7 @@ const Home = () => {
 
   // Top Clients List (can be expanded)
   const topClients = [
-    { name: t("clientGizaWater"), icon: <FaWater /> },
+    { name: t("clientWater"), icon: <FaWater /> },
     { name: t("clientYouthSports"), icon: <FaFutbol /> },
     { name: t("clientNileClub"), icon: <FaBuilding /> },
     { name: t("clientAdultEducation"), icon: <FaChalkboardTeacher /> },
@@ -159,6 +159,18 @@ const Home = () => {
                     <FaChevronRight className={styles.buttonIcon} />
                   </span>
                 </button>
+
+                <a
+                  href="https://mostafaashraaf.github.io/AL3alamiaLandingPage/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.profileButton}
+                >
+                  <span className={styles.buttonContent}>
+                    {t("visitProfile") || "Visit Our Profile"}{" "}
+                    <FaUserTie className={styles.buttonIcon} />
+                  </span>
+                </a>
               </div>
             </div>
 
@@ -170,12 +182,11 @@ const Home = () => {
                 >
                   <div className={styles.cardGlow}></div>
                   <div className={styles.cardContent}>
-                    <div className={styles.cardIconContainer}>
-                      {t("siteName")}
-                    </div>
-                    <div className={styles.cardTitle}>
-                      {t("welcomeToSite", { site: t("siteName") })}
-                    </div>
+                    <img
+                      src={logo}
+                      alt="AL3ALAMIA Logo"
+                      className={styles.cardLogo}
+                    />
                     <div className={styles.cardInfo}>
                       <div className={styles.cardInfoLabel}>{t("Since")}</div>
                       <div className={styles.cardInfoYear}>2010</div>
@@ -248,35 +259,30 @@ const Home = () => {
               </div>
               <div className={styles.aboutLogoBlock}>
                 <FaBuilding className={styles.aboutBuildingIcon} />
-                <h2 className={styles.aboutCompanyName}>
-                  {t("siteName")}
-                </h2>
+                <h2 className={styles.aboutCompanyName}>{t("siteName")}</h2>
                 <p className={styles.aboutCompanyFullName}>
-                  {t("companyFullName") || "Al-Alamiah Company for Importing and Supplying Inks and Computer Supplies"}
+                  {t("companyFullName") ||
+                    "Al-Alamiah Company for Importing and Supplying Inks and Computer Supplies"}
                 </p>
-              </div>
-              <div className={styles.aboutOwnerTag}>
-                <FaUserTie className={styles.aboutOwnerIcon} />
-                <div>
-                  <span className={styles.aboutOwnerLabel}>{t("owner") || "Owner"}</span>
-                  <span className={styles.aboutOwnerName}>
-                    {t("ownerName") || "Khaled Fathy Marzouk"}
-                  </span>
-                </div>
               </div>
             </div>
 
             {/* Right: Details Panel */}
             <div className={styles.aboutDetailsPanel}>
               <div className={styles.aboutBadgeRow}>
-                <span className={styles.aboutSectionBadge}>{t("aboutUsBadge") || "About Us"}</span>
+                <span className={styles.aboutSectionBadge}>
+                  {t("aboutUsBadge") || "About Us"}
+                </span>
               </div>
               <h3 className={styles.aboutSectionTitle}>
                 {t("aboutUs") || "About"}{" "}
-                <span className={styles.aboutTitleAccent}>{t("company") || "Our Company"}</span>
+                <span className={styles.aboutTitleAccent}>
+                  {t("company") || "Our Company"}
+                </span>
               </h3>
               <p className={styles.aboutParagraph}>
-                {t("aboutUsDescription") || "We are a leading Egyptian company specializing in the import and supply of inks and computer supplies, serving government entities and private sector organizations with excellence since 2010."}
+                {t("aboutUsDescription") ||
+                  "We are a leading Egyptian company specializing in the import and supply of inks and computer supplies, serving government entities and private sector organizations with excellence since 2010."}
               </p>
 
               {/* Credentials Grid */}
@@ -286,8 +292,12 @@ const Home = () => {
                     <FaIdCard className={styles.credentialIcon} />
                   </div>
                   <div className={styles.credentialText}>
-                    <span className={styles.credentialTitle}>{t("commercialRegistration") || "Commercial Registration"}</span>
-                    <span className={styles.credentialSub}>{t("commercialRegNumber") || "Registered & Verified"}</span>
+                    <span className={styles.credentialTitle}>
+                      {t("commercialRegistration") || "Commercial Registration"}
+                    </span>
+                    <span className={styles.credentialSub}>
+                      {t("commercialRegNumber") || "Registered & Verified"}
+                    </span>
                   </div>
                 </div>
                 <div className={styles.credentialCard}>
@@ -295,8 +305,12 @@ const Home = () => {
                     <FaCertificate className={styles.credentialIcon} />
                   </div>
                   <div className={styles.credentialText}>
-                    <span className={styles.credentialTitle}>{t("taxCard") || "Tax Card"}</span>
-                    <span className={styles.credentialSub}>{t("taxCardNumber") || "Tax Compliant"}</span>
+                    <span className={styles.credentialTitle}>
+                      {t("taxCard") || "Tax Card"}
+                    </span>
+                    <span className={styles.credentialSub}>
+                      {t("taxCardNumber") || "Tax Compliant"}
+                    </span>
                   </div>
                 </div>
                 <div className={styles.credentialCard}>
@@ -304,8 +318,12 @@ const Home = () => {
                     <FaCalendarAlt className={styles.credentialIcon} />
                   </div>
                   <div className={styles.credentialText}>
-                    <span className={styles.credentialTitle}>{t("work History") || "Work History"}</span>
-                    <span className={styles.credentialSub}>{t("work History Years") || "15+ Years Active"}</span>
+                    <span className={styles.credentialTitle}>
+                      {t("work History") || "Work History"}
+                    </span>
+                    <span className={styles.credentialSub}>
+                      {t("work History Years") || "15+ Years Active"}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -379,11 +397,14 @@ const Home = () => {
             </div>
             <div className={styles.clientsHeaderRight}>
               <p className={styles.clientsHeaderDesc}>
-                {t("topClientsSubtitle") || "Trusted by leading government bodies and private institutions for over five years."}
+                {t("topClientsSubtitle") ||
+                  "Trusted by leading government bodies and private institutions for over five years."}
               </p>
               <div className={styles.clientsYearsBadge}>
                 <span className={styles.clientsYearsNum}>5+</span>
-                <span className={styles.clientsYearsText}>{t("yearsOfTrust") || "Years of Trust"}</span>
+                <span className={styles.clientsYearsText}>
+                  {t("yearsOfTrust") || "Years of Trust"}
+                </span>
               </div>
             </div>
           </div>
@@ -391,7 +412,10 @@ const Home = () => {
           {/* Clients Showcase */}
           <div className={styles.clientsShowcase}>
             {topClients.map((client, idx) => (
-              <div key={idx} className={`${styles.clientShowcaseCard} ${idx % 2 === 0 ? styles.clientCardEven : styles.clientCardOdd}`}>
+              <div
+                key={idx}
+                className={`${styles.clientShowcaseCard} ${idx % 2 === 0 ? styles.clientCardEven : styles.clientCardOdd}`}
+              >
                 <div className={styles.clientCardNumber}>0{idx + 1}</div>
                 <div className={styles.clientIconLarge}>{client.icon}</div>
                 <h3 className={styles.clientShowcaseName}>{client.name}</h3>
