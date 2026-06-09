@@ -30,16 +30,13 @@ function CardsContainer({ info }) {
             ) : filteredProducts.length === 0 ? (
               <h1 className="isEmpty">No products match your filters</h1>
             ) : (
-              filteredProducts.map(
-                (p) =>
-                  (p.stock > 0 || p.stock === undefined) && (
-                    <ProductCard
-                      data={p}
-                      key={p.id || p.fireId}
-                      onProductSelect={onProductSelect}
-                    />
-                  )
-              )
+              filteredProducts.map((p) => (
+                <ProductCard
+                  data={p}
+                  key={p.id || p.fireId}
+                  onProductSelect={onProductSelect}
+                />
+              ))
             )}
           </div>
         </div>
