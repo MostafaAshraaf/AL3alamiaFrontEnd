@@ -5522,7 +5522,7 @@
     "price": 1600,
     "stock": 1000,
     "sales": 173,
-    "image": "/AL3ALAMIA/Drums/Oki/oki_410_430.png",
+    "image": "/AL3ALAMIA/Drums/OKI/oki_410_430.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -5536,7 +5536,7 @@
     "price": 1800,
     "stock": 1000,
     "sales": 241,
-    "image": "/AL3ALAMIA/Drums/Oki/oki_412_432_472_492.png",
+    "image": "/AL3ALAMIA/Drums/OKI/oki_412_432_472_492.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7608,7 +7608,7 @@
     "price": 470,
     "stock": 1000,
     "sales": 235,
-    "image": "/AL3ALAMIA/Chips/Oki/oki_412_432_472_492.png",
+    "image": "/AL3ALAMIA/Chips/OKI/oki_412_432_472_492.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7622,7 +7622,7 @@
     "price": 225,
     "stock": 1000,
     "sales": 484,
-    "image": "/AL3ALAMIA/Chips/Oki/oki_4131_4191.png",
+    "image": "/AL3ALAMIA/Chips/OKI/oki_4131_4191.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7636,7 +7636,7 @@
     "price": 225,
     "stock": 1000,
     "sales": 292,
-    "image": "/AL3ALAMIA/Chips/Oki/oki_4132_4192_5112_5162.png",
+    "image": "/AL3ALAMIA/Chips/OKI/oki_4132_4192_5112_5162.png",
     "rating": 0,
     "createdAt": 0
   },
