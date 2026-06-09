@@ -3,6 +3,10 @@ import { useMemo, useState } from "react";
 // Helper: get unique values from array
 const unique = (arr) => [...new Set(arr)];
 
+// Normalize brand strings to deduplicate case variants (e.g. "HP" / "Hp" → "Hp")
+const normalizeBrand = (b) =>
+  b ? b.trim().charAt(0).toUpperCase() + b.trim().slice(1).toLowerCase() : b;
+
 export const useProductFilters = (products = []) => {
   // Filter state
   const [mainCategory, setMainCategory] = useState("all");
@@ -55,9 +59,9 @@ export const useProductFilters = (products = []) => {
       ["Printers", "Cartridges", "Inks", "Drums", "Chips"].includes(p.type)
     );
 
-    // Brands from inspiredBy field
+    // Brands from inspiredBy field — normalize to deduplicate (e.g. "HP" vs "Hp")
     const availableBrands = unique(
-      printerInksProducts.map((p) => p.inspiredBy).filter(Boolean)
+      printerInksProducts.map((p) => normalizeBrand(p.inspiredBy)).filter(Boolean)
     );
 
     // Printer types (Printers, Cartridges, Inks) that exist
@@ -109,15 +113,18 @@ export const useProductFilters = (products = []) => {
       result = result.filter((p) => p.type === accessoryType);
     }
 
-    // 4. Printer brand
+    // 4. Printer brand (compare normalized to handle "HP" vs "Hp" in data)
     if (mainCategory === "printers-inks" && printerBrand !== "all") {
-      result = result.filter((p) => p.inspiredBy === printerBrand);
+      result = result.filter((p) => normalizeBrand(p.inspiredBy) === printerBrand);
     }
 
     // 5. Printer type
     if (mainCategory === "printers-inks" && printerType !== "all") {
       result = result.filter((p) => p.type === printerType);
     }
+
+    // 6. Exclude out-of-stock products (stock === 0)
+    result = result.filter((p) => p.stock > 0 || p.stock === undefined);
 
     return result;
   }, [
@@ -188,7 +195,7 @@ export const useProductFilters = (products = []) => {
         ["Printers", "Cartridges", "Inks", "Drums", "Chips"].includes(p.type)
       );
       if (testFilters.printerBrand !== "all") {
-        testResult = testResult.filter((p) => p.inspiredBy === testFilters.printerBrand);
+        testResult = testResult.filter((p) => normalizeBrand(p.inspiredBy) === testFilters.printerBrand);
       }
       if (testFilters.printerType !== "all") {
         testResult = testResult.filter((p) => p.type === testFilters.printerType);
