@@ -5466,7 +5466,7 @@
     "price": 1900,
     "stock": 1000,
     "sales": 245,
-    "image": "/AL3ALAMIA/Drums/Hp/hp_104_1104.png",
+    "image": "/AL3ALAMIA/Drums/HP/hp_104_1104.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -5480,7 +5480,7 @@
     "price": 400,
     "stock": 1000,
     "sales": 162,
-    "image": "/AL3ALAMIA/Drums/Hp/hp_17_19a.png",
+    "image": "/AL3ALAMIA/Drums/HP/hp_17_19a.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -5494,7 +5494,7 @@
     "price": 400,
     "stock": 1000,
     "sales": 136,
-    "image": "/AL3ALAMIA/Drums/Hp/hp_32_232a.png",
+    "image": "/AL3ALAMIA/Drums/HP/hp_32_232a.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -5508,7 +5508,7 @@
     "price": 4000,
     "stock": 1000,
     "sales": 100,
-    "image": "/AL3ALAMIA/Drums/Hp/hp_57a.png",
+    "image": "/AL3ALAMIA/Drums/HP/hp_57a.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6138,7 +6138,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 358,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_106a.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_106a.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6152,7 +6152,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 202,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_107a.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_107a.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6166,7 +6166,7 @@
     "price": 550,
     "stock": 1000,
     "sales": 476,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_10a.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_10a.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6180,7 +6180,7 @@
     "price": 175,
     "stock": 1000,
     "sales": 484,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_117_2070_c.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_117_2070_c.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6194,7 +6194,7 @@
     "price": 175,
     "stock": 1000,
     "sales": 325,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_117_2070_k.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_117_2070_k.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6208,7 +6208,7 @@
     "price": 175,
     "stock": 1000,
     "sales": 311,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_117_2070_m.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_117_2070_m.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6222,7 +6222,7 @@
     "price": 175,
     "stock": 1000,
     "sales": 187,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_117_2070_y.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_117_2070_y.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6236,7 +6236,7 @@
     "price": 175,
     "stock": 1000,
     "sales": 347,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_1331a.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_1331a.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6250,7 +6250,7 @@
     "price": 175,
     "stock": 1000,
     "sales": 102,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_1331x.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_1331x.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6264,7 +6264,7 @@
     "price": 125,
     "stock": 1000,
     "sales": 391,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_1332a.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_1332a.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6278,7 +6278,7 @@
     "price": 225,
     "stock": 1000,
     "sales": 406,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_1360a.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_1360a.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6292,7 +6292,7 @@
     "price": 750,
     "stock": 1000,
     "sales": 146,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_14a.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_14a.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6306,7 +6306,7 @@
     "price": 145,
     "stock": 1000,
     "sales": 133,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_14x.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_14x.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6320,7 +6320,7 @@
     "price": 225,
     "stock": 1000,
     "sales": 287,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_150_1500.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_150_1500.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6334,7 +6334,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 198,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_2055_c.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_2055_c.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6348,7 +6348,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 167,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_2055_k.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_2055_k.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6362,7 +6362,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 396,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_2055_m.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_2055_m.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6376,7 +6376,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 112,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_2055_y.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_2055_y.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6390,7 +6390,7 @@
     "price": 275,
     "stock": 1000,
     "sales": 342,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_206_207_2210_c.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_206_207_2210_c.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6404,7 +6404,7 @@
     "price": 275,
     "stock": 1000,
     "sales": 236,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_206_207_2210_k.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_206_207_2210_k.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6418,7 +6418,7 @@
     "price": 275,
     "stock": 1000,
     "sales": 487,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_206_207_2210_m.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_206_207_2210_m.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6432,7 +6432,7 @@
     "price": 275,
     "stock": 1000,
     "sales": 153,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_206_207_2210_y.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_206_207_2210_y.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6446,7 +6446,7 @@
     "price": 325,
     "stock": 1000,
     "sales": 261,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_2410_c.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_2410_c.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6460,7 +6460,7 @@
     "price": 325,
     "stock": 1000,
     "sales": 347,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_2410_k.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_2410_k.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6474,7 +6474,7 @@
     "price": 325,
     "stock": 1000,
     "sales": 241,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_2410_m.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_2410_m.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6488,7 +6488,7 @@
     "price": 325,
     "stock": 1000,
     "sales": 463,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_2410_y.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_2410_y.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6502,7 +6502,7 @@
     "price": 175,
     "stock": 1000,
     "sales": 337,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_25x.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_25x.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6516,7 +6516,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 354,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_260_4525_4540_bk.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_260_4525_4540_bk.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6530,7 +6530,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 350,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_260_4525_4540_c.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_260_4525_4540_c.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6544,7 +6544,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 499,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_260_4525_4540_m.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_260_4525_4540_m.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6558,7 +6558,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 128,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_260_4525_4540_y.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_260_4525_4540_y.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6572,7 +6572,7 @@
     "price": 75,
     "stock": 1000,
     "sales": 352,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_26a.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_26a.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6586,7 +6586,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 452,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_310_855_c.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_310_855_c.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6600,7 +6600,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 401,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_310_855_k.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_310_855_k.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6614,7 +6614,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 484,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_310_855_m.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_310_855_m.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6628,7 +6628,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 350,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_310_855_y.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_310_855_y.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6642,7 +6642,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 156,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_37a.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_37a.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6656,7 +6656,7 @@
     "price": 75,
     "stock": 1000,
     "sales": 365,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_380_476_c.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_380_476_c.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6670,7 +6670,7 @@
     "price": 75,
     "stock": 1000,
     "sales": 146,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_380_476_k.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_380_476_k.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6684,7 +6684,7 @@
     "price": 75,
     "stock": 1000,
     "sales": 443,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_380_476_m.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_380_476_m.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6698,7 +6698,7 @@
     "price": 75,
     "stock": 1000,
     "sales": 443,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_380_476_y.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_380_476_y.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6712,7 +6712,7 @@
     "price": 225,
     "stock": 1000,
     "sales": 375,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_415_2030_c.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_415_2030_c.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6726,7 +6726,7 @@
     "price": 225,
     "stock": 1000,
     "sales": 193,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_415_2030_k.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_415_2030_k.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6740,7 +6740,7 @@
     "price": 225,
     "stock": 1000,
     "sales": 373,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_415_2030_m.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_415_2030_m.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6754,7 +6754,7 @@
     "price": 225,
     "stock": 1000,
     "sales": 215,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_415_2030_y.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_415_2030_y.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6768,7 +6768,7 @@
     "price": 75,
     "stock": 1000,
     "sales": 219,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_48a.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_48a.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6782,7 +6782,7 @@
     "price": 75,
     "stock": 1000,
     "sales": 344,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_49_53a.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_49_53a.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6796,7 +6796,7 @@
     "price": 125,
     "stock": 1000,
     "sales": 364,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_57a.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_57a.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6810,7 +6810,7 @@
     "price": 225,
     "stock": 1000,
     "sales": 431,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_57a_drum.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_57a_drum.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6824,7 +6824,7 @@
     "price": 125,
     "stock": 1000,
     "sales": 232,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_59a.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_59a.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6838,7 +6838,7 @@
     "price": 75,
     "stock": 1000,
     "sales": 483,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_85_35a.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_85_35a.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6852,7 +6852,7 @@
     "price": 125,
     "stock": 1000,
     "sales": 458,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_880_300_drum_c.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_880_300_drum_c.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6866,7 +6866,7 @@
     "price": 125,
     "stock": 1000,
     "sales": 298,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_880_300_drum_k.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_880_300_drum_k.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6880,7 +6880,7 @@
     "price": 125,
     "stock": 1000,
     "sales": 113,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_880_300_drum_m.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_880_300_drum_m.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6894,7 +6894,7 @@
     "price": 125,
     "stock": 1000,
     "sales": 268,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_880_300_drum_y.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_880_300_drum_y.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6908,7 +6908,7 @@
     "price": 225,
     "stock": 1000,
     "sales": 491,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_89a.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_89a.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6922,7 +6922,7 @@
     "price": 275,
     "stock": 1000,
     "sales": 171,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_9005.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_9005.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6936,7 +6936,7 @@
     "price": 275,
     "stock": 1000,
     "sales": 259,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_9190_c.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_9190_c.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6950,7 +6950,7 @@
     "price": 275,
     "stock": 1000,
     "sales": 134,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_9190_k.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_9190_k.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6964,7 +6964,7 @@
     "price": 275,
     "stock": 1000,
     "sales": 180,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_9190_m.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_9190_m.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6978,7 +6978,7 @@
     "price": 275,
     "stock": 1000,
     "sales": 496,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_9190_y.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_9190_y.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -6992,7 +6992,7 @@
     "price": 125,
     "stock": 1000,
     "sales": 263,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_ce_340_775_c.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_ce_340_775_c.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7006,7 +7006,7 @@
     "price": 125,
     "stock": 1000,
     "sales": 101,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_ce_340_775_k.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_ce_340_775_k.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7020,7 +7020,7 @@
     "price": 125,
     "stock": 1000,
     "sales": 317,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_ce_340_775_m.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_ce_340_775_m.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7034,7 +7034,7 @@
     "price": 125,
     "stock": 1000,
     "sales": 276,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_ce_340_775_y.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_ce_340_775_y.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7048,7 +7048,7 @@
     "price": 125,
     "stock": 1000,
     "sales": 492,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_ce_400_507_k.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_ce_400_507_k.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7062,7 +7062,7 @@
     "price": 125,
     "stock": 1000,
     "sales": 111,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_ce_400_507_c.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_ce_400_507_c.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7076,7 +7076,7 @@
     "price": 125,
     "stock": 1000,
     "sales": 256,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_ce_400_507_m.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_ce_400_507_m.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7090,7 +7090,7 @@
     "price": 125,
     "stock": 1000,
     "sales": 489,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_ce_400_507_y.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_ce_400_507_y.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7104,7 +7104,7 @@
     "price": 125,
     "stock": 1000,
     "sales": 108,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_ce_740_c.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_ce_740_c.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7118,7 +7118,7 @@
     "price": 125,
     "stock": 1000,
     "sales": 219,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_ce_740_k.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_ce_740_k.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7132,7 +7132,7 @@
     "price": 125,
     "stock": 1000,
     "sales": 282,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_ce_740_m.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_ce_740_m.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7146,7 +7146,7 @@
     "price": 125,
     "stock": 1000,
     "sales": 389,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_ce_740_y.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_ce_740_y.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7160,7 +7160,7 @@
     "price": 125,
     "stock": 1000,
     "sales": 189,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_300_880_c.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_300_880_c.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7174,7 +7174,7 @@
     "price": 125,
     "stock": 1000,
     "sales": 212,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_300_880_k.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_300_880_k.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7188,7 +7188,7 @@
     "price": 125,
     "stock": 1000,
     "sales": 196,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_300_880_m.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_300_880_m.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7202,7 +7202,7 @@
     "price": 125,
     "stock": 1000,
     "sales": 233,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_300_880_y.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_300_880_y.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7216,7 +7216,7 @@
     "price": 225,
     "stock": 1000,
     "sales": 189,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_330_c.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_330_c.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7230,7 +7230,7 @@
     "price": 225,
     "stock": 1000,
     "sales": 169,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_330_k.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_330_k.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7244,7 +7244,7 @@
     "price": 225,
     "stock": 1000,
     "sales": 174,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_330_m.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_330_m.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7258,7 +7258,7 @@
     "price": 225,
     "stock": 1000,
     "sales": 204,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_330_y.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_330_y.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7272,7 +7272,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 145,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_360_508_c.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_360_508_c.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7286,7 +7286,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 226,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_360_508_k.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_360_508_k.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7300,7 +7300,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 409,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_360_508_m.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_360_508_m.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7314,7 +7314,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 174,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_360_508_y.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_360_508_y.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7328,7 +7328,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 478,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_400_c.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_400_c.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7342,7 +7342,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 400,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_400_k.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_400_k.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7356,7 +7356,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 192,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_400_m.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_400_m.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7370,7 +7370,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 454,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_400_y.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_400_y.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7384,7 +7384,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 459,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_410_c.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_410_c.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7398,7 +7398,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 491,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_410_k.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_410_k.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7412,7 +7412,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 296,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_410_m.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_410_m.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7426,7 +7426,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 458,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_410_y.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_410_y.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7440,7 +7440,7 @@
     "price": 225,
     "stock": 1000,
     "sales": 193,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_450_c.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_450_c.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7454,7 +7454,7 @@
     "price": 225,
     "stock": 1000,
     "sales": 488,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_450_k.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_450_k.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7468,7 +7468,7 @@
     "price": 225,
     "stock": 1000,
     "sales": 300,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_450_m.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_450_m.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7482,7 +7482,7 @@
     "price": 2125,
     "stock": 1000,
     "sales": 401,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_450_y.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_450_y.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7496,7 +7496,7 @@
     "price": 225,
     "stock": 1000,
     "sales": 246,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_470_c.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_470_c.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7510,7 +7510,7 @@
     "price": 225,
     "stock": 1000,
     "sales": 430,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_470_k.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_470_k.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7524,7 +7524,7 @@
     "price": 225,
     "stock": 1000,
     "sales": 312,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_470_m.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_470_m.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7538,7 +7538,7 @@
     "price": 225,
     "stock": 1000,
     "sales": 410,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_470_y.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_470_y.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7552,7 +7552,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 456,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_540_c.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_540_c.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7566,7 +7566,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 305,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_540_k.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_540_k.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7580,7 +7580,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 441,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_540_m.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_540_m.png",
     "rating": 0,
     "createdAt": 0
   },
@@ -7594,7 +7594,7 @@
     "price": 100,
     "stock": 1000,
     "sales": 246,
-    "image": "/AL3ALAMIA/Chips/Hp/hp_cf_540_y.png",
+    "image": "/AL3ALAMIA/Chips/HP/hp_cf_540_y.png",
     "rating": 0,
     "createdAt": 0
   },
