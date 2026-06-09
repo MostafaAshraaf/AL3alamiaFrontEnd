@@ -108,8 +108,6 @@ const ProductInfo = () => {
       case "Mouse":
         return <FaMouse />;
       case "Keyboard":
-        return <FaKeyboard />;
-      case "Cables":
         return <FaPlug />;
       case "Mouse Pad":
         return <FaSquare />;
@@ -122,6 +120,10 @@ const ProductInfo = () => {
       case "Inks":
         return <FaTint />;
       case "Cartridges":
+        return <FaPrint />;
+      case "Drums":
+        return <FaPrint />;
+      case "Chips":
         return <FaPrint />;
       default:
         return <FaBox className={styles.typeIcon} />;
