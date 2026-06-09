@@ -289,7 +289,7 @@
   "topClientsBadge": "موثوق من قبل",
   "topClients": "أبرز العملاء",
   "topClientsSubtitle": "نفخر بالتعاون مع كبرى المؤسسات",
-  "clientGizaWater": "شركة مياه الشرب والصرف الصحي بالجيزة",
+  "clientWater": "شركة مياه الشرب والصرف الصحي ",
   "clientYouthSports": "وزارة الشباب والرياضة",
   "clientNileClub": "نادي النيل الرياضي",
   "clientAdultEducation": "الهيئة العامة لتعليم الكبار",
@@ -302,5 +302,9 @@
   "checkInboxAndSpam": "من فضلك تحقق من صندوق الوارد ورسائل البريد غير الهام (Spam).",
   "resendVerificationEmail": "إعادة إرسال رسالة التحقق",
   "resendIn": "إعادة الإرسال خلال",
-  "backToLogin": "العودة لتسجيل الدخول"
+  "backToLogin": "العودة لتسجيل الدخول",
+  "companyFullName": "شركة العالمية ستور لاستيراد وتوريد الأحبار ومستلزمات الكمبيوتر",
+  "visitProfile": "زيارة ملفنا الشخصي",
+  "Drums": "درام",
+  "Chips": "شيبات"
 }
