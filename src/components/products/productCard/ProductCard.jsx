@@ -17,7 +17,6 @@ import { useTranslation } from "react-i18next";
 function ProductCard({ data, children }) {
   const { t } = useTranslation();
 
-  // const { fireId, name, description, image, type } = data;
   const { fireId, name, description, price, image, type } = data;
 
   const { inCart, addToCartHandler, removeFromCartHandler } = useCart(data);
@@ -73,4 +72,9 @@ function ProductCard({ data, children }) {
   );
 }
 
-export default React.memo(ProductCard);
+export default React.memo(ProductCard, (prev, next) => {
+  // Re-render whenever the product identity changes
+  const prevId = prev.data?.fireId ?? prev.data?.id;
+  const nextId = next.data?.fireId ?? next.data?.id;
+  return prevId === nextId;
+});
