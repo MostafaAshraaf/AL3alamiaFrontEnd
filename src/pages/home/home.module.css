@@ -78,7 +78,33 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+/* Logo inside the hero card */
+.cardLogo {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin: 0 auto 12px;
+  display: block;
+}
 
+/* Profile page button */
+.profileButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 28px;
+  border-radius: 50px;
+  border: 2px solid #d4a017;
+  color: #d4a017;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.profileButton:hover {
+  background: #d4a017;
+  color: #000;
+}
 .heroText {
   animation: fadeInLeft 1s ease-out forwards;
 }
@@ -229,7 +255,7 @@
 .cardGlow {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, #c9a84c, #e8c96b);
+  /* background: linear-gradient(to right, #c9a84c, #e8c96b); */
   border-radius: 1.5rem;
   filter: blur(4px);
   opacity: 0.3;
@@ -830,11 +856,7 @@
   margin-bottom: 1.5rem;
 }
 
-.perfumePrice {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #c9a84c;
-}
+
 
 .perfumeRating {
   display: flex;
