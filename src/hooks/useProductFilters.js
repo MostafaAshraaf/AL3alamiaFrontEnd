@@ -52,7 +52,7 @@ export const useProductFilters = (products = []) => {
 
     // Printers & Inks related
     const printerInksProducts = baseProducts.filter((p) =>
-      ["Printers", "Cartridges", "Inks"].includes(p.type)
+      ["Printers", "Cartridges", "Inks", "Drums", "Chips"].includes(p.type)
     );
 
     // Brands from inspiredBy field
@@ -100,7 +100,7 @@ export const useProductFilters = (products = []) => {
       result = result.filter((p) => accessoryTypes.includes(p.type));
     } else if (mainCategory === "printers-inks") {
       result = result.filter((p) =>
-        ["Printers", "Cartridges", "Inks"].includes(p.type)
+        ["Printers", "Cartridges", "Inks", "Drums", "Chips"].includes(p.type)
       );
     }
 
@@ -185,7 +185,7 @@ export const useProductFilters = (products = []) => {
       }
     } else if (testFilters.mainCategory === "printers-inks") {
       testResult = testResult.filter((p) =>
-        ["Printers", "Cartridges", "Inks"].includes(p.type)
+        ["Printers", "Cartridges", "Inks", "Drums", "Chips"].includes(p.type)
       );
       if (testFilters.printerBrand !== "all") {
         testResult = testResult.filter((p) => p.inspiredBy === testFilters.printerBrand);
