@@ -11,7 +11,7 @@ import {
 import ProductCard from "../../components/products/productCard/ProductCard";
 import { successMessage } from "../../redux/toasts";
 // import { useTranslation } from "react-i18next";
-
+import CatalogGenerator from "../../components/catalog/CatalogGenerator";
 const validationSchema = Yup.object({
   name: Yup.string().required("Name is required"),
   description: Yup.string().required("Description is required"),
@@ -81,7 +81,8 @@ const MarketManage = () => {
   };
 
   const handleDelete = async (fireId) => {
-    if (!window.confirm("Are you sure you want to delete this product?")) return;
+    if (!window.confirm("Are you sure you want to delete this product?"))
+      return;
     try {
       await deleteProductMutation.mutateAsync(fireId);
       refetch();
@@ -94,7 +95,7 @@ const MarketManage = () => {
   const filteredProducts = products.filter(
     (product) =>
       product.name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.description?.toLowerCase().includes(searchQuery.toLowerCase())
+      product.description?.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   useEffect(() => {
@@ -117,9 +118,9 @@ const MarketManage = () => {
     { value: "Mouse", label: "Mouse" },
     { value: "Keyboard", label: "Keyboard" },
     { value: "Mouse Pad", label: "Mouse Pad" },
-    { value: "Game pad", label: "Game pad" },
+    { value: "Game Pad", label: "Game Pad" },
     { value: "Speakers", label: "Speakers" },
-    { value: "Printer", label: "Printer" },
+    { value: "Printers", label: "Printers" },
     { value: "Cartridges", label: "Cartridges" },
     { value: "Drums", label: "Drums" },
     { value: "Inks", label: "Inks" },
@@ -138,6 +139,7 @@ const MarketManage = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
+            <CatalogGenerator products={products} /> 
             <button
               className={styles.addButton}
               onClick={() => handleOpenModal()}
@@ -202,7 +204,11 @@ const MarketManage = () => {
                   </div>
                   <div className={styles.formGroup}>
                     <label>Description</label>
-                    <Field name="description" as="textarea" className={styles.input} />
+                    <Field
+                      name="description"
+                      as="textarea"
+                      className={styles.input}
+                    />
                     <ErrorMessage
                       name="description"
                       component="div"
