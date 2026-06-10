@@ -1,0 +1,133 @@
+/* catalogGenerator.module.css */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ── Generate Button ─────────────────────────────── */
+.generateBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #a07d1c, #c9a227);
+  color: #0a0a0a;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 2px 12px rgba(201, 162, 39, 0.3);
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+}
+
+.generateBtn:hover:not(:disabled) {
+  opacity: 0.92;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 18px rgba(201, 162, 39, 0.45);
+}
+
+.generateBtn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.generateBtn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btnIcon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* ── Spinner ─────────────────────────────────────── */
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(10, 10, 10, 0.3);
+  border-top-color: #0a0a0a;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Toggle ──────────────────────────────────────── */
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggleLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: #c9a227;
+  white-space: nowrap;
+}
+
+.toggleTrack {
+  width: 40px;
+  height: 22px;
+  border-radius: 11px;
+  background: #2e2a22;
+  border: 1px solid rgba(201, 162, 39, 0.35);
+  position: relative;
+  transition: background 0.25s, border-color 0.25s;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.toggleTrack:focus {
+  outline: 2px solid #c9a227;
+  outline-offset: 2px;
+}
+
+.toggleOn {
+  background: #c9a227;
+  border-color: #c9a227;
+}
+
+.toggleThumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #f5f0e8;
+  transition: transform 0.25s;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.toggleOn .toggleThumb {
+  transform: translateX(18px);
+}
+
+.toggleHint {
+  font-size: 11px;
+  color: #8a7a5a;
+  max-width: 180px;
+  direction: rtl;
+  text-align: right;
+  line-height: 1.3;
+}
+
+/* ── Hint text ───────────────────────────────────── */
+.hint {
+  font-size: 12px;
+  color: #8a7a5a;
+}
