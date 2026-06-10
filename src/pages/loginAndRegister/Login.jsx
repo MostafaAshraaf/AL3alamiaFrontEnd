@@ -1,6 +1,6 @@
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import styles from "./login.module.css";
-import logo from "../../assets/logo2.png";
+import logo from "../../../public/logo.png";
 import { ErrorMessage, Field, Formik, Form } from "formik";
 import * as Yup from "yup";
 import { loginApi } from "../../redux/auth/authApis";
