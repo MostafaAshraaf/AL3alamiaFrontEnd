@@ -116,13 +116,13 @@ const MarketManage = () => {
     { value: "", label: "Select Type" },
     { value: "Mouse", label: "Mouse" },
     { value: "Keyboard", label: "Keyboard" },
-    { value: "Ink", label: "Ink / Toner" },
-    { value: "MousePad", label: "Mouse Pad" },
-    { value: "Cables", label: "Cables" },
+    { value: "Mouse Pad", label: "Mouse Pad" },
+    { value: "Game pad", label: "Game pad" },
+    { value: "Speakers", label: "Speakers" },
     { value: "Printer", label: "Printer" },
-    { value: "Scanner", label: "Scanner" },
-    { value: "Monitor", label: "Monitor" },
-    { value: "Accessory", label: "Accessory" },
+    { value: "Cartridges", label: "Cartridges" },
+    { value: "Drums", label: "Drums" },
+    { value: "Inks", label: "Inks" },
   ];
 
   return (
