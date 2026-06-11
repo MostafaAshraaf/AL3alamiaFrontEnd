@@ -457,7 +457,8 @@
 
 .admin_prices {
   display: flex;
-  gap: 12px;
+  gap: 5px;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 8px;
 }
@@ -475,3 +476,17 @@
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
+.adminControls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.admin_actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+/* If you want to target children specifically */
