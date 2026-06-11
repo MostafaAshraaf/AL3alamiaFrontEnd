@@ -109,7 +109,6 @@
 /* All category badges use same gold gradient */
 .Mouse_badge,
 .Keyboard_badge,
-.cables_badge,
 .Mousepad_badge,
 .Inks_badge,
 .Gamepad_badge,
@@ -453,4 +452,26 @@
 @keyframes shimmer {
   0% { background-position: -200px 0; }
   100% { background-position: calc(200px + 100%) 0; }
+}
+
+
+.admin_prices {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.admin_price_item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.admin_price_label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
