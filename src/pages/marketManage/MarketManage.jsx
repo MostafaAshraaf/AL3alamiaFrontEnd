@@ -10,8 +10,10 @@ import {
 } from "../../redux/products/productsApis";
 import ProductCard from "../../components/products/productCard/ProductCard";
 import { successMessage } from "../../redux/toasts";
-// import { useTranslation } from "react-i18next";
 import CatalogGenerator from "../../components/catalog/CatalogGenerator";
+import PriceQuote from "../../components/priceQuote/PriceQuote";
+import BulkPriceAdjust from "../../components/bulkPriceAdjust/BulkPriceAdjust";
+
 const validationSchema = Yup.object({
   name: Yup.string().required("Name is required"),
   description: Yup.string().required("Description is required"),
@@ -25,10 +27,18 @@ const validationSchema = Yup.object({
   sales: Yup.number()
     .required("Sales is required")
     .min(0, "Sales cannot be negative"),
+  price: Yup.number()
+    .required("Price is required")
+    .positive("Price must be positive"),
+  code: Yup.number()
+    .required("Purchase price is required")
+    .positive("Purchase price must be positive"),
+  supply: Yup.number()
+    .required("Supply price is required")
+    .positive("Supply price must be positive"),
 });
 
 const MarketManage = () => {
-  // const { t } = useTranslation();
   const { data: products = [], isLoading, error, refetch } = useProducts();
   const addProductMutation = useAddProduct();
   const updateProductMutation = useUpdateProduct();
@@ -36,6 +46,7 @@ const MarketManage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const [isBulkOpen, setIsBulkOpen] = useState(false);
 
   const handleOpenModal = (product = null) => {
     setSelectedProduct(product);
@@ -50,8 +61,6 @@ const MarketManage = () => {
   const handleImageChange = (event, setFieldValue) => {
     const file = event.target.files[0];
     if (file) {
-      // Note: For production, consider uploading to Firebase Storage
-      // and storing the download URL instead of base64.
       const reader = new FileReader();
       reader.onloadend = () => {
         setFieldValue("image", reader.result);
@@ -100,19 +109,12 @@ const MarketManage = () => {
 
   useEffect(() => {
     const handleEsc = (event) => {
-      if (event.key === "Escape") {
-        handleCloseModal();
-      }
+      if (event.key === "Escape") handleCloseModal();
     };
-    if (isModalOpen) {
-      window.addEventListener("keydown", handleEsc);
-    }
-    return () => {
-      window.removeEventListener("keydown", handleEsc);
-    };
+    if (isModalOpen) window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
   }, [isModalOpen]);
 
-  // Product type options relevant to computer accessories store
   const productTypeOptions = [
     { value: "", label: "Select Type" },
     { value: "Mouse", label: "Mouse" },
@@ -124,6 +126,7 @@ const MarketManage = () => {
     { value: "Cartridges", label: "Cartridges" },
     { value: "Drums", label: "Drums" },
     { value: "Inks", label: "Inks" },
+    { value: "Chips", label: "Chips" },
   ];
 
   return (
@@ -139,16 +142,25 @@ const MarketManage = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
-            <CatalogGenerator products={products} /> 
+            <CatalogGenerator products={products} />
             <button
               className={styles.addButton}
               onClick={() => handleOpenModal()}
             >
               Add Product
             </button>
+            <button
+              className={styles.addButton}
+              onClick={() => setIsBulkOpen(true)}
+            >
+              📊 Bulk Price Adjust
+            </button>
+            <PriceQuote />
           </div>
+
           {isLoading && <p>Loading...</p>}
           {error && <p>Error: {error.message}</p>}
+
           <div className={styles.productGrid}>
             {filteredProducts.map((product) => (
               <div key={product.fireId} className={styles.productCardWrapper}>
@@ -174,6 +186,7 @@ const MarketManage = () => {
         </div>
       </div>
 
+      {/* ── Add / Edit Modal ───────────────────────────────────────────── */}
       {isModalOpen && (
         <div className={styles.modal}>
           <div className={styles.modalContent}>
@@ -187,6 +200,9 @@ const MarketManage = () => {
                 brand: selectedProduct?.brand || "",
                 stock: selectedProduct?.stock || "",
                 sales: selectedProduct?.sales || 0,
+                price: selectedProduct?.price || "",
+                code: selectedProduct?.code || "",
+                supply: selectedProduct?.supply || "",
               }}
               validationSchema={validationSchema}
               onSubmit={handleSubmit}
@@ -202,6 +218,7 @@ const MarketManage = () => {
                       className={styles.error}
                     />
                   </div>
+
                   <div className={styles.formGroup}>
                     <label>Description</label>
                     <Field
@@ -215,6 +232,7 @@ const MarketManage = () => {
                       className={styles.error}
                     />
                   </div>
+
                   <div className={styles.formGroup}>
                     <label>Type</label>
                     <Field name="type" as="select" className={styles.input}>
@@ -230,8 +248,10 @@ const MarketManage = () => {
                       className={styles.error}
                     />
                   </div>
+
+                  {/* ── Price fields ── */}
                   <div className={styles.formGroup}>
-                    <label>Price</label>
+                    <label>User Price (price)</label>
                     <Field
                       name="price"
                       type="number"
@@ -243,6 +263,31 @@ const MarketManage = () => {
                       className={styles.error}
                     />
                   </div>
+
+                  <div className={styles.formGroup}>
+                    <label>Purchase Price (code)</label>
+                    <Field name="code" type="number" className={styles.input} />
+                    <ErrorMessage
+                      name="code"
+                      component="div"
+                      className={styles.error}
+                    />
+                  </div>
+
+                  <div className={styles.formGroup}>
+                    <label>Supply Price (supply)</label>
+                    <Field
+                      name="supply"
+                      type="number"
+                      className={styles.input}
+                    />
+                    <ErrorMessage
+                      name="supply"
+                      component="div"
+                      className={styles.error}
+                    />
+                  </div>
+
                   <div className={styles.formGroup}>
                     <label>Image</label>
                     <input
@@ -266,6 +311,7 @@ const MarketManage = () => {
                       className={styles.error}
                     />
                   </div>
+
                   <div className={styles.formGroup}>
                     <label>Brand</label>
                     <Field name="brand" type="text" className={styles.input} />
@@ -275,6 +321,7 @@ const MarketManage = () => {
                       className={styles.error}
                     />
                   </div>
+
                   <div className={styles.formGroup}>
                     <label>Stock Quantity</label>
                     <Field
@@ -288,6 +335,7 @@ const MarketManage = () => {
                       className={styles.error}
                     />
                   </div>
+
                   <div className={styles.formGroup}>
                     <label>Sales (Optional)</label>
                     <Field
@@ -301,6 +349,7 @@ const MarketManage = () => {
                       className={styles.error}
                     />
                   </div>
+
                   <div className={styles.formButtons}>
                     <button
                       type="submit"
@@ -322,6 +371,18 @@ const MarketManage = () => {
             </Formik>
           </div>
         </div>
+      )}
+
+      {/* ── Bulk Price Adjust Modal ────────────────────────────────────── */}
+      {isBulkOpen && (
+        <BulkPriceAdjust
+          products={products}
+          onClose={() => setIsBulkOpen(false)}
+          onSuccess={() => {
+            refetch();
+            setIsBulkOpen(false);
+          }}
+        />
       )}
     </div>
   );
