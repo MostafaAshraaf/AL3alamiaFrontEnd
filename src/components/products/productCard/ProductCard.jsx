@@ -57,7 +57,19 @@ function ProductCard({ data, children }) {
             {price} {t("EGP")}
           </p>
           {userRole === "admin" ? (
-            children
+            <>
+              <div className={styles.admin_prices}>
+                <span className={styles.admin_price_item}>
+                  <span className={styles.admin_price_label}>Supply</span>
+                  <span className={styles.price}>{data.supply}</span>
+                </span>
+                <span className={styles.admin_price_item}>
+                  <span className={styles.admin_price_label}>Purchase</span>
+                  <span className={styles.price}>{data.code}</span>
+                </span>
+              </div>
+              {children}
+            </>
           ) : (
             <button
               className={`${styles.cart_btn} ${inCart ? styles.add_to_cart : styles.remove_from_cart}`}
