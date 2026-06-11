@@ -88,12 +88,12 @@
 .actionButtons {
   display: flex;
   gap: 12px;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .editButton,
 .deleteButton {
-  padding: 8px 16px;
+  padding: 8px 25px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -101,6 +101,7 @@
   font-weight: 700;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   letter-spacing: 0.025em;
+
 }
 
 .editButton {
