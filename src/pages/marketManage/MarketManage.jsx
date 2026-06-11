@@ -13,7 +13,7 @@ import { successMessage } from "../../redux/toasts";
 import CatalogGenerator from "../../components/catalog/CatalogGenerator";
 import PriceQuote from "../../components/priceQuote/PriceQuote";
 import BulkPriceAdjust from "../../components/bulkPriceAdjust/BulkPriceAdjust";
-
+import QuoteBuilder from "../../components/quoteBuilder/Quotebuilder";
 const validationSchema = Yup.object({
   name: Yup.string().required("Name is required"),
   description: Yup.string().required("Description is required"),
@@ -143,6 +143,7 @@ const MarketManage = () => {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
             <CatalogGenerator products={products} />
+            <QuoteBuilder products={products} />
             <button
               className={styles.addButton}
               onClick={() => handleOpenModal()}
