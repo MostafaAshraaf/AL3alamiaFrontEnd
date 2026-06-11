@@ -53,23 +53,29 @@ function ProductCard({ data, children }) {
           ...
         </p>
         <div className={styles.main}>
-          <p className={styles.price}>
-            {price} {t("EGP")}
-          </p>
+          {userRole !== "admin" && (
+            <p className={styles.price}>
+              {price} {t("EGP")}
+            </p>
+          )}
           {userRole === "admin" ? (
-            <>
+            <div className={styles.adminControls}>
               <div className={styles.admin_prices}>
+                <span className={styles.admin_price_item}>
+                  <span className={styles.admin_price_label}>Purchase</span>
+                  <span className={styles.price}>{data.code}</span>
+                </span>
                 <span className={styles.admin_price_item}>
                   <span className={styles.admin_price_label}>Supply</span>
                   <span className={styles.price}>{data.supply}</span>
                 </span>
                 <span className={styles.admin_price_item}>
-                  <span className={styles.admin_price_label}>Purchase</span>
-                  <span className={styles.price}>{data.code}</span>
+                  <span className={styles.admin_price_label}>User</span>
+                  <span className={styles.price}>{data.price}</span>
                 </span>
               </div>
-              {children}
-            </>
+              <div className={styles.admin_actions}>{children}</div>
+            </div>
           ) : (
             <button
               className={`${styles.cart_btn} ${inCart ? styles.add_to_cart : styles.remove_from_cart}`}
