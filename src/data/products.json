@@ -11,7 +11,9 @@
     "sales": 5,
     "image": "/AL3ALAMIA/Mouse/GigaMax_G1100.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 250,
+    "code": 0
   },
   {
     "id": "GigaMax_G1200",
@@ -25,7 +27,9 @@
     "sales": 7,
     "image": "/AL3ALAMIA/Mouse/GigaMax_G1200.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 250,
+    "code": 0
   },
   {
     "id": "GigaMax_G1300",
@@ -39,7 +43,9 @@
     "sales": 3,
     "image": "/AL3ALAMIA/Mouse/GigaMax_G1300.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 250,
+    "code": 0
   },
   {
     "id": "GigaMax_G1400",
@@ -53,7 +59,9 @@
     "sales": 1,
     "image": "/AL3ALAMIA/Mouse/GigaMax_G1400.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 250,
+    "code": 0
   },
   {
     "id": "GigaMax_G1500",
@@ -67,7 +75,9 @@
     "sales": 5,
     "image": "/AL3ALAMIA/Mouse/GigaMax_G1500.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 250,
+    "code": 0
   },
   {
     "id": "GigaMax_G1600",
@@ -81,7 +91,9 @@
     "sales": 3,
     "image": "/AL3ALAMIA/Mouse/GigaMax_G1600.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 250,
+    "code": 0
   },
   {
     "id": "GigaMax_G1700",
@@ -95,7 +107,9 @@
     "sales": 12,
     "image": "/AL3ALAMIA/Mouse/GigaMax_G1700.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 250,
+    "code": 0
   },
   {
     "id": "GigaMax_G1800",
@@ -109,7 +123,9 @@
     "sales": 2,
     "image": "/AL3ALAMIA/Mouse/GigaMax_G1800.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 250,
+    "code": 0
   },
   {
     "id": "GigaMax_G1900",
@@ -123,7 +139,9 @@
     "sales": 6,
     "image": "/AL3ALAMIA/Mouse/GigaMax_G1900.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 250,
+    "code": 0
   },
   {
     "id": "GigaMax_G2000",
@@ -137,7 +155,9 @@
     "sales": 14,
     "image": "/AL3ALAMIA/Mouse/GigaMax_G2000.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 265,
+    "code": 0
   },
   {
     "id": "GigaMax_G3100",
@@ -151,7 +171,9 @@
     "sales": 1,
     "image": "/AL3ALAMIA/Mouse/GigaMAx_G3100.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 295,
+    "code": 0
   },
   {
     "id": "Hood_M8000",
@@ -165,7 +187,9 @@
     "sales": 6,
     "image": "/AL3ALAMIA/Mouse/Hood_M8000.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 130,
+    "code": 0
   },
   {
     "id": "Hp_M100",
@@ -179,7 +203,9 @@
     "sales": 22,
     "image": "/AL3ALAMIA/Mouse/Hp_M100.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 105,
+    "code": 0
   },
   {
     "id": "IMICE_A8",
@@ -193,7 +219,9 @@
     "sales": 18,
     "image": "/AL3ALAMIA/Mouse/Imice_A8.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 475,
+    "code": 0
   },
   {
     "id": "IMICE_T90",
@@ -207,7 +235,9 @@
     "sales": 9,
     "image": "/AL3ALAMIA/Mouse/Imice_T90.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 690,
+    "code": 0
   },
   {
     "id": "IMICE_T98",
@@ -221,7 +251,9 @@
     "sales": 1,
     "image": "/AL3ALAMIA/Mouse/Imice_T98.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 425,
+    "code": 0
   },
   {
     "id": "IMICE_V9",
@@ -235,7 +267,9 @@
     "sales": 18,
     "image": "/AL3ALAMIA/Mouse/Imice_V9.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 475,
+    "code": 0
   },
   {
     "id": "JERTECH_M500",
@@ -249,7 +283,9 @@
     "sales": 4,
     "image": "/AL3ALAMIA/Mouse/Jertech_M500.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 105,
+    "code": 0
   },
   {
     "id": "LEDMouse_TJ9",
@@ -263,7 +299,9 @@
     "sales": 14,
     "image": "/AL3ALAMIA/Mouse/LEDMouse_TJ9.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 210,
+    "code": 0
   },
   {
     "id": "PTEC_P11",
@@ -277,7 +315,9 @@
     "sales": 4,
     "image": "/AL3ALAMIA/Mouse/Ptec_p11.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 0
   },
   {
     "id": "PTEC_P12",
@@ -291,7 +331,9 @@
     "sales": 11,
     "image": "/AL3ALAMIA/Mouse/Ptec_p12.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 105,
+    "code": 0
   },
   {
     "id": "CRASH_X60",
@@ -305,7 +347,9 @@
     "sales": 18,
     "image": "/AL3ALAMIA/Keyboard/Crash_X60.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 265,
+    "code": 0
   },
   {
     "id": "Zero_ZR2608",
@@ -319,7 +363,9 @@
     "sales": 7,
     "image": "/AL3ALAMIA/Keyboard/Zero_ZR2608.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 190,
+    "code": 0
   },
   {
     "id": "Dell",
@@ -333,7 +379,9 @@
     "sales": 7,
     "image": "/AL3ALAMIA/Keyboard/Dell.jpeg ",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 290,
+    "code": 0
   },
   {
     "id": "GigaMax_K519",
@@ -347,7 +395,9 @@
     "sales": 7,
     "image": "/AL3ALAMIA/Keyboard/GigaMax_K519.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 190,
+    "code": 0
   },
   {
     "id": "Mini_K1000",
@@ -361,7 +411,9 @@
     "sales": 7,
     "image": "/AL3ALAMIA/Keyboard/Mini_K1000.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 255,
+    "code": 0
   },
   {
     "id": "VestA",
@@ -375,7 +427,9 @@
     "sales": 7,
     "image": "/AL3ALAMIA/Keyboard/Vesta.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 190,
+    "code": 0
   },
   {
     "id": "Gffice_LKSM-x88",
@@ -389,7 +443,9 @@
     "sales": 7,
     "image": "/AL3ALAMIA/Mouse Pad/Gffice_LKSM-x88.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 75,
+    "code": 0
   },
   {
     "id": "SilkGliding_L11",
@@ -403,7 +459,9 @@
     "sales": 7,
     "image": "/AL3ALAMIA/Mouse Pad/SilkGliding_L11.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 45,
+    "code": 0
   },
   {
     "id": "SilkGliding_L18",
@@ -417,7 +475,9 @@
     "sales": 7,
     "image": "/AL3ALAMIA/Mouse Pad/SilkGliding_L18.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 60,
+    "code": 0
   },
   {
     "id": "Zero_ZR3001",
@@ -431,7 +491,9 @@
     "sales": 15,
     "image": "/AL3ALAMIA/Game Pad/Zero_ZR3001.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 170,
+    "code": 0
   },
   {
     "id": "Zero_ZR4001",
@@ -445,7 +507,9 @@
     "sales": 15,
     "image": "/AL3ALAMIA/Game Pad/Zero_ZR4001.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 240,
+    "code": 0
   },
   {
     "id": "GigaMax",
@@ -459,7 +523,9 @@
     "sales": 15,
     "image": "/AL3ALAMIA/Game Pad/GigaMax.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 170,
+    "code": 0
   },
   {
     "id": "HP_400_401dn",
@@ -473,13 +539,15 @@
     "sales": 28,
     "image": "/AL3ALAMIA/Printers/HP_400_401dn.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 5200,
+    "code": 0
   },
   {
     "id": "HP_402dn",
     "name": "Printer HP 402dn",
     "brand": "AL3ALAMIA",
-    "description":" طابعة HP LaserJet Pro M402dn تعمل بتقنية الليزر الأبيض والأسود بسرعة تصل إلى 38 صفحة في الدقيقة، مع دعم ميزة الطباعة التلقائية على الوجهين (Duplex) لتوفير الوقت والورق. تأتي بدقة طباعة تصل إلى 1200 × 1200 dpi، وتدعم الاتصال عبر USB 2.0 وEthernet. تحتوي على درج ورق بسعة 250 ورقة وتستخدم خرطوشة HP 26A (CF226A) أو 26X (CF226X)، مع حمولة شهرية تصل إلى 80,000 صفحة.",
+    "description": " طابعة HP LaserJet Pro M402dn تعمل بتقنية الليزر الأبيض والأسود بسرعة تصل إلى 38 صفحة في الدقيقة، مع دعم ميزة الطباعة التلقائية على الوجهين (Duplex) لتوفير الوقت والورق. تأتي بدقة طباعة تصل إلى 1200 × 1200 dpi، وتدعم الاتصال عبر USB 2.0 وEthernet. تحتوي على درج ورق بسعة 250 ورقة وتستخدم خرطوشة HP 26A (CF226A) أو 26X (CF226X)، مع حمولة شهرية تصل إلى 80,000 صفحة.",
     "inspiredBy": "HP",
     "type": "Printers",
     "price": 5700,
@@ -487,7 +555,9 @@
     "sales": 14,
     "image": "/AL3ALAMIA/Printers/HP_402dn.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 5700,
+    "code": 0
   },
   {
     "id": "HP_1018",
@@ -501,7 +571,9 @@
     "sales": 8,
     "image": "/AL3ALAMIA/Printers/HP_1018.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3200,
+    "code": 0
   },
   {
     "id": "HP_107A",
@@ -515,7 +587,9 @@
     "sales": 13,
     "image": "/AL3ALAMIA/Printers/HP_107A.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 4200,
+    "code": 0
   },
   {
     "id": "HP_M102A",
@@ -529,7 +603,9 @@
     "sales": 13,
     "image": "/AL3ALAMIA/Printers/HP_M102A.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 4200,
+    "code": 0
   },
   {
     "id": "HP_P1102",
@@ -543,7 +619,9 @@
     "sales": 48,
     "image": "/AL3ALAMIA/Printers/HP_P1102.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3800,
+    "code": 0
   },
   {
     "id": "HP_P1102w",
@@ -557,10 +635,10 @@
     "sales": 8,
     "image": "/AL3ALAMIA/Printers/HP_P1102W.jpg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 5500,
+    "code": 0
   },
-
-
   {
     "id": "hp_laserjet_powder_bk",
     "name": "HP LaserJet Powder Black",
@@ -573,7 +651,9 @@
     "sales": 550,
     "image": "/AL3ALAMIA/Inks/HP/hp_laserjet_powder_bk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 375,
+    "code": 0
   },
   {
     "id": "hp_laserjet_powder_bk_2",
@@ -587,9 +667,11 @@
     "sales": 550,
     "image": "/AL3ALAMIA/Inks/HP/hp_laserjet_powder_bk_2.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 375,
+    "code": 0
   },
-    {
+  {
     "id": "hp_laserjet_powder_bk_217",
     "name": "HP LaserJet Powder Black 217",
     "brand": "AL3ALAMIA",
@@ -601,9 +683,11 @@
     "sales": 633,
     "image": "/AL3ALAMIA/Inks/HP/hp_laserjet_powder_bk_217.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 295,
+    "code": 0
   },
-    {
+  {
     "id": "hp_refill_ink",
     "name": "HP Refill Ink",
     "brand": "AL3ALAMIA",
@@ -615,9 +699,11 @@
     "sales": 328,
     "image": "/AL3ALAMIA/Inks/HP/hp_refill_ink.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 400,
+    "code": 0
   },
-    {
+  {
     "id": "hp_laserjet_powder_hamza",
     "name": "HP LaserJet Powder CMYK",
     "brand": "AL3ALAMIA",
@@ -629,9 +715,11 @@
     "sales": 252,
     "image": "/AL3ALAMIA/Inks/HP/hp_laserjet_powder_hamza.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1300,
+    "code": 0
   },
-    {
+  {
     "id": "canon_refill_ink",
     "name": "Canon Refill Ink ",
     "brand": "AL3ALAMIA",
@@ -643,9 +731,11 @@
     "sales": 180,
     "image": "/AL3ALAMIA/Inks/Canon/canon_refill_ink.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 400,
+    "code": 0
   },
-   {
+  {
     "id": "canon_refill_ink_6_color",
     "name": "Canon Refill Ink 6 Color",
     "brand": "AL3ALAMIA",
@@ -657,7 +747,9 @@
     "sales": 408,
     "image": "/AL3ALAMIA/Inks/Canon/canon_refill_ink_6_color.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 550,
+    "code": 0
   },
   {
     "id": "canon_laserjet_powder_bk",
@@ -671,9 +763,11 @@
     "sales": 179,
     "image": "/AL3ALAMIA/Inks/Canon/canon_laserjet_powder_bk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 420,
+    "code": 0
   },
-    {
+  {
     "id": "canon_laserjet_powder_cmyk",
     "name": "Canon LaserJet Powder CMYK",
     "brand": "AL3ALAMIA",
@@ -685,7 +779,9 @@
     "sales": 126,
     "image": "/AL3ALAMIA/Inks/Canon/canon_laserjet_powder_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1500,
+    "code": 0
   },
   {
     "id": "brother_laserjet_powder_bk",
@@ -699,9 +795,11 @@
     "sales": 377,
     "image": "/AL3ALAMIA/Inks/Brother/brother_laserjet_powder_bk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 300,
+    "code": 0
   },
-    {
+  {
     "id": "brother_laserjet_powder_bottle_bk",
     "name": "Brother LaserJet Powder Black",
     "brand": "AL3ALAMIA",
@@ -713,7 +811,9 @@
     "sales": 312,
     "image": "/AL3ALAMIA/Inks/Brother/brother_laserjet_powder_bottle_bk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 300,
+    "code": 0
   },
   {
     "id": "brother_refill_ink",
@@ -727,9 +827,11 @@
     "sales": 60,
     "image": "/AL3ALAMIA/Inks/Brother/brother_refill_ink.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 400,
+    "code": 0
   },
-{
+  {
     "id": "ricoh_laserjet_powder_bk",
     "name": "Ricoh LaserJet Powder Black",
     "brand": "AL3ALAMIA",
@@ -741,7 +843,9 @@
     "sales": 85,
     "image": "/AL3ALAMIA/Inks/Ricoh/ricoh_laserjet_powder_bk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 300,
+    "code": 0
   },
   {
     "id": "ricoh_laserjet_powder_bk_bottle_4210",
@@ -755,7 +859,9 @@
     "sales": 35,
     "image": "/AL3ALAMIA/Inks/Ricoh/ricoh_laserjet_powder_bk_bottle_4210.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 300,
+    "code": 0
   },
   {
     "id": "ricoh_laserjet_powder_cmyk",
@@ -769,25 +875,29 @@
     "sales": 36,
     "image": "/AL3ALAMIA/Inks/Ricoh/ricoh_laserjet_powder_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1300,
+    "code": 0
   },
   {
-      "id": "toshiba_laserjet_powder_bk",
-      "name": "Toshiba LaserJet Powder Black",
-      "brand": "AL3ALAMIA",
-      "description": "بودرة حبر ليزر أسود متوافقة مع طابعات توشيبا (Toshiba) لإعادة التعبئة - كيس بحجم 350 جرام.",
-      "inspiredBy": "Toshiba",
-      "type": "Inks",
-      "price": 300,
-      "stock": 1000,
-      "sales": 68,
-      "image": "/AL3ALAMIA/Inks/Toshiba/toshiba_laserjet_powder_bk.png",
-      "rating": 0,
-      "createdAt": 0
-    },
-    {
-      "id": "toshiba_laserjet_powder_cmyk",
-      "name": "Toshiba LaserJet Powder CMYK",
+    "id": "toshiba_laserjet_powder_bk",
+    "name": "Toshiba LaserJet Powder Black",
+    "brand": "AL3ALAMIA",
+    "description": "بودرة حبر ليزر أسود متوافقة مع طابعات توشيبا (Toshiba) لإعادة التعبئة - كيس بحجم 350 جرام.",
+    "inspiredBy": "Toshiba",
+    "type": "Inks",
+    "price": 300,
+    "stock": 1000,
+    "sales": 68,
+    "image": "/AL3ALAMIA/Inks/Toshiba/toshiba_laserjet_powder_bk.png",
+    "rating": 0,
+    "createdAt": 0,
+    "supply": 300,
+    "code": 0
+  },
+  {
+    "id": "toshiba_laserjet_powder_cmyk",
+    "name": "Toshiba LaserJet Powder CMYK",
     "brand": "AL3ALAMIA",
     "description": "طقم بودرة حبر ليزر (أسود وملون) متوافق مع طابعات توشيبا (Toshiba) لإعادة التعبئة - زجاجات بحجم 250 جرام للعبوة.",
     "inspiredBy": "Toshiba",
@@ -797,23 +907,27 @@
     "sales": 47,
     "image": "/AL3ALAMIA/Inks/Toshiba/toshiba_laserjet_powder_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1500,
+    "code": 0
   },
   {
-      "id": "sharp_laserjet_powder_bk",
-      "name": "Sharp LaserJet Powder Black",
-      "brand": "AL3ALAMIA",
-      "description": "بودرة حبر ليزر أسود متوافقة مع طابعات شارب (Sharp) لإعادة التعبئة - كيس بحجم 350 جرام.",
-      "inspiredBy": "Sharp",
-      "type": "Inks",
-      "price": 300,
-      "stock": 1000,
-      "sales": 68,
-      "image": "/AL3ALAMIA/Inks/Sharp/sharp_laserjet_powder_bk.png",
-      "rating": 0,
-      "createdAt": 0
-    },
-{
+    "id": "sharp_laserjet_powder_bk",
+    "name": "Sharp LaserJet Powder Black",
+    "brand": "AL3ALAMIA",
+    "description": "بودرة حبر ليزر أسود متوافقة مع طابعات شارب (Sharp) لإعادة التعبئة - كيس بحجم 350 جرام.",
+    "inspiredBy": "Sharp",
+    "type": "Inks",
+    "price": 300,
+    "stock": 1000,
+    "sales": 68,
+    "image": "/AL3ALAMIA/Inks/Sharp/sharp_laserjet_powder_bk.png",
+    "rating": 0,
+    "createdAt": 0,
+    "supply": 300,
+    "code": 0
+  },
+  {
     "id": "kyocera_laserjet_powder_bk",
     "name": "Kyocera LaserJet Powder Black",
     "brand": "AL3ALAMIA",
@@ -825,7 +939,9 @@
     "sales": 320,
     "image": "/AL3ALAMIA/Inks/Kyocera/kyocera_laserjet_powder_bk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 440,
+    "code": 0
   },
   {
     "id": "kyocera_laserjet_powder_cmyk",
@@ -839,9 +955,11 @@
     "sales": 361,
     "image": "/AL3ALAMIA/Inks/Kyocera/kyocera_laserjet_powder_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1500,
+    "code": 0
   },
-    {
+  {
     "id": "kyocera_laserjet_powder_super_bk",
     "name": "KYOCERA LASERJET POWDER Super Black",
     "brand": "AL3ALAMIA",
@@ -853,9 +971,11 @@
     "sales": 263,
     "image": "/AL3ALAMIA/Inks/Kyocera/kyocera_laserjet_powder_super_bk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 350,
+    "code": 0
   },
-    {
+  {
     "id": "kyocera_laserjet_powder_8520",
     "name": "Kyocera LaserJet Powder Black 8520",
     "brand": "AL3ALAMIA",
@@ -867,9 +987,10 @@
     "sales": 522,
     "image": "/AL3ALAMIA/Inks/Kyocera/kyocera_laserjet_powder_8520.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 375,
+    "code": 0
   },
-
   {
     "id": "xerox_laserjet_powder_bk_5655",
     "name": "Xerox LaserJet Powder Black 5655",
@@ -882,9 +1003,11 @@
     "sales": 237,
     "image": "/AL3ALAMIA/Inks/Xerox/xerox_laserjet_powder_bk_5655.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 250,
+    "code": 0
   },
-    {
+  {
     "id": "xerox_laserjet_powder_bk",
     "name": "Xerox LaserJet Powder Black",
     "brand": "AL3ALAMIA",
@@ -896,7 +1019,9 @@
     "sales": 325,
     "image": "/AL3ALAMIA/Inks/Xerox/xerox_laserjet_powder_bk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 500,
+    "code": 0
   },
   {
     "id": "xerox_laserjet_powder_cmyk",
@@ -910,9 +1035,11 @@
     "sales": 134,
     "image": "/AL3ALAMIA/Inks/Xerox/xerox_laserjet_powder_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1300,
+    "code": 0
   },
-{
+  {
     "id": "samsung_lexmark_laserjet_powder_bk",
     "name": "Samsung LaserJet Powder Black",
     "brand": "AL3ALAMIA",
@@ -924,10 +1051,11 @@
     "sales": 17,
     "image": "/AL3ALAMIA/Inks/Samsung/samsung_lexmark_laserjet_powder_bk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 300,
+    "code": 0
   },
-
-    {
+  {
     "id": "lexmark_samsung_laserjet_powder_bk",
     "name": "Lexmark LaserJet Powder Black",
     "brand": "AL3ALAMIA",
@@ -939,10 +1067,11 @@
     "sales": 17,
     "image": "/AL3ALAMIA/Inks/Lexmark/lexmark_samsung_laserjet_powder_bk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 300,
+    "code": 0
   },
-
-    {
+  {
     "id": "lexmark_laserjet_powder_bk",
     "name": "Lexmark LaserJet Powder Black",
     "brand": "AL3ALAMIA",
@@ -954,9 +1083,10 @@
     "sales": 416,
     "image": "/AL3ALAMIA/Inks/Lexmark/lexmark_laserjet_powder_bk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 225,
+    "code": 0
   },
-
   {
     "id": "konica_laserjet_powder_bk",
     "name": "Konica LaserJet Powder Black",
@@ -969,7 +1099,9 @@
     "sales": 306,
     "image": "/AL3ALAMIA/Inks/Konica/konica_laserjet_powder_bk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 350,
+    "code": 0
   },
   {
     "id": "epson_103_refill_ink",
@@ -983,9 +1115,10 @@
     "sales": 325,
     "image": "/AL3ALAMIA/Inks/Epson/epson_103_refill_ink.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 400,
+    "code": 0
   },
-
   {
     "id": "universal_refill_ink_100ml",
     "name": "Universal Refill Ink 100ml",
@@ -998,7 +1131,9 @@
     "sales": 436,
     "image": "/AL3ALAMIA/Inks/Universal/universal_refill_ink_100ml.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 300,
+    "code": 0
   },
   {
     "id": "universal_refill_ink_500ml",
@@ -1012,7 +1147,9 @@
     "sales": 436,
     "image": "/AL3ALAMIA/Inks/Universal/universal_refill_ink_500ml.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 800,
+    "code": 0
   },
   {
     "id": "universal_refill_ink_1000ml",
@@ -1026,9 +1163,11 @@
     "sales": 436,
     "image": "/AL3ALAMIA/Inks/Universal/universal_refill_ink_1000ml.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1100,
+    "code": 0
   },
-    {
+  {
     "id": "color_laserjet_powder_hamza",
     "name": "Ink Color LaserJet Powder Hamza",
     "brand": "AL3ALAMIA",
@@ -1040,9 +1179,10 @@
     "sales": 353,
     "image": "/AL3ALAMIA/Inks/Universal/color_laserjet_powder_hamza.png",
     "rating": 0,
-    "createdAt": 0
-  }, 
-
+    "createdAt": 0,
+    "supply": 1300,
+    "code": 0
+  },
   {
     "id": "GX-409",
     "name": "Speaker Gamma GX-409",
@@ -1055,7 +1195,9 @@
     "sales": 59,
     "image": "/AL3ALAMIA/Speakers/GX-409.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 265,
+    "code": 0
   },
   {
     "id": "HOTMAI_HN-88",
@@ -1069,7 +1211,9 @@
     "sales": 30,
     "image": "/AL3ALAMIA/Speakers/HOTMAI_HN-88.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 235,
+    "code": 0
   },
   {
     "id": "HOTMAI_HT-414",
@@ -1083,7 +1227,9 @@
     "sales": 93,
     "image": "/AL3ALAMIA/Speakers/HOTMAI_HT-414.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 315,
+    "code": 0
   },
   {
     "id": "HOTMAI _HT-500",
@@ -1097,7 +1243,9 @@
     "sales": 112,
     "image": "/AL3ALAMIA/Speakers/HOTMAI _HT-500.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 185,
+    "code": 0
   },
   {
     "id": "HOTMAI _HT-2031",
@@ -1111,7 +1259,9 @@
     "sales": 72,
     "image": "/AL3ALAMIA/Speakers/HOTMAI _HT-2031.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 370,
+    "code": 0
   },
   {
     "id": "HOTMAI _HT-556_LED",
@@ -1125,7 +1275,9 @@
     "sales": 44,
     "image": "/AL3ALAMIA/Speakers/HOTMAI _HT-556_LED.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 315,
+    "code": 0
   },
   {
     "id": "JEDEL_S-511",
@@ -1139,7 +1291,9 @@
     "sales": 33,
     "image": "/AL3ALAMIA/Speakers/JEDEL_S-511.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 230,
+    "code": 0
   },
   {
     "id": "JEDEL_S-578",
@@ -1153,7 +1307,9 @@
     "sales": 65,
     "image": "/AL3ALAMIA/Speakers/JEDEL_S-578.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 265,
+    "code": 0
   },
   {
     "id": "HOTMAL_K2065",
@@ -1167,7 +1323,9 @@
     "sales": 62,
     "image": "/AL3ALAMIA/Speakers/HOTMAL_K2065.jpg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 230,
+    "code": 0
   },
   {
     "id": "Generic_Mini_D7",
@@ -1181,7 +1339,9 @@
     "sales": 88,
     "image": "/AL3ALAMIA/Speakers/Generic_Mini_D7.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 230,
+    "code": 0
   },
   {
     "id": "Moo_BT-3",
@@ -1195,7 +1355,9 @@
     "sales": 77,
     "image": "/AL3ALAMIA/Speakers/Moo_BT-3.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 290,
+    "code": 0
   },
   {
     "id": "POINT_PT-702",
@@ -1209,7 +1371,9 @@
     "sales": 53,
     "image": "/AL3ALAMIA/Speakers/POINT_PT-702.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 370,
+    "code": 0
   },
   {
     "id": "POINT_PT-800",
@@ -1223,7 +1387,9 @@
     "sales": 162,
     "image": "/AL3ALAMIA/Speakers/Point_PT-800.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 370,
+    "code": 0
   },
   {
     "id": "PRIME_FT-102",
@@ -1237,7 +1403,9 @@
     "sales": 68,
     "image": "/AL3ALAMIA/Speakers/PRIME_FT-102.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 160,
+    "code": 0
   },
   {
     "id": "PRIME_FT-616",
@@ -1251,7 +1419,9 @@
     "sales": 144,
     "image": "/AL3ALAMIA/Speakers/PRIME_FT-616.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 235,
+    "code": 0
   },
   {
     "id": "PRIME_HT-858",
@@ -1265,7 +1435,9 @@
     "sales": 79,
     "image": "/AL3ALAMIA/Speakers/PRIME_HT-858.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 370,
+    "code": 0
   },
   {
     "id": "XO_YL-14",
@@ -1279,7 +1451,9 @@
     "sales": 120,
     "image": "/AL3ALAMIA/Speakers/XO_YL-14.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 140,
+    "code": 0
   },
   {
     "id": "GT-1126",
@@ -1293,9 +1467,10 @@
     "sales": 110,
     "image": "/AL3ALAMIA/Speakers/GT-1126.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 290,
+    "code": 0
   },
-
   {
     "id": "Asto_samsung_205S",
     "name": "Cartridge Asto Samsung 205S",
@@ -1303,14 +1478,15 @@
     "description": "خرطوشة حبر Samsung 205S من Asto أسود، متوافقة مع طابعات سامسونج، توفر طباعة من 1000 إلى 2000 صفحة بأداء ثابت.",
     "inspiredBy": "Samsung",
     "type": "Cartridges",
-    "price": 630,
+    "price": 650,
     "stock": 1000,
     "sales": 176,
     "image": "/AL3ALAMIA/Cartridges/Asto_samsung_205S.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 550,
+    "code": 0
   },
-
   {
     "id": "Nlite_36A",
     "name": "Cartridge Nlite 36A",
@@ -1323,9 +1499,10 @@
     "sales": 127,
     "image": "/AL3ALAMIA/Cartridges/Nlite_36A.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 230,
+    "code": 0
   },
-
   {
     "id": "SSN_XR3330",
     "name": "Cartridge SSN XR3330",
@@ -1338,7 +1515,9 @@
     "sales": 72,
     "image": "/AL3ALAMIA/Cartridges/SSN_XR3330.jpeg",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 440,
+    "code": 0
   },
   {
     "id": "epson_ribbon_lq_590_890",
@@ -1352,7 +1531,9 @@
     "sales": 134,
     "image": "/AL3ALAMIA/Cartridges/EPSON/ribbon_lq_590_890.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 250,
+    "code": 220
   },
   {
     "id": "epson_ribbon_lq_300",
@@ -1366,7 +1547,9 @@
     "sales": 150,
     "image": "/AL3ALAMIA/Cartridges/EPSON/ribbon_lq_300.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 170,
+    "code": 140
   },
   {
     "id": "epson_ribbon_lq_350",
@@ -1380,7 +1563,9 @@
     "sales": 365,
     "image": "/AL3ALAMIA/Cartridges/EPSON/ribbon_lq_350.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 170,
+    "code": 140
   },
   {
     "id": "epson_m2000_2010",
@@ -1394,7 +1579,9 @@
     "sales": 365,
     "image": "/AL3ALAMIA/Cartridges/EPSON/epson_m2000_2010.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 450,
+    "code": 420
   },
   {
     "id": "epson_mx300",
@@ -1408,7 +1595,9 @@
     "sales": 365,
     "image": "/AL3ALAMIA/Cartridges/EPSON/epson_mx300.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 500,
+    "code": 470
   },
   {
     "id": "brother_tn_660_2305_2320_2330_2350",
@@ -1422,7 +1611,9 @@
     "sales": 265,
     "image": "/AL3ALAMIA/Cartridges/BROTHER/brother_tn_660_2305_2320_2330_2350.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 230,
+    "code": 200
   },
   {
     "id": "brother_tn_1000_1030_1050_1060",
@@ -1436,7 +1627,9 @@
     "sales": 263,
     "image": "/AL3ALAMIA/Cartridges/BROTHER/brother_tn_1000_1030_1050_1060.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 180,
+    "code": 150
   },
   {
     "id": "brother_tn_2000_2025",
@@ -1450,7 +1643,9 @@
     "sales": 234,
     "image": "/AL3ALAMIA/Cartridges/BROTHER/brother_tn_2000_2025.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 250,
+    "code": 220
   },
   {
     "id": "brother_tn_2060_2210_2260_2010",
@@ -1464,7 +1659,9 @@
     "sales": 431,
     "image": "/AL3ALAMIA/Cartridges/BROTHER/brother_tn_2060_2210_2260_2010.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 280,
+    "code": 250
   },
   {
     "id": "brother_tn_2405",
@@ -1478,7 +1675,9 @@
     "sales": 121,
     "image": "/AL3ALAMIA/Cartridges/BROTHER/brother_tn_2405.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 250,
+    "code": 220
   },
   {
     "id": "brother_tn_3417_3405_5200",
@@ -1492,7 +1691,9 @@
     "sales": 434,
     "image": "/AL3ALAMIA/Cartridges/BROTHER/brother_tn_3417_3405_5200.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 360,
+    "code": 330
   },
   {
     "id": "brother_tn_3437",
@@ -1506,7 +1707,9 @@
     "sales": 278,
     "image": "/AL3ALAMIA/Cartridges/BROTHER/brother_tn_3437.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 400,
+    "code": 370
   },
   {
     "id": "brother_tn_360_2125_2130_2150",
@@ -1520,7 +1723,9 @@
     "sales": 413,
     "image": "/AL3ALAMIA/Cartridges/BROTHER/brother_tn_360_2125_2130_2150.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 360,
+    "code": 330
   },
   {
     "id": "brother_tn_520_620_5340_3230_3250",
@@ -1534,7 +1739,9 @@
     "sales": 123,
     "image": "/AL3ALAMIA/Cartridges/BROTHER/brother_tn_520_620_5340_3230_3250.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 330,
+    "code": 300
   },
   {
     "id": "brother_tn_720_750_3340_3350_3380",
@@ -1548,7 +1755,9 @@
     "sales": 143,
     "image": "/AL3ALAMIA/Cartridges/BROTHER/brother_tn_720_750_3340_3350_3380.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 400,
+    "code": 370
   },
   {
     "id": "brother_tn_820_850_3480_5100",
@@ -1562,7 +1771,9 @@
     "sales": 158,
     "image": "/AL3ALAMIA/Cartridges/BROTHER/brother_tn_820_850_3480_5100.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 450,
+    "code": 420
   },
   {
     "id": "canon_041",
@@ -1576,7 +1787,9 @@
     "sales": 448,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_041.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 500,
+    "code": 470
   },
   {
     "id": "canon_047",
@@ -1590,7 +1803,9 @@
     "sales": 447,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_047.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 250,
+    "code": 220
   },
   {
     "id": "canon_052",
@@ -1604,7 +1819,9 @@
     "sales": 200,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_052.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 300,
+    "code": 270
   },
   {
     "id": "canon_057",
@@ -1618,7 +1835,9 @@
     "sales": 253,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_057.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 400,
+    "code": 370
   },
   {
     "id": "canon_070",
@@ -1632,7 +1851,9 @@
     "sales": 425,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_070.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 800,
+    "code": 770
   },
   {
     "id": "canon_071",
@@ -1646,7 +1867,9 @@
     "sales": 435,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_071.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 600,
+    "code": 570
   },
   {
     "id": "canon_cxv_11_12",
@@ -1660,7 +1883,9 @@
     "sales": 444,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_cxv_11_12.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 600,
+    "code": 570
   },
   {
     "id": "canon_cxv_18",
@@ -1674,7 +1899,9 @@
     "sales": 489,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_cxv_18.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 300,
+    "code": 270
   },
   {
     "id": "canon_cxv_28_cmyk",
@@ -1688,7 +1915,9 @@
     "sales": 323,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_cxv_28_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 5050,
+    "code": 4900
   },
   {
     "id": "canon_cxv_29_cmyk",
@@ -1702,7 +1931,9 @@
     "sales": 144,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_cxv_29_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 5050,
+    "code": 4900
   },
   {
     "id": "canon_cxv_32",
@@ -1716,7 +1947,9 @@
     "sales": 499,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_cxv_32.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 700,
+    "code": 670
   },
   {
     "id": "canon_cxv_33",
@@ -1730,7 +1963,9 @@
     "sales": 154,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_cxv_33.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 340,
+    "code": 310
   },
   {
     "id": "canon_cxv_36",
@@ -1744,7 +1979,9 @@
     "sales": 407,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_cxv_36.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1000,
+    "code": 970
   },
   {
     "id": "canon_cxv_38",
@@ -1758,7 +1995,9 @@
     "sales": 343,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_cxv_38.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1000,
+    "code": 970
   },
   {
     "id": "canon_cxv_39",
@@ -1772,7 +2011,9 @@
     "sales": 342,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_cxv_39.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1100,
+    "code": 1070
   },
   {
     "id": "canon_cxv_43",
@@ -1786,7 +2027,9 @@
     "sales": 358,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_cxv_43.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 800,
+    "code": 770
   },
   {
     "id": "canon_cxv_47_cmyk",
@@ -1800,7 +2043,9 @@
     "sales": 374,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_cxv_47_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 6050,
+    "code": 5900
   },
   {
     "id": "canon_cxv_49_cmyk",
@@ -1814,7 +2059,9 @@
     "sales": 173,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_cxv_49_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 5050,
+    "code": 4900
   },
   {
     "id": "canon_cxv_50",
@@ -1828,7 +2075,9 @@
     "sales": 280,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_cxv_50.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 900,
+    "code": 870
   },
   {
     "id": "canon_cxv_51_cmyk",
@@ -1842,7 +2091,9 @@
     "sales": 123,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_cxv_51_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 5050,
+    "code": 4900
   },
   {
     "id": "canon_cxv_53",
@@ -1856,7 +2107,9 @@
     "sales": 316,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_cxv_53.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 900,
+    "code": 870
   },
   {
     "id": "canon_cxv_54_cmyk",
@@ -1870,7 +2123,9 @@
     "sales": 283,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_cxv_54_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 5050,
+    "code": 4900
   },
   {
     "id": "canon_cxv_61",
@@ -1884,7 +2139,9 @@
     "sales": 202,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_cxv_61.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1100,
+    "code": 1070
   },
   {
     "id": "canon_cxv_63",
@@ -1898,7 +2155,9 @@
     "sales": 401,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_cxv_63.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1200,
+    "code": 1170
   },
   {
     "id": "canon_cxv_67",
@@ -1912,7 +2171,9 @@
     "sales": 184,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_cxv_67.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 2130,
+    "code": 2100
   },
   {
     "id": "canon_ep_26_27",
@@ -1926,7 +2187,9 @@
     "sales": 137,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_ep_26_27.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 400,
+    "code": 370
   },
   {
     "id": "canon_exv_60",
@@ -1940,7 +2203,9 @@
     "sales": 472,
     "image": "/AL3ALAMIA/Cartridges/CANON/canon_exv_60.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 260,
+    "code": 230
   },
   {
     "id": "hp_106/107A",
@@ -1954,7 +2219,9 @@
     "sales": 156,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_106_107a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 280,
+    "code": 250
   },
   {
     "id": "hp_10A",
@@ -1968,7 +2235,9 @@
     "sales": 310,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_10a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 480,
+    "code": 450
   },
   {
     "id": "hp_117_2070_cmyk",
@@ -1982,7 +2251,9 @@
     "sales": 170,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_117_2070_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1580,
+    "code": 1430
   },
   {
     "id": "hp_11A",
@@ -1996,7 +2267,9 @@
     "sales": 213,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_11a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 480,
+    "code": 450
   },
   {
     "id": "hp_126_310_350_cmyk",
@@ -2010,7 +2283,9 @@
     "sales": 288,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_126_310_350_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1550,
+    "code": 1400
   },
   {
     "id": "hp_12A",
@@ -2024,7 +2299,9 @@
     "sales": 368,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_12a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 180,
+    "code": 150
   },
   {
     "id": "hp_14A",
@@ -2038,7 +2315,9 @@
     "sales": 362,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_14a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 680,
+    "code": 650
   },
   {
     "id": "hp_16A",
@@ -2052,7 +2331,9 @@
     "sales": 166,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_16a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 680,
+    "code": 650
   },
   {
     "id": "hp_17A",
@@ -2066,7 +2347,9 @@
     "sales": 341,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_17a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 230,
+    "code": 200
   },
   {
     "id": "hp_207_2210_cmyk",
@@ -2080,7 +2363,9 @@
     "sales": 474,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_207_2210_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 2650,
+    "code": 2500
   },
   {
     "id": "hp_25x",
@@ -2094,7 +2379,9 @@
     "sales": 465,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_25x.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 2830,
+    "code": 2800
   },
   {
     "id": "hp_26A",
@@ -2108,7 +2395,9 @@
     "sales": 110,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_26a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 280,
+    "code": 250
   },
   {
     "id": "hp_37A",
@@ -2122,7 +2411,9 @@
     "sales": 248,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_37a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 800,
+    "code": 770
   },
   {
     "id": "hp_415_2030_cmyk",
@@ -2136,7 +2427,9 @@
     "sales": 484,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_415_2030_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 2650,
+    "code": 2500
   },
   {
     "id": "hp_42A",
@@ -2150,7 +2443,9 @@
     "sales": 220,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_42a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 630,
+    "code": 600
   },
   {
     "id": "hp_44A",
@@ -2164,7 +2459,9 @@
     "sales": 460,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_44a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 230,
+    "code": 200
   },
   {
     "id": "hp_48A",
@@ -2178,7 +2475,9 @@
     "sales": 212,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_48a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 280,
+    "code": 250
   },
   {
     "id": "hp_49/53A",
@@ -2192,7 +2491,9 @@
     "sales": 139,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_49_53a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 230,
+    "code": 200
   },
   {
     "id": "hp_51A",
@@ -2206,7 +2507,9 @@
     "sales": 105,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_51a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 480,
+    "code": 450
   },
   {
     "id": "hp_55A",
@@ -2220,7 +2523,9 @@
     "sales": 235,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_55a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 480,
+    "code": 450
   },
   {
     "id": "hp_56A",
@@ -2234,7 +2539,9 @@
     "sales": 108,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_56a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 430,
+    "code": 400
   },
   {
     "id": "hp_59A",
@@ -2248,7 +2555,9 @@
     "sales": 222,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_59a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 270,
+    "code": 240
   },
   {
     "id": "hp_64A",
@@ -2262,7 +2571,9 @@
     "sales": 337,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_64a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 630,
+    "code": 600
   },
   {
     "id": "hp_659_2010_cmyk",
@@ -2276,7 +2587,9 @@
     "sales": 437,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_659_2010_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 13850,
+    "code": 13700
   },
   {
     "id": "hp_70A",
@@ -2290,7 +2603,9 @@
     "sales": 444,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_70a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 680,
+    "code": 650
   },
   {
     "id": "hp_78A",
@@ -2304,7 +2619,9 @@
     "sales": 476,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_78a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 180,
+    "code": 150
   },
   {
     "id": "hp_79A",
@@ -2318,7 +2635,9 @@
     "sales": 328,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_79a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 180,
+    "code": 150
   },
   {
     "id": "hp_80/05A",
@@ -2332,7 +2651,9 @@
     "sales": 342,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_80_05a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 230,
+    "code": 200
   },
   {
     "id": "hp_81A",
@@ -2346,7 +2667,9 @@
     "sales": 246,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_81a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 580,
+    "code": 550
   },
   {
     "id": "hp_83A",
@@ -2360,7 +2683,9 @@
     "sales": 446,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_83a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 180,
+    "code": 150
   },
   {
     "id": "hp_85/35A",
@@ -2374,7 +2699,9 @@
     "sales": 121,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_85_35a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 180,
+    "code": 150
   },
   {
     "id": "hp_87A",
@@ -2388,7 +2715,9 @@
     "sales": 429,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_87a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 430,
+    "code": 400
   },
   {
     "id": "hp_89A",
@@ -2402,7 +2731,9 @@
     "sales": 496,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_89a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 630,
+    "code": 600
   },
   {
     "id": "hp_90A",
@@ -2416,7 +2747,9 @@
     "sales": 296,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_90a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 630,
+    "code": 600
   },
   {
     "id": "hp_9190_cmyk",
@@ -2430,7 +2763,9 @@
     "sales": 277,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_9190_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 11850,
+    "code": 11700
   },
   {
     "id": "hp_9730_5500_5550_cmyk",
@@ -2444,7 +2779,9 @@
     "sales": 102,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_9730_5500_5550_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 7850,
+    "code": 7700
   },
   {
     "id": "hp_ce_210_320_540_cmyk",
@@ -2458,7 +2795,9 @@
     "sales": 286,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_ce_210_320_540_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1580,
+    "code": 1430
   },
   {
     "id": "hp_ce_250_cmyk",
@@ -2472,7 +2811,9 @@
     "sales": 293,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_ce_250_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 4000,
+    "code": 3850
   },
   {
     "id": "hp_ce_260_4025_4525_cmyk",
@@ -2486,7 +2827,9 @@
     "sales": 275,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_ce_260_4025_4525_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 4250,
+    "code": 4100
   },
   {
     "id": "hp_ce_270_cmyk",
@@ -2500,7 +2843,9 @@
     "sales": 150,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_ce_270_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 6850,
+    "code": 6700
   },
   {
     "id": "hp_ce_305_530_2025_cmyk",
@@ -2514,7 +2859,9 @@
     "sales": 260,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_ce_305_530_2025_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1580,
+    "code": 1430
   },
   {
     "id": "hp_ce_320_cmyk",
@@ -2528,7 +2875,9 @@
     "sales": 282,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_ce_320_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 6850,
+    "code": 6700
   },
   {
     "id": "hp_ce_340_cmyk",
@@ -2542,7 +2891,9 @@
     "sales": 352,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_ce_340_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 6850,
+    "code": 6700
   },
   {
     "id": "hp_ce_400_507_cmyk",
@@ -2556,7 +2907,9 @@
     "sales": 103,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_ce_400_507_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3900,
+    "code": 3750
   },
   {
     "id": "hp_ce_740_cmyk",
@@ -2570,7 +2923,9 @@
     "sales": 112,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_ce_740_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 6850,
+    "code": 6700
   },
   {
     "id": "hp_cf_154_180_530_cmyk",
@@ -2584,7 +2939,9 @@
     "sales": 446,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_cf_154_180_530_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1580,
+    "code": 1430
   },
   {
     "id": "hp_cf_201_277_400_cmyk",
@@ -2598,7 +2955,9 @@
     "sales": 156,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_cf_201_277_400_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1580,
+    "code": 1430
   },
   {
     "id": "hp_cf_300_880_cmyk",
@@ -2612,7 +2971,9 @@
     "sales": 175,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_cf_300_880_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 7850,
+    "code": 7700
   },
   {
     "id": "hp_cf_360_508_cmyk",
@@ -2626,7 +2987,9 @@
     "sales": 349,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_cf_360_508_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 4000,
+    "code": 3850
   },
   {
     "id": "hp_cf_410_cmyk",
@@ -2640,7 +3003,9 @@
     "sales": 153,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_cf_410_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1580,
+    "code": 1430
   },
   {
     "id": "hp_cf_450_cmyk",
@@ -2654,7 +3019,9 @@
     "sales": 206,
     "image": "/AL3ALAMIA/Cartridges/HP/hp_cf_450_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 6850,
+    "code": 6700
   },
   {
     "id": "konica_114",
@@ -2668,7 +3035,9 @@
     "sales": 178,
     "image": "/AL3ALAMIA/Cartridges/KONICA/konica_114.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 400,
+    "code": 370
   },
   {
     "id": "konica_118",
@@ -2682,7 +3051,9 @@
     "sales": 416,
     "image": "/AL3ALAMIA/Cartridges/KONICA/konica_118.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 400,
+    "code": 370
   },
   {
     "id": "konica_211",
@@ -2696,7 +3067,9 @@
     "sales": 420,
     "image": "/AL3ALAMIA/Cartridges/KONICA/konica_211.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 400,
+    "code": 370
   },
   {
     "id": "konica_217",
@@ -2710,7 +3083,9 @@
     "sales": 270,
     "image": "/AL3ALAMIA/Cartridges/KONICA/konica_217.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 400,
+    "code": 370
   },
   {
     "id": "konica_3100_3110_ckmy",
@@ -2724,7 +3099,9 @@
     "sales": 244,
     "image": "/AL3ALAMIA/Cartridges/KONICA/konica_3100_3110_ckmy.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3200,
+    "code": 3170
   },
   {
     "id": "konica_3300_3301",
@@ -2738,7 +3115,9 @@
     "sales": 408,
     "image": "/AL3ALAMIA/Cartridges/KONICA/konica_3300_3301.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 550,
+    "code": 520
   },
   {
     "id": "konica_3320",
@@ -2752,7 +3131,9 @@
     "sales": 107,
     "image": "/AL3ALAMIA/Cartridges/KONICA/konica_3320.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 550,
+    "code": 520
   },
   {
     "id": "konica_c35_2035_ckmy",
@@ -2766,7 +3147,9 @@
     "sales": 300,
     "image": "/AL3ALAMIA/Cartridges/KONICA/konica_c35_2035_ckmy.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3200,
+    "code": 3170
   },
   {
     "id": "kyocera_5500",
@@ -2780,7 +3163,9 @@
     "sales": 280,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_5500.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1100,
+    "code": 1070
   },
   {
     "id": "kyocera_tk_06_8515_ckmy",
@@ -2794,7 +3179,9 @@
     "sales": 202,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_06_8515_ckmy.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 4850,
+    "code": 4700
   },
   {
     "id": "kyocera_tk_1110_1120_1125",
@@ -2808,7 +3195,9 @@
     "sales": 362,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_1110_1120_1125.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 180,
+    "code": 150
   },
   {
     "id": "kyocera_tk_1130_1132",
@@ -2822,7 +3211,9 @@
     "sales": 191,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_1130_1132.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 350,
+    "code": 320
   },
   {
     "id": "kyocera_tk_1140",
@@ -2836,7 +3227,9 @@
     "sales": 478,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_1140.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 450,
+    "code": 420
   },
   {
     "id": "kyocera_tk_1150_2635",
@@ -2850,7 +3243,9 @@
     "sales": 201,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_1150_2635.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 450,
+    "code": 420
   },
   {
     "id": "kyocera_tk_1170",
@@ -2864,7 +3259,9 @@
     "sales": 268,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_1170.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 500,
+    "code": 470
   },
   {
     "id": "kyocera_tk_1200",
@@ -2878,7 +3275,9 @@
     "sales": 318,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_1200.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 750,
+    "code": 720
   },
   {
     "id": "kyocera_tk_130_170",
@@ -2892,7 +3291,9 @@
     "sales": 447,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_130_170.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 450,
+    "code": 420
   },
   {
     "id": "kyocera_tk_160",
@@ -2906,7 +3307,9 @@
     "sales": 424,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_160.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 450,
+    "code": 420
   },
   {
     "id": "kyocera_tk_17_18_100",
@@ -2920,7 +3323,9 @@
     "sales": 332,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_17_18_100.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 450,
+    "code": 420
   },
   {
     "id": "kyocera_tk_2100_3100_4100",
@@ -2934,7 +3339,9 @@
     "sales": 186,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_2100_3100_4100.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 550,
+    "code": 520
   },
   {
     "id": "kyocera_tk_2500_2551_8325_ckmy",
@@ -2948,7 +3355,9 @@
     "sales": 456,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_2500_2551_8325_ckmy.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 4450,
+    "code": 4300
   },
   {
     "id": "kyocera_tk_3051_8305_ckmy",
@@ -2962,7 +3371,9 @@
     "sales": 184,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_3051_8305_ckmy.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 4850,
+    "code": 4700
   },
   {
     "id": "kyocera_tk_3160",
@@ -2976,7 +3387,9 @@
     "sales": 405,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_3160.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 500,
+    "code": 470
   },
   {
     "id": "kyocera_tk_3500_4500_5500_6305",
@@ -2990,7 +3403,9 @@
     "sales": 235,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_3500_4500_5500_6305.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1250,
+    "code": 1100
   },
   {
     "id": "kyocera_tk_4030",
@@ -3004,7 +3419,9 @@
     "sales": 159,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_4030.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 600,
+    "code": 570
   },
   {
     "id": "kyocera_tk_410",
@@ -3018,7 +3435,9 @@
     "sales": 455,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_410.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 800,
+    "code": 770
   },
   {
     "id": "kyocera_tk_4105",
@@ -3032,7 +3451,9 @@
     "sales": 412,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_4105.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 700,
+    "code": 670
   },
   {
     "id": "kyocera_tk_435",
@@ -3046,7 +3467,9 @@
     "sales": 272,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_435.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 800,
+    "code": 770
   },
   {
     "id": "kyocera_tk_448",
@@ -3060,7 +3483,9 @@
     "sales": 176,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_448.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 700,
+    "code": 670
   },
   {
     "id": "kyocera_tk_475_630",
@@ -3074,7 +3499,9 @@
     "sales": 105,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_475_630.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 700,
+    "code": 670
   },
   {
     "id": "kyocera_tk_5440_ckmy",
@@ -3088,7 +3515,9 @@
     "sales": 278,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_5440_ckmy.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 0,
+    "code": 4700
   },
   {
     "id": "kyocera_tk_6115",
@@ -3102,7 +3531,9 @@
     "sales": 236,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_6115.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1000,
+    "code": 970
   },
   {
     "id": "kyocera_tk_6325",
@@ -3116,7 +3547,9 @@
     "sales": 170,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_6325.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1200,
+    "code": 1170
   },
   {
     "id": "kyocera_tk_675",
@@ -3130,7 +3563,9 @@
     "sales": 353,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_675.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 7850,
+    "code": 7700
   },
   {
     "id": "kyocera_tk_7105",
@@ -3144,7 +3579,9 @@
     "sales": 179,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_7105.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1000,
+    "code": 970
   },
   {
     "id": "kyocera_tk_7120_7125",
@@ -3158,7 +3595,9 @@
     "sales": 166,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_7120_7125.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1000,
+    "code": 970
   },
   {
     "id": "kyocera_tk_715",
@@ -3172,7 +3611,9 @@
     "sales": 468,
     "image": "/AL3ALAMIA/Cartridges/KYOCERA/kyocera_tk_715.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1000,
+    "code": 970
   },
   {
     "id": "lexmark_120",
@@ -3186,7 +3627,9 @@
     "sales": 143,
     "image": "/AL3ALAMIA/Cartridges/LEXMARK/lexmark_120.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 0,
+    "code": 0
   },
   {
     "id": "lexmark_2338_2442_2546_2650",
@@ -3200,7 +3643,9 @@
     "sales": 209,
     "image": "/AL3ALAMIA/Cartridges/LEXMARK/lexmark_2338_2442_2546_2650.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 2730,
+    "code": 2700
   },
   {
     "id": "lexmark_260_360",
@@ -3214,7 +3659,9 @@
     "sales": 499,
     "image": "/AL3ALAMIA/Cartridges/LEXMARK/lexmark_260_360.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 530,
+    "code": 500
   },
   {
     "id": "lexmark_310_410_510",
@@ -3228,7 +3675,9 @@
     "sales": 269,
     "image": "/AL3ALAMIA/Cartridges/LEXMARK/lexmark_310_410_510.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 550,
+    "code": 520
   },
   {
     "id": "lexmark_640",
@@ -3242,7 +3691,9 @@
     "sales": 389,
     "image": "/AL3ALAMIA/Cartridges/LEXMARK/lexmark_640.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1130,
+    "code": 1100
   },
   {
     "id": "lexmark_650",
@@ -3256,7 +3707,9 @@
     "sales": 128,
     "image": "/AL3ALAMIA/Cartridges/LEXMARK/lexmark_650.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1430,
+    "code": 1400
   },
   {
     "id": "lexmark_710_810",
@@ -3270,7 +3723,9 @@
     "sales": 240,
     "image": "/AL3ALAMIA/Cartridges/LEXMARK/lexmark_710_810.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1130,
+    "code": 1100
   },
   {
     "id": "oki_411_431_471_491",
@@ -3284,7 +3739,9 @@
     "sales": 260,
     "image": "/AL3ALAMIA/Cartridges/OKI/oki_411_431_471_491.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 400,
+    "code": 370
   },
   {
     "id": "oki_412_432_472_492",
@@ -3298,7 +3755,9 @@
     "sales": 152,
     "image": "/AL3ALAMIA/Cartridges/OKI/oki_412_432_472_492.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 400,
+    "code": 370
   },
   {
     "id": "oki_531_cmyk",
@@ -3312,7 +3771,9 @@
     "sales": 341,
     "image": "/AL3ALAMIA/Cartridges/OKI/oki_531_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1200,
+    "code": 1170
   },
   {
     "id": "oki_610_cmyk",
@@ -3326,7 +3787,9 @@
     "sales": 283,
     "image": "/AL3ALAMIA/Cartridges/OKI/oki_610_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 5000,
+    "code": 4970
   },
   {
     "id": "oki_6200",
@@ -3340,7 +3803,9 @@
     "sales": 120,
     "image": "/AL3ALAMIA/Cartridges/OKI/oki_6200.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 2000,
+    "code": 1970
   },
   {
     "id": "oki_840",
@@ -3354,7 +3819,9 @@
     "sales": 428,
     "image": "/AL3ALAMIA/Cartridges/OKI/oki_840.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1500,
+    "code": 1470
   },
   {
     "id": "pantum_pd_219",
@@ -3368,7 +3835,9 @@
     "sales": 166,
     "image": "/AL3ALAMIA/Cartridges/PANTUM/pantum_pd_219.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 480,
+    "code": 450
   },
   {
     "id": "ricoh_2051_2551_2050_2550_cmyk",
@@ -3382,7 +3851,9 @@
     "sales": 202,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_2051_2551_2050_2550_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3050,
+    "code": 2900
   },
   {
     "id": "ricoh_250_2300_cmyk",
@@ -3396,7 +3867,9 @@
     "sales": 405,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_250_2300_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 4050,
+    "code": 3900
   },
   {
     "id": "ricoh_252_cmyk",
@@ -3410,7 +3883,9 @@
     "sales": 141,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_252_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 4050,
+    "code": 3900
   },
   {
     "id": "ricoh_300_cmyk",
@@ -3424,7 +3899,9 @@
     "sales": 163,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_300_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3050,
+    "code": 2900
   },
   {
     "id": "ricoh_3002_4502_5502_cmyk",
@@ -3438,7 +3915,9 @@
     "sales": 244,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_3002_4502_5502_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 4450,
+    "code": 4300
   },
   {
     "id": "ricoh_306_307_406_407_cmyk",
@@ -3452,7 +3931,9 @@
     "sales": 358,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_306_307_406_407_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3050,
+    "code": 2900
   },
   {
     "id": "ricoh_352_cmyk",
@@ -3466,7 +3947,9 @@
     "sales": 211,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_352_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 4050,
+    "code": 3900
   },
   {
     "id": "ricoh_mp_161_171_201_1270_1515",
@@ -3480,7 +3963,9 @@
     "sales": 130,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_mp_161_171_201_1270_1515.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 200,
+    "code": 170
   },
   {
     "id": "ricoh_mp_1805",
@@ -3494,7 +3979,9 @@
     "sales": 406,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_mp_1805.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 350,
+    "code": 320
   },
   {
     "id": "ricoh_mp_2035_2045_3025_3045",
@@ -3508,7 +3995,9 @@
     "sales": 244,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_mp_2035_2045_3025_3045.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 350,
+    "code": 320
   },
   {
     "id": "ricoh_mp_2220",
@@ -3522,7 +4011,9 @@
     "sales": 118,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_mp_2220.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 300,
+    "code": 270
   },
   {
     "id": "ricoh_mp_2501",
@@ -3536,7 +4027,9 @@
     "sales": 159,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_mp_2501.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 250,
+    "code": 220
   },
   {
     "id": "ricoh_mp_3000_cmyk",
@@ -3550,7 +4043,9 @@
     "sales": 417,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_mp_3000_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 5050,
+    "code": 4900
   },
   {
     "id": "ricoh_mp_301",
@@ -3564,7 +4059,9 @@
     "sales": 128,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_mp_301.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 200,
+    "code": 170
   },
   {
     "id": "ricoh_mp_305_cmyk",
@@ -3578,7 +4075,9 @@
     "sales": 145,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_mp_305_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3050,
+    "code": 2900
   },
   {
     "id": "ricoh_mp_3210",
@@ -3592,7 +4091,9 @@
     "sales": 274,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_mp_3210.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 300,
+    "code": 270
   },
   {
     "id": "ricoh_mp_406_cmyk",
@@ -3606,7 +4107,9 @@
     "sales": 348,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_mp_406_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3350,
+    "code": 3200
   },
   {
     "id": "ricoh_mp_4500",
@@ -3620,7 +4123,9 @@
     "sales": 196,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_mp_4500.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 450,
+    "code": 420
   },
   {
     "id": "ricoh_mp_4501_5000_5501_cmyk",
@@ -3634,7 +4139,9 @@
     "sales": 461,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_mp_4501_5000_5501_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 4450,
+    "code": 4300
   },
   {
     "id": "ricoh_mp_4503_5503_6003_cmyk",
@@ -3648,7 +4155,9 @@
     "sales": 161,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_mp_4503_5503_6003_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 4450,
+    "code": 4300
   },
   {
     "id": "ricoh_mp401_4520",
@@ -3662,7 +4171,9 @@
     "sales": 233,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_mp401_4520.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 450,
+    "code": 420
   },
   {
     "id": "ricoh_mpc_300_401_cmyk",
@@ -3676,7 +4187,9 @@
     "sales": 147,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_mpc_300_401_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3050,
+    "code": 2900
   },
   {
     "id": "ricoh_ricoh_mp_2014",
@@ -3690,7 +4203,9 @@
     "sales": 126,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_ricoh_mp_2014.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 350,
+    "code": 320
   },
   {
     "id": "ricoh_sp_100",
@@ -3704,7 +4219,9 @@
     "sales": 309,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_sp_100.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 450,
+    "code": 420
   },
   {
     "id": "ricoh_sp_150",
@@ -3718,7 +4235,9 @@
     "sales": 487,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_sp_150.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 450,
+    "code": 420
   },
   {
     "id": "ricoh_sp_200_210_211",
@@ -3732,7 +4251,9 @@
     "sales": 482,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_sp_200_210_211.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 450,
+    "code": 420
   },
   {
     "id": "ricoh_sp_232_242_311_320_cmyk",
@@ -3746,7 +4267,9 @@
     "sales": 265,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_sp_232_242_311_320_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 4050,
+    "code": 3900
   },
   {
     "id": "ricoh_sp_300_311",
@@ -3760,7 +4283,9 @@
     "sales": 302,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_sp_300_311.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 450,
+    "code": 420
   },
   {
     "id": "ricoh_sp_3054_3554",
@@ -3774,7 +4299,9 @@
     "sales": 193,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_sp_3054_3554.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1100,
+    "code": 1070
   },
   {
     "id": "ricoh_sp_3400_3410_3500_3510",
@@ -3788,7 +4315,9 @@
     "sales": 206,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_sp_3400_3410_3500_3510.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 450,
+    "code": 420
   },
   {
     "id": "ricoh_sp_3600_4500",
@@ -3802,7 +4331,9 @@
     "sales": 449,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_sp_3600_4500.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 450,
+    "code": 420
   },
   {
     "id": "ricoh_sp_3710",
@@ -3816,7 +4347,9 @@
     "sales": 458,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_sp_3710.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 500,
+    "code": 470
   },
   {
     "id": "ricoh_sp_400_450",
@@ -3830,7 +4363,9 @@
     "sales": 474,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_sp_400_450.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 450,
+    "code": 420
   },
   {
     "id": "ricoh_sp_430_440_cmyk",
@@ -3844,7 +4379,9 @@
     "sales": 112,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_sp_430_440_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3450,
+    "code": 3300
   },
   {
     "id": "ricoh_sp_5200_5210",
@@ -3858,7 +4395,9 @@
     "sales": 182,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_sp_5200_5210.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 2000,
+    "code": 1970
   },
   {
     "id": "ricoh_sp_5300_5310",
@@ -3872,7 +4411,9 @@
     "sales": 138,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_sp_5300_5310.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 800,
+    "code": 770
   },
   {
     "id": "ricoh_sp_6330",
@@ -3886,7 +4427,9 @@
     "sales": 491,
     "image": "/AL3ALAMIA/Cartridges/RICOH/ricoh_sp_6330.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 5000,
+    "code": 4970
   },
   {
     "id": "samsung_101s",
@@ -3900,7 +4443,9 @@
     "sales": 424,
     "image": "/AL3ALAMIA/Cartridges/SAMSUNG/samsung_101s.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 260,
+    "code": 230
   },
   {
     "id": "samsung_103s",
@@ -3914,7 +4459,9 @@
     "sales": 188,
     "image": "/AL3ALAMIA/Cartridges/SAMSUNG/samsung_103s.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 500,
+    "code": 470
   },
   {
     "id": "samsung_104s",
@@ -3928,7 +4475,9 @@
     "sales": 166,
     "image": "/AL3ALAMIA/Cartridges/SAMSUNG/samsung_104s.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 430,
+    "code": 400
   },
   {
     "id": "samsung_105",
@@ -3942,7 +4491,9 @@
     "sales": 450,
     "image": "/AL3ALAMIA/Cartridges/SAMSUNG/samsung_105.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 350,
+    "code": 320
   },
   {
     "id": "samsung_108_1660",
@@ -3956,7 +4507,9 @@
     "sales": 137,
     "image": "/AL3ALAMIA/Cartridges/SAMSUNG/samsung_108_1660.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 350,
+    "code": 320
   },
   {
     "id": "samsung_109_4300",
@@ -3970,7 +4523,9 @@
     "sales": 358,
     "image": "/AL3ALAMIA/Cartridges/SAMSUNG/samsung_109_4300.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 400,
+    "code": 370
   },
   {
     "id": "samsung_111",
@@ -3984,7 +4539,9 @@
     "sales": 295,
     "image": "/AL3ALAMIA/Cartridges/SAMSUNG/samsung_111.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 250,
+    "code": 220
   },
   {
     "id": "samsung_1610_3117",
@@ -3998,7 +4555,9 @@
     "sales": 155,
     "image": "/AL3ALAMIA/Cartridges/SAMSUNG/samsung_1610_3117.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 380,
+    "code": 350
   },
   {
     "id": "samsung_1710_1520",
@@ -4012,7 +4571,9 @@
     "sales": 107,
     "image": "/AL3ALAMIA/Cartridges/SAMSUNG/samsung_1710_1520.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 450,
+    "code": 420
   },
   {
     "id": "samsung_201",
@@ -4026,7 +4587,9 @@
     "sales": 160,
     "image": "/AL3ALAMIA/Cartridges/SAMSUNG/samsung_201.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 500,
+    "code": 470
   },
   {
     "id": "samsung_203l",
@@ -4040,7 +4603,9 @@
     "sales": 268,
     "image": "/AL3ALAMIA/Cartridges/SAMSUNG/samsung_203l.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 360,
+    "code": 330
   },
   {
     "id": "samsung_205l",
@@ -4054,7 +4619,9 @@
     "sales": 115,
     "image": "/AL3ALAMIA/Cartridges/SAMSUNG/samsung_205l.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 460,
+    "code": 430
   },
   {
     "id": "samsung_208",
@@ -4068,7 +4635,9 @@
     "sales": 197,
     "image": "/AL3ALAMIA/Cartridges/SAMSUNG/samsung_208.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 460,
+    "code": 430
   },
   {
     "id": "samsung_305l",
@@ -4082,7 +4651,9 @@
     "sales": 264,
     "image": "/AL3ALAMIA/Cartridges/SAMSUNG/samsung_305l.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 600,
+    "code": 570
   },
   {
     "id": "samsung_3470",
@@ -4096,7 +4667,9 @@
     "sales": 118,
     "image": "/AL3ALAMIA/Cartridges/SAMSUNG/samsung_3470.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 430,
+    "code": 400
   },
   {
     "id": "samsung_4200",
@@ -4110,7 +4683,9 @@
     "sales": 285,
     "image": "/AL3ALAMIA/Cartridges/SAMSUNG/samsung_4200.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 400,
+    "code": 370
   },
   {
     "id": "sharp_mx_021_5516",
@@ -4124,7 +4699,9 @@
     "sales": 313,
     "image": "/AL3ALAMIA/Cartridges/SHARP/sharp_mx_021_5516.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1200,
+    "code": 1170
   },
   {
     "id": "sharp_mx_23_2310_cmyk",
@@ -4138,7 +4715,9 @@
     "sales": 233,
     "image": "/AL3ALAMIA/Cartridges/SHARP/sharp_mx_23_2310_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 5050,
+    "code": 4900
   },
   {
     "id": "sharp_mx_235_236",
@@ -4152,7 +4731,9 @@
     "sales": 188,
     "image": "/AL3ALAMIA/Cartridges/SHARP/sharp_mx_235_236.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 800,
+    "code": 770
   },
   {
     "id": "sharp_mx_016",
@@ -4166,7 +4747,9 @@
     "sales": 131,
     "image": "/AL3ALAMIA/Cartridges/SHARP/sharp_mx_016.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1500,
+    "code": 1470
   },
   {
     "id": "sharp_mx_203",
@@ -4180,7 +4763,9 @@
     "sales": 104,
     "image": "/AL3ALAMIA/Cartridges/SHARP/sharp_mx_203.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1800,
+    "code": 1770
   },
   {
     "id": "sharp_mx_237",
@@ -4194,7 +4779,9 @@
     "sales": 408,
     "image": "/AL3ALAMIA/Cartridges/SHARP/sharp_mx_237.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1000,
+    "code": 970
   },
   {
     "id": "sharp_mx_31_cmyk",
@@ -4208,7 +4795,9 @@
     "sales": 307,
     "image": "/AL3ALAMIA/Cartridges/SHARP/sharp_mx_31_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 5050,
+    "code": 4900
   },
   {
     "id": "sharp_mx_310",
@@ -4222,7 +4811,9 @@
     "sales": 120,
     "image": "/AL3ALAMIA/Cartridges/SHARP/sharp_mx_310.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1200,
+    "code": 1170
   },
   {
     "id": "sharp_mx_312",
@@ -4236,7 +4827,9 @@
     "sales": 302,
     "image": "/AL3ALAMIA/Cartridges/SHARP/sharp_mx_312.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 900,
+    "code": 870
   },
   {
     "id": "sharp_mx_315",
@@ -4250,7 +4843,9 @@
     "sales": 319,
     "image": "/AL3ALAMIA/Cartridges/SHARP/sharp_mx_315.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 900,
+    "code": 870
   },
   {
     "id": "sharp_mx_36_cmyk",
@@ -4264,7 +4859,9 @@
     "sales": 333,
     "image": "/AL3ALAMIA/Cartridges/SHARP/sharp_mx_36_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 5050,
+    "code": 4900
   },
   {
     "id": "toshiba_1640",
@@ -4278,7 +4875,9 @@
     "sales": 200,
     "image": "/AL3ALAMIA/Cartridges/TOSHIBA/toshiba_1640.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 600,
+    "code": 570
   },
   {
     "id": "toshiba_1810",
@@ -4292,7 +4891,9 @@
     "sales": 365,
     "image": "/AL3ALAMIA/Cartridges/TOSHIBA/toshiba_1810.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 600,
+    "code": 570
   },
   {
     "id": "toshiba_2450",
@@ -4306,7 +4907,9 @@
     "sales": 347,
     "image": "/AL3ALAMIA/Cartridges/TOSHIBA/toshiba_2450.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 600,
+    "code": 570
   },
   {
     "id": "toshiba_3008_4508",
@@ -4320,7 +4923,9 @@
     "sales": 280,
     "image": "/AL3ALAMIA/Cartridges/TOSHIBA/toshiba_3008_4508.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1000,
+    "code": 970
   },
   {
     "id": "toshiba_350_352_450_452_3520",
@@ -4334,7 +4939,9 @@
     "sales": 487,
     "image": "/AL3ALAMIA/Cartridges/TOSHIBA/toshiba_350_352_450_452_3520.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 500,
+    "code": 470
   },
   {
     "id": "toshiba_6518",
@@ -4348,7 +4955,9 @@
     "sales": 228,
     "image": "/AL3ALAMIA/Cartridges/TOSHIBA/toshiba_6518.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3700,
+    "code": 3670
   },
   {
     "id": "toshiba_382_383_403_4030",
@@ -4362,7 +4971,9 @@
     "sales": 237,
     "image": "/AL3ALAMIA/Cartridges/TOSHIBA/toshiba_382_383_403_4030.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 500,
+    "code": 470
   },
   {
     "id": "toshiba_385",
@@ -4376,7 +4987,9 @@
     "sales": 416,
     "image": "/AL3ALAMIA/Cartridges/TOSHIBA/toshiba_385.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 500,
+    "code": 470
   },
   {
     "id": "toshiba_4530",
@@ -4390,7 +5003,9 @@
     "sales": 141,
     "image": "/AL3ALAMIA/Cartridges/TOSHIBA/toshiba_4530.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 600,
+    "code": 570
   },
   {
     "id": "toshiba_fc_25_28_c,m,y,k",
@@ -4404,7 +5019,9 @@
     "sales": 469,
     "image": "/AL3ALAMIA/Cartridges/TOSHIBA/toshiba_fc_25_28_c,m,y,k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 6050,
+    "code": 5900
   },
   {
     "id": "toshiba_fc_30_c,m,y,k",
@@ -4418,7 +5035,9 @@
     "sales": 334,
     "image": "/AL3ALAMIA/Cartridges/TOSHIBA/toshiba_fc_30_c,m,y,k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 6050,
+    "code": 5900
   },
   {
     "id": "toshiba_fc_50_c,m,y,k",
@@ -4432,7 +5051,9 @@
     "sales": 252,
     "image": "/AL3ALAMIA/Cartridges/TOSHIBA/toshiba_fc_50_c,m,y,k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 6050,
+    "code": 5900
   },
   {
     "id": "toshiba_2006_2303_2309_2507",
@@ -4446,7 +5067,9 @@
     "sales": 434,
     "image": "/AL3ALAMIA/Cartridges/TOSHIBA/toshiba_2006_2303_2309_2507.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 555,
+    "code": 525
   },
   {
     "id": "toshiba_2323_2523_2829",
@@ -4460,7 +5083,9 @@
     "sales": 274,
     "image": "/AL3ALAMIA/Cartridges/TOSHIBA/toshiba_2323_2523_2829.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 555,
+    "code": 525
   },
   {
     "id": "toshiba_2528_3028_3528_4528",
@@ -4474,7 +5099,9 @@
     "sales": 453,
     "image": "/AL3ALAMIA/Cartridges/TOSHIBA/toshiba_2528_3028_3528_4528.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1100,
+    "code": 1070
   },
   {
     "id": "toshiba_256_306_445_4590",
@@ -4488,7 +5115,9 @@
     "sales": 468,
     "image": "/AL3ALAMIA/Cartridges/TOSHIBA/toshiba_256_306_445_4590.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 650,
+    "code": 620
   },
   {
     "id": "toshiba_3018_4518_5018",
@@ -4502,7 +5131,9 @@
     "sales": 403,
     "image": "/AL3ALAMIA/Cartridges/TOSHIBA/toshiba_3018_4518_5018.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 910,
+    "code": 880
   },
   {
     "id": "toshiba_307_5070",
@@ -4516,7 +5147,9 @@
     "sales": 438,
     "image": "/AL3ALAMIA/Cartridges/TOSHIBA/toshiba_307_5070.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 600,
+    "code": 570
   },
   {
     "id": "toshiba_8560",
@@ -4530,7 +5163,9 @@
     "sales": 189,
     "image": "/AL3ALAMIA/Cartridges/TOSHIBA/toshiba_8560.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1200,
+    "code": 1170
   },
   {
     "id": "xerox_118",
@@ -4544,7 +5179,9 @@
     "sales": 357,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_118.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 700,
+    "code": 670
   },
   {
     "id": "xerox_128",
@@ -4558,7 +5195,9 @@
     "sales": 147,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_128.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 700,
+    "code": 670
   },
   {
     "id": "xerox_240_250_cmyk",
@@ -4572,7 +5211,9 @@
     "sales": 391,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_240_250_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 8050,
+    "code": 7900
   },
   {
     "id": "xerox_3010_3040",
@@ -4586,7 +5227,9 @@
     "sales": 497,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_3010_3040.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 250,
+    "code": 220
   },
   {
     "id": "xerox_3020_3025",
@@ -4600,7 +5243,9 @@
     "sales": 171,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_3020_3025.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 300,
+    "code": 270
   },
   {
     "id": "xerox_3055_3140_3160",
@@ -4614,7 +5259,9 @@
     "sales": 212,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_3055_3140_3160.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 400,
+    "code": 370
   },
   {
     "id": "xerox_3100",
@@ -4628,7 +5275,9 @@
     "sales": 125,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_3100.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1100,
+    "code": 1070
   },
   {
     "id": "xerox_3117_3125",
@@ -4642,7 +5291,9 @@
     "sales": 273,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_3117_3125.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 375,
+    "code": 345
   },
   {
     "id": "xerox_3150",
@@ -4656,7 +5307,9 @@
     "sales": 478,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_3150.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 500,
+    "code": 470
   },
   {
     "id": "xerox_3200",
@@ -4670,7 +5323,9 @@
     "sales": 380,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_3200.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 500,
+    "code": 470
   },
   {
     "id": "xerox_3210_3220_3250",
@@ -4684,7 +5339,9 @@
     "sales": 396,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_3210_3220_3250.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 500,
+    "code": 470
   },
   {
     "id": "xerox_3215_3225_3260",
@@ -4698,7 +5355,9 @@
     "sales": 371,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_3215_3225_3260.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 350,
+    "code": 320
   },
   {
     "id": "xerox_3315_3325",
@@ -4712,7 +5371,9 @@
     "sales": 490,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_3315_3325.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 450,
+    "code": 420
   },
   {
     "id": "xerox_3320",
@@ -4726,7 +5387,9 @@
     "sales": 235,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_3320.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 500,
+    "code": 470
   },
   {
     "id": "xerox_3330_3335_3345",
@@ -4740,7 +5403,9 @@
     "sales": 402,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_3330_3335_3345.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 500,
+    "code": 470
   },
   {
     "id": "xerox_3435",
@@ -4754,7 +5419,9 @@
     "sales": 201,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_3435.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 500,
+    "code": 470
   },
   {
     "id": "xerox_3610_3615",
@@ -4768,7 +5435,9 @@
     "sales": 434,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_3610_3615.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 500,
+    "code": 470
   },
   {
     "id": "xerox_3635",
@@ -4782,7 +5451,9 @@
     "sales": 457,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_3635.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 500,
+    "code": 470
   },
   {
     "id": "xerox_4150",
@@ -4796,7 +5467,9 @@
     "sales": 456,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_4150.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1000,
+    "code": 970
   },
   {
     "id": "xerox_4510",
@@ -4810,7 +5483,9 @@
     "sales": 492,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_4510.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 2000,
+    "code": 1970
   },
   {
     "id": "xerox_5016_5020",
@@ -4824,7 +5499,9 @@
     "sales": 339,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_5016_5020.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 300,
+    "code": 270
   },
   {
     "id": "xerox_5019_5021_5024",
@@ -4838,7 +5515,9 @@
     "sales": 139,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_5019_5021_5024.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 500,
+    "code": 470
   },
   {
     "id": "xerox_5325_5330_5335",
@@ -4852,7 +5531,9 @@
     "sales": 183,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_5325_5330_5335.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 650,
+    "code": 620
   },
   {
     "id": "xerox_5500",
@@ -4866,7 +5547,9 @@
     "sales": 490,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_5500.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 650,
+    "code": 620
   },
   {
     "id": "xerox_5550",
@@ -4880,7 +5563,9 @@
     "sales": 427,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_5550.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 650,
+    "code": 620
   },
   {
     "id": "xerox_5655_5755",
@@ -4894,7 +5579,9 @@
     "sales": 351,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_5655_5755.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1250,
+    "code": 1220
   },
   {
     "id": "xerox_5875",
@@ -4908,7 +5595,9 @@
     "sales": 268,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_5875.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1200,
+    "code": 1170
   },
   {
     "id": "xerox_6128_cmyk",
@@ -4922,7 +5611,9 @@
     "sales": 311,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_6128_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 2650,
+    "code": 2500
   },
   {
     "id": "xerox_6500_6505_cmyk",
@@ -4936,7 +5627,9 @@
     "sales": 252,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_6500_6505_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 2650,
+    "code": 2500
   },
   {
     "id": "xerox_6510_6515_cmyk",
@@ -4950,7 +5643,9 @@
     "sales": 447,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_6510_6515_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3050,
+    "code": 2900
   },
   {
     "id": "xerox_6600_6605_cmyk",
@@ -4964,7 +5659,9 @@
     "sales": 351,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_6600_6605_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3050,
+    "code": 2900
   },
   {
     "id": "xerox_6655_cmyk",
@@ -4978,7 +5675,9 @@
     "sales": 468,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_6655_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3050,
+    "code": 2900
   },
   {
     "id": "xerox_6700_cmyk",
@@ -4992,7 +5691,9 @@
     "sales": 444,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_6700_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 6050,
+    "code": 5900
   },
   {
     "id": "xerox_7100_cmyk",
@@ -5006,7 +5707,9 @@
     "sales": 380,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_7100_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 4550,
+    "code": 4400
   },
   {
     "id": "xerox_7120_7225_7130_7135_cmyk",
@@ -5020,7 +5723,9 @@
     "sales": 304,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_7120_7225_7130_7135_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 5050,
+    "code": 4900
   },
   {
     "id": "xerox_7500_cmyk",
@@ -5034,7 +5739,9 @@
     "sales": 254,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_7500_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 5050,
+    "code": 4900
   },
   {
     "id": "xerox_7525_7830_7835_cmyk",
@@ -5048,7 +5755,9 @@
     "sales": 137,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_7525_7830_7835_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 5050,
+    "code": 4900
   },
   {
     "id": "xerox_7800_cmyk",
@@ -5062,7 +5771,9 @@
     "sales": 184,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_7800_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 5050,
+    "code": 4900
   },
   {
     "id": "xerox_8130_8135_8145_8155_cmyk",
@@ -5076,7 +5787,9 @@
     "sales": 161,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_8130_8135_8145_8155_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 6050,
+    "code": 5900
   },
   {
     "id": "xerox_b205_215",
@@ -5090,7 +5803,9 @@
     "sales": 164,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_b205_215.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 550,
+    "code": 520
   },
   {
     "id": "xerox_b235_230_225",
@@ -5104,7 +5819,9 @@
     "sales": 473,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_b235_230_225.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 2000,
+    "code": 1970
   },
   {
     "id": "xerox_b305_310_315",
@@ -5118,7 +5835,9 @@
     "sales": 226,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_b305_310_315.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 4000,
+    "code": 3970
   },
   {
     "id": "xerox_b400_405",
@@ -5132,7 +5851,9 @@
     "sales": 281,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_b400_405.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 500,
+    "code": 470
   },
   {
     "id": "xerox_b600_605",
@@ -5146,7 +5867,9 @@
     "sales": 426,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_b600_605.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 800,
+    "code": 770
   },
   {
     "id": "xerox_b7020_7025_7030",
@@ -5160,7 +5883,9 @@
     "sales": 418,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_b7020_7025_7030.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 800,
+    "code": 770
   },
   {
     "id": "xerox_c2020_cmyk",
@@ -5174,7 +5899,9 @@
     "sales": 253,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_c2020_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 6050,
+    "code": 5900
   },
   {
     "id": "xerox_c400_405_cmyk",
@@ -5188,7 +5915,9 @@
     "sales": 195,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_c400_405_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3050,
+    "code": 2900
   },
   {
     "id": "xerox_c700_cmyk",
@@ -5202,7 +5931,9 @@
     "sales": 389,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_c700_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 8050,
+    "code": 7900
   },
   {
     "id": "xerox_c8000_cmyk",
@@ -5216,7 +5947,9 @@
     "sales": 227,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_c8000_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 6050,
+    "code": 5900
   },
   {
     "id": "xerox_m20",
@@ -5230,7 +5963,9 @@
     "sales": 427,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_m20.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1320,
+    "code": 1170
   },
   {
     "id": "xerox_c7000_cmyk",
@@ -5244,7 +5979,9 @@
     "sales": 344,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_c7000_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 6050,
+    "code": 5900
   },
   {
     "id": "xerox_c9000_cmyk",
@@ -5258,7 +5995,9 @@
     "sales": 241,
     "image": "/AL3ALAMIA/Cartridges/XEROX/xerox_c9000_cmyk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 6050,
+    "code": 5900
   },
   {
     "id": "brother_720_750_3325_3340_3300",
@@ -5272,7 +6011,9 @@
     "sales": 110,
     "image": "/AL3ALAMIA/Drums/Brother/brother_720_750_3325_3340_3300.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 630,
+    "code": 600
   },
   {
     "id": "drum_brother_tn_1000_1030_1050_1060",
@@ -5286,7 +6027,9 @@
     "sales": 269,
     "image": "/AL3ALAMIA/Drums/Brother/brother_tn_1000_1030_1050_1060.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 330,
+    "code": 300
   },
   {
     "id": "drum_brother_tn_2000_2025",
@@ -5300,7 +6043,9 @@
     "sales": 308,
     "image": "/AL3ALAMIA/Drums/Brother/brother_tn_2000_2025.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 630,
+    "code": 600
   },
   {
     "id": "brother_tn_2060_2260_2210",
@@ -5314,7 +6059,9 @@
     "sales": 372,
     "image": "/AL3ALAMIA/Drums/Brother/brother_tn_2060_2260_2210.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 430,
+    "code": 400
   },
   {
     "id": "drum_brother_tn_2405",
@@ -5328,7 +6075,9 @@
     "sales": 411,
     "image": "/AL3ALAMIA/Drums/Brother/brother_tn_2405.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 430,
+    "code": 400
   },
   {
     "id": "drum_brother_tn_3417_3405_5200",
@@ -5342,7 +6091,9 @@
     "sales": 433,
     "image": "/AL3ALAMIA/Drums/Brother/brother_tn_3417_3405_5200.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 480,
+    "code": 450
   },
   {
     "id": "drum_brother_tn_360_2125_2130_2150",
@@ -5356,7 +6107,9 @@
     "sales": 327,
     "image": "/AL3ALAMIA/Drums/Brother/brother_tn_360_2125_2130_2150.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 630,
+    "code": 600
   },
   {
     "id": "drum_brother_tn_520_620_5340_3230_3250",
@@ -5370,7 +6123,9 @@
     "sales": 293,
     "image": "/AL3ALAMIA/Drums/Brother/brother_tn_520_620_5340_3230_3250.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 530,
+    "code": 500
   },
   {
     "id": "brother_tn_660_2320_2305_2330_2350",
@@ -5384,7 +6139,9 @@
     "sales": 487,
     "image": "/AL3ALAMIA/Drums/Brother/brother_tn_660_2320_2305_2330_2350.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 430,
+    "code": 400
   },
   {
     "id": "brother_tn_660_2320_2305_2330_2355",
@@ -5398,7 +6155,9 @@
     "sales": 426,
     "image": "/AL3ALAMIA/Drums/Brother/brother_tn_660_2320_2305_2330_2355.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 430,
+    "code": 400
   },
   {
     "id": "drum_brother_tn_820_850_3480_5100",
@@ -5412,7 +6171,9 @@
     "sales": 117,
     "image": "/AL3ALAMIA/Drums/Brother/brother_tn_820_850_3480_5100.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 480,
+    "code": 450
   },
   {
     "id": "canon_2016_2020",
@@ -5426,7 +6187,9 @@
     "sales": 310,
     "image": "/AL3ALAMIA/Drums/Canon/canon_2016_2020.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3030,
+    "code": 3000
   },
   {
     "id": "canon_ir_2200",
@@ -5440,7 +6203,9 @@
     "sales": 309,
     "image": "/AL3ALAMIA/Drums/Canon/canon_ir_2200.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 2630,
+    "code": 2600
   },
   {
     "id": "canon_ir_2525_2530_2545",
@@ -5454,7 +6219,9 @@
     "sales": 325,
     "image": "/AL3ALAMIA/Drums/Canon/canon_ir_2525_2530_2545.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 2630,
+    "code": 2600
   },
   {
     "id": "hp_104_1104",
@@ -5468,7 +6235,9 @@
     "sales": 245,
     "image": "/AL3ALAMIA/Drums/HP/hp_104_1104.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1830,
+    "code": 1800
   },
   {
     "id": "hp_17_19A",
@@ -5482,7 +6251,9 @@
     "sales": 162,
     "image": "/AL3ALAMIA/Drums/HP/hp_17_19a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 330,
+    "code": 300
   },
   {
     "id": "hp_32_232A",
@@ -5496,7 +6267,9 @@
     "sales": 136,
     "image": "/AL3ALAMIA/Drums/HP/hp_32_232a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 330,
+    "code": 300
   },
   {
     "id": "hp_57A",
@@ -5510,7 +6283,9 @@
     "sales": 100,
     "image": "/AL3ALAMIA/Drums/HP/hp_57a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 4030,
+    "code": 4000
   },
   {
     "id": "oki_410_430",
@@ -5524,7 +6299,9 @@
     "sales": 173,
     "image": "/AL3ALAMIA/Drums/OKI/oki_410_430.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1530,
+    "code": 1500
   },
   {
     "id": "drum_oki_412_432_472_492",
@@ -5538,7 +6315,9 @@
     "sales": 241,
     "image": "/AL3ALAMIA/Drums/OKI/oki_412_432_472_492.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1830,
+    "code": 1800
   },
   {
     "id": "pantum_5100_5120",
@@ -5552,7 +6331,9 @@
     "sales": 307,
     "image": "/AL3ALAMIA/Drums/Pantum/pantum_5100_5120.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 930,
+    "code": 900
   },
   {
     "id": "ricoh_sp_2501",
@@ -5566,7 +6347,9 @@
     "sales": 272,
     "image": "/AL3ALAMIA/Drums/Ricoh/ricoh_sp_2501.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3530,
+    "code": 3500
   },
   {
     "id": "drum_ricoh_sp_3600_4500",
@@ -5580,7 +6363,9 @@
     "sales": 308,
     "image": "/AL3ALAMIA/Drums/Ricoh/ricoh_sp_3600_4500.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1530,
+    "code": 1500
   },
   {
     "id": "drum_ricoh_sp_400_450",
@@ -5594,7 +6379,9 @@
     "sales": 482,
     "image": "/AL3ALAMIA/Drums/Ricoh/ricoh_sp_400_450.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1530,
+    "code": 1500
   },
   {
     "id": "drum_samsung_204",
@@ -5608,7 +6395,9 @@
     "sales": 445,
     "image": "/AL3ALAMIA/Drums/Samsung/samsung_204.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 530,
+    "code": 500
   },
   {
     "id": "xerox_1025_1022",
@@ -5622,7 +6411,9 @@
     "sales": 107,
     "image": "/AL3ALAMIA/Drums/Xerox/xerox_1025_1022.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 4030,
+    "code": 4000
   },
   {
     "id": "drum_xerox_3215_3225_3260",
@@ -5636,7 +6427,9 @@
     "sales": 338,
     "image": "/AL3ALAMIA/Drums/Xerox/xerox_3215_3225_3260.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 430,
+    "code": 400
   },
   {
     "id": "drum_xerox_3330_3335_3345",
@@ -5650,7 +6443,9 @@
     "sales": 153,
     "image": "/AL3ALAMIA/Drums/Xerox/xerox_3330_3335_3345.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 530,
+    "code": 500
   },
   {
     "id": "xerox_3655",
@@ -5664,7 +6459,9 @@
     "sales": 409,
     "image": "/AL3ALAMIA/Drums/Xerox/xerox_3655.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 2030,
+    "code": 2000
   },
   {
     "id": "drum_xerox_5019_5021_5024",
@@ -5678,7 +6475,9 @@
     "sales": 492,
     "image": "/AL3ALAMIA/Drums/Xerox/xerox_5019_5021_5024.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3030,
+    "code": 3000
   },
   {
     "id": "xerox_5222_5225_5230",
@@ -5692,7 +6491,9 @@
     "sales": 274,
     "image": "/AL3ALAMIA/Drums/Xerox/xerox_5222_5225_5230.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3530,
+    "code": 3500
   },
   {
     "id": "xerox_5330_5335",
@@ -5706,7 +6507,9 @@
     "sales": 159,
     "image": "/AL3ALAMIA/Drums/Xerox/xerox_5330_5335.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3530,
+    "code": 3500
   },
   {
     "id": "xerox_5500_5550",
@@ -5720,7 +6523,9 @@
     "sales": 297,
     "image": "/AL3ALAMIA/Drums/Xerox/xerox_5500_5550.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3530,
+    "code": 3500
   },
   {
     "id": "xerox_7525",
@@ -5734,7 +6539,9 @@
     "sales": 433,
     "image": "/AL3ALAMIA/Drums/Xerox/xerox_7525.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 2230,
+    "code": 2200
   },
   {
     "id": "drum_xerox_b205_215",
@@ -5748,7 +6555,9 @@
     "sales": 433,
     "image": "/AL3ALAMIA/Drums/Xerox/xerox_b205_215.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 630,
+    "code": 600
   },
   {
     "id": "xerox_b235",
@@ -5762,7 +6571,9 @@
     "sales": 315,
     "image": "/AL3ALAMIA/Drums/Xerox/xerox_b235.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1230,
+    "code": 1200
   },
   {
     "id": "xerox_b305",
@@ -5776,7 +6587,9 @@
     "sales": 490,
     "image": "/AL3ALAMIA/Drums/Xerox/xerox_b305.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1530,
+    "code": 1500
   },
   {
     "id": "xerox_b310_b315",
@@ -5790,7 +6603,9 @@
     "sales": 338,
     "image": "/AL3ALAMIA/Drums/Xerox/xerox_b310_b315.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 1530,
+    "code": 1500
   },
   {
     "id": "xerox_b405",
@@ -5804,7 +6619,9 @@
     "sales": 200,
     "image": "/AL3ALAMIA/Drums/Xerox/xerox_b405.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 2030,
+    "code": 2000
   },
   {
     "id": "xerox_b7030",
@@ -5818,7 +6635,9 @@
     "sales": 476,
     "image": "/AL3ALAMIA/Drums/Xerox/xerox_b7030.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 3530,
+    "code": 3500
   },
   {
     "id": "canon_02_2160_3160_1220",
@@ -5832,7 +6651,9 @@
     "sales": 210,
     "image": "/AL3ALAMIA/Chips/Canon/canon_02_2160_3160_1220.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "canon_040_c",
@@ -5846,7 +6667,9 @@
     "sales": 385,
     "image": "/AL3ALAMIA/Chips/Canon/canon_040_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "canon_040_k",
@@ -5860,7 +6683,9 @@
     "sales": 461,
     "image": "/AL3ALAMIA/Chips/Canon/canon_040_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "canon_040_m",
@@ -5874,7 +6699,9 @@
     "sales": 126,
     "image": "/AL3ALAMIA/Chips/Canon/canon_040_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "canon_040_y",
@@ -5888,7 +6715,9 @@
     "sales": 381,
     "image": "/AL3ALAMIA/Chips/Canon/canon_040_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "canon_054_500_c",
@@ -5902,7 +6731,9 @@
     "sales": 258,
     "image": "/AL3ALAMIA/Chips/Canon/canon_054_500_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "canon_054_500_k",
@@ -5916,7 +6747,9 @@
     "sales": 181,
     "image": "/AL3ALAMIA/Chips/Canon/canon_054_500_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "canon_054_500_m",
@@ -5930,7 +6763,9 @@
     "sales": 118,
     "image": "/AL3ALAMIA/Chips/Canon/canon_054_500_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "canon_054_500_y",
@@ -5944,7 +6779,9 @@
     "sales": 155,
     "image": "/AL3ALAMIA/Chips/Canon/canon_054_500_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "canon_055_c",
@@ -5958,7 +6795,9 @@
     "sales": 296,
     "image": "/AL3ALAMIA/Chips/Canon/canon_055_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "canon_055_k",
@@ -5972,7 +6811,9 @@
     "sales": 284,
     "image": "/AL3ALAMIA/Chips/Canon/canon_055_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "canon_055_m",
@@ -5986,7 +6827,9 @@
     "sales": 176,
     "image": "/AL3ALAMIA/Chips/Canon/canon_055_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "canon_055_y",
@@ -6000,7 +6843,9 @@
     "sales": 333,
     "image": "/AL3ALAMIA/Chips/Canon/canon_055_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "chip_canon_057",
@@ -6014,7 +6859,9 @@
     "sales": 433,
     "image": "/AL3ALAMIA/Chips/Canon/canon_057.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "canon_06",
@@ -6028,7 +6875,9 @@
     "sales": 111,
     "image": "/AL3ALAMIA/Chips/Canon/canon_06.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 265,
+    "code": 250
   },
   {
     "id": "chip_canon_070",
@@ -6042,7 +6891,9 @@
     "sales": 411,
     "image": "/AL3ALAMIA/Chips/Canon/canon_070.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "canon_09_c",
@@ -6056,7 +6907,9 @@
     "sales": 311,
     "image": "/AL3ALAMIA/Chips/Canon/canon_09_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 265,
+    "code": 250
   },
   {
     "id": "canon_09_k",
@@ -6070,7 +6923,9 @@
     "sales": 250,
     "image": "/AL3ALAMIA/Chips/Canon/canon_09_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 265,
+    "code": 250
   },
   {
     "id": "canon_09_m",
@@ -6084,7 +6939,9 @@
     "sales": 130,
     "image": "/AL3ALAMIA/Chips/Canon/canon_09_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 265,
+    "code": 250
   },
   {
     "id": "canon_09_y",
@@ -6098,7 +6955,9 @@
     "sales": 151,
     "image": "/AL3ALAMIA/Chips/Canon/canon_09_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 265,
+    "code": 250
   },
   {
     "id": "canon_237_337_737",
@@ -6112,7 +6971,9 @@
     "sales": 197,
     "image": "/AL3ALAMIA/Chips/Canon/canon_237_337_737.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 65,
+    "code": 50
   },
   {
     "id": "canon_59",
@@ -6126,7 +6987,9 @@
     "sales": 464,
     "image": "/AL3ALAMIA/Chips/Canon/canon_59.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "hp_106A",
@@ -6140,7 +7003,9 @@
     "sales": 358,
     "image": "/AL3ALAMIA/Chips/HP/hp_106a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_107A",
@@ -6154,7 +7019,9 @@
     "sales": 202,
     "image": "/AL3ALAMIA/Chips/HP/hp_107a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "chip_hp_10A",
@@ -6168,7 +7035,9 @@
     "sales": 476,
     "image": "/AL3ALAMIA/Chips/HP/hp_10a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_117_2070_c",
@@ -6182,7 +7051,9 @@
     "sales": 484,
     "image": "/AL3ALAMIA/Chips/HP/hp_117_2070_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "hp_117_2070_k",
@@ -6196,7 +7067,9 @@
     "sales": 325,
     "image": "/AL3ALAMIA/Chips/HP/hp_117_2070_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "hp_117_2070_m",
@@ -6210,7 +7083,9 @@
     "sales": 311,
     "image": "/AL3ALAMIA/Chips/HP/hp_117_2070_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "hp_117_2070_y",
@@ -6224,7 +7099,9 @@
     "sales": 187,
     "image": "/AL3ALAMIA/Chips/HP/hp_117_2070_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "hp_1331A",
@@ -6238,7 +7115,9 @@
     "sales": 347,
     "image": "/AL3ALAMIA/Chips/HP/hp_1331a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "hp_1331x",
@@ -6252,7 +7131,9 @@
     "sales": 102,
     "image": "/AL3ALAMIA/Chips/HP/hp_1331x.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "hp_1332A",
@@ -6266,7 +7147,9 @@
     "sales": 391,
     "image": "/AL3ALAMIA/Chips/HP/hp_1332a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "hp_1360A",
@@ -6280,7 +7163,9 @@
     "sales": 406,
     "image": "/AL3ALAMIA/Chips/HP/hp_1360a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "chip_hp_14A",
@@ -6294,7 +7179,9 @@
     "sales": 146,
     "image": "/AL3ALAMIA/Chips/HP/hp_14a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_14x",
@@ -6308,7 +7195,9 @@
     "sales": 133,
     "image": "/AL3ALAMIA/Chips/HP/hp_14x.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 135,
+    "code": 120
   },
   {
     "id": "hp_150_1500",
@@ -6322,7 +7211,9 @@
     "sales": 287,
     "image": "/AL3ALAMIA/Chips/HP/hp_150_1500.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "hp_2055_c",
@@ -6336,7 +7227,9 @@
     "sales": 198,
     "image": "/AL3ALAMIA/Chips/HP/hp_2055_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_2055_k",
@@ -6350,7 +7243,9 @@
     "sales": 167,
     "image": "/AL3ALAMIA/Chips/HP/hp_2055_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_2055_m",
@@ -6364,7 +7259,9 @@
     "sales": 396,
     "image": "/AL3ALAMIA/Chips/HP/hp_2055_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_2055_y",
@@ -6378,7 +7275,9 @@
     "sales": 112,
     "image": "/AL3ALAMIA/Chips/HP/hp_2055_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_206_207_2210_c",
@@ -6392,7 +7291,9 @@
     "sales": 342,
     "image": "/AL3ALAMIA/Chips/HP/hp_206_207_2210_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 265,
+    "code": 250
   },
   {
     "id": "hp_206_207_2210_k",
@@ -6406,7 +7307,9 @@
     "sales": 236,
     "image": "/AL3ALAMIA/Chips/HP/hp_206_207_2210_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 265,
+    "code": 250
   },
   {
     "id": "hp_206_207_2210_m",
@@ -6420,7 +7323,9 @@
     "sales": 487,
     "image": "/AL3ALAMIA/Chips/HP/hp_206_207_2210_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 265,
+    "code": 250
   },
   {
     "id": "hp_206_207_2210_y",
@@ -6434,7 +7339,9 @@
     "sales": 153,
     "image": "/AL3ALAMIA/Chips/HP/hp_206_207_2210_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 265,
+    "code": 250
   },
   {
     "id": "hp_2410_c",
@@ -6448,7 +7355,9 @@
     "sales": 261,
     "image": "/AL3ALAMIA/Chips/HP/hp_2410_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 315,
+    "code": 300
   },
   {
     "id": "hp_2410_k",
@@ -6462,7 +7371,9 @@
     "sales": 347,
     "image": "/AL3ALAMIA/Chips/HP/hp_2410_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 315,
+    "code": 300
   },
   {
     "id": "hp_2410_m",
@@ -6476,7 +7387,9 @@
     "sales": 241,
     "image": "/AL3ALAMIA/Chips/HP/hp_2410_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 315,
+    "code": 300
   },
   {
     "id": "hp_2410_y",
@@ -6490,7 +7403,9 @@
     "sales": 463,
     "image": "/AL3ALAMIA/Chips/HP/hp_2410_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 315,
+    "code": 300
   },
   {
     "id": "chip_hp_25x",
@@ -6504,7 +7419,9 @@
     "sales": 337,
     "image": "/AL3ALAMIA/Chips/HP/hp_25x.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "hp_260_4525_4540_bk",
@@ -6518,7 +7435,9 @@
     "sales": 354,
     "image": "/AL3ALAMIA/Chips/HP/hp_260_4525_4540_bk.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_260_4525_4540_c",
@@ -6532,7 +7451,9 @@
     "sales": 350,
     "image": "/AL3ALAMIA/Chips/HP/hp_260_4525_4540_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_260_4525_4540_m",
@@ -6546,7 +7467,9 @@
     "sales": 499,
     "image": "/AL3ALAMIA/Chips/HP/hp_260_4525_4540_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_260_4525_4540_y",
@@ -6560,7 +7483,9 @@
     "sales": 128,
     "image": "/AL3ALAMIA/Chips/HP/hp_260_4525_4540_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "chip_hp_26A",
@@ -6574,7 +7499,9 @@
     "sales": 352,
     "image": "/AL3ALAMIA/Chips/HP/hp_26a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 65,
+    "code": 50
   },
   {
     "id": "hp_310_855_c",
@@ -6588,7 +7515,9 @@
     "sales": 452,
     "image": "/AL3ALAMIA/Chips/HP/hp_310_855_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_310_855_k",
@@ -6602,7 +7531,9 @@
     "sales": 401,
     "image": "/AL3ALAMIA/Chips/HP/hp_310_855_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_310_855_m",
@@ -6616,7 +7547,9 @@
     "sales": 484,
     "image": "/AL3ALAMIA/Chips/HP/hp_310_855_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_310_855_y",
@@ -6630,7 +7563,9 @@
     "sales": 350,
     "image": "/AL3ALAMIA/Chips/HP/hp_310_855_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "chip_hp_37A",
@@ -6644,7 +7579,9 @@
     "sales": 156,
     "image": "/AL3ALAMIA/Chips/HP/hp_37a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_380_476_c",
@@ -6658,7 +7595,9 @@
     "sales": 365,
     "image": "/AL3ALAMIA/Chips/HP/hp_380_476_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 65,
+    "code": 50
   },
   {
     "id": "hp_380_476_k",
@@ -6672,7 +7611,9 @@
     "sales": 146,
     "image": "/AL3ALAMIA/Chips/HP/hp_380_476_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 65,
+    "code": 50
   },
   {
     "id": "hp_380_476_m",
@@ -6686,7 +7627,9 @@
     "sales": 443,
     "image": "/AL3ALAMIA/Chips/HP/hp_380_476_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 65,
+    "code": 50
   },
   {
     "id": "hp_380_476_y",
@@ -6700,7 +7643,9 @@
     "sales": 443,
     "image": "/AL3ALAMIA/Chips/HP/hp_380_476_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 65,
+    "code": 50
   },
   {
     "id": "hp_415_2030_c",
@@ -6714,7 +7659,9 @@
     "sales": 375,
     "image": "/AL3ALAMIA/Chips/HP/hp_415_2030_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "hp_415_2030_k",
@@ -6728,7 +7675,9 @@
     "sales": 193,
     "image": "/AL3ALAMIA/Chips/HP/hp_415_2030_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "hp_415_2030_m",
@@ -6742,7 +7691,9 @@
     "sales": 373,
     "image": "/AL3ALAMIA/Chips/HP/hp_415_2030_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "hp_415_2030_y",
@@ -6756,7 +7707,9 @@
     "sales": 215,
     "image": "/AL3ALAMIA/Chips/HP/hp_415_2030_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "chip_hp_48A",
@@ -6770,7 +7723,9 @@
     "sales": 219,
     "image": "/AL3ALAMIA/Chips/HP/hp_48a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 65,
+    "code": 50
   },
   {
     "id": "hp_49_53A",
@@ -6784,7 +7739,9 @@
     "sales": 344,
     "image": "/AL3ALAMIA/Chips/HP/hp_49_53a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 65,
+    "code": 50
   },
   {
     "id": "chip_hp_57A",
@@ -6798,7 +7755,9 @@
     "sales": 364,
     "image": "/AL3ALAMIA/Chips/HP/hp_57a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "hp_57a_drum",
@@ -6812,7 +7771,9 @@
     "sales": 431,
     "image": "/AL3ALAMIA/Chips/HP/hp_57a_drum.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 225,
+    "code": 225
   },
   {
     "id": "chip_hp_59A",
@@ -6826,7 +7787,9 @@
     "sales": 232,
     "image": "/AL3ALAMIA/Chips/HP/hp_59a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "hp_85_35A",
@@ -6840,7 +7803,9 @@
     "sales": 483,
     "image": "/AL3ALAMIA/Chips/HP/hp_85_35a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 65,
+    "code": 50
   },
   {
     "id": "hp_880_300_drum_c",
@@ -6854,7 +7819,9 @@
     "sales": 458,
     "image": "/AL3ALAMIA/Chips/HP/hp_880_300_drum_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "hp_880_300_drum_k",
@@ -6868,7 +7835,9 @@
     "sales": 298,
     "image": "/AL3ALAMIA/Chips/HP/hp_880_300_drum_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "hp_880_300_drum_m",
@@ -6882,7 +7851,9 @@
     "sales": 113,
     "image": "/AL3ALAMIA/Chips/HP/hp_880_300_drum_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "hp_880_300_drum_y",
@@ -6896,7 +7867,9 @@
     "sales": 268,
     "image": "/AL3ALAMIA/Chips/HP/hp_880_300_drum_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "chip_hp_89A",
@@ -6910,7 +7883,9 @@
     "sales": 491,
     "image": "/AL3ALAMIA/Chips/HP/hp_89a.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "hp_9005",
@@ -6924,7 +7899,9 @@
     "sales": 171,
     "image": "/AL3ALAMIA/Chips/HP/hp_9005.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 265,
+    "code": 250
   },
   {
     "id": "hp_9190_c",
@@ -6938,7 +7915,9 @@
     "sales": 259,
     "image": "/AL3ALAMIA/Chips/HP/hp_9190_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 265,
+    "code": 250
   },
   {
     "id": "hp_9190_k",
@@ -6952,7 +7931,9 @@
     "sales": 134,
     "image": "/AL3ALAMIA/Chips/HP/hp_9190_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 265,
+    "code": 250
   },
   {
     "id": "hp_9190_m",
@@ -6966,7 +7947,9 @@
     "sales": 180,
     "image": "/AL3ALAMIA/Chips/HP/hp_9190_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 265,
+    "code": 250
   },
   {
     "id": "hp_9190_y",
@@ -6980,7 +7963,9 @@
     "sales": 496,
     "image": "/AL3ALAMIA/Chips/HP/hp_9190_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 265,
+    "code": 250
   },
   {
     "id": "hp_ce_340_775_c",
@@ -6994,7 +7979,9 @@
     "sales": 263,
     "image": "/AL3ALAMIA/Chips/HP/hp_ce_340_775_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "hp_ce_340_775_k",
@@ -7008,7 +7995,9 @@
     "sales": 101,
     "image": "/AL3ALAMIA/Chips/HP/hp_ce_340_775_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "hp_ce_340_775_m",
@@ -7022,7 +8011,9 @@
     "sales": 317,
     "image": "/AL3ALAMIA/Chips/HP/hp_ce_340_775_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "hp_ce_340_775_y",
@@ -7036,7 +8027,9 @@
     "sales": 276,
     "image": "/AL3ALAMIA/Chips/HP/hp_ce_340_775_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "hp_ce_400_507_k",
@@ -7050,7 +8043,9 @@
     "sales": 492,
     "image": "/AL3ALAMIA/Chips/HP/hp_ce_400_507_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "hp_ce_400_507_c",
@@ -7064,7 +8059,9 @@
     "sales": 111,
     "image": "/AL3ALAMIA/Chips/HP/hp_ce_400_507_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "hp_ce_400_507_m",
@@ -7078,7 +8075,9 @@
     "sales": 256,
     "image": "/AL3ALAMIA/Chips/HP/hp_ce_400_507_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "hp_ce_400_507_y",
@@ -7092,7 +8091,9 @@
     "sales": 489,
     "image": "/AL3ALAMIA/Chips/HP/hp_ce_400_507_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "hp_ce_740_c",
@@ -7106,7 +8107,9 @@
     "sales": 108,
     "image": "/AL3ALAMIA/Chips/HP/hp_ce_740_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "hp_ce_740_k",
@@ -7120,7 +8123,9 @@
     "sales": 219,
     "image": "/AL3ALAMIA/Chips/HP/hp_ce_740_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "hp_ce_740_m",
@@ -7134,7 +8139,9 @@
     "sales": 282,
     "image": "/AL3ALAMIA/Chips/HP/hp_ce_740_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "hp_ce_740_y",
@@ -7148,7 +8155,9 @@
     "sales": 389,
     "image": "/AL3ALAMIA/Chips/HP/hp_ce_740_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "hp_cf_300_880_c",
@@ -7162,7 +8171,9 @@
     "sales": 189,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_300_880_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "hp_cf_300_880_k",
@@ -7176,7 +8187,9 @@
     "sales": 212,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_300_880_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "hp_cf_300_880_m",
@@ -7190,7 +8203,9 @@
     "sales": 196,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_300_880_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "hp_cf_300_880_y",
@@ -7204,7 +8219,9 @@
     "sales": 233,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_300_880_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "hp_cf_330_c",
@@ -7218,7 +8235,9 @@
     "sales": 189,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_330_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "hp_cf_330_k",
@@ -7232,7 +8251,9 @@
     "sales": 169,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_330_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "hp_cf_330_m",
@@ -7246,7 +8267,9 @@
     "sales": 174,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_330_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "hp_cf_330_y",
@@ -7260,7 +8283,9 @@
     "sales": 204,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_330_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "hp_cf_360_508_c",
@@ -7274,7 +8299,9 @@
     "sales": 145,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_360_508_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_cf_360_508_k",
@@ -7288,7 +8315,9 @@
     "sales": 226,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_360_508_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_cf_360_508_m",
@@ -7302,7 +8331,9 @@
     "sales": 409,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_360_508_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_cf_360_508_y",
@@ -7316,7 +8347,9 @@
     "sales": 174,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_360_508_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_cf_400_c",
@@ -7330,7 +8363,9 @@
     "sales": 478,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_400_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_cf_400_k",
@@ -7344,7 +8379,9 @@
     "sales": 400,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_400_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_cf_400_m",
@@ -7358,7 +8395,9 @@
     "sales": 192,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_400_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_cf_400_y",
@@ -7372,7 +8411,9 @@
     "sales": 454,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_400_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_cf_410_c",
@@ -7386,7 +8427,9 @@
     "sales": 459,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_410_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_cf_410_k",
@@ -7400,7 +8443,9 @@
     "sales": 491,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_410_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_cf_410_m",
@@ -7414,7 +8459,9 @@
     "sales": 296,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_410_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_cf_410_y",
@@ -7428,7 +8475,9 @@
     "sales": 458,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_410_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_cf_450_c",
@@ -7442,7 +8491,9 @@
     "sales": 193,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_450_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "hp_cf_450_k",
@@ -7456,7 +8507,9 @@
     "sales": 488,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_450_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "hp_cf_450_m",
@@ -7470,7 +8523,9 @@
     "sales": 300,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_450_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "hp_cf_450_y",
@@ -7484,7 +8539,9 @@
     "sales": 401,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_450_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 2115,
+    "code": 2100
   },
   {
     "id": "hp_cf_470_c",
@@ -7498,7 +8555,9 @@
     "sales": 246,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_470_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "hp_cf_470_k",
@@ -7512,7 +8571,9 @@
     "sales": 430,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_470_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "hp_cf_470_m",
@@ -7526,7 +8587,9 @@
     "sales": 312,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_470_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "hp_cf_470_y",
@@ -7540,7 +8603,9 @@
     "sales": 410,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_470_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "hp_cf_540_c",
@@ -7554,7 +8619,9 @@
     "sales": 456,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_540_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_cf_540_k",
@@ -7568,7 +8635,9 @@
     "sales": 305,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_540_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_cf_540_m",
@@ -7582,7 +8651,9 @@
     "sales": 441,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_540_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "hp_cf_540_y",
@@ -7596,7 +8667,9 @@
     "sales": 246,
     "image": "/AL3ALAMIA/Chips/HP/hp_cf_540_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 90,
+    "code": 75
   },
   {
     "id": "chip_oki_412_432_472_492",
@@ -7610,7 +8683,9 @@
     "sales": 235,
     "image": "/AL3ALAMIA/Chips/OKI/oki_412_432_472_492.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 135,
+    "code": 120
   },
   {
     "id": "oki_4131_4191",
@@ -7624,7 +8699,9 @@
     "sales": 484,
     "image": "/AL3ALAMIA/Chips/OKI/oki_4131_4191.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "oki_4132_4192_5112_5162",
@@ -7638,7 +8715,9 @@
     "sales": 292,
     "image": "/AL3ALAMIA/Chips/OKI/oki_4132_4192_5112_5162.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "pantum_106_219",
@@ -7652,7 +8731,9 @@
     "sales": 461,
     "image": "/AL3ALAMIA/Chips/Pantum/pantum_106_219.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 135,
+    "code": 120
   },
   {
     "id": "chip_pantum_5100_5120",
@@ -7666,7 +8747,9 @@
     "sales": 306,
     "image": "/AL3ALAMIA/Chips/Pantum/pantum_5100_5120.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "pantum_5100_5120_drum",
@@ -7680,7 +8763,9 @@
     "sales": 250,
     "image": "/AL3ALAMIA/Chips/Pantum/pantum_5100_5120_drum.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 225,
+    "code": 225
   },
   {
     "id": "ricoh_sp_100_111_112",
@@ -7694,7 +8779,9 @@
     "sales": 395,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_sp_100_111_112.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_150",
@@ -7708,7 +8795,9 @@
     "sales": 234,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_150.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_220_222_240_c",
@@ -7722,7 +8811,9 @@
     "sales": 347,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_220_222_240_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_220_222_240_k",
@@ -7736,7 +8827,9 @@
     "sales": 359,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_220_222_240_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_220_222_240_m",
@@ -7750,7 +8843,9 @@
     "sales": 363,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_220_222_240_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_220_222_240_y",
@@ -7764,7 +8859,9 @@
     "sales": 167,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_220_222_240_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_232_242_311_320_c",
@@ -7778,7 +8875,9 @@
     "sales": 382,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_232_242_311_320_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_232_242_311_320_k",
@@ -7792,7 +8891,9 @@
     "sales": 268,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_232_242_311_320_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_232_242_311_320_m",
@@ -7806,7 +8907,9 @@
     "sales": 278,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_232_242_311_320_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_232_242_311_320_y",
@@ -7820,7 +8923,9 @@
     "sales": 173,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_232_242_311_320_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_250_c",
@@ -7834,7 +8939,9 @@
     "sales": 375,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_250_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_250_k",
@@ -7848,7 +8955,9 @@
     "sales": 348,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_250_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_250_m",
@@ -7862,7 +8971,9 @@
     "sales": 225,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_250_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_250_y",
@@ -7876,7 +8987,9 @@
     "sales": 384,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_250_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_252_c",
@@ -7890,7 +9003,9 @@
     "sales": 150,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_252_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_252_k",
@@ -7904,7 +9019,9 @@
     "sales": 480,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_252_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_252_m",
@@ -7918,7 +9035,9 @@
     "sales": 244,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_252_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_252_y",
@@ -7932,7 +9051,9 @@
     "sales": 102,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_252_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_305_c",
@@ -7946,7 +9067,9 @@
     "sales": 343,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_305_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_305_k",
@@ -7960,7 +9083,9 @@
     "sales": 406,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_305_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_305_m",
@@ -7974,7 +9099,9 @@
     "sales": 312,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_305_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_305_y",
@@ -7988,7 +9115,9 @@
     "sales": 297,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_305_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_306_406_c",
@@ -8002,7 +9131,9 @@
     "sales": 478,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_306_406_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_306_406_k",
@@ -8016,7 +9147,9 @@
     "sales": 412,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_306_406_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_306_406_m",
@@ -8030,7 +9163,9 @@
     "sales": 344,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_306_406_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_306_406_y",
@@ -8044,7 +9179,9 @@
     "sales": 467,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_306_406_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_340_c",
@@ -8058,7 +9195,9 @@
     "sales": 261,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_340_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_340_k",
@@ -8072,7 +9211,9 @@
     "sales": 245,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_340_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_340_m",
@@ -8086,7 +9227,9 @@
     "sales": 325,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_340_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_340_y",
@@ -8100,7 +9243,9 @@
     "sales": 217,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_340_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_3400_3500",
@@ -8114,7 +9259,9 @@
     "sales": 400,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_3400_3500.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_3410",
@@ -8128,7 +9275,9 @@
     "sales": 162,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_3410.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_352_c",
@@ -8142,7 +9291,9 @@
     "sales": 166,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_352_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_352_k",
@@ -8156,7 +9307,9 @@
     "sales": 424,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_352_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_352_m",
@@ -8170,7 +9323,9 @@
     "sales": 230,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_352_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_352_y",
@@ -8184,7 +9339,9 @@
     "sales": 414,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_352_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_3710",
@@ -8198,7 +9355,9 @@
     "sales": 350,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_3710.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_400_450",
@@ -8212,7 +9371,9 @@
     "sales": 341,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_400_450.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_400_450_drum",
@@ -8226,7 +9387,9 @@
     "sales": 222,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_400_450_drum.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "ricoh_401_4520",
@@ -8240,7 +9403,9 @@
     "sales": 245,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_401_4520.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_401_4520_drum",
@@ -8254,7 +9419,9 @@
     "sales": 480,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_401_4520_drum.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_4100_4200_4210_4300_4310",
@@ -8268,7 +9435,9 @@
     "sales": 379,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_4100_4200_4210_4300_4310.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_4500_4510_3600_3610_drum",
@@ -8282,7 +9451,9 @@
     "sales": 130,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_4500_4510_3600_3610_drum.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 75,
+    "code": 60
   },
   {
     "id": "ricoh_501_601_5300_5310",
@@ -8296,7 +9467,9 @@
     "sales": 402,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_501_601_5300_5310.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_5200",
@@ -8310,7 +9483,9 @@
     "sales": 422,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_5200.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 95,
+    "code": 80
   },
   {
     "id": "chip_ricoh_sp_200_210_211",
@@ -8324,7 +9499,9 @@
     "sales": 164,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_sp_200_210_211.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_sp_310_311",
@@ -8338,7 +9515,9 @@
     "sales": 130,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_sp_310_311.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 85,
+    "code": 70
   },
   {
     "id": "ricoh_sp_4500_4510_3600_3610",
@@ -8352,7 +9531,9 @@
     "sales": 171,
     "image": "/AL3ALAMIA/Chips/Ricoh/ricoh_sp_4500_4510_3600_3610.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 65,
+    "code": 50
   },
   {
     "id": "samsung_101",
@@ -8366,7 +9547,9 @@
     "sales": 282,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_101.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 95,
+    "code": 80
   },
   {
     "id": "samsung_103l",
@@ -8380,7 +9563,9 @@
     "sales": 287,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_103l.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 95,
+    "code": 80
   },
   {
     "id": "samsung_104",
@@ -8394,7 +9579,9 @@
     "sales": 359,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_104.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 95,
+    "code": 80
   },
   {
     "id": "chip_samsung_105",
@@ -8408,7 +9595,9 @@
     "sales": 449,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_105.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 95,
+    "code": 80
   },
   {
     "id": "samsung_108",
@@ -8422,7 +9611,9 @@
     "sales": 224,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_108.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 80,
+    "code": 65
   },
   {
     "id": "samsung_109",
@@ -8436,7 +9627,9 @@
     "sales": 315,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_109.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 95,
+    "code": 80
   },
   {
     "id": "chip_samsung_111",
@@ -8450,7 +9643,9 @@
     "sales": 416,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_111.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 95,
+    "code": 80
   },
   {
     "id": "samsung_115",
@@ -8464,7 +9659,9 @@
     "sales": 463,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_115.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "samsung_116",
@@ -8478,7 +9675,9 @@
     "sales": 319,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_116.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 75,
+    "code": 60
   },
   {
     "id": "samsung_116_drum",
@@ -8492,7 +9691,9 @@
     "sales": 114,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_116_drum.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 135,
+    "code": 120
   },
   {
     "id": "samsung_201l",
@@ -8506,7 +9707,9 @@
     "sales": 187,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_201l.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 190,
+    "code": 175
   },
   {
     "id": "samsung_203_l",
@@ -8520,7 +9723,9 @@
     "sales": 474,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_203_l.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 75,
+    "code": 60
   },
   {
     "id": "samsung_204",
@@ -8534,7 +9739,9 @@
     "sales": 216,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_204.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "samsung_204_drum",
@@ -8548,7 +9755,9 @@
     "sales": 299,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_204_drum.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 95,
+    "code": 80
   },
   {
     "id": "samsung_205",
@@ -8562,7 +9771,9 @@
     "sales": 499,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_205.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 95,
+    "code": 80
   },
   {
     "id": "chip_samsung_208",
@@ -8576,7 +9787,9 @@
     "sales": 231,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_208.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 95,
+    "code": 80
   },
   {
     "id": "samsung_209",
@@ -8590,7 +9803,9 @@
     "sales": 324,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_209.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 95,
+    "code": 80
   },
   {
     "id": "samsung_2850",
@@ -8604,7 +9819,9 @@
     "sales": 302,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_2850.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 95,
+    "code": 80
   },
   {
     "id": "samsung_303",
@@ -8618,7 +9835,9 @@
     "sales": 438,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_303.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 465,
+    "code": 450
   },
   {
     "id": "samsung_303_drum",
@@ -8632,7 +9851,9 @@
     "sales": 303,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_303_drum.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 265,
+    "code": 250
   },
   {
     "id": "samsung_304",
@@ -8646,7 +9867,9 @@
     "sales": 248,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_304.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 415,
+    "code": 400
   },
   {
     "id": "samsung_305",
@@ -8660,7 +9883,9 @@
     "sales": 302,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_305.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 95,
+    "code": 80
   },
   {
     "id": "samsung_307",
@@ -8674,7 +9899,9 @@
     "sales": 149,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_307.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 265,
+    "code": 250
   },
   {
     "id": "chip_samsung_3470",
@@ -8688,7 +9915,9 @@
     "sales": 342,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_3470.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 95,
+    "code": 80
   },
   {
     "id": "samsung_406_410_c",
@@ -8702,7 +9931,9 @@
     "sales": 355,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_406_410_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "samsung_406_410_k",
@@ -8716,7 +9947,9 @@
     "sales": 230,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_406_410_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "samsung_406_410_m",
@@ -8730,7 +9963,9 @@
     "sales": 269,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_406_410_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "samsung_406_410_y",
@@ -8744,7 +9979,9 @@
     "sales": 122,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_406_410_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "samsung_504_c",
@@ -8758,7 +9995,9 @@
     "sales": 396,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_504_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "samsung_504_k",
@@ -8772,7 +10011,9 @@
     "sales": 231,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_504_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "samsung_504_m",
@@ -8786,7 +10027,9 @@
     "sales": 440,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_504_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "samsung_504_y",
@@ -8800,7 +10043,9 @@
     "sales": 246,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_504_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "samsung_506_6260_c",
@@ -8814,7 +10059,9 @@
     "sales": 320,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_506_6260_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 365,
+    "code": 350
   },
   {
     "id": "samsung_506_6260_k",
@@ -8828,7 +10075,9 @@
     "sales": 129,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_506_6260_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 365,
+    "code": 350
   },
   {
     "id": "samsung_506_6260_m",
@@ -8842,7 +10091,9 @@
     "sales": 168,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_506_6260_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 365,
+    "code": 350
   },
   {
     "id": "samsung_506_6260_y",
@@ -8856,7 +10107,9 @@
     "sales": 290,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_506_6260_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 365,
+    "code": 350
   },
   {
     "id": "samsung_5530",
@@ -8870,7 +10123,9 @@
     "sales": 348,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_5530.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "samsung_6545_6555",
@@ -8884,7 +10139,9 @@
     "sales": 424,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_6545_6555.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "samsung_707",
@@ -8898,7 +10155,9 @@
     "sales": 414,
     "image": "/AL3ALAMIA/Chips/Samsung/samsung_707.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 315,
+    "code": 300
   },
   {
     "id": "sharp_235",
@@ -8912,7 +10171,9 @@
     "sales": 191,
     "image": "/AL3ALAMIA/Chips/Sharp/sharp_235.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "sharp_237",
@@ -8926,7 +10187,9 @@
     "sales": 399,
     "image": "/AL3ALAMIA/Chips/Sharp/sharp_237.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "sharp_310",
@@ -8940,7 +10203,9 @@
     "sales": 268,
     "image": "/AL3ALAMIA/Chips/Sharp/sharp_310.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "sharp_312_260",
@@ -8954,7 +10219,9 @@
     "sales": 298,
     "image": "/AL3ALAMIA/Chips/Sharp/sharp_312_260.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "sharp_315",
@@ -8968,7 +10235,9 @@
     "sales": 240,
     "image": "/AL3ALAMIA/Chips/Sharp/sharp_315.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "sharp_c31_c",
@@ -8982,7 +10251,9 @@
     "sales": 119,
     "image": "/AL3ALAMIA/Chips/Sharp/sharp_c31_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "sharp_c31_k",
@@ -8996,7 +10267,9 @@
     "sales": 359,
     "image": "/AL3ALAMIA/Chips/Sharp/sharp_c31_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "sharp_c31_m",
@@ -9010,7 +10283,9 @@
     "sales": 301,
     "image": "/AL3ALAMIA/Chips/Sharp/sharp_c31_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "sharp_c31_y",
@@ -9024,7 +10299,9 @@
     "sales": 254,
     "image": "/AL3ALAMIA/Chips/Sharp/sharp_c31_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "sharp_c36_c",
@@ -9038,7 +10315,9 @@
     "sales": 281,
     "image": "/AL3ALAMIA/Chips/Sharp/sharp_c36_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "sharp_c36_k",
@@ -9052,7 +10331,9 @@
     "sales": 201,
     "image": "/AL3ALAMIA/Chips/Sharp/sharp_c36_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "sharp_c36_m",
@@ -9066,7 +10347,9 @@
     "sales": 101,
     "image": "/AL3ALAMIA/Chips/Sharp/sharp_c36_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "sharp_c36_y",
@@ -9080,7 +10363,9 @@
     "sales": 308,
     "image": "/AL3ALAMIA/Chips/Sharp/sharp_c36_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "sharp_m23_2310_c",
@@ -9094,7 +10379,9 @@
     "sales": 215,
     "image": "/AL3ALAMIA/Chips/Sharp/sharp_m23_2310_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "sharp_m23_2310_k",
@@ -9108,7 +10395,9 @@
     "sales": 308,
     "image": "/AL3ALAMIA/Chips/Sharp/sharp_m23_2310_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "sharp_m23_2310_m",
@@ -9122,7 +10411,9 @@
     "sales": 312,
     "image": "/AL3ALAMIA/Chips/Sharp/sharp_m23_2310_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "sharp_m23_2310_y",
@@ -9136,7 +10427,9 @@
     "sales": 225,
     "image": "/AL3ALAMIA/Chips/Sharp/sharp_m23_2310_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "chip_toshiba_2450",
@@ -9150,7 +10443,9 @@
     "sales": 391,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_2450.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 95,
+    "code": 80
   },
   {
     "id": "toshiba_2802",
@@ -9164,7 +10459,9 @@
     "sales": 227,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_2802.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 135,
+    "code": 120
   },
   {
     "id": "toshiba_305_c",
@@ -9178,7 +10475,9 @@
     "sales": 363,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_305_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "toshiba_305_k",
@@ -9192,7 +10491,9 @@
     "sales": 267,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_305_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "toshiba_305_m",
@@ -9206,7 +10507,9 @@
     "sales": 428,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_305_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "toshiba_305_y",
@@ -9220,7 +10523,9 @@
     "sales": 143,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_305_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 215,
+    "code": 200
   },
   {
     "id": "toshiba_5070",
@@ -9234,7 +10539,9 @@
     "sales": 216,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_5070.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "toshiba_5518_6518",
@@ -9248,7 +10555,9 @@
     "sales": 102,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_5518_6518.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 465,
+    "code": 450
   },
   {
     "id": "toshiba_2309",
@@ -9262,7 +10571,9 @@
     "sales": 387,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_2309.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 135,
+    "code": 120
   },
   {
     "id": "toshiba_2323",
@@ -9276,7 +10587,9 @@
     "sales": 278,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_2323.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "toshiba_2507",
@@ -9290,7 +10603,9 @@
     "sales": 395,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_2507.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "toshiba_256_306_4590",
@@ -9304,7 +10619,9 @@
     "sales": 448,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_256_306_4590.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 95,
+    "code": 80
   },
   {
     "id": "toshiba_3008",
@@ -9318,7 +10635,9 @@
     "sales": 473,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_3008.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "toshiba_3018_5018",
@@ -9332,7 +10651,9 @@
     "sales": 149,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_3018_5018.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "chip_toshiba_385",
@@ -9346,7 +10667,9 @@
     "sales": 150,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_385.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "toshiba_385_drum",
@@ -9360,7 +10683,9 @@
     "sales": 217,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_385_drum.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 175,
+    "code": 175
   },
   {
     "id": "toshiba_415_3015_c",
@@ -9374,7 +10699,9 @@
     "sales": 140,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_415_3015_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "toshiba_415_3015_k",
@@ -9388,7 +10715,9 @@
     "sales": 266,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_415_3015_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "toshiba_415_3015_m",
@@ -9402,7 +10731,9 @@
     "sales": 346,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_415_3015_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "toshiba_415_3015_y",
@@ -9416,7 +10747,9 @@
     "sales": 111,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_415_3015_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 165,
+    "code": 150
   },
   {
     "id": "toshiba_fc_30_c",
@@ -9430,7 +10763,9 @@
     "sales": 141,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_fc_30_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "toshiba_fc_30_k",
@@ -9444,7 +10779,9 @@
     "sales": 386,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_fc_30_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "toshiba_fc_30_m",
@@ -9458,7 +10795,9 @@
     "sales": 163,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_fc_30_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "toshiba_fc_30_y",
@@ -9472,7 +10811,9 @@
     "sales": 210,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_fc_30_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "toshiba_fc_50_c",
@@ -9486,7 +10827,9 @@
     "sales": 240,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_fc_50_c.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "toshiba_fc_50_k",
@@ -9500,7 +10843,9 @@
     "sales": 420,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_fc_50_k.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "toshiba_fc_50_m",
@@ -9514,7 +10859,9 @@
     "sales": 486,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_fc_50_m.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   },
   {
     "id": "toshiba_fc_50_y",
@@ -9528,6 +10875,8 @@
     "sales": 371,
     "image": "/AL3ALAMIA/Chips/Toshiba/toshiba_fc_50_y.png",
     "rating": 0,
-    "createdAt": 0
+    "createdAt": 0,
+    "supply": 115,
+    "code": 100
   }
 ]
