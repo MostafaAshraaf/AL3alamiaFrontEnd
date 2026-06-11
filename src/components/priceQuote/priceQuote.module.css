@@ -1,0 +1,200 @@
+/* ─── Wrapper ─────────────────────────────────────────────────────────────── */
+.wrapper {
+  background: linear-gradient(135deg, #1a1a1a 0%, #111 100%);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 520px;
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+  direction: rtl;
+}
+
+/* ─── Header ─────────────────────────────────────────────────────────────── */
+.header {
+  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+  padding-bottom: 1rem;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #C9A84C;
+  margin: 0 0 2px 0;
+  letter-spacing: 0.3px;
+}
+
+.subtitle {
+  font-size: 0.75rem;
+  color: #9A8E78;
+  margin: 0;
+}
+
+/* ─── Price type selector ────────────────────────────────────────────────── */
+.selectorRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.selectorLabel {
+  font-size: 0.8rem;
+  color: #9A8E78;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.toggleGroup {
+  display: flex;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  border-radius: 10px;
+  padding: 3px;
+}
+
+.toggleBtn {
+  padding: 6px 16px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: #9A8E78;
+  font-family: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.toggleBtn:hover {
+  color: #C9A84C;
+  background: rgba(201, 168, 76, 0.06);
+}
+
+.toggleActive {
+  background: linear-gradient(135deg, #C9A84C, #8B6914);
+  color: #0A0A0A !important;
+  box-shadow: 0 2px 8px rgba(201, 168, 76, 0.3);
+}
+
+/* ─── Breakdown grid ─────────────────────────────────────────────────────── */
+.breakdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.breakdownItem {
+  background: rgba(201, 168, 76, 0.04);
+  border: 1px solid rgba(201, 168, 76, 0.12);
+  border-radius: 10px;
+  padding: 0.6rem 0.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.breakdownLabel {
+  font-size: 0.7rem;
+  color: #C9A84C;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.breakdownCount {
+  font-size: 0.68rem;
+  color: #9A8E78;
+}
+
+/* ─── Generate button ────────────────────────────────────────────────────── */
+.generateBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.85rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(201, 168, 76, 0.5);
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.12), rgba(139, 105, 20, 0.08));
+  color: #C9A84C;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.3px;
+}
+
+.generateBtn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #C9A84C, #8B6914);
+  color: #0A0A0A;
+  border-color: #C9A84C;
+  box-shadow: 0 4px 16px rgba(201, 168, 76, 0.25);
+  transform: translateY(-1px);
+}
+
+.generateBtn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.generateBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ─── States ─────────────────────────────────────────────────────────────── */
+.loadingText {
+  color: #9A8E78;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.errorText {
+  color: #e05555;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.emptyNote {
+  font-size: 0.75rem;
+  color: #9A8E78;
+  text-align: center;
+  margin: 0;
+  padding: 0.5rem;
+  border: 1px dashed rgba(201, 168, 76, 0.15);
+  border-radius: 8px;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .breakdown {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .toggleGroup {
+    flex-wrap: wrap;
+  }
+
+  .wrapper {
+    padding: 1rem;
+  }
+}
