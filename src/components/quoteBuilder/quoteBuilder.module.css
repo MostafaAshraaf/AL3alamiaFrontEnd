@@ -870,4 +870,132 @@
     font-size: 10px;
     padding: 10px 4px;
   }
+  
+}
+
+/* ── Company Selector ───────────────────────────────────────────────────────── */
+.companySelector {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.companyOption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #0f0e0b;
+  border: 1px solid rgba(201, 162, 39, 0.15);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+.companyOption:hover {
+  border-color: rgba(201, 162, 39, 0.4);
+}
+.companyOptionActive {
+  border-color: rgba(201, 162, 39, 0.6);
+  background: rgba(201, 162, 39, 0.05);
+}
+.companyOption input[type="radio"] {
+  accent-color: #c9a227;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+.companyOptionTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #f5f0e8;
+}
+.companyOptionDesc {
+  font-size: 11px;
+  color: #8a7a5a;
+  margin-top: 2px;
+}
+
+/* ── Al-Alamia Info Display ─────────────────────────────────────────────────── */
+.alalamiaInfo {
+  background: rgba(201, 162, 39, 0.05);
+  border: 1px solid rgba(201, 162, 39, 0.2);
+  border-radius: 10px;
+  padding: 14px;
+}
+.alalamiaName {
+  font-size: 16px;
+  font-weight: 800;
+  color: #c9a227;
+  margin-bottom: 6px;
+}
+.alalamiaDesc {
+  font-size: 12px;
+  color: #8a7a5a;
+  margin-bottom: 12px;
+}
+.alalamiaContact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11px;
+  color: #f5f0e8;
+}
+.alalamiaContact span {
+  display: block;
+}
+
+/* ── Logo Uploader ──────────────────────────────────────────────────────────── */
+.logoUploader {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(201, 162, 39, 0.15);
+}
+.logoPreview {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #0f0e0b;
+  border: 1px solid rgba(201, 162, 39, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logoPreviewImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.logoPlaceholder {
+  font-size: 32px;
+  color: #8a7a5a;
+}
+.logoButtons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.logoBtn {
+  padding: 6px 12px;
+  background: rgba(201, 162, 39, 0.1);
+  border: 1px solid rgba(201, 162, 39, 0.3);
+  border-radius: 6px;
+  color: #c9a227;
+  font-size: 11px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.logoBtn:hover {
+  background: rgba(201, 162, 39, 0.2);
+}
+.logoBtnRemove {
+  border-color: rgba(224, 85, 85, 0.3);
+  color: #e05555;
+}
+.logoBtnRemove:hover {
+  background: rgba(224, 85, 85, 0.15);
+}
+.logoHint {
+  font-size: 10px;
+  color: #5a4e3a;
 }
