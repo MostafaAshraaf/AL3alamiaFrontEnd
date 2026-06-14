@@ -14,6 +14,9 @@ import CatalogGenerator from "../../components/catalog/CatalogGenerator";
 import PriceQuote from "../../components/priceQuote/PriceQuote";
 import BulkPriceAdjust from "../../components/bulkPriceAdjust/BulkPriceAdjust";
 import QuoteBuilder from "../../components/quoteBuilder/Quotebuilder";
+import FilterPanel from "../../components/common/filterPanel/FilterPanel";
+import { useProductFilters } from "../../hooks/useProductFilters";
+
 const validationSchema = Yup.object({
   name: Yup.string().required("Name is required"),
   description: Yup.string().required("Description is required"),
@@ -47,6 +50,35 @@ const MarketManage = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [isBulkOpen, setIsBulkOpen] = useState(false);
+  
+  // Initialize filter hook with products data
+  const filterHook = useProductFilters(products || []);
+  const {
+    filteredProducts,
+    resultCount,
+    mainCategory,
+    setMainCategory,
+    accessoryType,
+    setAccessoryType,
+    printerBrand,
+    setPrinterBrand,
+    printerType,
+    setPrinterType,
+    searchTerm,
+    setSearchTerm,
+    resetFilters,
+    options,
+    isOptionDisabled,
+  } = filterHook;
+
+  // Sync local search with filter hook search (optional - you can use either)
+  // If you want to keep the top search bar, use this effect
+  useEffect(() => {
+    setSearchTerm(searchQuery);
+  }, [searchQuery, setSearchTerm]);
+
+  // Or if you want to use only the filter panel's search, remove the top search bar
+  // and use searchTerm directly
 
   const handleOpenModal = (product = null) => {
     setSelectedProduct(product);
@@ -101,11 +133,8 @@ const MarketManage = () => {
     }
   };
 
-  const filteredProducts = products.filter(
-    (product) =>
-      product.name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.description?.toLowerCase().includes(searchQuery.toLowerCase()),
-  );
+  // Remove the old filteredProducts logic since we're using the hook's filteredProducts
+  // const filteredProducts = products.filter(...) - DELETE THIS LINE
 
   useEffect(() => {
     const handleEsc = (event) => {
@@ -134,6 +163,8 @@ const MarketManage = () => {
       <div className={styles.mainSection}>
         <div className={styles.infoCard}>
           <h3 className={styles.cardTitle}>Market Management</h3>
+          
+          {/* Controls Row - Optional: you can keep or remove the top search bar */}
           <div className={styles.controls}>
             <input
               type="text"
@@ -142,7 +173,7 @@ const MarketManage = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
-            <CatalogGenerator products={products} />
+            <CatalogGenerator products={filteredProducts} />
             <QuoteBuilder products={products} />
             <button
               className={styles.addButton}
@@ -159,35 +190,77 @@ const MarketManage = () => {
             <PriceQuote />
           </div>
 
-          {isLoading && <p>Loading...</p>}
-          {error && <p>Error: {error.message}</p>}
+          {/* Main layout with Filter Panel and Products Grid */}
+          <div className={styles.marketLayout}>
+            {/* Filter Panel Sidebar */}
+            <div className={styles.filterSidebar}>
+              <FilterPanel
+                mainCategory={mainCategory}
+                setMainCategory={setMainCategory}
+                accessoryType={accessoryType}
+                setAccessoryType={setAccessoryType}
+                printerBrand={printerBrand}
+                setPrinterBrand={setPrinterBrand}
+                printerType={printerType}
+                setPrinterType={setPrinterType}
+                searchTerm={searchTerm}
+                setSearchTerm={setSearchTerm}
+                resetFilters={resetFilters}
+                options={options}
+                resultCount={resultCount}
+                isOptionDisabled={isOptionDisabled}
+              />
+            </div>
 
-          <div className={styles.productGrid}>
-            {filteredProducts.map((product) => (
-              <div key={product.fireId} className={styles.productCardWrapper}>
-                <ProductCard data={product}>
-                  <div className={styles.actionButtons}>
-                    <button
-                      className={styles.editButton}
-                      onClick={() => handleOpenModal(product)}
-                    >
-                      Edit
-                    </button>
-                    <button
-                      className={styles.deleteButton}
-                      onClick={() => handleDelete(product.fireId)}
-                    >
-                      Delete
-                    </button>
-                  </div>
-                </ProductCard>
-              </div>
-            ))}
+            {/* Products Grid */}
+            <div className={styles.productsSection}>
+              {isLoading && <p className={styles.loadingText}>Loading...</p>}
+              {error && <p className={styles.errorText}>Error: {error.message}</p>}
+
+              {!isLoading && !error && (
+                <>
+                  {filteredProducts.length === 0 ? (
+                    <div className={styles.noProducts}>
+                      <p>No products match your filters</p>
+                      <button 
+                        className={styles.resetFiltersBtn}
+                        onClick={resetFilters}
+                      >
+                        Reset All Filters
+                      </button>
+                    </div>
+                  ) : (
+                    <div className={styles.productGrid}>
+                      {filteredProducts.map((product) => (
+                        <div key={product.fireId} className={styles.productCardWrapper}>
+                          <ProductCard data={product}>
+                            <div className={styles.actionButtons}>
+                              <button
+                                className={styles.editButton}
+                                onClick={() => handleOpenModal(product)}
+                              >
+                                Edit
+                              </button>
+                              <button
+                                className={styles.deleteButton}
+                                onClick={() => handleDelete(product.fireId)}
+                              >
+                                Delete
+                              </button>
+                            </div>
+                          </ProductCard>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </>
+              )}
+            </div>
           </div>
         </div>
       </div>
 
-      {/* ── Add / Edit Modal ───────────────────────────────────────────── */}
+      {/* ── Add / Edit Modal ── (same as before) */}
       {isModalOpen && (
         <div className={styles.modal}>
           <div className={styles.modalContent}>
@@ -250,7 +323,6 @@ const MarketManage = () => {
                     />
                   </div>
 
-                  {/* ── Price fields ── */}
                   <div className={styles.formGroup}>
                     <label>User Price (price)</label>
                     <Field
@@ -374,7 +446,7 @@ const MarketManage = () => {
         </div>
       )}
 
-      {/* ── Bulk Price Adjust Modal ────────────────────────────────────── */}
+      {/* ── Bulk Price Adjust Modal ── */}
       {isBulkOpen && (
         <BulkPriceAdjust
           products={products}
