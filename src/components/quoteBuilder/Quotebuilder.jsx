@@ -9,6 +9,15 @@ import {
 const fmtEGP = (n) =>
   Number(n).toLocaleString("ar-EG", { minimumFractionDigits: 0 }) + " ج.م";
 
+// AL3ALAMIA Store default info
+const AL3ALAMIA_STORE = {
+  name: "AL3ALAMIA Store العالمية ستور",
+  nameEn: "AL3ALAMIA Store",
+  description: "توريد أحبار · طابعات · إكسسوارات كمبيوتر",
+  address: "٣ ش جامعة الدول مول سفنكس ميدان سفنكس المهندسين الجيزة",
+  phone: "01140030112 - 01114939714 - 01121301515",
+};
+
 // ── Sub-component: Price Picker Dialog ───────────────────────────────────────
 const PricePicker = ({ product, onConfirm, onCancel }) => {
   const [mode, setMode] = useState("price"); // "price" | "supply" | "custom"
@@ -133,14 +142,81 @@ const PricePicker = ({ product, onConfirm, onCancel }) => {
   );
 };
 
+// ── Sub-component: Logo Uploader ──────────────────────────────────────────────
+const LogoUploader = ({ onLogoChange, currentLogo }) => {
+  const fileInputRef = useRef(null);
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file && file.type.startsWith('image/')) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        onLogoChange(event.target.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleRemove = () => {
+    onLogoChange(null);
+    if (fileInputRef.current) fileInputRef.current.value = '';
+  };
+
+  return (
+    <div className={styles.logoUploader}>
+      <div className={styles.logoPreview}>
+        {currentLogo ? (
+          <img src={currentLogo} alt="Company logo" className={styles.logoPreviewImg} />
+        ) : (
+          <div className={styles.logoPlaceholder}>📷</div>
+        )}
+      </div>
+      <div className={styles.logoButtons}>
+        <button
+          type="button"
+          className={styles.logoBtn}
+          onClick={() => fileInputRef.current?.click()}
+        >
+          {currentLogo ? 'تغيير الشعار' : 'رفع شعار'}
+        </button>
+        {currentLogo && (
+          <button
+            type="button"
+            className={`${styles.logoBtn} ${styles.logoBtnRemove}`}
+            onClick={handleRemove}
+          >
+            إزالة
+          </button>
+        )}
+      </div>
+      <input
+        ref={fileInputRef}
+        type="file"
+        accept="image/*"
+        onChange={handleFileChange}
+        style={{ display: 'none' }}
+      />
+      <div className={styles.logoHint}>اختر شعار شركتك (يظهر في عرض السعر)</div>
+    </div>
+  );
+};
+
 // ── Main Component ────────────────────────────────────────────────────────────
 const QuoteBuilder = ({ products = [] }) => {
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState(1); // 1=sender+recipient, 2=products, 3=settings
 
+  // Company selection
+  const [companyType, setCompanyType] = useState("alalamia"); // "alalamia" | "other"
+  const [customLogo, setCustomLogo] = useState(null);
+
   // Sender
   const [sender, setSender] = useState({
-    name: "", phone: "", address: "",
+    name: AL3ALAMIA_STORE.name,
+    nameEn: AL3ALAMIA_STORE.nameEn,
+    description: AL3ALAMIA_STORE.description,
+    phone: AL3ALAMIA_STORE.phone,
+    address: AL3ALAMIA_STORE.address,
   });
 
   // Recipient
@@ -164,6 +240,29 @@ const QuoteBuilder = ({ products = [] }) => {
   // Quote number (generated once per open)
   const [quoteNumber, setQuoteNumber] = useState("");
 
+  // Handle company type change
+  const handleCompanyTypeChange = (type) => {
+    setCompanyType(type);
+    if (type === "alalamia") {
+      setSender({
+        name: AL3ALAMIA_STORE.name,
+        nameEn: AL3ALAMIA_STORE.nameEn,
+        description: AL3ALAMIA_STORE.description,
+        phone: AL3ALAMIA_STORE.phone,
+        address: AL3ALAMIA_STORE.address,
+      });
+      setCustomLogo(null);
+    } else {
+      setSender({
+        name: "",
+        nameEn: "",
+        description: "",
+        phone: "",
+        address: "",
+      });
+    }
+  };
+
   const handleOpen = () => {
     setQuoteNumber(generateQuoteNumber());
     setStep(1);
@@ -173,7 +272,15 @@ const QuoteBuilder = ({ products = [] }) => {
   const handleClose = () => {
     setOpen(false);
     setStep(1);
-    setSender({ name: "", phone: "", address: "" });
+    setCompanyType("alalamia");
+    setCustomLogo(null);
+    setSender({
+      name: AL3ALAMIA_STORE.name,
+      nameEn: AL3ALAMIA_STORE.nameEn,
+      description: AL3ALAMIA_STORE.description,
+      phone: AL3ALAMIA_STORE.phone,
+      address: AL3ALAMIA_STORE.address,
+    });
     setRecipient({ name: "", address: "", phone: "", managerName: "", managerPhone: "" });
     setQuoteItems([]);
     setSearch("");
@@ -247,6 +354,7 @@ const QuoteBuilder = ({ products = [] }) => {
       quoteNumber,
       quoteDate: new Date().toISOString(),
       baseUrl: window.location.origin,
+      customLogo: companyType === "other" ? customLogo : null,
     });
 
     const win = window.open("", "_blank");
@@ -255,7 +363,8 @@ const QuoteBuilder = ({ products = [] }) => {
   };
 
   // ── Step validation ──
-  const step1Valid = recipient.name.trim().length > 0;
+  const step1Valid = recipient.name.trim().length > 0 && 
+    (companyType === "alalamia" || (companyType === "other" && sender.name.trim().length > 0));
   const step2Valid = quoteItems.length > 0;
 
   if (!open) {
@@ -306,23 +415,82 @@ const QuoteBuilder = ({ products = [] }) => {
         {/* ── Step 1: Company Info ── */}
         {step === 1 && (
           <div className={styles.stepContent}>
+            {/* Company Selector */}
+            <div className={styles.section}>
+              <div className={styles.sectionTitle}>🏢 اختيار الشركة المُرسِلة</div>
+              <div className={styles.companySelector}>
+                <label className={`${styles.companyOption} ${companyType === "alalamia" ? styles.companyOptionActive : ""}`}>
+                  <input
+                    type="radio"
+                    name="companyType"
+                    value="alalamia"
+                    checked={companyType === "alalamia"}
+                    onChange={() => handleCompanyTypeChange("alalamia")}
+                  />
+                  <div>
+                    <div className={styles.companyOptionTitle}>AL3ALAMIA Store</div>
+                    <div className={styles.companyOptionDesc}>العالمية ستور (الإعدادات الافتراضية)</div>
+                  </div>
+                </label>
+                <label className={`${styles.companyOption} ${companyType === "other" ? styles.companyOptionActive : ""}`}>
+                  <input
+                    type="radio"
+                    name="companyType"
+                    value="other"
+                    checked={companyType === "other"}
+                    onChange={() => handleCompanyTypeChange("other")}
+                  />
+                  <div>
+                    <div className={styles.companyOptionTitle}>شركة أخرى</div>
+                    <div className={styles.companyOptionDesc}>إدخال بيانات وشعار مخصص</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
             {/* Sender */}
             <div className={styles.section}>
-              <div className={styles.sectionTitle}>🏢 بيانات شركتنا (المُرسِل)</div>
-              <div className={styles.fieldGrid}>
-                <div className={styles.fieldGroup}>
-                  <label className={styles.fieldLabel}>اسم الشركة</label>
-                  <input className={styles.fieldInput} value={sender.name} onChange={(e) => setSender({ ...sender, name: e.target.value })} placeholder="مثال: العالمية للتقنية" />
-                </div>
-                <div className={styles.fieldGroup}>
-                  <label className={styles.fieldLabel}>رقم التليفون</label>
-                  <input className={styles.fieldInput} value={sender.phone} onChange={(e) => setSender({ ...sender, phone: e.target.value })} placeholder="01xxxxxxxxx" />
-                </div>
-                <div className={`${styles.fieldGroup} ${styles.fieldGroupFull}`}>
-                  <label className={styles.fieldLabel}>العنوان</label>
-                  <input className={styles.fieldInput} value={sender.address} onChange={(e) => setSender({ ...sender, address: e.target.value })} placeholder="العنوان بالتفصيل" />
-                </div>
+              <div className={styles.sectionTitle}>
+                🏢 بيانات شركتنا (المُرسِل)
+                {companyType !== "alalamia" && <span className={styles.required}> *</span>}
               </div>
+              {companyType === "other" && (
+                <>
+                  <div className={styles.fieldGrid}>
+                    <div className={styles.fieldGroup}>
+                      <label className={styles.fieldLabel}>اسم الشركة *</label>
+                      <input className={styles.fieldInput} value={sender.name} onChange={(e) => setSender({ ...sender, name: e.target.value })} placeholder="مثال: العالمية للتقنية" />
+                    </div>
+                    <div className={styles.fieldGroup}>
+                      <label className={styles.fieldLabel}>اسم الشركة (إنجليزي)</label>
+                      <input className={styles.fieldInput} value={sender.nameEn} onChange={(e) => setSender({ ...sender, nameEn: e.target.value })} placeholder="Company Name" />
+                    </div>
+                    <div className={styles.fieldGroup}>
+                      <label className={styles.fieldLabel}>الوصف (اختياري)</label>
+                      <input className={styles.fieldInput} value={sender.description} onChange={(e) => setSender({ ...sender, description: e.target.value })} placeholder="توريد أحبار · طابعات · إكسسوارات" />
+                    </div>
+                    <div className={styles.fieldGroup}>
+                      <label className={styles.fieldLabel}>رقم التليفون</label>
+                      <input className={styles.fieldInput} value={sender.phone} onChange={(e) => setSender({ ...sender, phone: e.target.value })} placeholder="01xxxxxxxxx" />
+                    </div>
+                    <div className={`${styles.fieldGroup} ${styles.fieldGroupFull}`}>
+                      <label className={styles.fieldLabel}>العنوان</label>
+                      <input className={styles.fieldInput} value={sender.address} onChange={(e) => setSender({ ...sender, address: e.target.value })} placeholder="العنوان بالتفصيل" />
+                    </div>
+                  </div>
+                  <LogoUploader onLogoChange={setCustomLogo} currentLogo={customLogo} />
+                </>
+              )}
+              {companyType === "alalamia" && (
+                <div className={styles.alalamiaInfo}>
+                  <div className={styles.alalamiaName}>{AL3ALAMIA_STORE.name}</div>
+                  <div className={styles.alalamiaDesc}>{AL3ALAMIA_STORE.description}</div>
+                  <div className={styles.alalamiaContact}>
+                    <span>📞 {AL3ALAMIA_STORE.phone}</span>
+                    <span>📍 {AL3ALAMIA_STORE.address}</span>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Recipient */}
@@ -573,7 +741,7 @@ const QuoteBuilder = ({ products = [] }) => {
               <div className={styles.summaryRows}>
                 <div className={styles.summaryRow}>
                   <span>مقدم من</span>
-                  <span>{sender.name || "—"}</span>
+                  <span>{companyType === "alalamia" ? AL3ALAMIA_STORE.name : (sender.name || "—")}</span>
                 </div>
                 <div className={styles.summaryRow}>
                   <span>مقدم إلى</span>
