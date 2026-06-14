@@ -36,9 +36,11 @@ body { font-family: var(--font-body); background: #050505; color: var(--off-whit
 /* Header */
 .quote-header { padding: 8mm 10mm 6mm; display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid var(--border-gold); flex-shrink: 0; }
 .header-logo { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
-.header-logo img { height: 70px; object-fit: contain; filter: drop-shadow(0 2px 8px rgba(201,162,39,.3)); }
+.header-logo img { height: 70px; width: auto; max-width: 180px; object-fit: contain; filter: drop-shadow(0 2px 8px rgba(201,162,39,.3)); }
+.header-logo .no-logo { width: 70px; height: 70px; background: rgba(201,162,39,0.08); border: 1px dashed var(--border-gold); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 24px; }
 .header-company { text-align: right; }
 .company-name { font-size: 13px; font-weight: 700; color: var(--gold); margin-bottom: 4px; }
+.company-description { font-size: 10px; color: var(--muted); margin-bottom: 6px; }
 .company-detail { font-size: 11px; color: var(--muted); line-height: 1.7; }
 
 .header-quote-info { text-align: left; direction: ltr; }
@@ -124,8 +126,16 @@ export const generateQuoteHTML = ({
   quoteNumber,
   quoteDate,
   baseUrl = "",
+  customLogo = null,
 }) => {
-  const logoSrc = `${baseUrl}/logo.png`;
+  const logoSrc = customLogo || `${baseUrl}/logo.png`;
+
+  // Format sender display
+  const senderDisplayName = senderCompany.nameEn 
+    ? `${senderCompany.name} (${senderCompany.nameEn})` 
+    : senderCompany.name;
+  
+  const senderDescription = senderCompany.description || "";
 
   // ── Totals ──
   const grandTotal = items.reduce(
@@ -165,6 +175,21 @@ export const generateQuoteHTML = ({
     )
     .join("");
 
+  // Logo HTML
+  const logoHtml = customLogo 
+    ? `<img src="${customLogo}" alt="${senderCompany.name}">`
+    : `<div class="no-logo">🏢</div>`;
+
+  // Sender details HTML
+  const senderDetailsHtml = `
+    <div class="company-name">${senderDisplayName}</div>
+    ${senderDescription ? `<div class="company-description">${senderDescription}</div>` : ''}
+    <div class="company-detail">
+      ${senderCompany.phone ? `📞 ${senderCompany.phone}<br>` : ""}
+      ${senderCompany.address ? `📍 ${senderCompany.address}` : ""}
+    </div>
+  `;
+
   return `<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -200,13 +225,9 @@ export const generateQuoteHTML = ({
       </div>
     </div>
     <div class="header-logo">
-      <img src="${logoSrc}" alt="${senderCompany.name}">
+      ${logoHtml}
       <div class="header-company">
-        <div class="company-name">${senderCompany.name}</div>
-        <div class="company-detail">
-          ${senderCompany.phone ? `📞 ${senderCompany.phone}<br>` : ""}
-          ${senderCompany.address ? `📍 ${senderCompany.address}` : ""}
-        </div>
+        ${senderDetailsHtml}
       </div>
     </div>
   </div>
@@ -278,7 +299,7 @@ export const generateQuoteHTML = ({
       <div class="footer-sig-label">التوقيع والختم</div>
     </div>
     <div class="footer-brand">
-      <span>${senderCompany.name}</span> &nbsp;·&nbsp; ${new Date().getFullYear()}
+      <span>${senderCompany.nameEn || senderCompany.name}</span> &nbsp;·&nbsp; ${new Date().getFullYear()}
     </div>
   </div>
 
