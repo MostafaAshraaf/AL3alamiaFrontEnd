@@ -1,765 +1,665 @@
-import { useState, useRef, useEffect } from "react";
-import styles from "./quoteBuilder.module.css";
-import {
-  generateQuoteHTML,
-  generateQuoteNumber,
-} from "./quoteTemplate";
+// quoteTemplate.js
+// Generates a printable Arabic RTL price quote HTML string
 
-// ── Helpers ───────────────────────────────────────────────────────────────────
-const fmtEGP = (n) =>
-  Number(n).toLocaleString("ar-EG", { minimumFractionDigits: 0 }) + " ج.م";
+const fmtPrice = (price) => Number(price).toLocaleString("ar-EG") + " ج.م";
 
-// AL3ALAMIA Store default info
-const AL3ALAMIA_STORE = {
-  name: "AL3ALAMIA Store العالمية ستور",
-  nameEn: "AL3ALAMIA Store",
-  description: "توريد أحبار · طابعات · إكسسوارات كمبيوتر",
-  address: "٣ ش جامعة الدول مول سفنكس ميدان سفنكس المهندسين الجيزة",
-  phone: "01140030112 - 01114939714 - 01121301515",
-};
-
-// ── Sub-component: Price Picker Dialog ───────────────────────────────────────
-const PricePicker = ({ product, onConfirm, onCancel }) => {
-  const [mode, setMode] = useState("price"); // "price" | "supply" | "custom"
-  const [customVal, setCustomVal] = useState("");
-  const [displayName, setDisplayName] = useState(product.name || "");
-  const [quantity, setQuantity] = useState(1);
-
-  const priceMap = {
-    price: product.price,
-    supply: product.supply,
-    custom: parseFloat(customVal) || 0,
-  };
-
-  const finalPrice = priceMap[mode];
-
-  const handleConfirm = () => {
-    if (mode === "custom" && !customVal) return;
-    onConfirm({
-      id: product.fireId || `manual-${Date.now()}`,
-      originalName: product.name,
-      displayName: displayName.trim() || product.name,
-      quantity: Math.max(1, parseInt(quantity) || 1),
-      quotedPrice: finalPrice,
-      purchasePrice: product.code, // admin-only visibility
-    });
-  };
-
-  return (
-    <div className={styles.pickerBackdrop}>
-      <div className={styles.pickerBox}>
-        <div className={styles.pickerHeader}>
-          <span className={styles.pickerTitle}>إضافة منتج للعرض</span>
-          <button className={styles.pickerClose} onClick={onCancel}>✕</button>
-        </div>
-
-        {/* Product name display */}
-        <div className={styles.pickerProductName}>{product.name}</div>
-
-        {/* Admin-only cost badge */}
-        {product.code && (
-          <div className={styles.costBadge}>
-            سعر الشراء (للمسؤول فقط): <strong>{fmtEGP(product.code)}</strong>
-          </div>
-        )}
-
-        {/* Display name override */}
-        <div className={styles.pickerField}>
-          <label className={styles.pickerLabel}>اسم المنتج في العرض</label>
-          <div className={styles.nameFieldRow}>
-            <input
-              className={styles.pickerInput}
-              value={displayName}
-              onChange={(e) => setDisplayName(e.target.value)}
-              placeholder="اسم المنتج كما سيظهر في العرض"
-            />
-            {displayName !== product.name && (
-              <button
-                className={styles.resetBtn}
-                onClick={() => setDisplayName(product.name)}
-                title="إعادة الاسم الأصلي"
-              >
-                ↺
-              </button>
-            )}
-          </div>
-        </div>
-
-        {/* Quantity */}
-        <div className={styles.pickerField}>
-          <label className={styles.pickerLabel}>الكمية</label>
-          <input
-            className={styles.pickerInput}
-            type="number"
-            min="1"
-            value={quantity}
-            onChange={(e) => setQuantity(e.target.value)}
-          />
-        </div>
-
-        {/* Price options */}
-        <div className={styles.pickerField}>
-          <label className={styles.pickerLabel}>سعر البيع في العرض</label>
-          <div className={styles.priceOptions}>
-            <label className={`${styles.priceOption} ${mode === "price" ? styles.priceOptionActive : ""}`}>
-              <input type="radio" name="pmode" value="price" checked={mode === "price"} onChange={() => setMode("price")} />
-              <span className={styles.priceOptionLabel}>سعر المستخدم</span>
-              <span className={styles.priceOptionVal}>{fmtEGP(product.price)}</span>
-            </label>
-            <label className={`${styles.priceOption} ${mode === "supply" ? styles.priceOptionActive : ""}`}>
-              <input type="radio" name="pmode" value="supply" checked={mode === "supply"} onChange={() => setMode("supply")} />
-              <span className={styles.priceOptionLabel}>سعر التوريد</span>
-              <span className={styles.priceOptionVal}>{fmtEGP(product.supply)}</span>
-            </label>
-            <label className={`${styles.priceOption} ${mode === "custom" ? styles.priceOptionActive : ""}`}>
-              <input type="radio" name="pmode" value="custom" checked={mode === "custom"} onChange={() => setMode("custom")} />
-              <span className={styles.priceOptionLabel}>سعر مخصص</span>
-              {mode === "custom" && (
-                <input
-                  className={styles.customPriceInput}
-                  type="number"
-                  min="0"
-                  placeholder="0"
-                  value={customVal}
-                  onChange={(e) => setCustomVal(e.target.value)}
-                  autoFocus
-                />
-              )}
-            </label>
-          </div>
-        </div>
-
-        {/* Confirm */}
-        <button
-          className={styles.pickerConfirm}
-          onClick={handleConfirm}
-          disabled={mode === "custom" && !customVal}
-        >
-          ✚ إضافة للعرض
-        </button>
-      </div>
-    </div>
-  );
-};
-
-// ── Sub-component: Logo Uploader ──────────────────────────────────────────────
-const LogoUploader = ({ onLogoChange, currentLogo }) => {
-  const fileInputRef = useRef(null);
-
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    if (file && file.type.startsWith('image/')) {
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        onLogoChange(event.target.result);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const handleRemove = () => {
-    onLogoChange(null);
-    if (fileInputRef.current) fileInputRef.current.value = '';
-  };
-
-  return (
-    <div className={styles.logoUploader}>
-      <div className={styles.logoPreview}>
-        {currentLogo ? (
-          <img src={currentLogo} alt="Company logo" className={styles.logoPreviewImg} />
-        ) : (
-          <div className={styles.logoPlaceholder}>📷</div>
-        )}
-      </div>
-      <div className={styles.logoButtons}>
-        <button
-          type="button"
-          className={styles.logoBtn}
-          onClick={() => fileInputRef.current?.click()}
-        >
-          {currentLogo ? 'تغيير الشعار' : 'رفع شعار'}
-        </button>
-        {currentLogo && (
-          <button
-            type="button"
-            className={`${styles.logoBtn} ${styles.logoBtnRemove}`}
-            onClick={handleRemove}
-          >
-            إزالة
-          </button>
-        )}
-      </div>
-      <input
-        ref={fileInputRef}
-        type="file"
-        accept="image/*"
-        onChange={handleFileChange}
-        style={{ display: 'none' }}
-      />
-      <div className={styles.logoHint}>اختر شعار شركتك (يظهر في عرض السعر)</div>
-    </div>
-  );
-};
-
-// ── Main Component ────────────────────────────────────────────────────────────
-const QuoteBuilder = ({ products = [] }) => {
-  const [open, setOpen] = useState(false);
-  const [step, setStep] = useState(1); // 1=sender+recipient, 2=products, 3=settings
-
-  // Company selection
-  const [companyType, setCompanyType] = useState("alalamia"); // "alalamia" | "other"
-  const [customLogo, setCustomLogo] = useState(null);
-
-  // Sender
-  const [sender, setSender] = useState({
-    name: AL3ALAMIA_STORE.name,
-    nameEn: AL3ALAMIA_STORE.nameEn,
-    description: AL3ALAMIA_STORE.description,
-    phone: AL3ALAMIA_STORE.phone,
-    address: AL3ALAMIA_STORE.address,
+const fmtDate = (date) =>
+  new Date(date).toLocaleDateString("ar-EG", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
   });
 
-  // Recipient
-  const [recipient, setRecipient] = useState({
-    name: "", address: "", phone: "", managerName: "", managerPhone: "",
-  });
-
-  // Products in quote
-  const [quoteItems, setQuoteItems] = useState([]);
-  const [pickerProduct, setPickerProduct] = useState(null);
-  const [search, setSearch] = useState("");
-  const searchRef = useRef(null);
-
-  // Manual product
-  const [showManual, setShowManual] = useState(false);
-  const [manualItem, setManualItem] = useState({ name: "", price: "", quantity: 1 });
-
-  // Settings
-  const [validityDays, setValidityDays] = useState(7);
-
-  // Quote number (generated once per open)
-  const [quoteNumber, setQuoteNumber] = useState("");
-
-  // Handle company type change
-  const handleCompanyTypeChange = (type) => {
-    setCompanyType(type);
-    if (type === "alalamia") {
-      setSender({
-        name: AL3ALAMIA_STORE.name,
-        nameEn: AL3ALAMIA_STORE.nameEn,
-        description: AL3ALAMIA_STORE.description,
-        phone: AL3ALAMIA_STORE.phone,
-        address: AL3ALAMIA_STORE.address,
-      });
-      setCustomLogo(null);
-    } else {
-      setSender({
-        name: "",
-        nameEn: "",
-        description: "",
-        phone: "",
-        address: "",
-      });
+// ── CSS ───────────────────────────────────────────────────────────────────────
+const CSS = `
+/*! 
+     * Light Print-Friendly Quote Template
+     * خلفية بيضاء / فاتحة ، مصممة للطباعة بوضوح واقتصاد في الحبر
+     */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-  };
 
-  const handleOpen = () => {
-    setQuoteNumber(generateQuoteNumber());
-    setStep(1);
-    setOpen(true);
-  };
+    :root {
+      /* لوحة ألوان فاتحة ونظيفة */
+      --white: #ffffff;
+      --paper: #fefef7;
+      --off-white: #fafaf5;
+      --gray-50: #f9f9f8;
+      --gray-100: #f0f0ea;
+      --gray-200: #e4e4dc;
+      --gray-300: #cbcbc1;
+      --gray-600: #6b6b5e;
+      --gray-700: #4a4a40;
+      --gray-800: #2e2e28;
+      --gray-900: #1c1c18;
+      
+      --gold: #b8860b;
+      --gold-light: #e6c87a;
+      --gold-soft: #f7e9cd;
+      --gold-pale: #fef5e6;
+      --gold-border: #dbb45c;
+      
+      --accent-green: #2c6e2f;
+      --accent-blue: #2c5f8a;
+      
+      --font-head: 'Playfair Display', Georgia, serif;
+      --font-body: 'Tajawal', 'Segoe UI', sans-serif;
+      --font-mono: 'DM Mono', 'Courier New', monospace;
+    }
 
-  const handleClose = () => {
-    setOpen(false);
-    setStep(1);
-    setCompanyType("alalamia");
-    setCustomLogo(null);
-    setSender({
-      name: AL3ALAMIA_STORE.name,
-      nameEn: AL3ALAMIA_STORE.nameEn,
-      description: AL3ALAMIA_STORE.description,
-      phone: AL3ALAMIA_STORE.phone,
-      address: AL3ALAMIA_STORE.address,
-    });
-    setRecipient({ name: "", address: "", phone: "", managerName: "", managerPhone: "" });
-    setQuoteItems([]);
-    setSearch("");
-    setShowManual(false);
-    setManualItem({ name: "", price: "", quantity: 1 });
-    setValidityDays(7);
-  };
+    body {
+      font-family: var(--font-body);
+      background: #e2e2da;
+      color: var(--gray-800);
+      direction: rtl;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
 
-  // Close on Escape
-  useEffect(() => {
-    const onKey = (e) => { if (e.key === "Escape") { if (pickerProduct) setPickerProduct(null); else handleClose(); } };
-    if (open) window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [open, pickerProduct]);
+    @page {
+      size: A4;
+      margin: 1.2cm;
+    }
 
-  const filteredProducts = products.filter((p) =>
-    p.name?.toLowerCase().includes(search.toLowerCase()) ||
-    p.brand?.toLowerCase().includes(search.toLowerCase())
-  );
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      background: var(--white);
+      background-image: linear-gradient(to bottom, var(--paper), var(--white));
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      page-break-after: avoid;
+      break-after: page;
+      display: flex;
+      flex-direction: column;
+    }
 
-  const addItemFromPicker = (item) => {
-    setQuoteItems((prev) => {
-      const existing = prev.findIndex((i) => i.id === item.id);
-      if (existing !== -1) {
-        const updated = [...prev];
-        updated[existing] = item;
-        return updated;
+    /* Bars with soft warm gold */
+    .top-bar {
+      height: 6px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light), #d7aa4a, var(--gold));
+      flex-shrink: 0;
+    }
+    .bottom-bar {
+      height: 6px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light), #d7aa4a, var(--gold));
+      flex-shrink: 0;
+      margin-top: auto;
+    }
+
+    /* Header */
+    .quote-header {
+      padding: 8mm 12mm 5mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid var(--gold-soft);
+      flex-wrap: wrap;
+      gap: 12px;
+      background: var(--white);
+    }
+
+    .header-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+    .header-logo img {
+      height: 70px;
+      width: auto;
+      max-width: 180px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 5px rgba(0,0,0,0.05));
+    }
+    .no-logo {
+      width: 70px;
+      height: 70px;
+      background: var(--gold-pale);
+      border: 1px solid var(--gold-border);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 30px;
+    }
+    .header-company {
+      text-align: right;
+    }
+    .company-name {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--gray-900);
+      margin-bottom: 4px;
+      letter-spacing: -0.2px;
+    }
+    .company-description {
+      font-size: 14px;
+      color: var(--gray-600);
+      margin-bottom: 6px;
+    }
+    .company-detail {
+      font-size: 14px;
+      color: var(--gray-700);
+      line-height: 1.6;
+    }
+
+    .header-quote-info {
+      text-align: left;
+      direction: ltr;
+    }
+    .quote-title-ar {
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--gray-900);
+      font-family: var(--font-head);
+      direction: rtl;
+      text-align: right;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+    .quote-badge {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 5px;
+      background: var(--gold-pale);
+      border: 1px solid var(--gold-border);
+      border-radius: 18px;
+      padding: 10px 16px;
+      direction: rtl;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    .quote-badge-row {
+      display: flex;
+      gap: 12px;
+      align-items: baseline;
+      font-size: 16px;
+    }
+    .badge-label {
+      color: var(--gray-600);
+      font-weight: 500;
+    }
+    .badge-value {
+      color: var(--gold);
+      font-weight: 800;
+      font-family: var(--font-mono);
+    }
+
+    /* Recipient */
+    .recipient-section {
+      padding: 6mm 12mm;
+      border-bottom: 1px solid var(--gray-200);
+      background: var(--white);
+    }
+    .section-eyebrow {
+      font-size: 14px;
+      letter-spacing: 2px;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+    .recipient-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .recipient-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 14px;
+      padding: 8px 14px;
+      transition: all 0.1s ease;
+    }
+    .recipient-card-label {
+      font-size: 14px;
+      color: var(--gray-600);
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+    .recipient-card-value {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--gray-800);
+    }
+
+    /* Products table - clean & light */
+    .products-section {
+      padding: 6mm 12mm;
+      flex: 1;
+      background: var(--white);
+    }
+    .products-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 18px;
+    }
+    .products-table thead tr {
+      background: var(--gray-100);
+      border-bottom: 2px solid var(--gold-light);
+    }
+    .products-table th {
+      padding: 10px 10px;
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--gray-800);
+      text-align: right;
+      letter-spacing: 0.3px;
+    }
+    .products-table td {
+      padding: 9px 10px;
+      font-size: 16px;
+      color: var(--gray-700);
+      border-bottom: 1px solid var(--gray-200);
+      text-align: right;
+      vertical-align: middle;
+    }
+    .products-table tbody tr:nth-child(even) {
+      background-color: var(--gray-50);
+    }
+    .products-table tbody tr:hover {
+      background-color: var(--gold-pale);
+    }
+    .td-num {
+      color: var(--gray-500);
+      font-size: 11px;
+      font-family: var(--font-mono);
+      text-align: center;
+    }
+    .td-name {
+      font-weight: 700;
+      color: var(--gray-800);
+    }
+    .td-qty {
+      text-align: center;
+      font-family: var(--font-mono);
+      color: var(--accent-green);
+      font-weight: 600;
+    }
+    .td-price, .td-total {
+      font-family: var(--font-mono);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .td-price {
+      color: var(--gold);
+    }
+    .td-total {
+      color: var(--gray-800);
+      font-weight: 700;
+    }
+
+    /* Totals */
+    .totals-section {
+      padding: 5mm 12mm;
+      border-top: 1px solid var(--gray-200);
+      background: var(--white);
+    }
+    .totals-wrap {
+      display: flex;
+      justify-content: flex-start;
+    }
+    .totals-box {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 20px;
+      overflow: hidden;
+      min-width: 260px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    .totals-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 18px;
+      border-bottom: 1px solid var(--gray-200);
+      gap: 32px;
+    }
+    .totals-row:last-child {
+      border-bottom: none;
+    }
+    .totals-row.grand {
+      background: var(--gold-pale);
+    }
+    .totals-label {
+      font-size: 12px;
+      color: var(--gray-700);
+      font-weight: 500;
+    }
+    .totals-value {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gold);
+      font-family: var(--font-mono);
+    }
+    .totals-row.grand .totals-label {
+      color: var(--gray-800);
+      font-weight: 800;
+    }
+    .totals-row.grand .totals-value {
+      color: var(--accent-blue);
+      font-size: 15px;
+    }
+
+    /* Validity pill */
+    .validity-section {
+      padding: 4mm 12mm;
+      background: var(--white);
+    }
+    .validity-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold-pale);
+      border: 1px solid var(--gold-border);
+      border-radius: 40px;
+      padding: 6px 18px;
+      font-size: 12px;
+      color: var(--gray-700);
+    }
+    .validity-pill strong {
+      color: var(--gold);
+      font-weight: 800;
+    }
+
+    /* Terms */
+    .terms-section {
+      padding: 5mm 12mm;
+      border-top: 1px solid var(--gray-200);
+      background: var(--white);
+    }
+    .terms-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--gray-800);
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+    .terms-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .terms-list li {
+      font-size: 14px;
+      color: var(--gray-900);
+      line-height: 1.55;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+    .terms-list li::before {
+      content: '✦';
+      color: var(--gold);
+      font-size: 9px;
+      margin-top: 2px;
+    }
+
+    /* Footer */
+    .quote-footer {
+      padding: 5mm 12mm 6mm;
+      border-top: 1px solid var(--gray-200);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      background: var(--white);
+    }
+    .footer-sig {
+      text-align: center;
+    }
+    .footer-sig-line {
+      width: 130px;
+      height: 1px;
+      background: var(--gray-300);
+      margin: 0 auto 5px;
+    }
+    .footer-sig-label {
+      font-size: 16px;
+      color: var(--gray-600);
+    }
+    .footer-brand {
+      font-size: 16px;
+      color: var(--gray-600);
+      text-align: left;
+      direction: ltr;
+    }
+    .footer-brand span {
+      color: var(--gold);
+      font-weight: 800;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+        margin: 0;
       }
-      return [...prev, item];
-    });
-    setPickerProduct(null);
-  };
+      .page {
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+        width: 100%;
+        min-height: 0;
+      }
+      .products-table tbody tr:hover {
+        background-color: transparent;
+      }
+      .totals-box, .quote-badge {
+        box-shadow: none;
+        border: 1px solid #ccc;
+      }
+    }
+`;
 
-  const removeItem = (id) => setQuoteItems((prev) => prev.filter((i) => i.id !== id));
+// ── Main Export ───────────────────────────────────────────────────────────────
+export const generateQuoteHTML = ({
+  senderCompany,
+  recipientCompany,
+  items,
+  validityDays,
+  quoteNumber,
+  quoteDate,
+  baseUrl = "",
+  customLogo = null,
+}) => {
+  const logoSrc = customLogo || `${baseUrl}/logo.png`;
 
-  const updateItem = (id, field, value) => {
-    setQuoteItems((prev) =>
-      prev.map((i) => i.id === id ? { ...i, [field]: field === "quantity" ? Math.max(1, parseInt(value) || 1) : value } : i)
-    );
-  };
+  // Format sender display
+  const senderDisplayName = senderCompany.nameEn
+    ? `${senderCompany.name} (${senderCompany.nameEn})`
+    : senderCompany.name;
 
-  const addManualItem = () => {
-    if (!manualItem.name.trim() || !manualItem.price) return;
-    setQuoteItems((prev) => [
-      ...prev,
-      {
-        id: `manual-${Date.now()}`,
-        originalName: manualItem.name.trim(),
-        displayName: manualItem.name.trim(),
-        quantity: Math.max(1, parseInt(manualItem.quantity) || 1),
-        quotedPrice: parseFloat(manualItem.price),
-        purchasePrice: null,
-        isManual: true,
-      },
-    ]);
-    setManualItem({ name: "", price: "", quantity: 1 });
-    setShowManual(false);
-  };
+  const senderDescription = senderCompany.description || "";
 
-  const grandTotal = quoteItems.reduce((s, i) => s + i.quotedPrice * i.quantity, 0);
-
-  const handleGenerate = () => {
-    if (!recipient.name.trim()) { alert("يرجى إدخال اسم الشركة المستلِمة"); return; }
-    if (quoteItems.length === 0) { alert("يرجى إضافة منتج واحد على الأقل"); return; }
-
-    const html = generateQuoteHTML({
-      senderCompany: sender,
-      recipientCompany: recipient,
-      items: quoteItems,
-      validityDays,
-      quoteNumber,
-      quoteDate: new Date().toISOString(),
-      baseUrl: window.location.origin,
-      customLogo: companyType === "other" ? customLogo : null,
-    });
-
-    const win = window.open("", "_blank");
-    win.document.write(html);
-    win.document.close();
-  };
-
-  // ── Step validation ──
-  const step1Valid = recipient.name.trim().length > 0 && 
-    (companyType === "alalamia" || (companyType === "other" && sender.name.trim().length > 0));
-  const step2Valid = quoteItems.length > 0;
-
-  if (!open) {
-    return (
-      <button className={styles.triggerBtn} onClick={handleOpen}>
-        📋 عرض سعر
-      </button>
-    );
-  }
-
-  return (
-    <div className={styles.overlay}>
-      <div className={styles.modal}>
-        {/* ── Modal Header ── */}
-        <div className={styles.modalHeader}>
-          <div className={styles.modalTitleGroup}>
-            <span className={styles.modalIcon}>📋</span>
-            <div>
-              <div className={styles.modalTitle}>إنشاء عرض سعر</div>
-              <div className={styles.modalSubtitle}>{quoteNumber}</div>
-            </div>
-          </div>
-          <button className={styles.closeBtn} onClick={handleClose}>✕</button>
-        </div>
-
-        {/* ── Step Tabs ── */}
-        <div className={styles.stepTabs}>
-          {[
-            { n: 1, label: "بيانات الشركات" },
-            { n: 2, label: "المنتجات" },
-            { n: 3, label: "إعدادات وإصدار" },
-          ].map(({ n, label }) => (
-            <button
-              key={n}
-              className={`${styles.stepTab} ${step === n ? styles.stepTabActive : ""} ${step > n ? styles.stepTabDone : ""}`}
-              onClick={() => {
-                if (n === 2 && !step1Valid) return;
-                if (n === 3 && (!step1Valid || !step2Valid)) return;
-                setStep(n);
-              }}
-            >
-              <span className={styles.stepNum}>{step > n ? "✓" : n}</span>
-              {label}
-            </button>
-          ))}
-        </div>
-
-        {/* ── Step 1: Company Info ── */}
-        {step === 1 && (
-          <div className={styles.stepContent}>
-            {/* Company Selector */}
-            <div className={styles.section}>
-              <div className={styles.sectionTitle}>🏢 اختيار الشركة المُرسِلة</div>
-              <div className={styles.companySelector}>
-                <label className={`${styles.companyOption} ${companyType === "alalamia" ? styles.companyOptionActive : ""}`}>
-                  <input
-                    type="radio"
-                    name="companyType"
-                    value="alalamia"
-                    checked={companyType === "alalamia"}
-                    onChange={() => handleCompanyTypeChange("alalamia")}
-                  />
-                  <div>
-                    <div className={styles.companyOptionTitle}>AL3ALAMIA Store</div>
-                    <div className={styles.companyOptionDesc}>العالمية ستور (الإعدادات الافتراضية)</div>
-                  </div>
-                </label>
-                <label className={`${styles.companyOption} ${companyType === "other" ? styles.companyOptionActive : ""}`}>
-                  <input
-                    type="radio"
-                    name="companyType"
-                    value="other"
-                    checked={companyType === "other"}
-                    onChange={() => handleCompanyTypeChange("other")}
-                  />
-                  <div>
-                    <div className={styles.companyOptionTitle}>شركة أخرى</div>
-                    <div className={styles.companyOptionDesc}>إدخال بيانات وشعار مخصص</div>
-                  </div>
-                </label>
-              </div>
-            </div>
-
-            {/* Sender */}
-            <div className={styles.section}>
-              <div className={styles.sectionTitle}>
-                🏢 بيانات شركتنا (المُرسِل)
-                {companyType !== "alalamia" && <span className={styles.required}> *</span>}
-              </div>
-              {companyType === "other" && (
-                <>
-                  <div className={styles.fieldGrid}>
-                    <div className={styles.fieldGroup}>
-                      <label className={styles.fieldLabel}>اسم الشركة *</label>
-                      <input className={styles.fieldInput} value={sender.name} onChange={(e) => setSender({ ...sender, name: e.target.value })} placeholder="مثال: العالمية للتقنية" />
-                    </div>
-                    <div className={styles.fieldGroup}>
-                      <label className={styles.fieldLabel}>اسم الشركة (إنجليزي)</label>
-                      <input className={styles.fieldInput} value={sender.nameEn} onChange={(e) => setSender({ ...sender, nameEn: e.target.value })} placeholder="Company Name" />
-                    </div>
-                    
-                    <div className={styles.fieldGroup}>
-                      <label className={styles.fieldLabel}>رقم التليفون</label>
-                      <input className={styles.fieldInput} value={sender.phone} onChange={(e) => setSender({ ...sender, phone: e.target.value })} placeholder="01xxxxxxxxx" />
-                    </div>
-                  </div>
-                  <LogoUploader onLogoChange={setCustomLogo} currentLogo={customLogo} />
-                </>
-              )}
-              {companyType === "alalamia" && (
-                <div className={styles.alalamiaInfo}>
-                  <div className={styles.alalamiaName}>{AL3ALAMIA_STORE.name}</div>
-                  <div className={styles.alalamiaDesc}>{AL3ALAMIA_STORE.description}</div>
-                  <div className={styles.alalamiaContact}>
-                    <span>📞 {AL3ALAMIA_STORE.phone}</span>
-                    <span>📍 {AL3ALAMIA_STORE.address}</span>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Recipient */}
-            <div className={styles.section}>
-              <div className={styles.sectionTitle}>🏭 بيانات الشركة المستلِمة <span className={styles.required}>*</span></div>
-              <div className={styles.fieldGrid}>
-                <div className={styles.fieldGroup}>
-                  <label className={styles.fieldLabel}>اسم الشركة *</label>
-                  <input className={styles.fieldInput} value={recipient.name} onChange={(e) => setRecipient({ ...recipient, name: e.target.value })} placeholder="اسم الشركة المستلِمة" />
-                </div>
-                
-              </div>
-            </div>
-
-            <div className={styles.stepFooter}>
-              <button
-                className={styles.nextBtn}
-                onClick={() => setStep(2)}
-                disabled={!step1Valid}
-              >
-                التالي: إضافة المنتجات ←
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* ── Step 2: Products ── */}
-        {step === 2 && (
-          <div className={styles.stepContent}>
-            <div className={styles.productsLayout}>
-              {/* Left: Search & Add */}
-              <div className={styles.searchPanel}>
-                <div className={styles.sectionTitle}>🔍 بحث عن منتج</div>
-                <input
-                  ref={searchRef}
-                  className={styles.searchInput}
-                  placeholder="ابحث بالاسم أو البراند..."
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                  autoFocus
-                />
-                <div className={styles.searchResults}>
-                  {search.trim() === "" && (
-                    <div className={styles.searchHint}>اكتب للبحث في {products.length} منتج</div>
-                  )}
-                  {search.trim() !== "" && filteredProducts.length === 0 && (
-                    <div className={styles.searchHint}>لا توجد نتائج</div>
-                  )}
-                  {filteredProducts.slice(0, 15).map((p) => {
-                    const alreadyAdded = quoteItems.some((i) => i.id === p.fireId);
-                    return (
-                      <div
-                        key={p.fireId}
-                        className={`${styles.searchResultItem} ${alreadyAdded ? styles.searchResultAdded : ""}`}
-                        onClick={() => !alreadyAdded && setPickerProduct(p)}
-                      >
-                        <div className={styles.resultName}>{p.name}</div>
-                        <div className={styles.resultMeta}>{p.brand} · {fmtEGP(p.price)}</div>
-                        {alreadyAdded && <span className={styles.addedBadge}>✓ مضاف</span>}
-                      </div>
-                    );
-                  })}
-                </div>
-
-                {/* Manual product */}
-                <div className={styles.manualSection}>
-                  <button
-                    className={styles.manualToggle}
-                    onClick={() => setShowManual(!showManual)}
-                  >
-                    {showManual ? "▲ إخفاء" : "＋ إضافة منتج غير موجود في القاعدة"}
-                  </button>
-                  {showManual && (
-                    <div className={styles.manualForm}>
-                      <input
-                        className={styles.fieldInput}
-                        placeholder="اسم المنتج *"
-                        value={manualItem.name}
-                        onChange={(e) => setManualItem({ ...manualItem, name: e.target.value })}
-                      />
-                      <div className={styles.manualRow}>
-                        <input
-                          className={styles.fieldInput}
-                          type="number"
-                          placeholder="السعر *"
-                          min="0"
-                          value={manualItem.price}
-                          onChange={(e) => setManualItem({ ...manualItem, price: e.target.value })}
-                        />
-                        <input
-                          className={styles.fieldInput}
-                          type="number"
-                          placeholder="الكمية"
-                          min="1"
-                          value={manualItem.quantity}
-                          onChange={(e) => setManualItem({ ...manualItem, quantity: e.target.value })}
-                        />
-                      </div>
-                      <button
-                        className={styles.manualAddBtn}
-                        onClick={addManualItem}
-                        disabled={!manualItem.name.trim() || !manualItem.price}
-                      >
-                        ✚ إضافة
-                      </button>
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              {/* Right: Quote items list */}
-              <div className={styles.quoteList}>
-                <div className={styles.sectionTitle}>
-                  🧾 منتجات العرض
-                  {quoteItems.length > 0 && (
-                    <span className={styles.itemCount}>{quoteItems.length} صنف</span>
-                  )}
-                </div>
-                {quoteItems.length === 0 ? (
-                  <div className={styles.emptyList}>لم تُضَف منتجات بعد</div>
-                ) : (
-                  <div className={styles.quoteItems}>
-                    {quoteItems.map((item) => (
-                      <div key={item.id} className={styles.quoteItem}>
-                        <div className={styles.quoteItemHeader}>
-                          <span className={styles.quoteItemName}>{item.displayName}</span>
-                          {item.displayName !== item.originalName && (
-                            <span className={styles.renamedBadge} title={`الأصلي: ${item.originalName}`}>✎</span>
-                          )}
-                          <button className={styles.removeBtn} onClick={() => removeItem(item.id)}>✕</button>
-                        </div>
-                        {item.purchasePrice && (
-                          <div className={styles.costHint}>سعر الشراء: {fmtEGP(item.purchasePrice)}</div>
-                        )}
-                        <div className={styles.quoteItemControls}>
-                          <div className={styles.controlGroup}>
-                            <label>الكمية</label>
-                            <input
-                              type="number" min="1"
-                              value={item.quantity}
-                              onChange={(e) => updateItem(item.id, "quantity", e.target.value)}
-                              className={styles.inlineInput}
-                            />
-                          </div>
-                          <div className={styles.controlGroup}>
-                            <label>السعر</label>
-                            <input
-                              type="number" min="0"
-                              value={item.quotedPrice}
-                              onChange={(e) => updateItem(item.id, "quotedPrice", parseFloat(e.target.value) || 0)}
-                              className={styles.inlineInput}
-                            />
-                          </div>
-                          <div className={styles.controlGroup}>
-                            <label>الإجمالي</label>
-                            <span className={styles.itemTotal}>{fmtEGP(item.quotedPrice * item.quantity)}</span>
-                          </div>
-                        </div>
-                        {/* Display name edit */}
-                        <div className={styles.displayNameRow}>
-                          <label>الاسم في العرض</label>
-                          <div className={styles.nameFieldRow}>
-                            <input
-                              className={styles.inlineNameInput}
-                              value={item.displayName}
-                              onChange={(e) => updateItem(item.id, "displayName", e.target.value)}
-                            />
-                            {item.displayName !== item.originalName && (
-                              <button
-                                className={styles.resetBtn}
-                                onClick={() => updateItem(item.id, "displayName", item.originalName)}
-                                title="إعادة الاسم الأصلي"
-                              >↺</button>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-
-                {quoteItems.length > 0 && (
-                  <div className={styles.grandTotalBar}>
-                    <span>الإجمالي الكلي</span>
-                    <span className={styles.grandTotalVal}>{fmtEGP(grandTotal)}</span>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            <div className={styles.stepFooter}>
-              <button className={styles.backBtn} onClick={() => setStep(1)}>→ السابق</button>
-              <button
-                className={styles.nextBtn}
-                onClick={() => setStep(3)}
-                disabled={!step2Valid}
-              >
-                التالي: إعدادات العرض ←
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* ── Step 3: Settings & Generate ── */}
-        {step === 3 && (
-          <div className={styles.stepContent}>
-            <div className={styles.section}>
-              <div className={styles.sectionTitle}>⚙️ إعدادات العرض</div>
-              <div className={styles.fieldGrid}>
-                <div className={styles.fieldGroup}>
-                  <label className={styles.fieldLabel}>رقم العرض</label>
-                  <div className={styles.quoteNumRow}>
-                    <input className={`${styles.fieldInput} ${styles.monoInput}`} value={quoteNumber} readOnly />
-                    <button className={styles.regenBtn} onClick={() => setQuoteNumber(generateQuoteNumber())} title="توليد رقم جديد">⟳</button>
-                  </div>
-                </div>
-                <div className={styles.fieldGroup}>
-                  <label className={styles.fieldLabel}>صلاحية العرض (بالأيام)</label>
-                  <input
-                    className={styles.fieldInput}
-                    type="number"
-                    min="1"
-                    value={validityDays}
-                    onChange={(e) => setValidityDays(Math.max(1, parseInt(e.target.value) || 1))}
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Summary */}
-            <div className={styles.summaryBox}>
-              <div className={styles.summaryTitle}>ملخص العرض</div>
-              <div className={styles.summaryRows}>
-                <div className={styles.summaryRow}>
-                  <span>مقدم من</span>
-                  <span>{companyType === "alalamia" ? AL3ALAMIA_STORE.name : (sender.name || "—")}</span>
-                </div>
-                <div className={styles.summaryRow}>
-                  <span>مقدم إلى</span>
-                  <span>{recipient.name}</span>
-                </div>
-                <div className={styles.summaryRow}>
-                  <span>عدد الأصناف</span>
-                  <span>{quoteItems.length} صنف</span>
-                </div>
-                <div className={styles.summaryRow}>
-                  <span>إجمالي الكميات</span>
-                  <span>{quoteItems.reduce((s, i) => s + i.quantity, 0)} قطعة</span>
-                </div>
-                <div className={`${styles.summaryRow} ${styles.summaryTotal}`}>
-                  <span>الإجمالي الكلي</span>
-                  <span>{fmtEGP(grandTotal)}</span>
-                </div>
-              </div>
-            </div>
-
-            <div className={styles.stepFooter}>
-              <button className={styles.backBtn} onClick={() => setStep(2)}>→ السابق</button>
-              <button className={styles.generateBtn} onClick={handleGenerate}>
-                🖨️ إنشاء وفتح العرض
-              </button>
-            </div>
-          </div>
-        )}
-      </div>
-
-      {/* ── Price Picker Dialog ── */}
-      {pickerProduct && (
-        <PricePicker
-          product={pickerProduct}
-          onConfirm={addItemFromPicker}
-          onCancel={() => setPickerProduct(null)}
-        />
-      )}
-    </div>
+  // ── Totals ──
+  const grandTotal = items.reduce(
+    (sum, item) => sum + item.quotedPrice * item.quantity,
+    0,
   );
+
+  // ── Products table rows ──
+  const tableRows = items
+    .map(
+      (item, idx) => `
+    <tr>
+      <td class="td-num">${idx + 1}</td>
+      <td class="td-name">${item.displayName}</td>
+      <td class="td-qty">${item.quantity}</td>
+      <td class="td-price">${fmtPrice(item.quotedPrice)}</td>
+      <td class="td-total">${fmtPrice(item.quotedPrice * item.quantity)}</td>
+    </tr>`,
+    )
+    .join("");
+
+  // { label: "العنوان", value: recipientCompany.address },
+  // { label: "رقم التليفون", value: recipientCompany.phone },
+  // { label: "مسؤول المشتريات", value: recipientCompany.managerName },
+  // { label: "تليفون المسؤول", value: recipientCompany.managerPhone },
+  // ── Recipient grid ──
+  const recipientFields = [
+    { label: "اسم الشركة", value: recipientCompany.name },
+  ]
+    .filter((f) => f.value)
+    .map(
+      (f) => `
+    <div class="recipient-card">
+      <div class="recipient-card-label">${f.label}</div>
+      <div class="recipient-card-value">${f.value}</div>
+    </div>`,
+    )
+    .join("");
+
+  // Logo HTML
+  const logoHtml = customLogo
+    ? `<img src="${customLogo}" alt="${senderCompany.name}">`
+    : `<div class="no-logo">🏢</div>`;
+
+  // Sender details HTML
+  const senderDetailsHtml = `
+    <div class="company-name">${senderDisplayName}</div>
+    ${senderDescription ? `<div class="company-description">${senderDescription}</div>` : ""}
+    <div class="company-detail">
+      ${senderCompany.phone ? `📞 ${senderCompany.phone}<br>` : ""}
+      ${senderCompany.address ? `📍 ${senderCompany.address}` : ""}
+    </div>
+  `;
+
+  return `<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عرض سعر رقم ${quoteNumber}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&family=Playfair+Display:wght@700;900&family=DM+Mono&display=swap" rel="stylesheet">
+  <style>${CSS}</style>
+</head>
+<body>
+<div class="page">
+  <div class="top-bar"></div>
+
+  <!-- Header -->
+  <div class="quote-header">
+    <div class="header-quote-info">
+      <div class="quote-title-ar">عرض سعر</div>
+      <div class="quote-badge">
+        <div class="quote-badge-row">
+          <span class="badge-label">رقم العرض</span>
+          <span class="badge-value">${quoteNumber}</span>
+        </div>
+        <div class="quote-badge-row">
+          <span class="badge-label">التاريخ</span>
+          <span class="badge-value">${fmtDate(quoteDate)}</span>
+        </div>
+        <div class="quote-badge-row">
+          <span class="badge-label">صالح لمدة</span>
+          <span class="badge-value">${validityDays} يوم</span>
+        </div>
+      </div>
+    </div>
+    <div class="header-logo">
+      ${logoHtml}
+      <div class="header-company">
+        ${senderDetailsHtml}
+      </div>
+    </div>
+  </div>
+
+  <!-- Recipient -->
+  <div class="recipient-section">
+    <div class="section-eyebrow">السادة / مقدم إليه</div>
+    <div class="recipient-grid">${recipientFields}</div>
+  </div>
+
+  <!-- Products -->
+  <div class="products-section">
+    <table class="products-table">
+      <thead>
+        <tr>
+          <th style="text-align:center;width:32px">#</th>
+          <th>اسم المنتج</th>
+          <th style="text-align:center;width:50px">الكمية</th>
+          <th style="width:110px">سعر الوحدة</th>
+          <th style="width:120px">الإجمالي</th>
+        </tr>
+      </thead>
+      <tbody>${tableRows}</tbody>
+    </table>
+  </div>
+
+  <!-- Totals -->
+  <div class="totals-section">
+    <div class="totals-wrap">
+      <div class="totals-box">
+        <div class="totals-row">
+          <span class="totals-label">عدد الأصناف</span>
+          <span class="totals-value">${items.length} صنف</span>
+        </div>
+        <div class="totals-row">
+          <span class="totals-label">إجمالي الكميات</span>
+          <span class="totals-value">${items.reduce((s, i) => s + i.quantity, 0)} قطعة</span>
+        </div>
+        <div class="totals-row grand">
+          <span class="totals-label">الإجمالي الكلي</span>
+          <span class="totals-value">${fmtPrice(grandTotal)}</span>
+        </div>
+        <div class="totals-row grand">
+          <span class="totals-label">الفاتورة الضريبية 14%</span>
+<span class="totals-value">${fmtPrice(grandTotal * 0.14)}</span>
+        </div>
+        <div class="totals-row grand">
+          <span class="totals-label">الإجمالي بعد الفاتورة الضريبية 14%</span>
+<span class="totals-value">${fmtPrice(grandTotal + grandTotal * 0.14)}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Terms -->
+  <div class="terms-section">
+    <div class="terms-title">الشروط والأحكام</div>
+    <ul class="terms-list">
+      <li>الاسعار لاتشمل اي خصومات 1% او 8%</li>
+      <li>الأسعار بالجنيه المصري وقابلة للتغيير دون إشعار مسبق بعد انتهاء مدة صلاحية العرض.</li>
+      <li>يتم التسليم بعد الاتفاق على طريقة الدفع والكميات المطلوبة.</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <div class="quote-footer">
+    <div class="footer-sig">
+      <div class="footer-sig-line"></div>
+      <div class="footer-sig-label">التوقيع والختم</div>
+    </div>
+    <div class="footer-brand">
+      <span>${senderCompany.nameEn || senderCompany.name}</span> &nbsp;·&nbsp; ${new Date().getFullYear()}
+    </div>
+  </div>
+
+  <div class="bottom-bar"></div>
+</div>
+</body>
+</html>`;
 };
 
-export default QuoteBuilder;
+// ── Quote number generator ────────────────────────────────────────────────────
+export const generateQuoteNumber = () => {
+  const now = new Date();
+  const year = now.getFullYear();
+  const rand = Math.floor(1000 + Math.random() * 9000);
+  return `QT-${year}-${rand}`;
+};
