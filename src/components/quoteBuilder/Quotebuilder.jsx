@@ -465,17 +465,10 @@ const QuoteBuilder = ({ products = [] }) => {
                       <label className={styles.fieldLabel}>اسم الشركة (إنجليزي)</label>
                       <input className={styles.fieldInput} value={sender.nameEn} onChange={(e) => setSender({ ...sender, nameEn: e.target.value })} placeholder="Company Name" />
                     </div>
-                    <div className={styles.fieldGroup}>
-                      <label className={styles.fieldLabel}>الوصف (اختياري)</label>
-                      <input className={styles.fieldInput} value={sender.description} onChange={(e) => setSender({ ...sender, description: e.target.value })} placeholder="توريد أحبار · طابعات · إكسسوارات" />
-                    </div>
+                    
                     <div className={styles.fieldGroup}>
                       <label className={styles.fieldLabel}>رقم التليفون</label>
                       <input className={styles.fieldInput} value={sender.phone} onChange={(e) => setSender({ ...sender, phone: e.target.value })} placeholder="01xxxxxxxxx" />
-                    </div>
-                    <div className={`${styles.fieldGroup} ${styles.fieldGroupFull}`}>
-                      <label className={styles.fieldLabel}>العنوان</label>
-                      <input className={styles.fieldInput} value={sender.address} onChange={(e) => setSender({ ...sender, address: e.target.value })} placeholder="العنوان بالتفصيل" />
                     </div>
                   </div>
                   <LogoUploader onLogoChange={setCustomLogo} currentLogo={customLogo} />
@@ -501,22 +494,7 @@ const QuoteBuilder = ({ products = [] }) => {
                   <label className={styles.fieldLabel}>اسم الشركة *</label>
                   <input className={styles.fieldInput} value={recipient.name} onChange={(e) => setRecipient({ ...recipient, name: e.target.value })} placeholder="اسم الشركة المستلِمة" />
                 </div>
-                <div className={styles.fieldGroup}>
-                  <label className={styles.fieldLabel}>رقم التليفون</label>
-                  <input className={styles.fieldInput} value={recipient.phone} onChange={(e) => setRecipient({ ...recipient, phone: e.target.value })} placeholder="01xxxxxxxxx" />
-                </div>
-                <div className={`${styles.fieldGroup} ${styles.fieldGroupFull}`}>
-                  <label className={styles.fieldLabel}>العنوان</label>
-                  <input className={styles.fieldInput} value={recipient.address} onChange={(e) => setRecipient({ ...recipient, address: e.target.value })} placeholder="عنوان الشركة" />
-                </div>
-                <div className={styles.fieldGroup}>
-                  <label className={styles.fieldLabel}>مسؤول المشتريات</label>
-                  <input className={styles.fieldInput} value={recipient.managerName} onChange={(e) => setRecipient({ ...recipient, managerName: e.target.value })} placeholder="الاسم الكامل" />
-                </div>
-                <div className={styles.fieldGroup}>
-                  <label className={styles.fieldLabel}>تليفون المسؤول</label>
-                  <input className={styles.fieldInput} value={recipient.managerPhone} onChange={(e) => setRecipient({ ...recipient, managerPhone: e.target.value })} placeholder="01xxxxxxxxx" />
-                </div>
+                
               </div>
             </div>
 
