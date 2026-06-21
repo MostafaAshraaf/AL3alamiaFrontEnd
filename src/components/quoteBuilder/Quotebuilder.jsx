@@ -1,9 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import styles from "./quoteBuilder.module.css";
-import {
-  generateQuoteHTML,
-  generateQuoteNumber,
-} from "./quoteTemplate";
+import { generateQuoteHTML, generateQuoteNumber } from "./quoteTemplate";
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 const fmtEGP = (n) =>
@@ -50,7 +47,9 @@ const PricePicker = ({ product, onConfirm, onCancel }) => {
       <div className={styles.pickerBox}>
         <div className={styles.pickerHeader}>
           <span className={styles.pickerTitle}>إضافة منتج للعرض</span>
-          <button className={styles.pickerClose} onClick={onCancel}>✕</button>
+          <button className={styles.pickerClose} onClick={onCancel}>
+            ✕
+          </button>
         </div>
 
         {/* Product name display */}
@@ -101,18 +100,46 @@ const PricePicker = ({ product, onConfirm, onCancel }) => {
         <div className={styles.pickerField}>
           <label className={styles.pickerLabel}>سعر البيع في العرض</label>
           <div className={styles.priceOptions}>
-            <label className={`${styles.priceOption} ${mode === "price" ? styles.priceOptionActive : ""}`}>
-              <input type="radio" name="pmode" value="price" checked={mode === "price"} onChange={() => setMode("price")} />
+            <label
+              className={`${styles.priceOption} ${mode === "price" ? styles.priceOptionActive : ""}`}
+            >
+              <input
+                type="radio"
+                name="pmode"
+                value="price"
+                checked={mode === "price"}
+                onChange={() => setMode("price")}
+              />
               <span className={styles.priceOptionLabel}>سعر المستخدم</span>
-              <span className={styles.priceOptionVal}>{fmtEGP(product.price)}</span>
+              <span className={styles.priceOptionVal}>
+                {fmtEGP(product.price)}
+              </span>
             </label>
-            <label className={`${styles.priceOption} ${mode === "supply" ? styles.priceOptionActive : ""}`}>
-              <input type="radio" name="pmode" value="supply" checked={mode === "supply"} onChange={() => setMode("supply")} />
+            <label
+              className={`${styles.priceOption} ${mode === "supply" ? styles.priceOptionActive : ""}`}
+            >
+              <input
+                type="radio"
+                name="pmode"
+                value="supply"
+                checked={mode === "supply"}
+                onChange={() => setMode("supply")}
+              />
               <span className={styles.priceOptionLabel}>سعر التوريد</span>
-              <span className={styles.priceOptionVal}>{fmtEGP(product.supply)}</span>
+              <span className={styles.priceOptionVal}>
+                {fmtEGP(product.supply)}
+              </span>
             </label>
-            <label className={`${styles.priceOption} ${mode === "custom" ? styles.priceOptionActive : ""}`}>
-              <input type="radio" name="pmode" value="custom" checked={mode === "custom"} onChange={() => setMode("custom")} />
+            <label
+              className={`${styles.priceOption} ${mode === "custom" ? styles.priceOptionActive : ""}`}
+            >
+              <input
+                type="radio"
+                name="pmode"
+                value="custom"
+                checked={mode === "custom"}
+                onChange={() => setMode("custom")}
+              />
               <span className={styles.priceOptionLabel}>سعر مخصص</span>
               {mode === "custom" && (
                 <input
@@ -148,7 +175,7 @@ const LogoUploader = ({ onLogoChange, currentLogo }) => {
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
-    if (file && file.type.startsWith('image/')) {
+    if (file && file.type.startsWith("image/")) {
       const reader = new FileReader();
       reader.onload = (event) => {
         onLogoChange(event.target.result);
@@ -159,14 +186,18 @@ const LogoUploader = ({ onLogoChange, currentLogo }) => {
 
   const handleRemove = () => {
     onLogoChange(null);
-    if (fileInputRef.current) fileInputRef.current.value = '';
+    if (fileInputRef.current) fileInputRef.current.value = "";
   };
 
   return (
     <div className={styles.logoUploader}>
       <div className={styles.logoPreview}>
         {currentLogo ? (
-          <img src={currentLogo} alt="Company logo" className={styles.logoPreviewImg} />
+          <img
+            src={currentLogo}
+            alt="Company logo"
+            className={styles.logoPreviewImg}
+          />
         ) : (
           <div className={styles.logoPlaceholder}>📷</div>
         )}
@@ -177,7 +208,7 @@ const LogoUploader = ({ onLogoChange, currentLogo }) => {
           className={styles.logoBtn}
           onClick={() => fileInputRef.current?.click()}
         >
-          {currentLogo ? 'تغيير الشعار' : 'رفع شعار'}
+          {currentLogo ? "تغيير الشعار" : "رفع شعار"}
         </button>
         {currentLogo && (
           <button
@@ -194,7 +225,7 @@ const LogoUploader = ({ onLogoChange, currentLogo }) => {
         type="file"
         accept="image/*"
         onChange={handleFileChange}
-        style={{ display: 'none' }}
+        style={{ display: "none" }}
       />
       <div className={styles.logoHint}>اختر شعار شركتك (يظهر في عرض السعر)</div>
     </div>
@@ -205,11 +236,21 @@ const LogoUploader = ({ onLogoChange, currentLogo }) => {
 const QuoteBuilder = ({ products = [] }) => {
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState(1); // 1=sender+recipient, 2=products, 3=settings
-
+  // Add these state variables in the main component (around line 100)
+  const [showConditions, setShowConditions] = useState(true);
+  const [showTax, setShowTax] = useState(true);
   // Company selection
   const [companyType, setCompanyType] = useState("alalamia"); // "alalamia" | "other"
   const [customLogo, setCustomLogo] = useState(null);
+  // Settings
 
+  // Individual conditions - ADD THESE
+  const [conditions, setConditions] = useState({
+    noDiscounts: true,
+    priceValidity: true,
+    deliveryTerms: true,
+    tax: true,
+  });
   // Sender
   const [sender, setSender] = useState({
     name: AL3ALAMIA_STORE.name,
@@ -221,7 +262,11 @@ const QuoteBuilder = ({ products = [] }) => {
 
   // Recipient
   const [recipient, setRecipient] = useState({
-    name: "", address: "", phone: "", managerName: "", managerPhone: "",
+    name: "",
+    address: "",
+    phone: "",
+    managerName: "",
+    managerPhone: "",
   });
 
   // Products in quote
@@ -232,7 +277,11 @@ const QuoteBuilder = ({ products = [] }) => {
 
   // Manual product
   const [showManual, setShowManual] = useState(false);
-  const [manualItem, setManualItem] = useState({ name: "", price: "", quantity: 1 });
+  const [manualItem, setManualItem] = useState({
+    name: "",
+    price: "",
+    quantity: 1,
+  });
 
   // Settings
   const [validityDays, setValidityDays] = useState(7);
@@ -251,7 +300,7 @@ const QuoteBuilder = ({ products = [] }) => {
         phone: AL3ALAMIA_STORE.phone,
         address: AL3ALAMIA_STORE.address,
       });
-      setCustomLogo('/logo.png');
+      setCustomLogo("/logo.png");
     } else {
       setSender({
         name: "",
@@ -281,24 +330,43 @@ const QuoteBuilder = ({ products = [] }) => {
       phone: AL3ALAMIA_STORE.phone,
       address: AL3ALAMIA_STORE.address,
     });
-    setRecipient({ name: "", address: "", phone: "", managerName: "", managerPhone: "" });
+    setRecipient({
+      name: "",
+      address: "",
+      phone: "",
+      managerName: "",
+      managerPhone: "",
+    });
     setQuoteItems([]);
     setSearch("");
     setShowManual(false);
     setManualItem({ name: "", price: "", quantity: 1 });
     setValidityDays(7);
+    // Reset conditions
+    setConditions({
+      noDiscounts: true,
+      priceValidity: true,
+      deliveryTerms: true,
+      tax: true,
+    });
   };
 
   // Close on Escape
   useEffect(() => {
-    const onKey = (e) => { if (e.key === "Escape") { if (pickerProduct) setPickerProduct(null); else handleClose(); } };
+    const onKey = (e) => {
+      if (e.key === "Escape") {
+        if (pickerProduct) setPickerProduct(null);
+        else handleClose();
+      }
+    };
     if (open) window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [open, pickerProduct]);
 
-  const filteredProducts = products.filter((p) =>
-    p.name?.toLowerCase().includes(search.toLowerCase()) ||
-    p.brand?.toLowerCase().includes(search.toLowerCase())
+  const filteredProducts = products.filter(
+    (p) =>
+      p.name?.toLowerCase().includes(search.toLowerCase()) ||
+      p.brand?.toLowerCase().includes(search.toLowerCase()),
   );
 
   const addItemFromPicker = (item) => {
@@ -314,11 +382,22 @@ const QuoteBuilder = ({ products = [] }) => {
     setPickerProduct(null);
   };
 
-  const removeItem = (id) => setQuoteItems((prev) => prev.filter((i) => i.id !== id));
+  const removeItem = (id) =>
+    setQuoteItems((prev) => prev.filter((i) => i.id !== id));
 
   const updateItem = (id, field, value) => {
     setQuoteItems((prev) =>
-      prev.map((i) => i.id === id ? { ...i, [field]: field === "quantity" ? Math.max(1, parseInt(value) || 1) : value } : i)
+      prev.map((i) =>
+        i.id === id
+          ? {
+              ...i,
+              [field]:
+                field === "quantity"
+                  ? Math.max(1, parseInt(value) || 1)
+                  : value,
+            }
+          : i,
+      ),
     );
   };
 
@@ -340,11 +419,20 @@ const QuoteBuilder = ({ products = [] }) => {
     setShowManual(false);
   };
 
-  const grandTotal = quoteItems.reduce((s, i) => s + i.quotedPrice * i.quantity, 0);
+  const grandTotal = quoteItems.reduce(
+    (s, i) => s + i.quotedPrice * i.quantity,
+    0,
+  );
 
   const handleGenerate = () => {
-    if (!recipient.name.trim()) { alert("يرجى إدخال اسم الشركة المستلِمة"); return; }
-    if (quoteItems.length === 0) { alert("يرجى إضافة منتج واحد على الأقل"); return; }
+    if (!recipient.name.trim()) {
+      alert("يرجى إدخال اسم الشركة المستلِمة");
+      return;
+    }
+    if (quoteItems.length === 0) {
+      alert("يرجى إضافة منتج واحد على الأقل");
+      return;
+    }
 
     const html = generateQuoteHTML({
       senderCompany: sender,
@@ -355,6 +443,7 @@ const QuoteBuilder = ({ products = [] }) => {
       quoteDate: new Date().toISOString(),
       baseUrl: window.location.origin,
       customLogo: companyType === "other" ? customLogo : null,
+      conditions: conditions, // Pass individual conditions
     });
 
     const win = window.open("", "_blank");
@@ -363,8 +452,10 @@ const QuoteBuilder = ({ products = [] }) => {
   };
 
   // ── Step validation ──
-  const step1Valid = recipient.name.trim().length > 0 && 
-    (companyType === "alalamia" || (companyType === "other" && sender.name.trim().length > 0));
+  const step1Valid =
+    recipient.name.trim().length > 0 &&
+    (companyType === "alalamia" ||
+      (companyType === "other" && sender.name.trim().length > 0));
   const step2Valid = quoteItems.length > 0;
 
   if (!open) {
@@ -387,7 +478,9 @@ const QuoteBuilder = ({ products = [] }) => {
               <div className={styles.modalSubtitle}>{quoteNumber}</div>
             </div>
           </div>
-          <button className={styles.closeBtn} onClick={handleClose}>✕</button>
+          <button className={styles.closeBtn} onClick={handleClose}>
+            ✕
+          </button>
         </div>
 
         {/* ── Step Tabs ── */}
@@ -417,9 +510,13 @@ const QuoteBuilder = ({ products = [] }) => {
           <div className={styles.stepContent}>
             {/* Company Selector */}
             <div className={styles.section}>
-              <div className={styles.sectionTitle}>🏢 اختيار الشركة المُرسِلة</div>
+              <div className={styles.sectionTitle}>
+                🏢 اختيار الشركة المُرسِلة
+              </div>
               <div className={styles.companySelector}>
-                <label className={`${styles.companyOption} ${companyType === "alalamia" ? styles.companyOptionActive : ""}`}>
+                <label
+                  className={`${styles.companyOption} ${companyType === "alalamia" ? styles.companyOptionActive : ""}`}
+                >
                   <input
                     type="radio"
                     name="companyType"
@@ -428,11 +525,17 @@ const QuoteBuilder = ({ products = [] }) => {
                     onChange={() => handleCompanyTypeChange("alalamia")}
                   />
                   <div>
-                    <div className={styles.companyOptionTitle}>AL3ALAMIA Store</div>
-                    <div className={styles.companyOptionDesc}>العالمية ستور (الإعدادات الافتراضية)</div>
+                    <div className={styles.companyOptionTitle}>
+                      AL3ALAMIA Store
+                    </div>
+                    <div className={styles.companyOptionDesc}>
+                      العالمية ستور (الإعدادات الافتراضية)
+                    </div>
                   </div>
                 </label>
-                <label className={`${styles.companyOption} ${companyType === "other" ? styles.companyOptionActive : ""}`}>
+                <label
+                  className={`${styles.companyOption} ${companyType === "other" ? styles.companyOptionActive : ""}`}
+                >
                   <input
                     type="radio"
                     name="companyType"
@@ -442,7 +545,9 @@ const QuoteBuilder = ({ products = [] }) => {
                   />
                   <div>
                     <div className={styles.companyOptionTitle}>شركة أخرى</div>
-                    <div className={styles.companyOptionDesc}>إدخال بيانات وشعار مخصص</div>
+                    <div className={styles.companyOptionDesc}>
+                      إدخال بيانات وشعار مخصص
+                    </div>
                   </div>
                 </label>
               </div>
@@ -452,32 +557,64 @@ const QuoteBuilder = ({ products = [] }) => {
             <div className={styles.section}>
               <div className={styles.sectionTitle}>
                 🏢 بيانات شركتنا (المُرسِل)
-                {companyType !== "alalamia" && <span className={styles.required}> *</span>}
+                {companyType !== "alalamia" && (
+                  <span className={styles.required}> *</span>
+                )}
               </div>
               {companyType === "other" && (
                 <>
                   <div className={styles.fieldGrid}>
                     <div className={styles.fieldGroup}>
                       <label className={styles.fieldLabel}>اسم الشركة *</label>
-                      <input className={styles.fieldInput} value={sender.name} onChange={(e) => setSender({ ...sender, name: e.target.value })} placeholder="مثال: العالمية للتقنية" />
+                      <input
+                        className={styles.fieldInput}
+                        value={sender.name}
+                        onChange={(e) =>
+                          setSender({ ...sender, name: e.target.value })
+                        }
+                        placeholder="مثال: العالمية للتقنية"
+                      />
                     </div>
                     <div className={styles.fieldGroup}>
-                      <label className={styles.fieldLabel}>اسم الشركة (إنجليزي)</label>
-                      <input className={styles.fieldInput} value={sender.nameEn} onChange={(e) => setSender({ ...sender, nameEn: e.target.value })} placeholder="Company Name" />
+                      <label className={styles.fieldLabel}>
+                        اسم الشركة (إنجليزي)
+                      </label>
+                      <input
+                        className={styles.fieldInput}
+                        value={sender.nameEn}
+                        onChange={(e) =>
+                          setSender({ ...sender, nameEn: e.target.value })
+                        }
+                        placeholder="Company Name"
+                      />
                     </div>
-                    
+
                     <div className={styles.fieldGroup}>
                       <label className={styles.fieldLabel}>رقم التليفون</label>
-                      <input className={styles.fieldInput} value={sender.phone} onChange={(e) => setSender({ ...sender, phone: e.target.value })} placeholder="01xxxxxxxxx" />
+                      <input
+                        className={styles.fieldInput}
+                        value={sender.phone}
+                        onChange={(e) =>
+                          setSender({ ...sender, phone: e.target.value })
+                        }
+                        placeholder="01xxxxxxxxx"
+                      />
                     </div>
                   </div>
-                  <LogoUploader onLogoChange={setCustomLogo} currentLogo={customLogo} />
+                  <LogoUploader
+                    onLogoChange={setCustomLogo}
+                    currentLogo={customLogo}
+                  />
                 </>
               )}
               {companyType === "alalamia" && (
                 <div className={styles.alalamiaInfo}>
-                  <div className={styles.alalamiaName}>{AL3ALAMIA_STORE.name}</div>
-                  <div className={styles.alalamiaDesc}>{AL3ALAMIA_STORE.description}</div>
+                  <div className={styles.alalamiaName}>
+                    {AL3ALAMIA_STORE.name}
+                  </div>
+                  <div className={styles.alalamiaDesc}>
+                    {AL3ALAMIA_STORE.description}
+                  </div>
                   <div className={styles.alalamiaContact}>
                     <span>📞 {AL3ALAMIA_STORE.phone}</span>
                     <span>📍 {AL3ALAMIA_STORE.address}</span>
@@ -488,13 +625,22 @@ const QuoteBuilder = ({ products = [] }) => {
 
             {/* Recipient */}
             <div className={styles.section}>
-              <div className={styles.sectionTitle}>🏭 بيانات الشركة المستلِمة <span className={styles.required}>*</span></div>
+              <div className={styles.sectionTitle}>
+                🏭 بيانات الشركة المستلِمة{" "}
+                <span className={styles.required}>*</span>
+              </div>
               <div className={styles.fieldGrid}>
                 <div className={styles.fieldGroup}>
                   <label className={styles.fieldLabel}>اسم الشركة *</label>
-                  <input className={styles.fieldInput} value={recipient.name} onChange={(e) => setRecipient({ ...recipient, name: e.target.value })} placeholder="اسم الشركة المستلِمة" />
+                  <input
+                    className={styles.fieldInput}
+                    value={recipient.name}
+                    onChange={(e) =>
+                      setRecipient({ ...recipient, name: e.target.value })
+                    }
+                    placeholder="اسم الشركة المستلِمة"
+                  />
                 </div>
-                
               </div>
             </div>
 
@@ -527,13 +673,17 @@ const QuoteBuilder = ({ products = [] }) => {
                 />
                 <div className={styles.searchResults}>
                   {search.trim() === "" && (
-                    <div className={styles.searchHint}>اكتب للبحث في {products.length} منتج</div>
+                    <div className={styles.searchHint}>
+                      اكتب للبحث في {products.length} منتج
+                    </div>
                   )}
                   {search.trim() !== "" && filteredProducts.length === 0 && (
                     <div className={styles.searchHint}>لا توجد نتائج</div>
                   )}
                   {filteredProducts.slice(0, 15).map((p) => {
-                    const alreadyAdded = quoteItems.some((i) => i.id === p.fireId);
+                    const alreadyAdded = quoteItems.some(
+                      (i) => i.id === p.fireId,
+                    );
                     return (
                       <div
                         key={p.fireId}
@@ -541,8 +691,12 @@ const QuoteBuilder = ({ products = [] }) => {
                         onClick={() => !alreadyAdded && setPickerProduct(p)}
                       >
                         <div className={styles.resultName}>{p.name}</div>
-                        <div className={styles.resultMeta}>{p.brand} · {fmtEGP(p.price)}</div>
-                        {alreadyAdded && <span className={styles.addedBadge}>✓ مضاف</span>}
+                        <div className={styles.resultMeta}>
+                          {p.brand} · {fmtEGP(p.price)}
+                        </div>
+                        {alreadyAdded && (
+                          <span className={styles.addedBadge}>✓ مضاف</span>
+                        )}
                       </div>
                     );
                   })}
@@ -554,7 +708,9 @@ const QuoteBuilder = ({ products = [] }) => {
                     className={styles.manualToggle}
                     onClick={() => setShowManual(!showManual)}
                   >
-                    {showManual ? "▲ إخفاء" : "＋ إضافة منتج غير موجود في القاعدة"}
+                    {showManual
+                      ? "▲ إخفاء"
+                      : "＋ إضافة منتج غير موجود في القاعدة"}
                   </button>
                   {showManual && (
                     <div className={styles.manualForm}>
@@ -562,7 +718,9 @@ const QuoteBuilder = ({ products = [] }) => {
                         className={styles.fieldInput}
                         placeholder="اسم المنتج *"
                         value={manualItem.name}
-                        onChange={(e) => setManualItem({ ...manualItem, name: e.target.value })}
+                        onChange={(e) =>
+                          setManualItem({ ...manualItem, name: e.target.value })
+                        }
                       />
                       <div className={styles.manualRow}>
                         <input
@@ -571,7 +729,12 @@ const QuoteBuilder = ({ products = [] }) => {
                           placeholder="السعر *"
                           min="0"
                           value={manualItem.price}
-                          onChange={(e) => setManualItem({ ...manualItem, price: e.target.value })}
+                          onChange={(e) =>
+                            setManualItem({
+                              ...manualItem,
+                              price: e.target.value,
+                            })
+                          }
                         />
                         <input
                           className={styles.fieldInput}
@@ -579,7 +742,12 @@ const QuoteBuilder = ({ products = [] }) => {
                           placeholder="الكمية"
                           min="1"
                           value={manualItem.quantity}
-                          onChange={(e) => setManualItem({ ...manualItem, quantity: e.target.value })}
+                          onChange={(e) =>
+                            setManualItem({
+                              ...manualItem,
+                              quantity: e.target.value,
+                            })
+                          }
                         />
                       </div>
                       <button
@@ -599,7 +767,9 @@ const QuoteBuilder = ({ products = [] }) => {
                 <div className={styles.sectionTitle}>
                   🧾 منتجات العرض
                   {quoteItems.length > 0 && (
-                    <span className={styles.itemCount}>{quoteItems.length} صنف</span>
+                    <span className={styles.itemCount}>
+                      {quoteItems.length} صنف
+                    </span>
                   )}
                 </div>
                 {quoteItems.length === 0 ? (
@@ -609,37 +779,63 @@ const QuoteBuilder = ({ products = [] }) => {
                     {quoteItems.map((item) => (
                       <div key={item.id} className={styles.quoteItem}>
                         <div className={styles.quoteItemHeader}>
-                          <span className={styles.quoteItemName}>{item.displayName}</span>
+                          <span className={styles.quoteItemName}>
+                            {item.displayName}
+                          </span>
                           {item.displayName !== item.originalName && (
-                            <span className={styles.renamedBadge} title={`الأصلي: ${item.originalName}`}>✎</span>
+                            <span
+                              className={styles.renamedBadge}
+                              title={`الأصلي: ${item.originalName}`}
+                            >
+                              ✎
+                            </span>
                           )}
-                          <button className={styles.removeBtn} onClick={() => removeItem(item.id)}>✕</button>
+                          <button
+                            className={styles.removeBtn}
+                            onClick={() => removeItem(item.id)}
+                          >
+                            ✕
+                          </button>
                         </div>
                         {item.purchasePrice && (
-                          <div className={styles.costHint}>سعر الشراء: {fmtEGP(item.purchasePrice)}</div>
+                          <div className={styles.costHint}>
+                            سعر الشراء: {fmtEGP(item.purchasePrice)}
+                          </div>
                         )}
                         <div className={styles.quoteItemControls}>
                           <div className={styles.controlGroup}>
                             <label>الكمية</label>
                             <input
-                              type="number" min="1"
+                              type="number"
+                              min="1"
                               value={item.quantity}
-                              onChange={(e) => updateItem(item.id, "quantity", e.target.value)}
+                              onChange={(e) =>
+                                updateItem(item.id, "quantity", e.target.value)
+                              }
                               className={styles.inlineInput}
                             />
                           </div>
                           <div className={styles.controlGroup}>
                             <label>السعر</label>
                             <input
-                              type="number" min="0"
+                              type="number"
+                              min="0"
                               value={item.quotedPrice}
-                              onChange={(e) => updateItem(item.id, "quotedPrice", parseFloat(e.target.value) || 0)}
+                              onChange={(e) =>
+                                updateItem(
+                                  item.id,
+                                  "quotedPrice",
+                                  parseFloat(e.target.value) || 0,
+                                )
+                              }
                               className={styles.inlineInput}
                             />
                           </div>
                           <div className={styles.controlGroup}>
                             <label>الإجمالي</label>
-                            <span className={styles.itemTotal}>{fmtEGP(item.quotedPrice * item.quantity)}</span>
+                            <span className={styles.itemTotal}>
+                              {fmtEGP(item.quotedPrice * item.quantity)}
+                            </span>
                           </div>
                         </div>
                         {/* Display name edit */}
@@ -649,14 +845,28 @@ const QuoteBuilder = ({ products = [] }) => {
                             <input
                               className={styles.inlineNameInput}
                               value={item.displayName}
-                              onChange={(e) => updateItem(item.id, "displayName", e.target.value)}
+                              onChange={(e) =>
+                                updateItem(
+                                  item.id,
+                                  "displayName",
+                                  e.target.value,
+                                )
+                              }
                             />
                             {item.displayName !== item.originalName && (
                               <button
                                 className={styles.resetBtn}
-                                onClick={() => updateItem(item.id, "displayName", item.originalName)}
+                                onClick={() =>
+                                  updateItem(
+                                    item.id,
+                                    "displayName",
+                                    item.originalName,
+                                  )
+                                }
                                 title="إعادة الاسم الأصلي"
-                              >↺</button>
+                              >
+                                ↺
+                              </button>
                             )}
                           </div>
                         </div>
@@ -668,14 +878,18 @@ const QuoteBuilder = ({ products = [] }) => {
                 {quoteItems.length > 0 && (
                   <div className={styles.grandTotalBar}>
                     <span>الإجمالي الكلي</span>
-                    <span className={styles.grandTotalVal}>{fmtEGP(grandTotal)}</span>
+                    <span className={styles.grandTotalVal}>
+                      {fmtEGP(grandTotal)}
+                    </span>
                   </div>
                 )}
               </div>
             </div>
 
             <div className={styles.stepFooter}>
-              <button className={styles.backBtn} onClick={() => setStep(1)}>→ السابق</button>
+              <button className={styles.backBtn} onClick={() => setStep(1)}>
+                → السابق
+              </button>
               <button
                 className={styles.nextBtn}
                 onClick={() => setStep(3)}
@@ -696,19 +910,109 @@ const QuoteBuilder = ({ products = [] }) => {
                 <div className={styles.fieldGroup}>
                   <label className={styles.fieldLabel}>رقم العرض</label>
                   <div className={styles.quoteNumRow}>
-                    <input className={`${styles.fieldInput} ${styles.monoInput}`} value={quoteNumber} readOnly />
-                    <button className={styles.regenBtn} onClick={() => setQuoteNumber(generateQuoteNumber())} title="توليد رقم جديد">⟳</button>
+                    <input
+                      className={`${styles.fieldInput} ${styles.monoInput}`}
+                      value={quoteNumber}
+                      readOnly
+                    />
+                    <button
+                      className={styles.regenBtn}
+                      onClick={() => setQuoteNumber(generateQuoteNumber())}
+                      title="توليد رقم جديد"
+                    >
+                      ⟳
+                    </button>
                   </div>
                 </div>
                 <div className={styles.fieldGroup}>
-                  <label className={styles.fieldLabel}>صلاحية العرض (بالأيام)</label>
+                  <label className={styles.fieldLabel}>
+                    صلاحية العرض (بالأيام)
+                  </label>
                   <input
                     className={styles.fieldInput}
                     type="number"
                     min="1"
                     value={validityDays}
-                    onChange={(e) => setValidityDays(Math.max(1, parseInt(e.target.value) || 1))}
+                    onChange={(e) =>
+                      setValidityDays(
+                        Math.max(1, parseInt(e.target.value) || 1),
+                      )
+                    }
                   />
+                </div>
+              </div>
+
+              {/* Toggle options */}
+              <div
+                className={styles.sectionTitle}
+                style={{ marginTop: "20px" }}
+              >
+                📋 خيارات العرض
+              </div>
+
+              {/* Individual Conditions - Clean version */}
+              <div className={styles.checkboxGrid}>
+                <div className={styles.fieldGroupCheckbox}>
+                  <input
+                    type="checkbox"
+                    id="condNoDiscounts"
+                    checked={conditions.noDiscounts}
+                    onChange={(e) =>
+                      setConditions({
+                        ...conditions,
+                        noDiscounts: e.target.checked,
+                      })
+                    }
+                  />
+                  <label htmlFor="condNoDiscounts">
+                    لا تشمل الخصومات (1% أو 8%)
+                  </label>
+                </div>
+
+                <div className={styles.fieldGroupCheckbox}>
+                  <input
+                    type="checkbox"
+                    id="condPriceValidity"
+                    checked={conditions.priceValidity}
+                    onChange={(e) =>
+                      setConditions({
+                        ...conditions,
+                        priceValidity: e.target.checked,
+                      })
+                    }
+                  />
+                  <label htmlFor="condPriceValidity">
+                    الأسعار قابلة للتغيير بعد انتهاء الصلاحية
+                  </label>
+                </div>
+
+                <div className={styles.fieldGroupCheckbox}>
+                  <input
+                    type="checkbox"
+                    id="condDeliveryTerms"
+                    checked={conditions.deliveryTerms}
+                    onChange={(e) =>
+                      setConditions({
+                        ...conditions,
+                        deliveryTerms: e.target.checked,
+                      })
+                    }
+                  />
+                  <label htmlFor="condDeliveryTerms">
+                    التسليم بعد الاتفاق على الدفع والكميات
+                  </label>
+                </div>
+
+                <div className={styles.fieldGroupCheckbox}>
+                  <input
+                    type="checkbox"
+                    id="condTax"
+                    checked={conditions.tax}
+                    onChange={(e) =>
+                      setConditions({ ...conditions, tax: e.target.checked })
+                    }
+                  />
+                  <label htmlFor="condTax">عرض الفاتورة الضريبية (14%)</label>
                 </div>
               </div>
             </div>
@@ -719,7 +1023,11 @@ const QuoteBuilder = ({ products = [] }) => {
               <div className={styles.summaryRows}>
                 <div className={styles.summaryRow}>
                   <span>مقدم من</span>
-                  <span>{companyType === "alalamia" ? AL3ALAMIA_STORE.name : (sender.name || "—")}</span>
+                  <span>
+                    {companyType === "alalamia"
+                      ? AL3ALAMIA_STORE.name
+                      : sender.name || "—"}
+                  </span>
                 </div>
                 <div className={styles.summaryRow}>
                   <span>مقدم إلى</span>
@@ -731,17 +1039,35 @@ const QuoteBuilder = ({ products = [] }) => {
                 </div>
                 <div className={styles.summaryRow}>
                   <span>إجمالي الكميات</span>
-                  <span>{quoteItems.reduce((s, i) => s + i.quantity, 0)} قطعة</span>
+                  <span>
+                    {quoteItems.reduce((s, i) => s + i.quantity, 0)} قطعة
+                  </span>
                 </div>
                 <div className={`${styles.summaryRow} ${styles.summaryTotal}`}>
                   <span>الإجمالي الكلي</span>
                   <span>{fmtEGP(grandTotal)}</span>
                 </div>
+                {conditions.tax && (
+                  <>
+                    <div className={styles.summaryRow}>
+                      <span>الفاتورة الضريبية (14%)</span>
+                      <span>{fmtEGP(grandTotal * 0.14)}</span>
+                    </div>
+                    <div
+                      className={`${styles.summaryRow} ${styles.summaryTotal}`}
+                    >
+                      <span>الإجمالي بعد الضريبة</span>
+                      <span>{fmtEGP(grandTotal + grandTotal * 0.14)}</span>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
 
             <div className={styles.stepFooter}>
-              <button className={styles.backBtn} onClick={() => setStep(2)}>→ السابق</button>
+              <button className={styles.backBtn} onClick={() => setStep(2)}>
+                → السابق
+              </button>
               <button className={styles.generateBtn} onClick={handleGenerate}>
                 🖨️ إنشاء وفتح العرض
               </button>
