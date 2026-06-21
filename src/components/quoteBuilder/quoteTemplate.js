@@ -472,6 +472,12 @@ export const generateQuoteHTML = ({
   quoteDate,
   baseUrl = "",
   customLogo = null,
+  conditions = {
+    noDiscounts: true,
+    priceValidity: true,
+    deliveryTerms: true,
+    tax: true,
+  },
 }) => {
   const logoSrc = customLogo || `/logo.png`;
 
@@ -502,10 +508,45 @@ export const generateQuoteHTML = ({
     )
     .join("");
 
-  // { label: "العنوان", value: recipientCompany.address },
-  // { label: "رقم التليفون", value: recipientCompany.phone },
-  // { label: "مسؤول المشتريات", value: recipientCompany.managerName },
-  // { label: "تليفون المسؤول", value: recipientCompany.managerPhone },
+  // ── Tax rows (conditional based on conditions.tax) ──
+  const taxRows = conditions.tax
+    ? `
+    <div class="totals-row grand">
+      <span class="totals-label">الفاتورة الضريبية 14%</span>
+      <span class="totals-value">${fmtPrice(grandTotal * 0.14)}</span>
+    </div>
+    <div class="totals-row grand">
+      <span class="totals-label">الإجمالي بعد الفاتورة الضريبية 14%</span>
+      <span class="totals-value">${fmtPrice(grandTotal + grandTotal * 0.14)}</span>
+    </div>
+  `
+    : "";
+
+  // ── Build conditions list based on selected items ──
+  const conditionItems = [];
+  
+  if (conditions.noDiscounts) {
+    conditionItems.push('الاسعار لاتشمل اي خصومات مثل 1% او 8%');
+  }
+  if (conditions.priceValidity) {
+    conditionItems.push('الأسعار بالجنيه المصري وقابلة للتغيير دون إشعار مسبق بعد انتهاء مدة صلاحية العرض.');
+  }
+  if (conditions.deliveryTerms) {
+    conditionItems.push('يتم التسليم بعد الاتفاق على طريقة الدفع والكميات المطلوبة.');
+  }
+
+  const conditionsSection = conditionItems.length > 0
+    ? `
+    <!-- Terms -->
+    <div class="terms-section">
+      <div class="terms-title">الشروط والأحكام</div>
+      <ul class="terms-list">
+        ${conditionItems.map(item => `<li>${item}</li>`).join('')}
+      </ul>
+    </div>
+  `
+    : "";
+
   // ── Recipient grid ──
   const recipientFields = [
     { label: "اسم الشركة", value: recipientCompany.name },
@@ -543,7 +584,7 @@ export const generateQuoteHTML = ({
   <title>عرض سعر رقم ${quoteNumber}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;%00;700;900&family=Playfair+Display:wght@700;900&family=DM+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&family=Playfair+Display:wght@700;900&family=DM+Mono&display=swap" rel="stylesheet">
   <style>${CSS}</style>
 </head>
 <body>
@@ -615,29 +656,12 @@ export const generateQuoteHTML = ({
           <span class="totals-label">الإجمالي الكلي</span>
           <span class="totals-value">${fmtPrice(grandTotal)}</span>
         </div>
-        <div class="totals-row grand">
-          <span class="totals-label">الفاتورة الضريبية 14%</span>
-<span class="totals-value">${fmtPrice(grandTotal * 0.14)}</span>
-        </div>
-        <div class="totals-row grand">
-          <span class="totals-label">الإجمالي بعد الفاتورة الضريبية 14%</span>
-<span class="totals-value">${fmtPrice(grandTotal + grandTotal * 0.14)}</span>
-        </div>
+        ${taxRows}
       </div>
     </div>
   </div>
 
-
-
-  <!-- Terms -->
-  <div class="terms-section">
-    <div class="terms-title">الشروط والأحكام</div>
-    <ul class="terms-list">
-      <li>الاسعار لاتشمل اي خصومات مثل  1% او 8%</li>
-      <li>الأسعار بالجنيه المصري وقابلة للتغيير دون إشعار مسبق بعد انتهاء مدة صلاحية العرض.</li>
-      <li>يتم التسليم بعد الاتفاق على طريقة الدفع والكميات المطلوبة.</li>
-    </ul>
-  </div>
+  ${conditionsSection}
 
   <!-- Footer -->
   <div class="quote-footer">
