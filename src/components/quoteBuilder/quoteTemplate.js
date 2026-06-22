@@ -10,6 +10,15 @@ const fmtDate = (date) =>
     day: "numeric",
   });
 
+// Escapes free-text user input before inserting into HTML (custom terms, etc.)
+const escapeHtml = (str) =>
+  String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+
 // ── CSS ───────────────────────────────────────────────────────────────────────
 const CSS = `
 /*! 
@@ -67,20 +76,20 @@ const CSS = `
       margin: 1.2cm;
     }
 
-    .page {
-      width: 210mm;
-      min-height: 297mm;
-      background: var(--white);
-      background-image: linear-gradient(to bottom, var(--paper), var(--white));
-      position: relative;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      overflow: hidden;
-      page-break-after: avoid;
-      break-after: page;
-      display: flex;
-      flex-direction: column;
-    }
+.page {
+  width: 210mm;
+  min-height: 100vh; /* Changed from 297mm to allow growth */
+  background: var(--white);
+  background-image: linear-gradient(to bottom, var(--paper), var(--white));
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: visible; /* Changed from hidden */
+  page-break-after: avoid;
+  break-after: page;
+  display: flex;
+  flex-direction: column;
+}
 
     /* Bars with soft warm gold */
     .top-bar {
@@ -97,7 +106,7 @@ const CSS = `
 
     /* Header */
     .quote-header {
-      padding: 8mm 12mm 5mm;
+      padding: 2mm 7mm 2mm;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -158,13 +167,13 @@ const CSS = `
       direction: ltr;
     }
     .quote-title-ar {
-      font-size: 32px;
+      font-size: 28px;
       font-weight: 900;
       color: var(--gray-900);
       font-family: var(--font-head);
       direction: rtl;
       text-align: right;
-      margin-bottom: 8px;
+      margin-bottom: 4px;
       letter-spacing: -0.5px;
     }
     .quote-badge {
@@ -197,45 +206,31 @@ const CSS = `
 
     /* Recipient */
     .recipient-section {
-      padding: 6mm 12mm;
+      padding: 3mm 3mm;
       border-bottom: 1px solid var(--gray-200);
       background: var(--white);
+      display: flex;
+      // align-items: center;
+      gap: 20px;
     }
     .section-eyebrow {
-      font-size: 14px;
+      font-size: 18px;
       letter-spacing: 2px;
       color: var(--gold);
-      font-weight: 700;
-      margin-bottom: 8px;
+      font-weight: 900;
+      // margin-bottom: 8px;
       text-transform: uppercase;
     }
     .recipient-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 12px;
-    }
-    .recipient-card {
-      background: var(--gray-50);
-      border: 1px solid var(--gray-200);
-      border-radius: 14px;
-      padding: 8px 14px;
-      transition: all 0.1s ease;
-    }
-    .recipient-card-label {
-      font-size: 14px;
-      color: var(--gray-600);
-      margin-bottom: 4px;
-      font-weight: 500;
-    }
-    .recipient-card-value {
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--gray-800);
+      display: flex;
+      gap: 10px;
+      font-size: 18px;
+      font-weight: 900;
     }
 
     /* Products table - clean & light */
     .products-section {
-      padding: 6mm 12mm;
+      padding: 2mm 12mm;
       flex: 1;
       background: var(--white);
     }
@@ -250,7 +245,7 @@ const CSS = `
     }
     .products-table th {
       padding: 10px 10px;
-      font-size: 18px;
+      font-size: 14px;
       font-weight: 800;
       color: var(--gray-800);
       text-align: right;
@@ -279,6 +274,15 @@ const CSS = `
     .td-name {
       font-weight: 700;
       color: var(--gray-800);
+    }
+    .td-desc {
+      font-weight: 400;
+      font-size: 13px;
+      color: var(--gray-600);
+      margin-top: 3px;
+      line-height: 1.5;
+      unicode-bidi: plaintext;
+      white-space: pre-wrap;
     }
     .td-qty {
       text-align: center;
@@ -439,27 +443,65 @@ const CSS = `
       font-weight: 800;
     }
 
-    @media print {
-      body {
-        background: white;
-        padding: 0;
-        margin: 0;
-      }
-      .page {
-        box-shadow: none;
-        border-radius: 0;
-        margin: 0;
-        width: 100%;
-        min-height: 0;
-      }
-      .products-table tbody tr:hover {
-        background-color: transparent;
-      }
-      .totals-box, .quote-badge {
-        box-shadow: none;
-        border: 1px solid #ccc;
-      }
-    }
+@media print {
+  body {
+    background: white;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .page {
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 0; /* Reset for print */
+    overflow: visible;
+    break-after: page; /* Force page break after each .page */
+    page-break-after: always;
+  }
+  
+  /* Ensure table breaks properly across pages */
+  .products-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .products-table thead {
+    display: table-header-group; /* Ensures header repeats on each page */
+  }
+  
+  .products-table tbody tr {
+    page-break-inside: avoid; /* Prevents rows from splitting across pages */
+  }
+  
+  .products-table tbody tr:last-child {
+    page-break-after: auto;
+  }
+  
+  .products-table tbody tr:hover {
+    background-color: transparent;
+  }
+  
+  .totals-box, .quote-badge {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  /* Prevent page breaks inside key sections */
+  .recipient-section,
+  .totals-section,
+  .terms-section,
+  .validity-section,
+  .quote-footer {
+    page-break-inside: avoid;
+  }
+  
+  /* Let products section grow and break naturally */
+  .products-section {
+    page-break-inside: auto;
+  }
+}
 `;
 
 // ── Main Export ───────────────────────────────────────────────────────────────
@@ -473,11 +515,14 @@ export const generateQuoteHTML = ({
   baseUrl = "",
   customLogo = null,
   conditions = {
+    noVatInvoice: true,
     noDiscounts: true,
     priceValidity: true,
-    deliveryTerms: true,
-    tax: true,
+    cashPayment: true,
   },
+  showTax = true,
+  showTotals = true, // ADD THIS - defaults to true for backward compatibility
+  customTerms = [],
 }) => {
   const logoSrc = customLogo || `/logo.png`;
 
@@ -494,22 +539,34 @@ export const generateQuoteHTML = ({
     0,
   );
 
-  // ── Products table rows ──
+  // ── Products table rows with page break hints ──
   const tableRows = items
-    .map(
-      (item, idx) => `
-    <tr>
+    .map((item, idx) => {
+      const showDesc =
+        item.showDescription && item.description && item.description.trim();
+      const descHtml = showDesc
+        ? `<div class="td-desc">${escapeHtml(item.description.trim()).replace(/\n/g, "<br>")}</div>`
+        : "";
+
+      // Add page break after every 15 rows to prevent orphaned rows
+      const pageBreak =
+        idx > 0 && idx % 15 === 0
+          ? ' style="page-break-before: always; break-before: page;"'
+          : "";
+
+      return `
+    <tr${pageBreak}>
       <td class="td-num">${idx + 1}</td>
-      <td class="td-name">${item.displayName}</td>
+      <td class="td-name">${escapeHtml(item.displayName)}${descHtml}</td>
       <td class="td-qty">${item.quantity}</td>
       <td class="td-price">${fmtPrice(item.quotedPrice)}</td>
       <td class="td-total">${fmtPrice(item.quotedPrice * item.quantity)}</td>
-    </tr>`,
-    )
+    </tr>`;
+    })
     .join("");
 
-  // ── Tax rows (conditional based on conditions.tax) ──
-  const taxRows = conditions.tax
+  // ── Tax rows (conditional based on the showTax switch) ──
+  const taxRows = showTax
     ? `
     <div class="totals-row grand">
       <span class="totals-label">الفاتورة الضريبية 14%</span>
@@ -524,32 +581,69 @@ export const generateQuoteHTML = ({
 
   // ── Build conditions list based on selected items ──
   const conditionItems = [];
-  
+
+  if (conditions.noVatInvoice) {
+    conditionItems.push("الأسعار لا تشمل فاتورة الضريبة.");
+  }
   if (conditions.noDiscounts) {
-    conditionItems.push('الاسعار لاتشمل اي خصومات مثل 1% او 8%');
+    conditionItems.push("الأسعار لا تشمل أي خصومات مثل 1% أو 8%.");
   }
   if (conditions.priceValidity) {
-    conditionItems.push('الأسعار بالجنيه المصري وقابلة للتغيير دون إشعار مسبق بعد انتهاء مدة صلاحية العرض.');
+    conditionItems.push(
+      "الأسعار بالجنيه المصري وقابلة للتغيير دون إشعار مسبق بعد انتهاء مدة صلاحية العرض.",
+    );
   }
-  if (conditions.deliveryTerms) {
-    conditionItems.push('يتم التسليم بعد الاتفاق على طريقة الدفع والكميات المطلوبة.');
+  if (conditions.cashPayment) {
+    conditionItems.push("يجب دفع أول معاملة نقدًا.");
   }
 
-  const conditionsSection = conditionItems.length > 0
-    ? `
+  // Append any additional free-text terms entered for this specific offer
+  customTerms.forEach((term) => {
+    if (term && term.trim()) conditionItems.push(term.trim());
+  });
+
+  const conditionsSection =
+    conditionItems.length > 0
+      ? `
     <!-- Terms -->
     <div class="terms-section">
       <div class="terms-title">الشروط والأحكام</div>
       <ul class="terms-list">
-        ${conditionItems.map(item => `<li>${item}</li>`).join('')}
+        ${conditionItems.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
       </ul>
     </div>
+  `
+      : "";
+
+  // ── Totals section (conditional based on showTotals) ──
+  const totalsSection = showTotals
+    ? `
+  <!-- Totals -->
+  <div class="totals-section">
+    <div class="totals-wrap">
+      <div class="totals-box">
+        <div class="totals-row">
+          <span class="totals-label">عدد الأصناف</span>
+          <span class="totals-value">${items.length} صنف</span>
+        </div>
+        <div class="totals-row">
+          <span class="totals-label">إجمالي الكميات</span>
+          <span class="totals-value">${items.reduce((s, i) => s + i.quantity, 0)} قطعة</span>
+        </div>
+        <div class="totals-row grand">
+          <span class="totals-label">الإجمالي الكلي</span>
+          <span class="totals-value">${fmtPrice(grandTotal)}</span>
+        </div>
+        ${taxRows}
+      </div>
+    </div>
+  </div>
   `
     : "";
 
   // ── Recipient grid ──
   const recipientFields = [
-    { label: "اسم الشركة", value: recipientCompany.name },
+    { label: "شركة", value: recipientCompany.name },
   ]
     .filter((f) => f.value)
     .map(
@@ -620,8 +714,8 @@ export const generateQuoteHTML = ({
 
   <!-- Recipient -->
   <div class="recipient-section">
-    <div class="section-eyebrow">السادة / مقدم إليه</div>
-    <div class="recipient-grid">${recipientFields}</div>
+    <div class="section-eyebrow">السادة / مقدم إليه : </div>
+    <div class="recipient-grid">${recipientCompany.name}</div>
   </div>
 
   <!-- Products -->
@@ -640,27 +734,7 @@ export const generateQuoteHTML = ({
     </table>
   </div>
 
-  <!-- Totals -->
-  <div class="totals-section">
-    <div class="totals-wrap">
-      <div class="totals-box">
-        <div class="totals-row">
-          <span class="totals-label">عدد الأصناف</span>
-          <span class="totals-value">${items.length} صنف</span>
-        </div>
-        <div class="totals-row">
-          <span class="totals-label">إجمالي الكميات</span>
-          <span class="totals-value">${items.reduce((s, i) => s + i.quantity, 0)} قطعة</span>
-        </div>
-        <div class="totals-row grand">
-          <span class="totals-label">الإجمالي الكلي</span>
-          <span class="totals-value">${fmtPrice(grandTotal)}</span>
-        </div>
-        ${taxRows}
-      </div>
-    </div>
-  </div>
-
+  ${totalsSection}
   ${conditionsSection}
 
   <!-- Footer -->
