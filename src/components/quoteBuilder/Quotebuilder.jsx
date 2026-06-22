@@ -21,6 +21,10 @@ const PricePicker = ({ product, onConfirm, onCancel }) => {
   const [customVal, setCustomVal] = useState("");
   const [displayName, setDisplayName] = useState(product.name || "");
   const [quantity, setQuantity] = useState(1);
+  const [description, setDescription] = useState(product.description || "");
+  const [showDescription, setShowDescription] = useState(
+    Boolean(product.description && product.description.trim()),
+  );
 
   const priceMap = {
     price: product.price,
@@ -39,6 +43,8 @@ const PricePicker = ({ product, onConfirm, onCancel }) => {
       quantity: Math.max(1, parseInt(quantity) || 1),
       quotedPrice: finalPrice,
       purchasePrice: product.code, // admin-only visibility
+      description: description.trim(),
+      showDescription: showDescription && description.trim().length > 0,
     });
   };
 
@@ -94,6 +100,35 @@ const PricePicker = ({ product, onConfirm, onCancel }) => {
             value={quantity}
             onChange={(e) => setQuantity(e.target.value)}
           />
+        </div>
+
+        {/* Description (optional, auto-filled if product has one) */}
+        <div className={styles.pickerField}>
+          <div className={styles.descFieldHeader}>
+            <label className={styles.pickerLabel}>
+              وصف المنتج <span className={styles.optionalTag}>(اختياري)</span>
+            </label>
+            <label className={styles.switch} title="إظهار الوصف في العرض">
+              <input
+                type="checkbox"
+                checked={showDescription}
+                onChange={(e) => setShowDescription(e.target.checked)}
+              />
+              <span className={styles.switchTrack}></span>
+            </label>
+          </div>
+          <textarea
+            className={styles.descTextarea}
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            placeholder="وصف المنتج (عربي أو إنجليزي)... يمكن أن يكون طويلاً"
+            rows={3}
+          />
+          <div className={styles.descHint}>
+            {showDescription
+              ? "سيظهر هذا الوصف في عرض السعر المطبوع"
+              : "الوصف محفوظ لكنه لن يظهر في عرض السعر"}
+          </div>
         </div>
 
         {/* Price options */}
@@ -236,21 +271,22 @@ const LogoUploader = ({ onLogoChange, currentLogo }) => {
 const QuoteBuilder = ({ products = [] }) => {
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState(1); // 1=sender+recipient, 2=products, 3=settings
-  // Add these state variables in the main component (around line 100)
-  const [showConditions, setShowConditions] = useState(true);
-  const [showTax, setShowTax] = useState(true);
   // Company selection
   const [companyType, setCompanyType] = useState("alalamia"); // "alalamia" | "other"
   const [customLogo, setCustomLogo] = useState(null);
   // Settings
-
-  // Individual conditions - ADD THESE
+  const [showTotals, setShowTotals] = useState(true);
+  // Predefined conditions (toggleable show/hide). VAT lives separately below
+  // since it affects the price calculation, not just the printed text.
   const [conditions, setConditions] = useState({
+    noVatInvoice: true,
     noDiscounts: true,
     priceValidity: true,
-    deliveryTerms: true,
-    tax: true,
+    cashPayment: true,
   });
+
+  // Custom per-quote terms (free text, added/removed by the user)
+  const [customTerms, setCustomTerms] = useState([]);
   // Sender
   const [sender, setSender] = useState({
     name: AL3ALAMIA_STORE.name,
@@ -281,10 +317,15 @@ const QuoteBuilder = ({ products = [] }) => {
     name: "",
     price: "",
     quantity: 1,
+    description: "",
+    showDescription: false,
   });
 
   // Settings
   const [validityDays, setValidityDays] = useState(7);
+
+  // VAT (tax) toggle — affects the actual price calculation, shown as a switch
+  const [showTax, setShowTax] = useState(true);
 
   // Quote number (generated once per open)
   const [quoteNumber, setQuoteNumber] = useState("");
@@ -340,15 +381,23 @@ const QuoteBuilder = ({ products = [] }) => {
     setQuoteItems([]);
     setSearch("");
     setShowManual(false);
-    setManualItem({ name: "", price: "", quantity: 1 });
+    setManualItem({
+      name: "",
+      price: "",
+      quantity: 1,
+      description: "",
+      showDescription: false,
+    });
     setValidityDays(7);
+    setShowTax(true);
     // Reset conditions
     setConditions({
+      noVatInvoice: true,
       noDiscounts: true,
       priceValidity: true,
-      deliveryTerms: true,
-      tax: true,
+      cashPayment: true,
     });
+    setCustomTerms([]);
   };
 
   // Close on Escape
@@ -413,9 +462,19 @@ const QuoteBuilder = ({ products = [] }) => {
         quotedPrice: parseFloat(manualItem.price),
         purchasePrice: null,
         isManual: true,
+        description: manualItem.description.trim(),
+        showDescription:
+          manualItem.showDescription &&
+          manualItem.description.trim().length > 0,
       },
     ]);
-    setManualItem({ name: "", price: "", quantity: 1 });
+    setManualItem({
+      name: "",
+      price: "",
+      quantity: 1,
+      description: "",
+      showDescription: false,
+    });
     setShowManual(false);
   };
 
@@ -423,6 +482,21 @@ const QuoteBuilder = ({ products = [] }) => {
     (s, i) => s + i.quotedPrice * i.quantity,
     0,
   );
+
+  // ── Custom terms management ──
+  const addCustomTerm = () => {
+    setCustomTerms((prev) => [...prev, { id: `term-${Date.now()}`, text: "" }]);
+  };
+
+  const updateCustomTerm = (id, text) => {
+    setCustomTerms((prev) =>
+      prev.map((t) => (t.id === id ? { ...t, text } : t)),
+    );
+  };
+
+  const removeCustomTerm = (id) => {
+    setCustomTerms((prev) => prev.filter((t) => t.id !== id));
+  };
 
   const handleGenerate = () => {
     if (!recipient.name.trim()) {
@@ -443,7 +517,12 @@ const QuoteBuilder = ({ products = [] }) => {
       quoteDate: new Date().toISOString(),
       baseUrl: window.location.origin,
       customLogo: companyType === "other" ? customLogo : null,
-      conditions: conditions, // Pass individual conditions
+      conditions: conditions,
+      showTax,
+      showTotals: showTotals,
+      customTerms: customTerms
+        .map((t) => t.text.trim())
+        .filter((t) => t.length > 0),
     });
 
     const win = window.open("", "_blank");
@@ -750,6 +829,40 @@ const QuoteBuilder = ({ products = [] }) => {
                           }
                         />
                       </div>
+                      <div className={styles.descFieldHeader}>
+                        <label className={styles.pickerLabel}>
+                          وصف المنتج{" "}
+                          <span className={styles.optionalTag}>(اختياري)</span>
+                        </label>
+                        <label
+                          className={styles.switch}
+                          title="إظهار الوصف في العرض"
+                        >
+                          <input
+                            type="checkbox"
+                            checked={manualItem.showDescription}
+                            onChange={(e) =>
+                              setManualItem({
+                                ...manualItem,
+                                showDescription: e.target.checked,
+                              })
+                            }
+                          />
+                          <span className={styles.switchTrack}></span>
+                        </label>
+                      </div>
+                      <textarea
+                        className={styles.descTextarea}
+                        value={manualItem.description}
+                        onChange={(e) =>
+                          setManualItem({
+                            ...manualItem,
+                            description: e.target.value,
+                          })
+                        }
+                        placeholder="وصف المنتج (عربي أو إنجليزي)..."
+                        rows={3}
+                      />
                       <button
                         className={styles.manualAddBtn}
                         onClick={addManualItem}
@@ -870,6 +983,44 @@ const QuoteBuilder = ({ products = [] }) => {
                             )}
                           </div>
                         </div>
+
+                        {/* Description edit */}
+                        <div className={styles.descItemRow}>
+                          <div className={styles.descFieldHeader}>
+                            <label className={styles.pickerLabel}>
+                              وصف المنتج{" "}
+                              <span className={styles.optionalTag}>
+                                (اختياري)
+                              </span>
+                            </label>
+                            <label
+                              className={styles.switch}
+                              title="إظهار الوصف في العرض"
+                            >
+                              <input
+                                type="checkbox"
+                                checked={Boolean(item.showDescription)}
+                                onChange={(e) =>
+                                  updateItem(
+                                    item.id,
+                                    "showDescription",
+                                    e.target.checked,
+                                  )
+                                }
+                              />
+                              <span className={styles.switchTrack}></span>
+                            </label>
+                          </div>
+                          <textarea
+                            className={styles.descTextarea}
+                            value={item.description || ""}
+                            onChange={(e) =>
+                              updateItem(item.id, "description", e.target.value)
+                            }
+                            placeholder="وصف المنتج (عربي أو إنجليزي)..."
+                            rows={2}
+                          />
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -942,17 +1093,64 @@ const QuoteBuilder = ({ products = [] }) => {
                 </div>
               </div>
 
-              {/* Toggle options */}
+              {/* VAT toggle — separate switch since it changes the price calculation */}
               <div
                 className={styles.sectionTitle}
                 style={{ marginTop: "20px" }}
               >
-                📋 خيارات العرض
+                💰 ضريبة القيمة المضافة
+              </div>
+              <div className={styles.vatToggleRow}>
+                <div className={styles.vatToggleInfo}>
+                  <span className={styles.vatToggleLabel}>
+                    إظهار ملخص الأسعار
+                  </span>
+                  <span className={styles.vatToggleHint}>
+                    عرض عدد الأصناف والإجماليات في نهاية العرض
+                  </span>
+                </div>
+                <label className={styles.switch}>
+                  <input
+                    type="checkbox"
+                    checked={showTotals}
+                    onChange={(e) => setShowTotals(e.target.checked)}
+                  />
+                  <span className={styles.switchTrack}></span>
+                </label>
               </div>
 
-              {/* Individual Conditions - Clean version */}
+              {/* Conditions checklist — choose which terms to show/hide */}
+              <div
+                className={styles.conditionsHeader}
+                style={{ marginTop: "20px" }}
+              >
+                <span className={styles.conditionsHeaderTitle}>
+                  📋 الشروط والأحكام
+                </span>
+              </div>
+
               <div className={styles.checkboxGrid}>
-                <div className={styles.fieldGroupCheckbox}>
+                <div className={styles.conditionRow}>
+                  <input
+                    type="checkbox"
+                    id="condNoVatInvoice"
+                    checked={conditions.noVatInvoice}
+                    onChange={(e) =>
+                      setConditions({
+                        ...conditions,
+                        noVatInvoice: e.target.checked,
+                      })
+                    }
+                  />
+                  <label
+                    htmlFor="condNoVatInvoice"
+                    className={styles.conditionRowText}
+                  >
+                    الأسعار لا تشمل فاتورة الضريبة
+                  </label>
+                </div>
+
+                <div className={styles.conditionRow}>
                   <input
                     type="checkbox"
                     id="condNoDiscounts"
@@ -964,12 +1162,15 @@ const QuoteBuilder = ({ products = [] }) => {
                       })
                     }
                   />
-                  <label htmlFor="condNoDiscounts">
-                    لا تشمل الخصومات (1% أو 8%)
+                  <label
+                    htmlFor="condNoDiscounts"
+                    className={styles.conditionRowText}
+                  >
+                    الأسعار لا تشمل أي خصومات مثل 1% أو 8%
                   </label>
                 </div>
 
-                <div className={styles.fieldGroupCheckbox}>
+                <div className={styles.conditionRow}>
                   <input
                     type="checkbox"
                     id="condPriceValidity"
@@ -981,39 +1182,74 @@ const QuoteBuilder = ({ products = [] }) => {
                       })
                     }
                   />
-                  <label htmlFor="condPriceValidity">
-                    الأسعار قابلة للتغيير بعد انتهاء الصلاحية
+                  <label
+                    htmlFor="condPriceValidity"
+                    className={styles.conditionRowText}
+                  >
+                    الأسعار بالجنيه المصري وقابلة للتغيير دون إشعار مسبق بعد
+                    انتهاء العرض
                   </label>
                 </div>
 
-                <div className={styles.fieldGroupCheckbox}>
+                <div className={styles.conditionRow}>
                   <input
                     type="checkbox"
-                    id="condDeliveryTerms"
-                    checked={conditions.deliveryTerms}
+                    id="condCashPayment"
+                    checked={conditions.cashPayment}
                     onChange={(e) =>
                       setConditions({
                         ...conditions,
-                        deliveryTerms: e.target.checked,
+                        cashPayment: e.target.checked,
                       })
                     }
                   />
-                  <label htmlFor="condDeliveryTerms">
-                    التسليم بعد الاتفاق على الدفع والكميات
+                  <label
+                    htmlFor="condCashPayment"
+                    className={styles.conditionRowText}
+                  >
+                    يجب دفع أول معاملة نقدًا
                   </label>
                 </div>
+              </div>
 
-                <div className={styles.fieldGroupCheckbox}>
-                  <input
-                    type="checkbox"
-                    id="condTax"
-                    checked={conditions.tax}
-                    onChange={(e) =>
-                      setConditions({ ...conditions, tax: e.target.checked })
-                    }
-                  />
-                  <label htmlFor="condTax">عرض الفاتورة الضريبية (14%)</label>
-                </div>
+              {/* Custom terms — additional free-text conditions for this offer */}
+              <div
+                className={styles.conditionsHeader}
+                style={{ marginTop: "16px" }}
+              >
+                <span className={styles.conditionsHeaderTitle}>
+                  ✦ شروط إضافية لهذا العرض
+                </span>
+              </div>
+
+              <div className={styles.customTermsList}>
+                {customTerms.map((term) => (
+                  <div className={styles.customTermRow} key={term.id}>
+                    <input
+                      className={styles.customTermInput}
+                      value={term.text}
+                      onChange={(e) =>
+                        updateCustomTerm(term.id, e.target.value)
+                      }
+                      placeholder="اكتب نص الشرط هنا..."
+                    />
+                    <button
+                      type="button"
+                      className={styles.customTermRemoveBtn}
+                      onClick={() => removeCustomTerm(term.id)}
+                      title="حذف الشرط"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                ))}
+                <button
+                  type="button"
+                  className={styles.customTermAddBtn}
+                  onClick={addCustomTerm}
+                >
+                  ＋ إضافة شرط جديد
+                </button>
               </div>
             </div>
 
@@ -1047,7 +1283,7 @@ const QuoteBuilder = ({ products = [] }) => {
                   <span>الإجمالي الكلي</span>
                   <span>{fmtEGP(grandTotal)}</span>
                 </div>
-                {conditions.tax && (
+                {showTax && (
                   <>
                     <div className={styles.summaryRow}>
                       <span>الفاتورة الضريبية (14%)</span>
