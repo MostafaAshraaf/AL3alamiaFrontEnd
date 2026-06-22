@@ -1,4 +1,7 @@
-  /* quoteBuilder.module.css — dark gold theme matching the admin panel */
+/* quoteBuilder.module.css — dark gold theme matching the admin panel */
+
+
+
 
   /* ── Trigger Button ──────────────────────────────────────────────────────── */
   .triggerBtn {
@@ -513,6 +516,47 @@
     color: #c9a227;
     font-family: 'DM Mono', 'Courier New', monospace;
     padding-top: 4px;
+  }
+
+  /* Description fields (picker / manual form / item card) */
+  .descFieldHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+  .optionalTag {
+    font-size: 9px;
+    color: #8a7a5a;
+    font-weight: 400;
+  }
+  .descTextarea {
+    width: 100%;
+    background: #1a1610;
+    border: 1px solid rgba(201, 162, 39, 0.2);
+    border-radius: 6px;
+    color: #f5f0e8;
+    font-size: 12px;
+    padding: 6px 8px;
+    outline: none;
+    resize: vertical;
+    font-family: inherit;
+    line-height: 1.5;
+    transition: border-color 0.2s;
+  }
+  .descTextarea:focus {
+    border-color: rgba(201, 162, 39, 0.5);
+  }
+  .descHint {
+    font-size: 9px;
+    color: #8a7a5a;
+    margin-top: 3px;
+  }
+  .descItemRow {
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px dashed rgba(201, 162, 39, 0.15);
   }
 
   /* Display name row */
@@ -1071,5 +1115,239 @@
   
   .fieldGroupCheckbox {
     padding: 8px 12px;
+  }
+}
+
+/* ── VAT Toggle Switch (separate from conditions, affects price calc) ───────── */
+.vatToggleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  background: rgba(15, 14, 11, 0.5);
+  border: 1px solid rgba(201, 162, 39, 0.18);
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+
+.vatToggleInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.vatToggleLabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: #f5f0e8;
+}
+
+.vatToggleHint {
+  font-size: 11px;
+  color: #8a7a5a;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switchTrack {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(201, 162, 39, 0.25);
+  border-radius: 999px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.switchTrack::before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  right: 2px;
+  top: 2px;
+  background: #8a7a5a;
+  border-radius: 50%;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.switch input:checked + .switchTrack {
+  background: rgba(201, 162, 39, 0.35);
+  border-color: #c9a227;
+}
+
+.switch input:checked + .switchTrack::before {
+  transform: translateX(-18px);
+  background: #c9a227;
+}
+
+/* ── Conditions Section Header ───────────────────────────────────────────────── */
+.conditionsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.conditionsHeaderTitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: #c9a227;
+  letter-spacing: 0.5px;
+}
+
+.conditionsActionBtn {
+  background: none;
+  border: none;
+  color: #8a7a5a;
+  font-size: 11px;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.conditionsActionBtn:hover {
+  color: #c9a227;
+}
+
+/* ── Editable Condition Row (predefined conditions) ──────────────────────────── */
+.conditionRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 9px 12px;
+  background: rgba(15, 14, 11, 0.5);
+  border-radius: 6px;
+  border: 1px solid rgba(201, 162, 39, 0.08);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.conditionRow:hover {
+  border-color: rgba(201, 162, 39, 0.25);
+  background: rgba(15, 14, 11, 0.8);
+}
+
+.conditionRow:has(input[type="checkbox"]:checked) {
+  border-color: rgba(201, 162, 39, 0.35);
+  background: rgba(201, 162, 39, 0.06);
+}
+
+.conditionRow input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  margin-top: 2px;
+  accent-color: #c9a227;
+  cursor: pointer;
+  flex-shrink: 0;
+  border-radius: 3px;
+}
+
+.conditionRowText {
+  flex: 1;
+  font-size: 12px;
+  color: #d0c8b8;
+  line-height: 1.5;
+  user-select: none;
+}
+
+.conditionRow:has(input:checked) .conditionRowText {
+  color: #f0e6cc;
+}
+
+/* ── Custom Terms List (per-quote additional conditions) ─────────────────────── */
+.customTermsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.customTermRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.customTermInput {
+  flex: 1;
+  background: #0f0e0b;
+  border: 1px solid rgba(201, 162, 39, 0.2);
+  border-radius: 7px;
+  color: #f5f0e8;
+  font-size: 12px;
+  padding: 8px 10px;
+  outline: none;
+  transition: border-color 0.2s;
+  direction: rtl;
+  text-align: right;
+}
+
+.customTermInput:focus {
+  border-color: rgba(201, 162, 39, 0.6);
+}
+
+.customTermInput::placeholder {
+  color: #3a3228;
+}
+
+.customTermRemoveBtn {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(224, 85, 85, 0.1);
+  border: 1px solid rgba(224, 85, 85, 0.3);
+  border-radius: 6px;
+  color: #e05555;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.customTermRemoveBtn:hover {
+  background: rgba(224, 85, 85, 0.2);
+}
+
+.customTermAddBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: rgba(201, 162, 39, 0.1);
+  border: 1px dashed rgba(201, 162, 39, 0.35);
+  border-radius: 7px;
+  color: #c9a227;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.customTermAddBtn:hover {
+  background: rgba(201, 162, 39, 0.18);
+  border-color: #c9a227;
+}
+
+@media (max-width: 640px) {
+  .vatToggleRow {
+    padding: 10px 12px;
   }
 }
