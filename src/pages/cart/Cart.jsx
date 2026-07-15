@@ -311,7 +311,7 @@ function Cart() {
                 <div className={styles.whatsappButtons}>
                   <button
                     className={styles.whatsappBtn}
-                    onClick={() => handleWhatsAppOrder("201140030112")}
+                    onClick={() => handleWhatsAppOrder("201121301515")}
                     disabled={isAddingBill}
                   >
                     <span className={styles.whatsappIcon}>📱</span>
@@ -319,7 +319,7 @@ function Cart() {
                   </button>
                   <button
                     className={styles.whatsappBtn}
-                    onClick={() => handleWhatsAppOrder("201114939714")}
+                    onClick={() => handleWhatsAppOrder("201122299637")}
                     disabled={isAddingBill}
                   >
                     <span className={styles.whatsappIcon}>📱</span>
