@@ -219,9 +219,8 @@ const buildFullHTML = ({ tablesByType, priceKey, title, subtitle, logoUrl }) => 
     </div>
     <div class="contact-block">
       <span>📍 مول سفنكس، المهندسين، الجيزة</span>
-      <a href="tel:01140030112">📞 01140030112</a>
       <a href="tel:01121301515">📞 01121301515</a>
-      <a href="tel:01114939714">📞 01114939714</a>
+      <a href="tel:01122299637">📞 01122299637</a>
     </div>
   </div>
 
