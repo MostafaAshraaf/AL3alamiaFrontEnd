@@ -179,7 +179,7 @@ const buildSectionsHTML = (sections, priceKey, showPages) => {
     .join("");
 };
 
-const buildFullHTML = ({ tablesByType, priceKey, title, subtitle, logoUrl }) => {
+const buildFullHTML = ({ tablesByType, priceKey, logoUrl }) => {
   const tabs = QUOTE_TYPES.map((type, i) => {
     const label = TYPE_LABELS[type] || type;
     return `<button class="tab-btn ${i === 0 ? "active" : ""}" onclick="showTab('${type}',this)">${label}</button>`;
@@ -202,7 +202,7 @@ const buildFullHTML = ({ tablesByType, priceKey, title, subtitle, logoUrl }) => 
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${title} — العالمية ستور</title>
+<title>العالمية ستور</title>
 <style>${buildCSS()}</style>
 </head>
 <body>
@@ -224,10 +224,6 @@ const buildFullHTML = ({ tablesByType, priceKey, title, subtitle, logoUrl }) => 
     </div>
   </div>
 
-  <div class="quote-badge">
-    ${title} &nbsp;|&nbsp;
-    <span style="font-size:14px;font-weight:500;color:var(--text-muted)">${subtitle}</span>
-  </div>
 
   <div class="tab-bar">
     <span style="font-size:11px;color:var(--text-muted);margin-left:6px">📂 الفئة:</span>
@@ -281,15 +277,12 @@ const PriceQuote = () => {
 
     const isUser = priceType === "user";
     const priceKey = isUser ? "price" : "supply";
-    const title = isUser ? "💼 عرض أسعار اليوزر" : "🏭 عرض أسعار التوريد المبدئي";
-    const subtitle = isUser
-      ? "السعر المقترح للمستخدم النهائي"
-      : "سعر التوريد المبدئي";
+
 
     // Use absolute URL for logo from public folder
     const logoUrl = `${window.location.origin}/logo.png`;
 
-    const html = buildFullHTML({ tablesByType, priceKey, title, subtitle, logoUrl });
+    const html = buildFullHTML({ tablesByType, priceKey,logoUrl });
 
     // Open in new tab
     const blob = new Blob([html], { type: "text/html;charset=utf-8" });
